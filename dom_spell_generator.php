@@ -98,8 +98,7 @@ $battle_meta = [
 				['name' => "Earthbound", 'coms' => 0, 'units' => 29],
 				['name' => "Ancient Stone Hurler", 'coms' => 0, 'units' => 24],
 				['name' => "Mammoth", 'coms' => 0, 'units' => 21],
-				['name' => "Ko-Oni", 'coms' => 0, 'units' => 2],
-				
+				['name' => "Ko-Oni", 'coms' => 0, 'units' => 2],				
 			],
 			3 => [
 				['name' => 'Guardian', 'coms' => 0, 'units' => 21],
