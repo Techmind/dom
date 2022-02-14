@@ -19,8 +19,14 @@ $debug_mod_template = __DIR__ . "\Debug_509_nor.dm";
 echo "Usage: change the code to write a spells generating armies (see \$battle_meta)
 OR launch dominions with debug flag and watch reports/battles and script will generate armies from log files\n\n";
 
+// 0 attacker (wont generate)
+// 1 attacker left 
+// 2 defender (wont generate)
+// 3 defender lef
+// 4 pd 
+
 $battle_meta = [
-	'gany_cap' => ['start' => -1, 'prov' => "custom", 
+	'capital_army' => ['start' => -1, 'prov' => "custom", 
 		'armies' => [
 			1 => [
 				['name' => "Keeper of Traditions", 'coms' => 1, 'units' => 0],
@@ -78,7 +84,7 @@ $battle_meta = [
 		]
 	],
 
-	'custom_gany' => ['start' => -1, 'prov' => "custom", 
+	'gany_siegers' => ['start' => -1, 'prov' => "custom", 
 		'armies' => [
 			1 => [
 				['name' => "Coral Priest", 'coms' => 1, 'units' => 0],
