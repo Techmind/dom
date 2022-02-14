@@ -1,17 +1,23 @@
 <?php
+$app_data_dir = !empty($_ENV["APPDATA"]) ? $_ENV["APPDATA"] : $_SERVER["APPDATA"];
 
 // launch Domninions with -d flag to create debug log and watch reports you want recreated
 $log_path = 'c:\Program Files (x86)\Steam\steamapps\common\Dominions5\log.txt';
 // use mod inspector to find unit id's
-$mod_inspector_path = 'c:\games\dom\mod_inspector\dom5inspector\gamedata' . "\\";
+// [TODO] add dependecny using git submodules ?
+$mod_inspector_path = __DIR__ . "\dom5inspector\gamedata" . "\\";
 
 $units_file = $mod_inspector_path . 'BaseU.csv';
 
 // mods for new units (WH in this case)
-$mods = ["C:\Users\ilya\AppData\Roaming\Dominions5\mods\WH_6_25.dm"];
+// TODO add linux suport ?
+$mods = [$app_data_dir . "\Dominions5\mods\WH_6_25.dm"];
+$debug_mod_location = $app_data_dir . "\Dominions5\mods\Debug_509_nor.dm";
 
-$debug_mod_location = "C:\Users\ilya\AppData\Roaming\Dominions5\mods\Debug_509_nor.dm";
 $debug_mod_template = __DIR__ . "\Debug_509_nor.dm";
+
+echo "Usage: change the code to write a spells generating armies (see \$battle_meta)
+OR launch dominions with debug flag and watch reports/battles and script will generate armies from log files\n\n";
 
 $battle_meta = [
 	'gany_cap' => ['start' => -1, 'prov' => "custom", 
@@ -153,73 +159,77 @@ if (($handle = fopen($units_file, "r")) !== FALSE) {
     fclose($handle);
 }
 
-$lines = file($log_path);
+if (file_exists($log_path)) {
+	$lines = file($log_path);
 
-$cnt = count($lines);
+	$cnt = count($lines);
 
-$bttl_start = "getbattlecount: seed";
+	$bttl_start = "getbattlecount: seed";
 
-$k = -1;
-$in_battle_step = 0;
+	$k = -1;
+	$in_battle_step = 0;
 
-$matches = [];
+	$matches = [];
 
-for ($i = 0; $i < $cnt; $i++)
-{
-	$line = $lines[$i];
-	if (strpos($lines[$i], $bttl_start) !== false)
+	for ($i = 0; $i < $cnt; $i++)
 	{
-		if (empty($battle_meta[$k]['armies']))
+		$line = $lines[$i];
+		if (strpos($lines[$i], $bttl_start) !== false)
 		{
-			//var_dump("UNSET $k");
-			//var_dump($battle_meta[$k]);
-			unset($battle_meta[$k]);
-		}
-		$in_battle_step = 1;
-		while (!(empty($battle_meta[$k])))
-		{
-			$k++;
-		}
-		if (preg_match("~lnr ([0-9]+),~", $lines[$i], $matches) === false)
-		{
-			var_dump(__LINE__, $matches, $lines[$i]); die();
-		}
-		$prov = $matches[1];
-		$battle_meta[$k] = ['start' => $i, 'prov' => $prov, 'armies' => []];		
-	}
-	if (preg_match("~getbattlecountfromvcr~", $lines[$i]) && $in_battle_step == 1)
-	{
-		$battle_meta[$k]['armies'] = [];
-		$in_battle_step = 2;
-		//var_dump([$i, $k]);
-		continue;
-	}
-	
-	if ($in_battle_step == 2)
-	{		
-		//   0:  0 15 Sea Troll (0 0)
-		if (preg_match("~\s*([0-9]):\s*([0-9]*)\s*([0-9]*)\s*([A-Za-z\s]*)~", $lines[$i], $matches)) {
-			$army = $matches[1];
-			$coms = $matches[2];
-			$units = $matches[3];
-			$name = trim($matches[4]);
-			$name = preg_replace('~\s^~', '', $name);
-			
-			if (empty($battle_meta[$k]['armies'][$army])) {
-				$battle_meta[$k]['armies'][$army] = [];
+			if (empty($battle_meta[$k]['armies']))
+			{
+				//var_dump("UNSET $k");
+				//var_dump($battle_meta[$k]);
+				unset($battle_meta[$k]);
 			}
-			
-			//var_dump("SET $k");
-			$battle_meta[$k]['armies'][$army][] = ['name' => $name, 'coms' => $coms, 'units' => $units];
-		} else {
-			$battle_meta[$k]['end'] = $i;
-			$tmp = $battle_meta[$k];
-			unset($battle_meta[$k]);
-			$prov = $tmp['prov'];
-			$battle_meta[$prov] = $tmp;
-			$in_battle_step = 0;
-		}		
+			$in_battle_step = 1;
+			while (!(empty($battle_meta[$k])))
+			{
+				$k++;
+			}
+			if (preg_match("~lnr ([0-9]+),~", $lines[$i], $matches) === false)
+			{
+				var_dump(__LINE__, $matches, $lines[$i]); die();
+			}
+			$prov = $matches[1];
+			$battle_meta[$k] = ['start' => $i, 'prov' => $prov, 'armies' => []];		
+		}
+		if (preg_match("~getbattlecountfromvcr~", $lines[$i]) && $in_battle_step == 1)
+		{
+			$battle_meta[$k]['armies'] = [];
+			$in_battle_step = 2;
+			//var_dump([$i, $k]);
+			continue;
+		}
+		
+		if ($in_battle_step == 2)
+		{		
+			//   0:  0 15 Sea Troll (0 0)
+			if (preg_match("~\s*([0-9]):\s*([0-9]*)\s*([0-9]*)\s*([A-Za-z\s]*)~", $lines[$i], $matches)) {
+				$army = $matches[1];
+				$coms = $matches[2];
+				$units = $matches[3];
+				$name = trim($matches[4]);
+				$name = preg_replace('~\s^~', '', $name);
+				
+				if (empty($battle_meta[$k]['armies'][$army])) {
+					$battle_meta[$k]['armies'][$army] = [];
+				}
+				
+				//var_dump("SET $k");
+				$battle_meta[$k]['armies'][$army][] = ['name' => $name, 'coms' => $coms, 'units' => $units];
+			} else {
+				$battle_meta[$k]['end'] = $i;
+				$tmp = $battle_meta[$k];
+				unset($battle_meta[$k]);
+				$prov = $tmp['prov'];
+				$battle_meta[$prov] = $tmp;
+				$in_battle_step = 0;
+			}		
+		}
 	}
+} else {
+	echo "NO LOG FILE: $log_path\n";
 }
 
 $uniq = 0;
@@ -360,11 +370,11 @@ foreach ($spells as $name => $rows)
 	}
 }
 
-echo $spells_text;
+//echo $spells_text;
 
 // TODO imply research from CASTERS spell or pass from console
 
-// TODO generate debug mod
+// generate debug mod
 $content = file($debug_mod_template);
 
 $new_content = "";
@@ -388,4 +398,5 @@ for ($i = 0; $i < count($content); $i++)
 	}	
 }
 
+echo "WRITING debug mod TO $debug_mod_location\n";
 file_put_contents($debug_mod_location, $new_content);
