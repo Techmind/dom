@@ -1,0 +1,61 @@
+GENERATES spells to summon armies:
+<button onlick='regenerate()'>REGENERATE & COPY</button>
+<br />
+<div style="width: 50%; display: inline-block">
+CONFIG:
+<textarea id="CONFIG" style="width: 100%; height:768px;">
+{
+  "test_army":{
+    "start": -1,
+    "prov": "custom",
+    "armies": {
+      "1": [
+        { "name": "Sirin", "coms": 2, "units": 0},
+        { "name": "Great Bear", "coms": 0, "units": 1, "id": 3803}
+      ],
+      "3": [
+        { "name": "Polemarch", "coms": 4, "units": 0},
+        { "name": "Gigante Hoplite", "coms": 0, "units": 10}
+      ]
+    }
+  }
+}
+</textarea>
+</div>
+
+
+<div style="width: 50%; float: right; display: inline-block">
+
+MOD TEXT:
+<textarea id="OUTPUT" style="width: 100%; height:768px;">
+</textarea>
+</div>
+<script id="data" src="./units_lookup.js"></script>
+<script>
+	//window.units_lookup = JSON.parse(document.getElementById('data').textContent);
+</script>
+<script src="./dom_spell_generator.js"></script>	
+
+<script>
+	function regenerate()
+	{
+		try {
+		let battle_meta = JSON.parse(document.getElementById('CONFIG').value);	
+		copyText = document.getElementById('OUTPUT'); 
+		copyText.value = generate(battle_meta, units_lookup);
+		 // Select the text field
+		  copyText.select();
+		  copyText.setSelectionRange(0, 999999); // For mobile devices
+	
+		   // Copy the text inside the text field
+		   navigator.clipboard.writeText(copyText.value)
+		} catch (e)
+		{
+			alert(e);
+		}
+	}
+	//document.getElementById('CONFIG').value = JSON.stringify(battle_meta, null, 1);
+	
+	regenerate();
+</script>
+
