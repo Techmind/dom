@@ -37,18 +37,26 @@ MOD TEXT:
 <script src="./dom_spell_generator.js"></script>	
 
 <script>
+	var stored = localStorage.getItem("CONFIG");
+	if (typeof stored != "undefined" && stored != null) {
+		document.getElementById('CONFIG').value = stored;
+	}
+
 	function regenerate()
 	{
 		try {
-		let battle_meta = JSON.parse(document.getElementById('CONFIG').value);	
-		copyText = document.getElementById('OUTPUT'); 
-		copyText.value = generate(battle_meta, units_lookup);
-		 // Select the text field
+		  let battle_meta = JSON.parse(document.getElementById('CONFIG').value);	
+		  copyText = document.getElementById('OUTPUT'); 
+		  copyText.value = generate(battle_meta, units_lookup);
+		  // Select the text field
 		  copyText.select();
 		  copyText.setSelectionRange(0, 999999); // For mobile devices
 	
-		   // Copy the text inside the text field
-		   navigator.clipboard.writeText(copyText.value)
+		  // Copy the text inside the text field
+		  navigator.clipboard.writeText(copyText.value)
+		  // save to localstoreage
+		  localStorage.setItem("CONFIG", document.getElementById('CONFIG').value);
+
 		} catch (e)
 		{
 			alert(e);
