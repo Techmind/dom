@@ -1,20 +1,25 @@
 <?php
 $app_data_dir = !empty($_ENV["APPDATA"]) ? $_ENV["APPDATA"] : $_SERVER["APPDATA"];
+$app_data_dir = "/home/ilya/.dominions6/";
 
 // launch Domninions with -d flag to create debug log and watch reports you want recreated
-$log_path = 'c:\Program Files (x86)\Steam\steamapps\common\Dominions5\log.txt';
+$log_path = 'log.txt';
 // use mod inspector to find unit id's
 // [TODO] add dependecny using git submodules ?
-$mod_inspector_path = __DIR__ . "\dom5inspector\gamedata" . "\\";
+$mod_inspector_path = __DIR__ . DIRECTORY_SEPARATOR . "dom6inspector" . DIRECTORY_SEPARATOR  .  "gamedata" . DIRECTORY_SEPARATOR;
 
 $units_file = $mod_inspector_path . 'BaseU.csv';
 
 // mods for new units (WH in this case)
 // TODO add linux suport ?
-$mods = [$app_data_dir . "\Dominions5\mods\WH_6_25.dm"];
-$debug_mod_location = $app_data_dir . "\Dominions5\mods\Debug_509_nor.dm";
+$mods = [
+	//'/home/ilya/.dominions5/mods/StoneSoupAuction Nations 0.641.dm',                                                           
+	//'/home/ilya/.dominions5/mods/DomEnhanced1_84.dm', "/home/ilya/.dominions5/mods/SparkOfDivinity_Enhanced1_2.dm", "/home/ilya/.dominions5/mods/AuxiliaryEmpires0.70wspf.dm", "/home/ilya/.dominions5/mods/bozmod_1.542_lite_dsp.dm"
+//	$app_data_dir . "\Dominions5\mods\WH_6_25.dm"                                                                                                
+];
+$debug_mod_location =  $app_data_dir . "mods/111/Debug_509_nor.dm";
 
-$debug_mod_template = __DIR__ . "\Debug_509_nor.dm";
+$debug_mod_template = __DIR__ . "/Debug_509_nor.dm";
 
 echo "Usage: change the code to write a spells generating armies (see \$battle_meta)
 OR launch dominions with debug flag and watch reports/battles and script will generate armies from log files\n\n";
@@ -26,94 +31,128 @@ OR launch dominions with debug flag and watch reports/battles and script will ge
 // 4 pd 
 
 $battle_meta = [
-	'capital_army' => ['start' => -1, 'prov' => "custom", 
+	'smartphone_army' => ['start' => -1, 'prov' => "custom", 
 		'armies' => [
 			1 => [
-				['name' => "Keeper of Traditions", 'coms' => 1, 'units' => 0],
-				['name' => "Equite of the Sacred Shroud", 'coms' => 0, 'units' => 15],
-				['name' => "Ancestor Vessel", 'coms' => 0, 'units' => 15],
-				['name' => "Militia", 'coms' => 0, 'units' => 80],
-			],
-			3 => [
-				['name' => 'Jotun Jarl', 'coms' => 1, 'units' => 0],
-				['name' => 'Hunter Lord', 'coms' => 1, 'units' => 0],
-				['name' => 'Eparch', 'coms' => 1, 'units' => 0],
-				['name' => 'Fay Boar', 'coms' => 0, 'units' => 78],
-				['name' => 'Ancient Stone Hurler', 'coms' => 0, 'units' => 14],
-				['name' => 'Rain Warrior', 'coms' => 0, 'units' => 17],
-				['name' => 'White Centaur', 'coms' => 0, 'units' => 14],
-			]
-		]
-	],
-	'custom_north' => ['start' => -1, 'prov' => "custom", 
-		'armies' => [
-			1 => [
-				['name' => "Dai Oni", 'coms' => 1, 'units' => 0],
-				['name' => "Keeper of Traditions", 'coms' => 1, 'units' => 0],
-				['name' => "Heavy Cavalry", 'coms' => 0, 'units' => 15],
-				['name' => "Fomorian Giant", 'coms' => 0, 'units' => 4],
-				['name' => "Sohei", 'coms' => 0, 'units' => 20],
-			],
-			3 => [
-				['name' => 'Jotun Jarl', 'coms' => 1, 'units' => 0],
-				['name' => 'Hunter Lord', 'coms' => 1, 'units' => 0],
-				['name' => 'Eparch', 'coms' => 1, 'units' => 0],
-				['name' => 'Fay Boar', 'coms' => 0, 'units' => 78],
-				['name' => 'Ancient Stone Hurler', 'coms' => 0, 'units' => 14],
-				['name' => 'Rain Warrior', 'coms' => 0, 'units' => 17],
-				['name' => 'White Centaur', 'coms' => 0, 'units' => 14],
-			]
-		]
-	],
-	'custom_north2' => ['start' => -1, 'prov' => "custom", 
-		'armies' => [
-			1 => [
-				['name' => "Keeper of Traditions", 'coms' => 1, 'units' => 0],
-				['name' => "Steel Maiden", 'coms' => 0, 'units' => 40],
-				['name' => "Abysian Infantry", 'coms' => 0, 'units' => 30],
-			],
-			3 => [
-				['name' => 'Jotun Jarl', 'coms' => 1, 'units' => 0],
-				['name' => 'Hunter Lord', 'coms' => 1, 'units' => 0],
-				['name' => 'Eparch', 'coms' => 1, 'units' => 0],
-				['name' => 'Fay Boar', 'coms' => 0, 'units' => 78],
-				['name' => 'Ancient Stone Hurler', 'coms' => 0, 'units' => 14],
-				['name' => 'Rain Warrior', 'coms' => 0, 'units' => 17],
-				['name' => 'White Centaur', 'coms' => 0, 'units' => 14],
-			]
-		]
-	],
-
-	'gany_siegers' => ['start' => -1, 'prov' => "custom", 
-		'armies' => [
-			1 => [
-				['name' => "Coral Priest", 'coms' => 1, 'units' => 0],
-				['name' => "Dai Oni", 'coms' => 1, 'units' => 0],
-				['name' => "Eparch", 'coms' => 1, 'units' => 0],
-				['name' => "Keeper of Traditions", 'coms' => 1, 'units' => 0],
-				['name' => "Thaumaturg", 'coms' => 1, 'units' => 0],
-				['name' => "Atavi Infantry", 'coms' => 0, 'units' => 37],
-				['name' => "Coral Guard", 'coms' => 0, 'units' => 28],
-				['name' => "Illithid Soldier", 'coms' => 0, 'units' => 32],
-				['name' => "Earthbound", 'coms' => 0, 'units' => 29],
-				['name' => "Ancient Stone Hurler", 'coms' => 0, 'units' => 24],
-				['name' => "Mammoth", 'coms' => 0, 'units' => 21],
-				['name' => "Ko-Oni", 'coms' => 0, 'units' => 2],				
-			],
-			3 => [
-				['name' => 'Guardian', 'coms' => 0, 'units' => 21],
-				['name' => 'Mother Guard', 'coms' => 0, 'units' => 21],
-				['name' => 'Temple Guard', 'coms' => 0, 'units' => 31],
-				['name' => 'Burning One', 'coms' => 0, 'units' => 7],
-				['name' => 'Markata', 'coms' => 0, 'units' => 40],
+				//['name' => "Rusian Chieftain", 'coms' => 2, 'units' => 0],
+				//['name' => "Militia", 'coms' => 0, 'units' => 30],
+				//['name' => "Light Cavalry", 'coms' => 0, 'units' => 30],
+				//['name' => "Rusian Hunter", 'coms' => 0, 'units' => 86],
+				//['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 30],
+				//['name' => "Rusian Warrior", 'coms' => 0, 'units' => 20],
+				//['name' => "Footman", 'coms' => 0, 'units' => 120, 'id' => 928 ],
+				//['name' => 'Great Bear', 'coms' => 0, 'units' => 86, 'id' => 3003],
+				['name' => 'Sirin', 'coms' => 10, 'units' => 0],
 				
-				['name' => 'Dai Oni', 'coms' => 1, 'units' => 0],
-				['name' => 'Moon Mage', 'coms' => 1, 'units' => 0],
-				['name' => 'Colossi Storm Captain', 'coms' => 1, 'units' => 0],
-				['name' => 'Mage of Summer', 'coms' => 1, 'units' => 0],
+				//['name' => "Ettin", 'coms' => 0, 'units' => 1],
+				//['name' => "Foul Spawn", 'coms' => 0, 'units' => 30, 'id'],
+				//['name' => "Heavy Infantry", 'coms' => 0, 'units' => 10],
+				//['name' => "Woodsman Blowpipe", 'coms' => 0, 'units' => 30],
+				//['name' => "Vine Man", 'coms' => 0, 'units' => 30],
+				//['name' => "Militia", 'coms' => 0, 'units' => 20],
+				//['name' => "White Centaur", 'coms' => 0, 'units' => 80],
+				//['name' => "Satyr", 'coms' => 0, 'units' => 300],
+				//['name' => "Archer", 'coms' => 0, 'units' => 300],
+				//['name' => "Crossbowman", 'coms' => 0, 'units' => 15]
+				//['name' => "Wolf Tribe Archer", 'coms' => 0, 'units' => 80],
+				//['name' => "Wolf Tribe Warrior", 'coms' => 0, 'units' => 80]
+				                                 
+			],
+			3 => [
+				//['name' => "Sleeper", 'coms' => 4, 'units' => 0],
+				//['name' => "Sleeper", 'coms' => 2, 'units' => 0],
+				//['name' => "Assassin", 'coms' => 1, 'units' => 0],
+				//['name' => "Forest Troll", 'coms' => 1, 'units' => 10],
+				//['name' => "Dai Oni", 'coms' => 1, 'units' => 0],
+				//['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 10],
+				['name' => "Polemarch", 'coms' => 4, 'units' => 0],
+				//['name' => "Geronte", 'coms' => 1, 'units' => 0],
+				//['name' => "Horse Tribe Cavalry", 'coms' => 1, 'units' => 50],
+				//['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 68],
+				//['name' => "Clockwork Soldier", 'coms' => 0, 'units' => 20],
+				//['name' => "Gigante Ekdromos", 'coms' => 0, 'units' => 15],
+				//['name' => "Machaka Archer", 'coms' => 0, 'units' => 80],
+				//['name' => "Helote Peltast", 'coms' => 0, 'units' => 209],
+				
+				//['name' => "Fir Bolg Warrior", 'coms' => 1, 'units' => 30],
+				//['name' => "Fir Bolg Slinger", 'coms' => 1, 'units' => 30],
+				//['name' => "Fir Bolg Militia", 'coms' => 1, 'units' => 30],
+				
+				//['name' => "Knight of the Chalice", 'coms' => 0, 'units' => 80],
+				//['name' => "Flagellant", 'coms' => 0, 'units' => 200],
+				//['name' => "Man at Arms", 'coms' => 0, 'units' => 200],
+				//['name' => 'Rusian Chieftain', 'coms' => 1, 'units' => 0],
+				//['name' => 'Chud Skinshifter', 'coms' => 0, 'units' => 10],
+				//['name' => 'Rusian Hunter', 'coms' => 0, 'units' => 9],
+
+				//['name' => "Rusian Warrior", 'coms' => 0, 'units' => 11],
+				//['name' => 'Black Priest', 'coms' => 1, 'units' => 0],
+				//['name' => 'Hochmeister', 'coms' => 4, 'units' => 0],
+				//['name' => 'Black Templar', 'coms' => 0, 'units' => 20],
+				//['name' => 'Ranger of Ulm', 'coms' => 3, 'units' => 7],
+				//['name' => 'Fortune Teller', 'coms' => 2, 'units' => 0],
+				//['name' => 'Wolf', 'coms' => 0, 'units' => 40],
+				
+			]
+			                                                           
+//			3 => [
+//				['name' => 'Soldier Priest', 'coms' => 1, 'units' => 18],
+//				['name' => 'Archer Priest', 'coms' => 1, 'units' => 7],
+//			]         
+		]
+	],                 
+	'ulm_1085_army' => ['start' => -1, 'prov' => "custom", 
+		'armies' => [
+			1 => [
+				['name' => "Barbarian", 'coms' => 3, 'units' => 0],
+				['name' => "Deer Tribe Warrior", 'coms' => 0, 'units' => 10],
+				['name' => "Deer Tribe Archer", 'coms' => 0, 'units' => 10],
+				
+			],
+			3 => [
+				['name' => 'Ranger of Ulm', 'coms' => 1, 'units' => 5],
+				['name' => 'Black Priest', 'coms' => 1, 'units' => 0],
+				['name' => 'Fortune Teller', 'coms' => 1, 'units' => 0],
+				['name' => 'Black Templar', 'coms' => 0, 'units' => 2],
+				['name' => 'Wolf', 'coms' => 0, 'units' => 8],
 			]
 		]
-	]		
+	],
+	'940' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+                                ['name' => "Commander", 'coms' => 3, 'units' => 0],
+                                ['name' => "Light Infantry", 'coms' => 0, 'units' => 20],
+                                ['name' => "Militia", 'coms' => 0, 'units' => 20],
+
+                        ],
+                        3 => [
+                                ['name' => 'Ichtyid Lord', 'coms' => 1, 'units' => 0],
+				['name' => 'Ichtyid', 'coms' => 0, 'units' => 20],
+				['name' => 'Crossbowman', 'coms' => 0, 'units' => 20],
+				['name' => 'Captain', 'coms' => 1, 'units' => 0],
+				['name' => 'Footman', 'coms' => 0, 'units' => 4],
+				['name' => 'Barbarian Heavy Horseman', 'coms' => 0, 'units' => 5],
+                        ]
+                ]
+	],
+	'barbs' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+                                ['name' => "Barbarian", 'coms' => 3, 'units' => 0],
+                                ['name' => "Barbarian", 'coms' => 0, 'units' => 40],
+
+                        ],
+                        3 => [
+                                ['name' => 'Ichtyid Lord', 'coms' => 1, 'units' => 0],
+                                ['name' => 'Ichtyid', 'coms' => 0, 'units' => 20],
+                                ['name' => 'Footman', 'coms' => 0, 'units' => 2],
+                                ['name' => 'Barbarian Heavy Horseman', 'coms' => 0, 'units' => 4],
+                        ]
+                ]
+        ],
+	
+	# todo add mpaths and gear 
 ];
 
 $units_lookup = [];
@@ -147,7 +186,7 @@ if (($handle = fopen($units_file, "r")) !== FALSE) {
 		$rcost = $data[16];
 		if ($row != 0)
 		{
-			$sum = $cost + $rcost;
+			$sum = intval($cost) + intval($rcost);
 			
 			if (empty($units_lookup[$name]))
 			{
@@ -164,7 +203,11 @@ if (($handle = fopen($units_file, "r")) !== FALSE) {
     fclose($handle);
 }
 
+
+//var_dump(array_keys($units_lookup));die;
+
 if (file_exists($log_path)) {
+	echo "USING LOG!\n";
 	$lines = file($log_path);
 
 	$cnt = count($lines);
@@ -237,6 +280,8 @@ if (file_exists($log_path)) {
 	echo "NO LOG FILE: $log_path\n";
 }
 
+var_dump(array_keys($battle_meta));
+
 $uniq = 0;
 $spells = [];
 
@@ -281,7 +326,7 @@ foreach ($battle_meta as $prov_id => $info)
 			$coms = $unit['coms'];
 			$num = $unit['units'];
 			
-			$unit_id = $units_lookup[$name]['id'];
+			$unit_id = !empty($unit['id']) ? $unit['id'] : $units_lookup[$name]['id'];
 			
 			if (empty($unit_id))
 			{
