@@ -9,6 +9,7 @@ $log_path = 'log.txt';
 $mod_inspector_path = __DIR__ . DIRECTORY_SEPARATOR . "dom6inspector" . DIRECTORY_SEPARATOR  .  "gamedata" . DIRECTORY_SEPARATOR;
 
 $units_file = $mod_inspector_path . 'BaseU.csv';
+$spells_file = $mod_inspector_path . 'spells.csv';
 
 // mods for new units (WH in this case)
 // TODO add linux suport ?
@@ -31,18 +32,30 @@ OR launch dominions with debug flag and watch reports/battles and script will ge
 // 4 pd 
 
 $battle_meta = [
-	'smartphone_army' => ['start' => -1, 'prov' => "custom", 
+	'my_defenders' => ['start' => -1, 'prov' => "custom", 
 		'armies' => [
 			1 => [
-				//['name' => "Rusian Chieftain", 'coms' => 2, 'units' => 0],
+				['name' => "Son of Heaven", 'coms' => 1, 'units' => 0],
+				['name' => "Daughter of the Sun", 'coms' => 1, 'units' => 0, 'autocast' => "Heat from Hell"],
+				['name' => "Rusian Hunter", 'coms' => 0, 'units' => 75],
+				['name' => "Chud Berserker", 'coms' => 0, 'units' => 6],
+				['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 50],
+				['name' => 'Great Bear', 'coms' => 0, 'units' => 75, 'id' => 3003],
+				['name' => 'Alkonost', 'coms' => 1, 'units' => 0],
+				//['name' => 'Slinger', 'coms' => 0, 'units' => 85],
+				
+				
 				//['name' => "Militia", 'coms' => 0, 'units' => 30],
 				//['name' => "Light Cavalry", 'coms' => 0, 'units' => 30],
-				//['name' => "Rusian Hunter", 'coms' => 0, 'units' => 86],
-				//['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 30],
+				
+				//['name' => "Firebird", 'coms' => 0, 'units' => 40],
 				//['name' => "Rusian Warrior", 'coms' => 0, 'units' => 20],
 				//['name' => "Footman", 'coms' => 0, 'units' => 120, 'id' => 928 ],
-				//['name' => 'Great Bear', 'coms' => 0, 'units' => 86, 'id' => 3003],
-				['name' => 'Sirin', 'coms' => 10, 'units' => 0],
+				
+				
+				
+				//['name' => 'Sirin', 'coms' => 1, 'units' => 0],
+				//['name' => 'Daughter of the Sun', 'coms' => 4, 'units' => 0],
 				
 				//['name' => "Ettin", 'coms' => 0, 'units' => 1],
 				//['name' => "Foul Spawn", 'coms' => 0, 'units' => 30, 'id'],
@@ -65,14 +78,16 @@ $battle_meta = [
 				//['name' => "Forest Troll", 'coms' => 1, 'units' => 10],
 				//['name' => "Dai Oni", 'coms' => 1, 'units' => 0],
 				//['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 10],
-				['name' => "Polemarch", 'coms' => 4, 'units' => 0],
+				['name' => "Polemarch", 'coms' => 5, 'units' => 0],
+				//['name' => "Lochos", 'coms' => 1, 'units' => 0],
+				//['name' => "Kryptes", 'coms' => 5, 'units' => 0],
 				//['name' => "Geronte", 'coms' => 1, 'units' => 0],
 				//['name' => "Horse Tribe Cavalry", 'coms' => 1, 'units' => 50],
-				//['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 68],
+				['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 100],
 				//['name' => "Clockwork Soldier", 'coms' => 0, 'units' => 20],
-				//['name' => "Gigante Ekdromos", 'coms' => 0, 'units' => 15],
+				//['name' => "Gigante Ekdromos", 'coms' => 0, 'units' => 10],
 				//['name' => "Machaka Archer", 'coms' => 0, 'units' => 80],
-				//['name' => "Helote Peltast", 'coms' => 0, 'units' => 209],
+				['name' => "Helote Peltast", 'coms' => 0, 'units' => 750],
 				
 				//['name' => "Fir Bolg Warrior", 'coms' => 1, 'units' => 30],
 				//['name' => "Fir Bolg Slinger", 'coms' => 1, 'units' => 30],
@@ -101,41 +116,6 @@ $battle_meta = [
 //			]         
 		]
 	],                 
-	'ulm_1085_army' => ['start' => -1, 'prov' => "custom", 
-		'armies' => [
-			1 => [
-				['name' => "Barbarian", 'coms' => 3, 'units' => 0],
-				['name' => "Deer Tribe Warrior", 'coms' => 0, 'units' => 10],
-				['name' => "Deer Tribe Archer", 'coms' => 0, 'units' => 10],
-				
-			],
-			3 => [
-				['name' => 'Ranger of Ulm', 'coms' => 1, 'units' => 5],
-				['name' => 'Black Priest', 'coms' => 1, 'units' => 0],
-				['name' => 'Fortune Teller', 'coms' => 1, 'units' => 0],
-				['name' => 'Black Templar', 'coms' => 0, 'units' => 2],
-				['name' => 'Wolf', 'coms' => 0, 'units' => 8],
-			]
-		]
-	],
-	'940' => ['start' => -1, 'prov' => "custom",
-                'armies' => [
-                        1 => [
-                                ['name' => "Commander", 'coms' => 3, 'units' => 0],
-                                ['name' => "Light Infantry", 'coms' => 0, 'units' => 20],
-                                ['name' => "Militia", 'coms' => 0, 'units' => 20],
-
-                        ],
-                        3 => [
-                                ['name' => 'Ichtyid Lord', 'coms' => 1, 'units' => 0],
-				['name' => 'Ichtyid', 'coms' => 0, 'units' => 20],
-				['name' => 'Crossbowman', 'coms' => 0, 'units' => 20],
-				['name' => 'Captain', 'coms' => 1, 'units' => 0],
-				['name' => 'Footman', 'coms' => 0, 'units' => 4],
-				['name' => 'Barbarian Heavy Horseman', 'coms' => 0, 'units' => 5],
-                        ]
-                ]
-	],
 	'barbs' => ['start' => -1, 'prov' => "custom",
                 'armies' => [
                         1 => [
@@ -144,9 +124,6 @@ $battle_meta = [
 
                         ],
                         3 => [
-                                ['name' => 'Ichtyid Lord', 'coms' => 1, 'units' => 0],
-                                ['name' => 'Ichtyid', 'coms' => 0, 'units' => 20],
-                                ['name' => 'Footman', 'coms' => 0, 'units' => 2],
                                 ['name' => 'Barbarian Heavy Horseman', 'coms' => 0, 'units' => 4],
                         ]
                 ]
@@ -203,6 +180,24 @@ if (($handle = fopen($units_file, "r")) !== FALSE) {
     fclose($handle);
 }
 
+$spells_lookup = [];
+
+$row = 0;
+if (($handle = fopen($spells_file, "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, "\t")) !== FALSE) {
+        $num = count($data);
+		// 0 - id
+		// 1 - name
+		// 15 basecost
+		// 16 rcost
+		$id = $data[0];
+		$name = $data[1];
+		$spells_lookup[$name] = $id;		
+		$row++;
+    }
+    fclose($handle);
+}
+
 
 //var_dump(array_keys($units_lookup));die;
 
@@ -253,12 +248,15 @@ if (file_exists($log_path)) {
 		if ($in_battle_step == 2)
 		{		
 			//   0:  0 15 Sea Troll (0 0)
-			if (preg_match("~\s*([0-9]):\s*([0-9]*)\s*([0-9]*)\s*([A-Za-z\s]*)~", $lines[$i], $matches)) {
+			if (preg_match("~\s*([0-9]):\s*([0-9\+]*)\s*([0-9\+]*)\s*([A-Za-z\s]*)~", $lines[$i], $matches)) {
+				//var_dump($matches);
 				$army = $matches[1];
-				$coms = $matches[2];
-				$units = $matches[3];
+				$coms = 1*explode('+', $matches[2])[0];
+				$units = 1*explode('+', $matches[3])[0];
 				$name = trim($matches[4]);
 				$name = preg_replace('~\s^~', '', $name);
+				
+				
 				
 				if (empty($battle_meta[$k]['armies'][$army])) {
 					$battle_meta[$k]['armies'][$army] = [];
@@ -266,6 +264,7 @@ if (file_exists($log_path)) {
 				
 				//var_dump("SET $k");
 				$battle_meta[$k]['armies'][$army][] = ['name' => $name, 'coms' => $coms, 'units' => $units];
+				//var_dump($battle_meta[$k]['armies'][$army]);die;
 			} else {
 				$battle_meta[$k]['end'] = $i;
 				$tmp = $battle_meta[$k];
@@ -282,8 +281,13 @@ if (file_exists($log_path)) {
 
 var_dump(array_keys($battle_meta));
 
+
+
 $uniq = 0;
 $spells = [];
+
+$item_id = 5000;
+$monster_id = 5000;
 
 foreach ($battle_meta as $prov_id => $info)
 {	
@@ -325,9 +329,46 @@ foreach ($battle_meta as $prov_id => $info)
 			$name = $unit['name'];
 			$coms = $unit['coms'];
 			$num = $unit['units'];
+			$autocast = !empty($unit['autocast']) ? $unit['autocast'] : null;
+			
+			if (empty($name))
+				{
+				continue;
+				}
 			
 			$unit_id = !empty($unit['id']) ? $unit['id'] : $units_lookup[$name]['id'];
+
 			
+			if ($autocast)
+			{
+				$spell_autocast_id = $spells_lookup[$autocast];
+				
+				$spells['items']["autocast_$autocast"] = "
+#selectitem $item_id
+#constlevel 11
+#name \"autocast_$autocast\"
+#autospell $spell_autocast_id
+#mainpath 0
+#mainlevel 1
+#type 8
+#end
+
+#selectmonster $monster_id
+#copystats $unit_id
+#startitem $item_id
+#onebattlespell $spell_autocast_id
+#end
+";
+
+$unit_id = $monster_id;
+
+$item_id++;
+$monster_id++;
+
+
+			}
+			
+						
 			if (empty($unit_id))
 			{
 				die("Unit $name not found");
@@ -408,6 +449,8 @@ foreach ($battle_meta as $prov_id => $info)
 ";
 	}
 }
+
+//var_dump($spells);die;
 
 $spells_text = '';
 
