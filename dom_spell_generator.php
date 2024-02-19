@@ -35,14 +35,16 @@ $battle_meta = [
 	'my_defenders' => ['start' => -1, 'prov' => "custom", 
 		'armies' => [
 			1 => [
-				['name' => "Son of Heaven", 'coms' => 1, 'units' => 0],
+				['name' => "Son of Heaven", 'coms' => 1, 'units' => 0, 'autocast' => "Mist,Wind Guide"],
 				['name' => "Daughter of the Sun", 'coms' => 1, 'units' => 0, 'autocast' => "Heat from Hell"],
 				['name' => "Rusian Hunter", 'coms' => 0, 'units' => 75],
 				['name' => "Chud Berserker", 'coms' => 0, 'units' => 6],
-				['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 50],
-				['name' => 'Great Bear', 'coms' => 0, 'units' => 75, 'id' => 3003],
-				['name' => 'Alkonost', 'coms' => 1, 'units' => 0],
-				//['name' => 'Slinger', 'coms' => 0, 'units' => 85],
+				['name' => "Rusian Hunter", 'coms' => 0, 'units' => 27],
+				//['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 50],
+				['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 10],
+				['name' => 'Great Bear', 'coms' => 0, 'units' => 90, 'id' => 3003],
+				['name' => 'Alkonost', 'coms' => 1, 'units' => 0, 'autocast' => "Flaming Arrows"],
+				['name' => 'Slinger', 'coms' => 0, 'units' => 80],
 				
 				
 				//['name' => "Militia", 'coms' => 0, 'units' => 30],
@@ -78,16 +80,18 @@ $battle_meta = [
 				//['name' => "Forest Troll", 'coms' => 1, 'units' => 10],
 				//['name' => "Dai Oni", 'coms' => 1, 'units' => 0],
 				//['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 10],
-				['name' => "Polemarch", 'coms' => 5, 'units' => 0],
+				//['name' => "Polemarch", 'coms' => 5, 'units' => 0],
 				//['name' => "Lochos", 'coms' => 1, 'units' => 0],
 				//['name' => "Kryptes", 'coms' => 5, 'units' => 0],
 				//['name' => "Geronte", 'coms' => 1, 'units' => 0],
 				//['name' => "Horse Tribe Cavalry", 'coms' => 1, 'units' => 50],
-				['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 100],
+			//	['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 100],
 				//['name' => "Clockwork Soldier", 'coms' => 0, 'units' => 20],
 				//['name' => "Gigante Ekdromos", 'coms' => 0, 'units' => 10],
 				//['name' => "Machaka Archer", 'coms' => 0, 'units' => 80],
-				['name' => "Helote Peltast", 'coms' => 0, 'units' => 750],
+				//['name' => "Helote Peltast", 'coms' => 0, 'units' => 750],
+				
+				['name' => "Cu Sidhe", 'coms' => 0, 'units' => 80],
 				
 				//['name' => "Fir Bolg Warrior", 'coms' => 1, 'units' => 30],
 				//['name' => "Fir Bolg Slinger", 'coms' => 1, 'units' => 30],
@@ -128,6 +132,316 @@ $battle_meta = [
                         ]
                 ]
         ],
+    
+    170 => 
+  array (
+    'start' => 9512,
+    'prov' => '170',
+    'armies' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Sidhe Warrior',
+          'coms' => 0,
+          'units' => 13,
+        ),
+        1 => 
+        array (
+          'name' => 'Tuatha Warrior',
+          'coms' => 0,
+          'units' => 31,
+        ),
+        2 => 
+        array (
+          'name' => 'Sidhe Lord',
+          'coms' => 2,
+          'units' => 0,
+        ),
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Sidhe Warrior',
+          'coms' => 0,
+          'units' => 13,
+        ),
+        1 => 
+        array (
+          'name' => 'Tuatha Warrior',
+          'coms' => 0,
+          'units' => 31,
+        ),
+        2 => 
+        array (
+          'name' => 'Sidhe Lord',
+          'coms' => 2,
+          'units' => 0,
+        ),
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Fir Bolg Militia',
+          'coms' => 0,
+          'units' => 14,
+        ),
+        1 => 
+        array (
+          'name' => 'Fir Bolg Slinger',
+          'coms' => 0,
+          'units' => 14,
+        ),
+        2 => 
+        array (
+          'name' => 'Rusian Chieftain',
+          'coms' => 1,
+          'units' => 0,
+        ),
+      ),
+      5 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Fir Bolg Militia',
+          'coms' => 0,
+          'units' => 6,
+        ),
+        1 => 
+        array (
+          'name' => 'Fir Bolg Slinger',
+          'coms' => 0,
+          'units' => 2,
+        ),
+        2 => 
+        array (
+          'name' => 'Rusian Chieftain',
+          'coms' => 1,
+          'units' => 0,
+        ),
+      ),
+    ),
+    'end' => 9526,
+  ),
+  184 => 
+  array (
+    'start' => 9618,
+    'prov' => '184',
+    'armies' => 
+    array (
+      0 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Barbarian',
+          'coms' => 0,
+          'units' => 1,
+        ),
+        1 => 
+        array (
+          'name' => 'Barbarian',
+          'coms' => 0,
+          'units' => 1,
+        ),
+        2 => 
+        array (
+          'name' => 'Lion Tribe Warrior',
+          'coms' => 0,
+          'units' => 5,
+        ),
+        3 => 
+        array (
+          'name' => 'Sidhe Warrior',
+          'coms' => 0,
+          'units' => 41,
+        ),
+        4 => 
+        array (
+          'name' => 'Tuatha Warrior',
+          'coms' => 0,
+          'units' => 66,
+        ),
+        5 => 
+        array (
+          'name' => 'Sidhe Lord',
+          'coms' => 3,
+          'units' => 0,
+        ),
+        6 => 
+        array (
+          'name' => 'Bean Sidhe',
+          'coms' => 6,
+          'units' => 0,
+        ),
+        7 => 
+        array (
+          'name' => 'Baobhan Sidhe',
+          'coms' => 1,
+          'units' => 0,
+        ),
+        8 => 
+        array (
+          'name' => 'Hoplite',
+          'coms' => 0,
+          'units' => 1,
+        ),
+      ),
+      1 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Barbarian',
+          'coms' => 0,
+          'units' => 0,
+        ),
+        1 => 
+        array (
+          'name' => 'Lion Tribe Warrior',
+          'coms' => 0,
+          'units' => 0,
+        ),
+        2 => 
+        array (
+          'name' => 'Sidhe Warrior',
+          'coms' => 0,
+          'units' => 38,
+        ),
+        3 => 
+        array (
+          'name' => 'Tuatha Warrior',
+          'coms' => 0,
+          'units' => 59,
+        ),
+        4 => 
+        array (
+          'name' => 'Sidhe Lord',
+          'coms' => 3,
+          'units' => 0,
+        ),
+        5 => 
+        array (
+          'name' => 'Bean Sidhe',
+          'coms' => 6,
+          'units' => 0,
+        ),
+        6 => 
+        array (
+          'name' => 'Baobhan Sidhe',
+          'coms' => 1,
+          'units' => 0,
+        ),
+        7 => 
+        array (
+          'name' => 'Hoplite',
+          'coms' => 0,
+          'units' => 1,
+        ),
+      ),
+      2 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Slinger',
+          'coms' => 0,
+          'units' => 1,
+        ),
+        1 => 
+        array (
+          'name' => 'Woodsman',
+          'coms' => 0,
+          'units' => 24,
+        ),
+        2 => 
+        array (
+          'name' => 'Lion Tribe Archer',
+          'coms' => 0,
+          'units' => 3,
+        ),
+        3 => 
+        array (
+          'name' => 'Rusian Hunter',
+          'coms' => 0,
+          'units' => 38,
+        ),
+        4 => 
+        array (
+          'name' => 'Rusian Warrior',
+          'coms' => 0,
+          'units' => 17,
+        ),
+        5 => 
+        array (
+          'name' => 'Rusian Warrior',
+          'coms' => 0,
+          'units' => 7,
+        ),
+        6 => 
+        array (
+          'name' => 'Rusian Chieftain',
+          'coms' => 3,
+          'units' => 0,
+        ),
+      ),
+      3 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Woodsman',
+          'coms' => 0,
+          'units' => 0,
+        ),
+        1 => 
+        array (
+          'name' => 'Rusian Hunter',
+          'coms' => 0,
+          'units' => 0,
+        ),
+        2 => 
+        array (
+          'name' => 'Rusian Warrior',
+          'coms' => 0,
+          'units' => 0,
+        ),
+        3 => 
+        array (
+          'name' => 'Rusian Warrior',
+          'coms' => 0,
+          'units' => 0,
+        ),
+        4 => 
+        array (
+          'name' => 'Rusian Chieftain',
+          'coms' => 2,
+          'units' => 0,
+        ),
+      ),
+      4 => 
+      array (
+        0 => 
+        array (
+          'name' => 'Woodsman Blowpipe',
+          'coms' => 0,
+          'units' => 1,
+        ),
+        1 => 
+        array (
+          'name' => 'Woodsman',
+          'coms' => 0,
+          'units' => 1,
+        ),
+        2 => 
+        array (
+          'name' => 'Rusian Chieftain',
+          'coms' => 1,
+          'units' => 0,
+        ),
+      ),
+    ),
+    'end' => 9652,
+  )
 	
 	# todo add mpaths and gear 
 ];
@@ -280,7 +594,7 @@ if (file_exists($log_path)) {
 }
 
 var_dump(array_keys($battle_meta));
-
+echo var_export($battle_meta, true);
 
 
 $uniq = 0;
@@ -341,9 +655,10 @@ foreach ($battle_meta as $prov_id => $info)
 			
 			if ($autocast)
 			{
-				$spell_autocast_id = $spells_lookup[$autocast];
+				$autocasts = explode(',', $autocast);
+				$spell_autocast_ids = array_map(function ($name) use ($spells_lookup) { return $spells_lookup[$name];}, $autocasts);
 				
-				$spells['items']["autocast_$autocast"] = "
+	/*			
 #selectitem $item_id
 #constlevel 11
 #name \"autocast_$autocast\"
@@ -353,11 +668,16 @@ foreach ($battle_meta as $prov_id => $info)
 #type 8
 #end
 
+#startitem $item_id
+
+*/
+$spells['items']["autocast_$autocast"] = "
+
 #selectmonster $monster_id
 #copystats $unit_id
-#startitem $item_id
-#onebattlespell $spell_autocast_id
-#end
+\n".
+implode('', array_map(function($i) { return "#onebattlespell $i\n";}, $spell_autocast_ids))
+."\n#end
 ";
 
 $unit_id = $monster_id;
