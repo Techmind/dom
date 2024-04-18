@@ -23,6 +23,17 @@ $debug_mod_location =  $app_data_dir . "mods/111/Debug_509_nor.dm";
 
 $debug_mod_template = __DIR__ . "/Debug_509_nor.dm";
 
+$gcost_file = __DIR__ . "/gcost.csv";
+
+$gcosts_h = fopen($gcost_file, 'r');
+
+$gcost_map = array();
+while (($line = fgetcsv($gcosts_h, 1000, "\t")) !== FALSE) {
+  //$line is an array of the csv elements
+  $gcost_map[$line[0]] = $line[1];
+}
+
+
 echo "Usage: change the code to write a spells generating armies (see \$battle_meta)
 OR launch dominions with debug flag and watch reports/battles and script will generate armies from log files\n\n";
 
@@ -141,12 +152,35 @@ $battle_meta = [
 	'fbirds' => ['start' => -1, 'prov' => "custom",
                 'armies' => [
                         1 => [
-                                ['name' => "Firebird", 'coms' => 0, 'units' => 200],
+                                ['name' => "Firebird", 'coms' => 0, 'units' => 40],
                                 //['name' => "Barbarian", 'coms' => 0, 'units' => 40],
 
                         ],
                         3 => [
                                 ['name' => 'Barbarian Heavy Horseman', 'coms' => 0, 'units' => 4],
+                        ]
+                ]
+        ],
+    'blitz' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+                        		['name' => 'Flame Spirit', 'coms' => 1, 'units' => 0],
+                                ['name' => "Ichtyid Lord", 'coms' => 1, 'units' => 0],
+                                ['name' => "Ichtyid Shaman", 'coms' => 1, 'units' => 0],
+                                ['name' => "Solar Serpent", 'coms' => 1, 'units' => 0],
+                                ['name' => 'Fire Snake', 'coms' => 0, 'units' => 84],
+                                ['name' => "Horned Serpent", 'coms' => 0, 'units' => 61],
+                                ['name' => "Ichtyid", 'coms' => 0, 'units' => 41],
+                                ['name' => "Ichtyid Warrior", 'coms' => 0, 'units' => 66],
+                                ['name' => "Scorpion Beast", 'coms' => 0, 'units' => 56],
+                                ['name' => "Will o' the Wisp", 'coms' => 0, 'units' => 49],
+
+                        ],
+                        3 => [
+                                ['name' => 'Palankasha', 'coms' => 0, 'units' => 36],
+                                ['name' => 'Atavi Archer', 'coms' => 0, 'units' => 58],
+                                ['name' => 'Bandar Archer', 'coms' => 0, 'units' => 20],
+                                ['name' => 'Raksharaja', 'coms' => 1, 'units' => 0, 'autospell' => 'Divine Bleessing'],
                         ]
                 ]
         ],
@@ -235,14 +269,40 @@ $sacred_test = [
 	1130 => 16,
 
 	// minotaur
-	234 => 40
+	234 => 40,
+	
+	// elephant
+	2307 => 80,
+	// chud berserker
+	2994 => 35,
+	// chud skinshifter
+	2997 => 65,
+	// guardian
+	66 => 20,
+	// elfs
+	1503 => 55,
+	// burning one
+	1543 => 70,
+	
+	// kotc
+	135 => 60,
+	// rephalite
+	2030 => 100,
+	// andromania
+	3847 => 0,
+	// mekone
+	3150 => 0,
+	// ulm zwehainder
+	1034 => 0
 ];
 
 $test_gold = 1500;
 
 foreach ($sacred_test as $unit_id => $gcost)
 {
-	$cnt = intval(ceil($test_gold / ($gcost ? $gcost :  $units_lookup[$unit_id]['gcost'])));
+	$gcost_real = ($gcost ? $gcost :  ($gcost_map[$unit_id] ? $gcost_map[$unit_id] : $units_lookup[$unit_id]['gcost']));
+	
+	$cnt = intval(ceil($test_gold / $gcost_real));
 	$name = $units_lookup[$unit_id]['name'];
 	
 	$battle_meta["$name"] = ['start' => -1, 'prov' => "custom_$unit_id", 
