@@ -3,7 +3,7 @@ $app_data_dir = !empty($_ENV["APPDATA"]) ? $_ENV["APPDATA"] : $_SERVER["APPDATA"
 $app_data_dir = "/home/ilya/.dominions6/";
 
 // launch Domninions with -d flag to create debug log and watch reports you want recreated
-$log_path = 'log3.txt';
+$log_path = 'log.txt';
 // use mod inspector to find unit id's
 // [TODO] add dependecny using git submodules ?
 $mod_inspector_path = __DIR__ . DIRECTORY_SEPARATOR . "dom6inspector" . DIRECTORY_SEPARATOR  .  "gamedata" . DIRECTORY_SEPARATOR;
@@ -12,12 +12,17 @@ $units_file = $mod_inspector_path . 'BaseU.csv';
 $spells_file = $mod_inspector_path . 'spells.csv';
 $items_file = $mod_inspector_path . 'BaseI.csv';
 
+// 4 astral
+// -1 None
+// 6 nature
+$spell_school = 4;
+
 // mods for new units (WH in this case)
 // TODO add linux suport ?
 $mods = [
 	//'/home/ilya/.dominions5/mods/StoneSoupAuction Nations 0.641.dm',                                                           
 	//'/home/ilya/.dominions5/mods/DomEnhanced1_84.dm', "/home/ilya/.dominions5/mods/SparkOfDivinity_Enhanced1_2.dm", "/home/ilya/.dominions5/mods/AuxiliaryEmpires0.70wspf.dm", "/home/ilya/.dominions5/mods/bozmod_1.542_lite_dsp.dm"
-//	$app_data_dir . "\Dominions5\mods\WH_6_25.dm"                                                                                                
+	$app_data_dir . "mods/SCBM_v1.04/SCBM_v1.04.dm"                                                                                                
 ];
 $debug_mod_location =  $app_data_dir . "mods/111/Debug_509_nor.dm";
 
@@ -32,7 +37,6 @@ while (($line = fgetcsv($gcosts_h, 1000, "\t")) !== FALSE) {
   //$line is an array of the csv elements
   $gcost_map[$line[0]] = $line[1];
 }
-
 
 echo "Usage: change the code to write a spells generating armies (see \$battle_meta)
 OR launch dominions with debug flag and watch reports/battles and script will generate armies from log files\n\n";
@@ -161,26 +165,69 @@ $battle_meta = [
                         ]
                 ]
         ],
-    'blitz' => ['start' => -1, 'prov' => "custom",
+    'cenos_90' => ['start' => -1, 'prov' => "custom",
                 'armies' => [
                         1 => [
-                        		['name' => 'Flame Spirit', 'coms' => 1, 'units' => 0],
-                                ['name' => "Ichtyid Lord", 'coms' => 1, 'units' => 0],
-                                ['name' => "Ichtyid Shaman", 'coms' => 1, 'units' => 0],
-                                ['name' => "Solar Serpent", 'coms' => 1, 'units' => 0],
-                                ['name' => 'Fire Snake', 'coms' => 0, 'units' => 84],
-                                ['name' => "Horned Serpent", 'coms' => 0, 'units' => 61],
-                                ['name' => "Ichtyid", 'coms' => 0, 'units' => 41],
-                                ['name' => "Ichtyid Warrior", 'coms' => 0, 'units' => 66],
-                                ['name' => "Scorpion Beast", 'coms' => 0, 'units' => 56],
-                                ['name' => "Will o' the Wisp", 'coms' => 0, 'units' => 49],
+                                ['name' => "Firebird", 'coms' => 0, 'units' => 40],
+                                //['name' => "Barbarian", 'coms' => 0, 'units' => 40],
 
                         ],
                         3 => [
-                                ['name' => 'Palankasha', 'coms' => 0, 'units' => 36],
-                                ['name' => 'Atavi Archer', 'coms' => 0, 'units' => 58],
-                                ['name' => 'Bandar Archer', 'coms' => 0, 'units' => 20],
-                                ['name' => 'Raksharaja', 'coms' => 1, 'units' => 0, 'autospell' => 'Divine Bleessing'],
+                        		['name' => 'Cynocephalian Shaman', 'coms' => 2, 'units' => 0],
+                                ['name' => 'Cynocephalian Hunter', 'coms' => 0, 'units' => 45],
+                                ['name' => 'Cynocephalian Warrior', 'coms' => 0, 'units' => 45],
+                        ]
+                ]
+        ],
+    'testblinds' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+					['name' => "Pale One Commander", 'coms' => 1, 'units' => 0],
+					['name' => "Blindlord", 'coms' => 1, 'units' => 0],
+					['name' => "Ktonian Reanimator", 'coms' => 1, 'units' => 0],
+					['name' => "Possessed Flame Corpse", 'coms' => 1, 'units' => 0],
+					['name' => "Agarthan Light Crossbowman", 'coms' => 0, 'units' => 120],
+					['name' => "Blindfighter", 'coms' => 0, 'units' => 30],
+					['name' => "Abysian Heavy Infantry", 'coms' => 0, 'units' => 60],
+					['name' => "Fire Drake", 'coms' => 0, 'units' => 30],
+					['name' => "Shard Wight", 'coms' => 0, 'units' => 30],
+
+                        ],
+                        3 => [
+                        		['name' => 'Cynocephalian Shaman', 'coms' => 2, 'units' => 0],
+                                ['name' => 'Cynocephalian Hunter', 'coms' => 0, 'units' => 20],
+                                ['name' => 'Cynocephalian Warrior', 'coms' => 0, 'units' => 20],
+                        ]
+                ]
+        ],
+    
+    'blitz' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+                        		['name' => 'Green Knight', 'coms' => 1, 'units' => 0],
+                        		['name' => 'Knight of Avalon', 'coms' => 0, 'units' => 22],
+                        		['name' => 'Longbowman', 'coms' => 0, 'units' => 10],
+                        		['name' => 'Archer', 'coms' => 0, 'units' => 10],
+                        		['name' => 'Logrian Warrior', 'coms' => 0, 'units' => 17],
+                        		['name' => 'Logrian Slinger', 'coms' => 0, 'units' => 11],
+                        		['name' => 'Royal Forester', 'coms' => 1, 'units' => 0, 'items' => 'Flambeau'],
+                        		['name' => 'Eparch', 'coms' => 1, 'units' => 0, 'autospell' => 'Divine Blessing'],
+                        		['name' => 'Sleeper', 'coms' => 1, 'units' => 0],
+                        		
+                        ],
+                        3 => [
+                                ['name' => 'Barbarian Chief', 'coms' => 2, 'units' => 0],
+                                ['name' => 'Celestial Master', 'coms' => 1, 'units' => 0],
+                                ['name' => 'Cloud Mage', 'coms' => 1, 'units' => 0],
+                                ['name' => 'Commander', 'coms' => 1, 'units' => 0],
+                                ['name' => 'Horse Tribe Cavalry', 'units' => 6, 'coms' => 0],
+                                ['name' => 'Imperial Horseman', 'units' => 1, 'coms' => 0],
+                                ['name' => 'Red Guard', 'units' => 7, 'coms' => 0],
+                                ['name' => 'Eunuch', 'units' => 0, 'coms' => 1],
+                                ['name' => 'Archer', 'units' => 12, 'coms' => 0],
+                                ['name' => 'Barbarian', 'units' => 62, 'coms' => 0],
+                                ['name' => 'Imperial Footman', 'units' => 42, 'coms' => 0],
+                                ['name' => 'Imperial Archer', 'units' => 15, 'coms' => 0],                                                               
                         ]
                 ]
         ],
@@ -242,6 +289,7 @@ if (($handle = fopen($units_file, "r")) !== FALSE) {
 
 //unit auto-tests spells
 $sacred_test = [
+	/*
 	// recruitanywhere
 	727 => 26,
 	845 => 140,
@@ -294,6 +342,25 @@ $sacred_test = [
 	3150 => 0,
 	// ulm zwehainder
 	1034 => 0
+	889 => 0, // ma mchaka black spider
+	886 => 0, // spider knight
+	64 => 0, // knight of avalon
+	57 => 0,
+	65 => 0,
+	842 => 0, // jotun hirdman
+	278 => 0, // speramen
+	3847 => 0,// andro top troop  
+	68 => 0, // ulm battleaxe 
+	80 => 0,
+	3404 => 0, // vaetti bersk	
+	3148 => 0,
+	1509 => 0,
+	3463 => 0,
+	3110 => 0,
+	1676 => 0,
+	1352 => 0*/
+	
+
 ];
 
 $test_gold = 1500;
@@ -595,11 +662,13 @@ $monster_id++;
 		
 		$spell_internal_name = $prefix . $name . '_' . $uniq;
 		
+		if ($prev_name)
+		{
 		$spells[$spell_name][$spell_internal_name] = "
 #newspell
 #name \"$spell_name\"
 #descr \"Debug summon test army\"
-#path 0 4
+#path 0 $spell_school
 #school 0
 #researchlevel 0
 #pathlevel 0 1
@@ -610,6 +679,23 @@ $monster_id++;
 #nextspell \"$prev_name\"
 #end
 ";
+		} else
+		{
+			$spells[$spell_name][$spell_internal_name] = "
+#newspell
+#name \"$spell_name\"
+#descr \"Debug summon test army\"
+#path 0 $spell_school
+#school 0
+#researchlevel 0
+#pathlevel 0 1
+#fatiguecost 100
+#effect 10021
+#damage 1158 
+#spec 8388608
+#end
+";
+		}
 	}
 }
 
@@ -626,7 +712,34 @@ foreach ($spells as $name => $rows)
 	}
 }
 
+$free_spells = file_get_contents("free_spells.txt");
+
+$free_spells = explode("\n", $free_spells);
+
+foreach ($free_spells as $k => $v)
+{
+	$name = trim($v);
+	if (!empty($name) && !empty($spells_lookup[$name])) {
+		$free_spells[$k] = $spells_lookup[$name];
+	} else {
+		unset($free_spells[$k]);
+	}
+}
+
+// Sloop mod some random spell
+$free_spells[1531] = 1531;
+$free_spells[1167] = 1167;
 //echo $spells_text;
+
+foreach ($free_spells as $id)
+{
+	$spells_text .= "
+	#selectspell $id
+	#researchlevel 0
+	#end
+";
+}
+
 
 // TODO imply research from CASTERS spell or pass from console
 

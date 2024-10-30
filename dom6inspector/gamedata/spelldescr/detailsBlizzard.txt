@@ -1,0 +1,2 @@
+Sets cold scale to 1. Precision reduced by half, 50% of missiles lost, clouds dissipate twice as fast.
+Can only be cast in heat 0 or 1.

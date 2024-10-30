@@ -1,0 +1,944 @@
+
+-------------------------
+----- DOMINIONS 6 -------
+-------------------------
+
+Version version 6.07b (607), dbglevel 4, pc_endian
+OS version: 220400 'Release:	22.04', RAM 17757 MB, CPUS 4(2)
+FreeRAM 6927 MB
+datapath='./data'
+confpath='/home/ilya/.dominions6'
+savepath='/home/ilya/.dominions6/savedgames'
+modpath='/home/ilya/.dominions6/mods'
+localmappath='/home/ilya/.dominions6/maps'
+temppath='/run/user/1001/dom6_26079'
+installpath='.'
+bgload_init: 1 thread
+use display nbr: -1
+SDL Version: 2.0.20
+Checking display mode: 1280*1024
+  closest display mode: 1280*1024
+Create window 1200x800, fs 0, bpp 24, z 16, dbl 1, ms 0 (disps 1)
+OpenGL MAJOR 1, MINOR 1, DrawableSize 1200*800
+max texture size: 16384
+maxxres 1920, maxyres 1080, defxres 1920, defyres 1080
+fullxres -2, fullyres -2, winxres 1200, winyres 800
+-- InitGLStuff --
+Clear screen
+glClear
+swap
+done
+Init extensions
+Init OpenGL extensions
+supported_ARB_texture_non_power_of_two = 1
+supported_ARB_vertex_buffer_object = 1
+supported_SGIS_generate_mipmap = 1
+supported_ARB_texture_compression = 1
+supported_ARB_point_sprite = 1
+Renderer (Mesa Intel(R) UHD Graphics (TGL GT2))
+Vendor (Intel)
+Version (4.6 (Compatibility Profile) Mesa 23.0.4-0ubuntu1~22.04.1)
+renderpath = -1
+filepath_data = ./data
+InitGUI, './data'
+InitDynTTF2
+InitPrint (forcep2 0)
+pw res 900 600
+loadfont './data/guifont.ttf' 16 -1
+creating new text tex 'Please Wait' (83*18) forcep2 0
+pixmode = GL_RGBA4
+modechange: mode 4, oldmode -1
+Window shown
+Window event unknown (4)
+Window exposed
+Window event unknown (10)
+Window focus gained
+CreateMaxTexture ./data/smoke_white.tga, alphamode 2, mipmaps 1, magfilt 1, minfilt 1, compr 0, mx 16384
+Not a sgi pic, 0
+sgi -1
+tga 3210
+tga2rgba32 alphamode 2 tgatype 3210 (256x256) tgalen198679
+pixmode = GL_RGBA
+CreateMaxTexture ./data/expl_white.tga, alphamode 2, mipmaps 1, magfilt 1, minfilt 1, compr 0, mx 16384
+Not a sgi pic, 0
+sgi -1
+tga 3210
+tga2rgba32 alphamode 2 tgatype 3210 (128x128) tgalen57002
+pixmode = GL_RGBA
+Create tex ./data/tile.tga
+CreateMaxTexture ./data/tile.tga, alphamode 0, mipmaps 1, magfilt 1, minfilt 1, compr 0, mx 16384
+Not a sgi pic, 0
+sgi -1
+tga 10
+tga2rgba32 alphamode 0 tgatype 10 (512x512) tgalen771692
+pixmode = GL_RGB
+Loading 33 (./data/monster.trs)
+pixmode = GL_RGB
+Unit sprite label 0 = 0
+Unit sprite label 1 = 518
+Unit sprite label 2 = 604
+Unit sprite label 3 = 1216
+Unit sprite label 4 = 1290
+Unit sprite label 5 = 1369
+Unit sprite label 6 = 1451
+Unit sprite label 7 = 1535
+Unit sprite label 8 = 1604
+Unit sprite label 9 = 1656
+Unit sprite label 10 = 1794
+Unit sprite label 11 = 1878
+Unit sprite label 12 = 1962
+Unit sprite label 13 = 2014
+Unit sprite label 14 = 2114
+Unit sprite label 15 = 2212
+Unit sprite label 16 = 2292
+Unit sprite label 17 = 2372
+Unit sprite label 18 = 2464
+Unit sprite label 19 = 2554
+Unit sprite label 20 = 2670
+Unit sprite label 21 = 2671
+Unit sprite label 22 = 2735
+Unit sprite label 23 = 2789
+Unit sprite label 24 = 2853
+Unit sprite label 25 = 2951
+Unit sprite label 26 = 3007
+Unit sprite label 27 = 3085
+Unit sprite label 28 = 3177
+Unit sprite label 29 = 3235
+Unit sprite label 30 = 3331
+Unit sprite label 31 = 3415
+Unit sprite label 32 = 3517
+Unit sprite label 33 = 3585
+Unit sprite label 34 = 3645
+Unit sprite label 35 = 3703
+Unit sprite label 36 = 3733
+Unit sprite label 37 = 3813
+Unit sprite label 38 = 3911
+Unit sprite label 39 = 3975
+Unit sprite label 40 = 4043
+Unit sprite label 41 = 4099
+Unit sprite label 42 = 4233
+Unit sprite label 43 = 4345
+Unit sprite label 44 = 4384
+Unit sprite label 45 = 4412
+Unit sprite label 46 = 4498
+Unit sprite label 47 = 4540
+Unit sprite label 48 = 4586
+Unit sprite label 49 = 4678
+Unit sprite label 50 = 4718
+Unit sprite label 51 = 4806
+Unit sprite label 52 = 4880
+Unit sprite label 53 = 4918
+Unit sprite label 54 = 4958
+Unit sprite label 55 = 5080
+Unit sprite label 56 = 5136
+Unit sprite label 57 = 5184
+Unit sprite label 58 = 5288
+Unit sprite label 59 = 5346
+Unit sprite label 60 = 5432
+Unit sprite label 61 = 5533
+Unit sprite label 62 = 5655
+Unit sprite label 63 = 5735
+Unit sprite label 64 = 5777
+Unit sprite label 65 = 5879
+Unit sprite label 66 = 5961
+Unit sprite label 67 = 6041
+Unit sprite label 68 = 6149
+Unit sprite label 69 = 6211
+Unit sprite label 70 = 6217
+Unit sprite label 71 = 6287
+Unit sprite label 72 = 6359
+Unit sprite label 73 = 6435
+Unit sprite label 74 = 6503
+Unit sprite label 75 = 6571
+Unit sprite label 76 = 6573
+Unit sprite label 77 = 6639
+Unit sprite label 78 = 6711
+Unit sprite label 79 = 6791
+Unit sprite label 80 = 6865
+Unit sprite label 81 = 6937
+Unit sprite label 82 = 7011
+Unit sprite label 83 = 7081
+Unit sprite label 84 = 7138
+Unit sprite label 85 = 7144
+Unit sprite label 86 = 7238
+Unit sprite label 87 = 7332
+Unit sprite label 88 = 7454
+Unit sprite label 89 = 7490
+Unit sprite label 90 = 7580
+Unit sprite label 91 = 7644
+Unit sprite label 92 = 7686
+Unit sprite label 93 = 7816
+Unit sprite label 94 = 8054
+Unit sprite label 95 = 8088
+Unit sprite label 96 = 8270
+Unit sprite label 97 = 8332
+Unit sprite label 98 = 8334
+Unit sprite label 99 = 8396
+Unit sprite label 100 = 8486
+Unit sprite label 101 = 8624
+Unit sprite label 102 = 8726
+Unit sprite label 103 = 8812
+Unit sprite label 104 = 8885
+Unit sprite label 105 = 8945
+Unit sprite label 106 = 9059
+Unit sprite label 107 = 9125
+Unit sprite label 108 = 9189
+Unit sprite label 109 = 9273
+Unit sprite label 110 = 9351
+Unit sprite label 111 = 9363
+Unit sprite label 112 = 9531
+Unit sprite label 113 = 9627
+Unit sprite label 114 = 9705
+Unit sprite label 115 = 9765
+Unit sprite label 116 = 9947
+Unit sprite label 117 = 10031
+Unit sprite label 118 = 10101
+Unit sprite label 119 = 10103
+Unit sprite label 120 = 10173
+Unit sprite label 121 = 10259
+Unit sprite label 122 = 10325
+Unit sprite label 123 = 10411
+Unit sprite label 124 = 10467
+-- sound_init --
+Init sound (1)
+sound initcommon (./data)
+  loading pulse lib
+  open PulseAudio
+  Pulse sound started
+sound: underflow st -1148844709 (1)
+sound: underflow st 1 (1)
+tree Plains(0): sf0 s0 tgas: & 
+tree North Forest(1): sf0 s0 tgas: & 
+tree South Forest(2): sf0 s0 tgas: & 
+tree Desert(3): sf0 s0 tgas: & 
+tree Swamp(4): sf0 s0 tgas: & 
+tree Poison Swamp(5): sf0 s0 tgas: & 
+tree Stone Desert(6): sf0 s0 tgas: & 
+tree Bushland(7): sf0 s0 tgas: & 
+tree Beach(8): sf0 s0 tgas: & 
+tree Sea(9): sf0 s0 tgas: & 
+tree Björk(10): sf-2 s0 tgas:nybjork1.tga & nybjork2.tga
+tga2rgba32 alphamode 1 tgatype 3210 (270x512) tgalen231620
+  atlas 1: 0.00,0.00 - 0.07,0.17
+tga2rgba32 alphamode 1 tgatype 3210 (290x512) tgalen263514
+  atlas 1: 0.07,0.00 - 0.14,0.17
+tree Björk(11): sf-2 s0 tgas:nybjork1.tga & nybjork2.tga
+  tgaatlas: reusing old './data/nybjork1.tga'
+  tgaatlas: reusing old './data/nybjork2.tga'
+tree Gran(12): sf-2 s0 tgas:nygran1.tga & nygran2.tga
+tga2rgba32 alphamode 1 tgatype 3210 (350x512) tgalen329608
+  atlas 1: 0.14,0.00 - 0.23,0.17
+tga2rgba32 alphamode 1 tgatype 3210 (350x512) tgalen330280
+  atlas 1: 0.23,0.00 - 0.31,0.17
+tree Tall(13): sf-2 s0 tgas:nytall1.tga & nytall2.tga
+tga2rgba32 alphamode 1 tgatype 3210 (380x512) tgalen356015
+  atlas 1: 0.32,0.00 - 0.41,0.17
+tga2rgba32 alphamode 1 tgatype 3210 (350x512) tgalen332118
+  atlas 1: 0.41,0.00 - 0.50,0.17
+tree Enbuske(14): sf-2 s0 tgas:enbuske1a.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (112x227) tgalen69197
+  atlas 1: 0.00,0.17 - 0.03,0.24
+tree Lingonris(15): sf-2 s0 tgas:lingonris1a.tga & lingonris1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (94x79) tgalen22454
+  atlas 1: 0.00,0.26 - 0.02,0.28
+tga2rgba32 alphamode 1 tgatype 3210 (94x83) tgalen24548
+  atlas 1: 0.02,0.26 - 0.05,0.28
+tree Dött Lingonris(16): sf-2 s0 tgas:dottris1a.tga & dottris1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (59x61) tgalen11904
+  atlas 1: 0.00,0.30 - 0.01,0.32
+tga2rgba32 alphamode 1 tgatype 3210 (59x62) tgalen12544
+  atlas 1: 0.02,0.30 - 0.03,0.32
+tree Lärkbuske(17): sf-2 s0 tgas:larkbuske1a.tga & larkbuske1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (96x84) tgalen18933
+  atlas 1: 0.05,0.26 - 0.07,0.28
+tga2rgba32 alphamode 1 tgatype 3210 (96x93) tgalen26405
+  atlas 1: 0.08,0.26 - 0.10,0.29
+tree Ormbunke(18): sf-2 s0 tgas:ormbunke1a.tga & ormbunke1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (112x74) tgalen23559
+  atlas 1: 0.10,0.26 - 0.13,0.28
+tga2rgba32 alphamode 1 tgatype 3210 (112x76) tgalen23515
+  atlas 1: 0.13,0.26 - 0.16,0.28
+tree Murgröna(19): sf-2 s0 tgas:murgrona1a.tga & murgrona1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (97x82) tgalen20852
+  atlas 1: 0.16,0.26 - 0.18,0.28
+tga2rgba32 alphamode 1 tgatype 3210 (97x81) tgalen23722
+  atlas 1: 0.18,0.26 - 0.21,0.28
+tree Smörbuske(20): sf-2 s0 tgas:smorbuske1a.tga & smorbuske1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (99x102) tgalen29288
+  atlas 1: 0.21,0.26 - 0.23,0.29
+tga2rgba32 alphamode 1 tgatype 3210 (99x99) tgalen28053
+  atlas 1: 0.24,0.26 - 0.26,0.29
+tree Kaveldun(21): sf-2 s0 tgas:kaveldun1a.tga & kaveldun1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (39x46) tgalen4803
+  atlas 1: 0.03,0.30 - 0.04,0.31
+tga2rgba32 alphamode 1 tgatype 3210 (39x46) tgalen3979
+  atlas 1: 0.04,0.30 - 0.05,0.31
+tree Yellow Grass(22): sf4 s0 tgas: & 
+Loading 4 (./data/tree.trs)
+  s2rgba 1: w64 h64
+  atlas 1: 0.06,0.30 - 0.07,0.32
+tree Swamp Grass(23): sf4 s2 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.07,0.30 - 0.09,0.32
+tree Green Grass(24): sf4 s3 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.09,0.30 - 0.11,0.32
+tree Yellow Purple Grass(25): sf4 s4 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.11,0.30 - 0.12,0.32
+tree Swamp Flower (Kaktus 1)(26): sf4 s5 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.13,0.30 - 0.14,0.32
+tree Kaktus 2(27): sf4 s6 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.14,0.30 - 0.16,0.32
+tree Kaktus 3(28): sf4 s7 tgas: & 
+  s2rgba 1: w64 h128
+  atlas 1: 0.26,0.26 - 0.28,0.30
+tree Yellow Orange Grass(29): sf4 s8 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.16,0.30 - 0.18,0.32
+tree Green Blue Grass(30): sf4 s9 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.18,0.30 - 0.19,0.32
+tree Yellow Pink Grass(31): sf4 s10 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.20,0.30 - 0.21,0.32
+tree Lonn(32): sf-2 s0 tgas:lonn1a.tga & lonn1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (192x208) tgalen83183
+  atlas 1: 0.03,0.17 - 0.08,0.24
+tga2rgba32 alphamode 1 tgatype 3210 (191x201) tgalen96479
+  atlas 1: 0.08,0.17 - 0.12,0.23
+tree Lonn(33): sf-2 s0 tgas:lonn2a.tga & lonn2b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (197x203) tgalen72538
+  atlas 1: 0.13,0.17 - 0.17,0.24
+tga2rgba32 alphamode 1 tgatype 3210 (197x201) tgalen102337
+  atlas 1: 0.18,0.17 - 0.22,0.23
+tree Palm(34): sf-2 s0 tgas:palm1a.tga & palm1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (325x398) tgalen210599
+  atlas 1: 0.50,0.00 - 0.58,0.13
+tga2rgba32 alphamode 1 tgatype 3210 (325x403) tgalen208166
+  atlas 1: 0.58,0.00 - 0.66,0.13
+tree Palm(35): sf-2 s0 tgas:palm2a.tga & palm2b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (312x405) tgalen205927
+  atlas 1: 0.66,0.00 - 0.74,0.13
+tga2rgba32 alphamode 1 tgatype 3210 (312x398) tgalen183947
+  atlas 1: 0.74,0.00 - 0.81,0.13
+tree Pilträd(36): sf-2 s0 tgas:nypiltrad1.tga & nypiltrad2.tga
+tga2rgba32 alphamode 1 tgatype 3210 (600x512) tgalen688268
+  atlas 1: 0.82,0.00 - 0.96,0.17
+tga2rgba32 alphamode 1 tgatype 3210 (600x512) tgalen694464
+  atlas 1: 0.00,0.32 - 0.15,0.49
+tree Hängpil(37): sf-2 s0 tgas:nyhangpil1.tga & nyhangpil2.tga
+tga2rgba32 alphamode 1 tgatype 3210 (630x512) tgalen764704
+  atlas 1: 0.15,0.32 - 0.30,0.49
+tga2rgba32 alphamode 1 tgatype 3210 (550x512) tgalen637616
+  atlas 1: 0.30,0.32 - 0.44,0.49
+tree Toppträd(38): sf-2 s0 tgas:nytopp1.tga & nytopp2.tga
+tga2rgba32 alphamode 1 tgatype 3210 (627x512) tgalen476626
+  atlas 1: 0.44,0.32 - 0.59,0.49
+tga2rgba32 alphamode 1 tgatype 3210 (582x512) tgalen444225
+  atlas 1: 0.60,0.32 - 0.74,0.49
+tree Gult Träd(39): sf-2 s0 tgas:gultrad1a.tga & gultrad1b.tga
+tga2rgba32 alphamode 1 tgatype 3210 (447x512) tgalen491984
+  atlas 1: 0.74,0.32 - 0.85,0.49
+tga2rgba32 alphamode 1 tgatype 3210 (447x512) tgalen531219
+  atlas 1: 0.85,0.32 - 0.96,0.49
+tree great oak(40): sf-2 s0 tgas:lonn1a.tga & lonn1b.tga
+  tgaatlas: reusing old './data/lonn1a.tga'
+  tgaatlas: reusing old './data/lonn1b.tga'
+tree vattenbos(41): sf4 s11 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.21,0.30 - 0.23,0.32
+tree Large Boulder(42): sf4 s13 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.23,0.30 - 0.25,0.32
+tree Huge Boulder(43): sf4 s12 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.25,0.30 - 0.26,0.32
+tree Small Boulder(44): sf4 s14 tgas: & 
+  s2rgba 1: w32 h32
+  atlas 1: 0.00,0.49 - 0.01,0.50
+tree Burned Stubbe(45): sf4 s15 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.27,0.30 - 0.28,0.32
+tree Burned Stubbe(46): sf4 s16 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.28,0.30 - 0.30,0.32
+tree Stubbe(47): sf4 s17 tgas: & 
+  s2rgba 1: w32 h32
+  atlas 1: 0.01,0.49 - 0.02,0.50
+tree Bushland Grass(48): sf4 s3 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.30,0.30 - 0.32,0.32
+tree Forest Green Grass (southern)(49): sf4 s3 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.32,0.30 - 0.33,0.32
+tree Log(50): sf4 s20 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.34,0.30 - 0.35,0.32
+tree Bushland Bush(51): sf4 s21 tgas: & 
+  s2rgba 1: w64 h32
+  atlas 1: 0.02,0.49 - 0.04,0.50
+tree Poison Swamp Grass(52): sf4 s2 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.35,0.30 - 0.37,0.32
+tree Poison Swamp Flower(53): sf4 s5 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.37,0.30 - 0.39,0.32
+tree Poison Swamp Fungus 1(54): sf4 s18 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.39,0.30 - 0.41,0.32
+tree Poison Swamp Fungus 2(55): sf4 s19 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.41,0.30 - 0.42,0.32
+tree Fungus 1(56): sf4 s18 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.42,0.30 - 0.44,0.32
+tree Fungus 2(57): sf4 s19 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.44,0.30 - 0.46,0.32
+tree Fungus 3(58): sf4 s26 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.46,0.30 - 0.48,0.32
+tree Fungus 4(59): sf4 s27 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.48,0.30 - 0.49,0.32
+tree Fungus 5(60): sf4 s28 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.50,0.30 - 0.51,0.32
+tree Fungus 6(61): sf4 s29 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.51,0.30 - 0.53,0.32
+tree Sjögräsfält (tomt)(62): sf0 s0 tgas: & 
+tree Sjögräs 1a(63): sf-2 s0 tgas:sg1.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (75x430) tgalen56630
+  atlas 1: 0.96,0.32 - 0.98,0.46
+tree Sjögräs 1b(64): sf-2 s0 tgas:sg2.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (72x430) tgalen51830
+  atlas 1: 0.98,0.32 - 1.00,0.46
+tree Sjögräs 2a(65): sf-2 s0 tgas:sg3.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (81x422) tgalen80100
+  atlas 1: 0.00,0.51 - 0.02,0.64
+tree Sjögräs 2b(66): sf-2 s0 tgas:sg4.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (82x415) tgalen78560
+  atlas 1: 0.02,0.51 - 0.04,0.64
+tree Sjögräs 3a(67): sf-2 s0 tgas:sg5.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (65x456) tgalen70128
+  atlas 1: 0.04,0.51 - 0.06,0.65
+tree Sjögräs 3a(68): sf-2 s0 tgas:sg6.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (66x452) tgalen70376
+  atlas 1: 0.06,0.51 - 0.08,0.65
+tree Sjöbuskar(69): sf4 s3 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.53,0.30 - 0.55,0.32
+tree Korallfält (tomt)(70): sf0 s0 tgas: & 
+tree Korall 1(71): sf-2 s0 tgas:korall1.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (204x199) tgalen108514
+  atlas 1: 0.23,0.17 - 0.28,0.23
+tree Korall 2(72): sf-2 s0 tgas:korall2.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (177x116) tgalen59090
+  atlas 1: 0.28,0.26 - 0.32,0.29
+tree Korall 3(73): sf-2 s0 tgas:korall3.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (154x248) tgalen72262
+  atlas 1: 0.28,0.17 - 0.32,0.25
+tree Deep Pillar 1(74): sf-2 s0 tgas:deeppillar1.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (105x221) tgalen54856
+  atlas 1: 0.32,0.17 - 0.34,0.24
+tree Deep Pillar 2(75): sf-2 s0 tgas:deeppillar2.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (87x243) tgalen48748
+  atlas 1: 0.35,0.17 - 0.37,0.25
+tree Deep Pillar 3(76): sf-2 s0 tgas:deeppillar3.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (206x256) tgalen82325
+  atlas 1: 0.37,0.17 - 0.42,0.25
+tree Deep Pillar 4(77): sf-2 s0 tgas:deeppillar4.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (188x142) tgalen64483
+  atlas 1: 0.42,0.17 - 0.47,0.22
+tree Deep Pillar 5(78): sf-2 s0 tgas:deeppillar5.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (127x181) tgalen55256
+  atlas 1: 0.47,0.17 - 0.50,0.23
+tree Deep Pillar 6(79): sf-2 s0 tgas:deeppillar6.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (191x256) tgalen87966
+  atlas 1: 0.50,0.17 - 0.55,0.25
+tree Cave(80): sf0 s0 tgas: & 
+tree Cave Fungus 1(81): sf4 s18 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.55,0.30 - 0.56,0.32
+tree Cave Fungus 2(82): sf4 s19 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.57,0.30 - 0.58,0.32
+tree Cave Fungus 3(83): sf4 s26 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.58,0.30 - 0.60,0.32
+tree Cave Fungus 4(84): sf4 s27 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.60,0.30 - 0.62,0.32
+tree Cave Fungus 5(85): sf4 s28 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.62,0.30 - 0.63,0.32
+tree Cave Fungus 6(86): sf4 s29 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.64,0.30 - 0.65,0.32
+tree Cave Flower field (empty)(87): sf0 s0 tgas: & 
+tree Cave Flower 1(88): sf4 s46 tgas: & 
+  s2rgba 1: w256 h256
+  atlas 1: 0.55,0.17 - 0.61,0.25
+tree Cave Flower 2(89): sf4 s47 tgas: & 
+  s2rgba 1: w256 h256
+  atlas 1: 0.61,0.17 - 0.68,0.25
+tree Cave Flower 3(90): sf4 s48 tgas: & 
+  s2rgba 1: w256 h256
+  atlas 1: 0.68,0.17 - 0.74,0.25
+tree Large Desert Boulder(91): sf4 s13 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.65,0.30 - 0.67,0.32
+tree Huge Desert Boulder(92): sf4 s12 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.67,0.30 - 0.69,0.32
+tree Small Desert Boulder(93): sf4 s14 tgas: & 
+  s2rgba 1: w32 h32
+  atlas 1: 0.04,0.49 - 0.04,0.50
+tree Stone Wall(94): sf-3 s0 tgas:wall.obj & stone.tga
+tga2rgba32 alphamode 1 tgatype 10 (512x384) tgalen591344
+  atlas 1: 0.00,0.67 - 0.12,0.80
+tree Stone Wall(95): sf-3 s0 tgas:wall.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Stone Wall(96): sf-3 s0 tgas:wall.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Stone Wall(97): sf-3 s0 tgas:wall.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Stone Wall 2(98): sf-3 s0 tgas:wall2.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Stone Wall 2(99): sf-3 s0 tgas:wall2.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Stone Wall 2(100): sf-3 s0 tgas:wall2.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Stone Wall 2(101): sf-3 s0 tgas:wall2.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Stairs(102): sf-3 s0 tgas:stairs.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Tower(103): sf-3 s0 tgas:tower.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Tower 2(104): sf-3 s0 tgas:dbltower.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Ruined Wall(105): sf-3 s0 tgas:brokenwall.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Ruined Wall(106): sf-3 s0 tgas:brokenwall.obj & stone.tga
+  tgaatlas: reusing old './data/stone.tga'
+tree Ice Wall(107): sf-3 s0 tgas:wall.obj & ice.tga
+tga2rgba32 alphamode 1 tgatype 10 (512x512) tgalen771877
+  atlas 1: 0.08,0.51 - 0.20,0.67
+tree Ice Wall(108): sf-3 s0 tgas:wall.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Ice Wall(109): sf-3 s0 tgas:wall.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Ice Wall(110): sf-3 s0 tgas:wall.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Ice Stairs(111): sf-3 s0 tgas:stairs.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Ice Tower(112): sf-3 s0 tgas:tower.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Ice Tower 2(113): sf-3 s0 tgas:rooftower.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Ruined Ice Wall(114): sf-3 s0 tgas:brokenwall.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Ruined Ice Wall(115): sf-3 s0 tgas:brokenwall.obj & ice.tga
+  tgaatlas: reusing old './data/ice.tga'
+tree Palisade(116): sf-3 s0 tgas:palisade.obj & wood.tga
+tga2rgba32 alphamode 1 tgatype 3210 (512x512) tgalen1050080
+  atlas 1: 0.21,0.51 - 0.33,0.67
+tree Palisade(117): sf-3 s0 tgas:palisade.obj & wood.tga
+  tgaatlas: reusing old './data/wood.tga'
+tree Palisade(118): sf-3 s0 tgas:palisade.obj & wood.tga
+  tgaatlas: reusing old './data/wood.tga'
+tree Palisade(119): sf-3 s0 tgas:palisade.obj & wood.tga
+  tgaatlas: reusing old './data/wood.tga'
+tree Palisade Stairs(120): sf-3 s0 tgas:palstairs.obj & wood.tga
+  tgaatlas: reusing old './data/wood.tga'
+tree Palisade Tower(121): sf-3 s0 tgas:paltower.obj & wood.tga
+  tgaatlas: reusing old './data/wood.tga'
+tree Broken Palisade(122): sf-3 s0 tgas:brokenpal.obj & wood.tga
+  tgaatlas: reusing old './data/wood.tga'
+tree Broken Palisade(123): sf-3 s0 tgas:brokenpal.obj & wood.tga
+  tgaatlas: reusing old './data/wood.tga'
+tree Bramble Wall(124): sf-3 s0 tgas:bramblewall.obj & woodvines.tga
+tga2rgba32 alphamode 1 tgatype 3210 (512x512) tgalen1050451
+  atlas 1: 0.33,0.51 - 0.46,0.67
+tree Bramble Wall(125): sf-3 s0 tgas:bramblewall.obj & woodvines.tga
+  tgaatlas: reusing old './data/woodvines.tga'
+tree Bramble Wall(126): sf-3 s0 tgas:bramblewall.obj & woodvines.tga
+  tgaatlas: reusing old './data/woodvines.tga'
+tree Bramble Wall(127): sf-3 s0 tgas:bramblewall.obj & woodvines.tga
+  tgaatlas: reusing old './data/woodvines.tga'
+tree Bramble Stairs(128): sf-3 s0 tgas:bramblestairs.obj & woodvines.tga
+  tgaatlas: reusing old './data/woodvines.tga'
+tree Bronze Wall(129): sf-3 s0 tgas:wall.obj & bronze.tga
+tga2rgba32 alphamode 1 tgatype 10 (256x256) tgalen194322
+  atlas 1: 0.74,0.17 - 0.81,0.25
+tree Bronze Wall(130): sf-3 s0 tgas:wall.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Bronze Wall(131): sf-3 s0 tgas:wall.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Bronze Wall(132): sf-3 s0 tgas:wall.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Stairs(133): sf-3 s0 tgas:stairs.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Tower(134): sf-3 s0 tgas:rooftower.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Ruined Wall(135): sf-3 s0 tgas:brokenwall.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Ruined Wall(136): sf-3 s0 tgas:brokenwall.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Arena Floor(137): sf-3 s0 tgas:arenatile.obj & bronze.tga
+  tgaatlas: reusing old './data/bronze.tga'
+tree Arena Spikes(138): sf-3 s0 tgas:arenaspikes.obj & iron.tga
+tga2rgba32 alphamode 1 tgatype 3210 (256x256) tgalen262532
+  atlas 1: 0.81,0.17 - 0.87,0.25
+tree Arena Die(139): sf-3 s0 tgas:arenadie.obj & iron.tga
+  tgaatlas: reusing old './data/iron.tga'
+tree Arena Cube(140): sf-3 s0 tgas:arenacube.obj & iron.tga
+  tgaatlas: reusing old './data/iron.tga'
+tree Arena Terrain(141): sf0 s0 tgas: & 
+tree Bramble Tower(142): sf-3 s0 tgas:brambletower.obj & woodvines.tga
+  tgaatlas: reusing old './data/woodvines.tga'
+tree Rock Wall(143): sf-3 s0 tgas:rockwall.obj & woodrock.tga
+tga2rgba32 alphamode 1 tgatype 10 (256x384) tgalen295632
+  atlas 1: 0.13,0.67 - 0.19,0.80
+tree Rock Wall(144): sf-3 s0 tgas:rockwall.obj & woodrock.tga
+  tgaatlas: reusing old './data/woodrock.tga'
+tree Rock Wall(145): sf-3 s0 tgas:rockwall.obj & woodrock.tga
+  tgaatlas: reusing old './data/woodrock.tga'
+tree Rock Wall(146): sf-3 s0 tgas:rockwall.obj & woodrock.tga
+  tgaatlas: reusing old './data/woodrock.tga'
+tree Large UW Boulder(147): sf4 s13 tgas: & 
+  s2rgba 1: w64 h64
+  atlas 1: 0.69,0.30 - 0.70,0.32
+tree Rock Stairs(148): sf-3 s0 tgas:rockstairs.obj & woodvines.tga
+  tgaatlas: reusing old './data/woodvines.tga'
+tree Astral Tower(149): sf-3 s0 tgas:asttow.obj & purpice.tga
+tga2rgba32 alphamode 1 tgatype 3210 (256x256) tgalen261866
+  atlas 1: 0.87,0.17 - 0.94,0.25
+tree Wooden Floor(150): sf-4 s0 tgas:wood.tga & 
+  tgaatlas: reusing old './data/wood.tga'
+tree Cobblestone Floor(151): sf-4 s0 tgas:floor_cobble.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (256x256) tgalen261246
+  atlas 1: 0.94,0.17 - 1.00,0.25
+tree Hexstone Floor(152): sf-4 s0 tgas:floor_hexstone.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (256x256) tgalen260280
+  atlas 1: 0.00,0.80 - 0.06,0.89
+tree Granite Floor(153): sf-4 s0 tgas:floor_granite.tga & 
+tga2rgba32 alphamode 1 tgatype 10 (256x256) tgalen197139
+  atlas 1: 0.06,0.80 - 0.13,0.89
+tree Void(154): sf0 s0 tgas: & 
+tree Summoning Circle(155): sf-4 s0 tgas:floor_sumcircle.tga & 
+tga2rgba32 alphamode 1 tgatype 3210 (256x256) tgalen260753
+  atlas 1: 0.13,0.80 - 0.19,0.89
+PrepareAtlas 0 (4096x3072) maxsize 16384x16384
+pixmode = GL_RGBA
+mipmap 2 for 4096*3072 tex
+Atlas done
+Loading 2 (./data/item.trs)
+pixmode = GL_RGB
+Item sprite label 0 = 0
+Item sprite label 1 = 482
+Item sprite label 2 = 515
+Item sprite label 3 = 531
+Item sprite label 4 = 535
+Item sprite label 5 = 570
+Item sprite label 6 = 643
+Item sprite label 7 = 707
+Item sprite label 8 = 738
+Item sprite label 9 = 876
+Item sprite label 10 = 915
+Item sprite label 11 = 930
+Item sprite label 12 = 942
+Start steam wrapper
+startsteam (2511500)
+Steam init failed
+steam_init failed: 0
+findworkshopitems
+startsteam (2511500)
+Steam init failed
+steam_init failed: 0
+loaded 8 workshop items (workshop '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500')
+date: 2024 2
+SetGraphicsQuality level 6, particles 62500 (-1)
+-- general_init --
+remmsg: 1 1 (hm -1)
+movenationend
+ movenationend, old=135
+highestneb 5, type 3
+Loading 8 (./data/flag.trs)
+pixmode = GL_RGBA
+createflags exp 0
+createflags done
+-- start --
+check cd-key
+keyfile='./dom6key' (105759)
+kollacrc 105759 = 1
+GetModInfo
+findmodsinfolder '/home/ilya/.dominions6/mods/111', dn '111'
+ParseModInfo 0 '/home/ilya/.dominions6/mods/111' '111' 'Debug_509_nor.dm'
+preparemodtext: 208 chars removed
+findmodsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3140347712', dn '3140347712'
+ParseModInfo 1 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3140347712' '3140347712' 'YearlyArena_1_6.dm'
+preparemodtext: 186 chars removed
+ParseModInfo 2 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3140347712' '3140347712' 'BetterArena_1_6.dm'
+preparemodtext: 976 chars removed
+findmodsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3083231618', dn '3083231618'
+ParseModInfo 3 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3083231618' '3083231618' 'Debug6_normal_research.dm'
+preparemodtext: 439 chars removed
+ParseModInfo 4 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3083231618' '3083231618' 'Debug6.dm'
+preparemodtext: 9660 chars removed
+findmodsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3084600890', dn '3084600890'
+ParseModInfo 5 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3084600890' '3084600890' 'WH_6_5_dom6.dm'
+preparemodtext: 71541 chars removed
+findmodsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3153584777', dn '3153584777'
+ParseModInfo 6 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3153584777' '3153584777' 'Trusty Research.dm'
+preparemodtext: 323 chars removed
+findmodsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3150572481', dn '3150572481'
+ParseModInfo 7 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3150572481' '3150572481' 'MovarchsMagnificentMagicModv1.10.dm'
+preparemodtext: 16535 chars removed
+findmodsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3148797231', dn '3148797231'
+ParseModInfo 8 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3148797231' '3148797231' 'CommunityMemes.dm'
+preparemodtext: 1513 chars removed
+findmodsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3153066321', dn '3153066321'
+ParseModInfo 9 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3153066321' '3153066321' 'ImprovedCastingAIv1.00SP.dm'
+preparemodtext: 9519 chars removed
+ParseModInfo 10 '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3153066321' '3153066321' 'ImprovedCastingAIv1.00.dm'
+preparemodtext: 3454 chars removed
+sound: startmusic era -1, fadein 0, tune 55
+sound: touch sample 55 './data/rawsound/everrune1.sw2' 16 bits
+sound: Fetch sample 55 './data/rawsound/everrune1.sw2' 16 bits
+sound: Fetch sample 56 './data/rawsound/everrune2.sw2' 16 bits
+sound:  Fetch sample done 56, loaded 2, len 3149538
+sound: Fetch sample 57 './data/rawsound/everrune3.sw2' 16 bits
+sound:  Fetch sample done 57, loaded 2, len 3042307
+sound: Fetch sample 58 './data/rawsound/everrune4.sw2' 16 bits
+sound:  Fetch sample done 58, loaded 2, len 2739472
+sound: Fetch sample 59 './data/rawsound/everrune5.sw2' 16 bits
+sound:  Fetch sample done 59, loaded 2, len 2292509
+sound: Fetch sample 60 './data/rawsound/everrune11.sw2' 16 bits
+sound:  Fetch sample done 60, loaded 2, len 1871459
+sound: Fetch sample 61 './data/rawsound/everrune12.sw2' 16 bits
+sound:  Fetch sample done 61, loaded 2, len 2986601
+sound: Fetch sample 62 './data/rawsound/everrune13.sw2' 16 bits
+sound:  Fetch sample done 62, loaded 2, len 3056298
+sound: Fetch sample 63 './data/rawsound/everrune14.sw2' 16 bits
+sound:  Fetch sample done 63, loaded 2, len 2075933
+sound: Fetch sample 64 './data/rawsound/everrune17.sw2' 16 bits
+sound:  Fetch sample done 64, loaded 2, len 2361555
+sound: Fetch sample 65 './data/rawsound/everrune21.sw2' 16 bits
+sound:  Fetch sample done 65, loaded 2, len 1985151
+sound: Fetch sample 66 './data/rawsound/everrune24.sw2' 16 bits
+sound:  Fetch sample done 66, loaded 2, len 2422744
+sound: Fetch sample 67 './data/rawsound/everrune25.sw2' 16 bits
+sound:  Fetch sample done 67, loaded 2, len 1985151
+sound: Fetch sample 68 './data/rawsound/everrune32.sw2' 16 bits
+sound:  Fetch sample done 68, loaded 2, len 2431193
+sound: Fetch sample 69 './data/rawsound/everrune33.sw2' 16 bits
+sound:  Fetch sample done 69, loaded 2, len 2978706
+sound: Fetch sample 70 './data/rawsound/everrune34.sw2' 16 bits
+sound:  Fetch sample done 70, loaded 2, len 2821513
+sound: Fetch sample 71 './data/rawsound/everrune35.sw2' 16 bits
+sound:  Fetch sample done 71, loaded 2, len 2919525
+sound: Fetch sample 72 './data/rawsound/everrune36.sw2' 16 bits
+sound:  Fetch sample done 72, loaded 2, len 2469673
+sound: Fetch sample 73 './data/rawsound/everrune37.sw2' 16 bits
+sound:  Fetch sample done 73, loaded 2, len 2094188
+sound: Fetch sample 74 './data/rawsound/everrune38.sw2' 16 bits
+sound:  Fetch sample done 74, loaded 2, len 2766636
+sound: Fetch sample 75 './data/rawsound/everrune42.sw2' 16 bits
+sound:  Fetch sample done 75, loaded 2, len 2703824
+sound: Fetch sample 76 './data/rawsound/everrune43.sw2' 16 bits
+sound:  Fetch sample done 76, loaded 2, len 2537835
+sound: Fetch sample 77 './data/rawsound/everrune44.sw2' 16 bits
+sound:  Fetch sample done 77, loaded 2, len 2408539
+sound: Fetch sample 90 './data/rawsound/everrune51.sw2' 16 bits
+sound:  Fetch sample done 90, loaded 2, len 3041536
+sound: Fetch sample 91 './data/rawsound/everrune52.sw2' 16 bits
+sound:  Fetch sample done 91, loaded 2, len 3250170
+sound: Fetch sample 92 './data/rawsound/everrune53.sw2' 16 bits
+sound:  Fetch sample done 92, loaded 2, len 2765296
+sound: Fetch sample 93 './data/rawsound/everrune54.sw2' 16 bits
+sound:  Fetch sample done 93, loaded 2, len 3492775
+sound: Fetch sample 94 './data/rawsound/everrune61.sw2' 16 bits
+sound:  Fetch sample done 94, loaded 2, len 2791208
+sound: Fetch sample 95 './data/rawsound/everrune63.sw2' 16 bits
+sound:  Fetch sample done 95, loaded 2, len 2146568
+sound: Fetch sample 96 './data/rawsound/everrune66.sw2' 16 bits
+sound:  Fetch sample done 96, loaded 2, len 1747039
+sound:  Fetch sample done 55, loaded 2, len 2783067
+sound: touch sample 56 './data/rawsound/everrune2.sw2' 16 bits
+findmaps '' 0 0
+--findmapsinfolder '/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3142555207'
+  findmapsinfolder: 'ArenaDom6_plainw.tga'
+  findmapsinfolder: 'dom6ws.txt'
+  findmapsinfolder: 'ArenaDom6_plane2.map'
+  findmapsinfolder: 'ArenaDom6_kelp.tga'
+  findmapsinfolder: 'ArenaDom6_swamp.tga'
+  findmapsinfolder: '..'
+  findmapsinfolder: 'ArenaDom6_plain.tga'
+  findmapsinfolder: 'Notes.txt'
+  findmapsinfolder: 'ArenaDom6_forest.tga'
+  findmapsinfolder: 'ArenaDom6_highland.tga'
+  findmapsinfolder: 'ArenaDom6_waste.tga'
+  findmapsinfolder: 'banner.png'
+  findmapsinfolder: 'ArenaDom6_kelpw.tga'
+  findmapsinfolder: 'ArenaDom6_winter.tga'
+  findmapsinfolder: 'ArenaDom6_swampw.tga'
+  findmapsinfolder: 'ArenaDom6_farm.tga'
+  findmapsinfolder: 'ArenaDom6.tga'
+  findmapsinfolder: 'ArenaDom6_plane2.tga'
+  findmapsinfolder: 'ArenaDom6_wastew.tga'
+  findmapsinfolder: 'dom6ws_pfid'
+  findmapsinfolder: 'ArenaDom6_water.tga'
+  findmapsinfolder: 'ArenaDom6_forestw.tga'
+  findmapsinfolder: 'ArenaDom6_farmw.tga'
+  findmapsinfolder: 'ArenaDom6.map'
+  findmapfile 'ArenaDom6.map' highestmapfile -1
+  added as nbr 0
+  findmapsinfolder: 'ArenaDom6_waterw.tga'
+  findmapsinfolder: 'ArenaDom6_highlandw.tga'
+  findmapsinfolder: '.'
+loadmapinfo highestmapfile 0
+preparemodtext: 211 chars removed
+map nr 0 (/home/ilya/.local/share/Steam/steamapps/workshop/content/2511500/3142555207/ArenaDom6.map), len 91699 [ArenaDom6.tga]
+loadmapinfo done (1 maps)
+luslus 105870
+MainMenu
+MainMenu - afterfade
+MainMenu - go
+mtt: ./data/dom6logo.tga
+CreateMaxTexture ./data/dom6logo.tga, alphamode 6, mipmaps 1, magfilt 1, minfilt 1, compr 0, mx 16384
+Not a sgi pic, 0
+sgi -1
+tga 3210
+tga2rgba32 alphamode 6 tgatype 3210 (2048x1024) tgalen4465378
+pixmode = GL_RGBA
+mtt: ./data/butt512x64w.tga
+CreateMaxTexture ./data/butt512x64w.tga, alphamode 6, mipmaps 1, magfilt 1, minfilt 1, compr 0, mx 16384
+Not a sgi pic, 0
+sgi -1
+tga 3210
+tga2rgba32 alphamode 6 tgatype 3210 (512x64) tgalen116518
+pixmode = GL_RGBA
+loadfont './data/guifont.ttf' 20 0
+creating new text tex 'Create World' (115*22) forcep2 0
+pixmode = GL_RGBA4
+creating new text tex 'Continue Old Game' (172*22) forcep2 0
+pixmode = GL_RGBA4
+creating new text tex 'Network' (73*22) forcep2 0
+pixmode = GL_RGBA4
+creating new text tex 'Tools & Manuals' (145*22) forcep2 0
+pixmode = GL_RGBA4
+creating new text tex 'Mods' (48*22) forcep2 0
+pixmode = GL_RGBA4
+creating new text tex 'Preferences' (105*22) forcep2 0
+pixmode = GL_RGBA4
+creating new text tex 'Quit' (36*22) forcep2 0
+pixmode = GL_RGBA4
+loadfont './data/guifont.ttf' 15 1
+creating new text tex 'version 6.07b (64-bit)' (139*17) forcep2 0
+pixmode = GL_RGBA4
+modechange: mode 9, oldmode 4
+Window take focus
+Loading 28 (./data/misc2.trs)
+pixmode = GL_RGBA
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+Window event unknown (11)
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+modechange: mode 9, oldmode 4
+Window closed
+flushopengl
+  mem ok
+FlushGUI hgbt -1, htt 1
+freetemptex: 0
+freetemptex: 1
+Free bigmap tex pn0
+Free bigmap tex pn1
+Free bigmap tex pn2
+Free bigmap tex pn3
+Free bigmap tex pn4
+Free bigmap tex pn5
+Free bigmap tex pn6
+Free bigmap tex pn7
+Free bigmap tex pn8
+Free bigmap tex pn9
+FlushNebula
+  opengl flushed
+opengl_deinit
+sound: Turning off PulseAudio
+sound: sound_freemem
+  Sound deinited

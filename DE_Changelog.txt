@@ -1,0 +1,4730 @@
+Version 1.85
+
+Manna from the Heavens N5 > N5S2
+Trimurti cost 300 > 350
+Boread Size 6, 68hp, Str 25 > Size 5, 58hp, Str 21
+Clockwork Spider mapmove 12 > 20 to match other Clockwork units
+Heartstone grants Magic Leadership 1
+Ryugo-jo should start in Deep Sea less often
+Mortal Blade now correctly prevents immortality if kills target with flame damage
+Lifelong Protection now prevents stealth while equipped
+Miraculous Cure All Elixir and Eye Pendant now heal 5 diseases each month
+Disease Grinder now heals 5 diseases and turns them into Death gems each month
+Scepter of Cleansing Flame now 2h
+Necklace from Beyond now works correctly with multiple mad units in a province
+Seeking Arrow cannot be cast into or out of caves & UW provinces
+Fixed an exploit where certain items could be wished for with unintended effects
+Once & future king now summons wardens up to half candles each month
+Blessing of the Solar Bull no longer cast unless scripted
+Fixed Shamans of Ulm and Fennoscandia Spirit Animals not appearing
+Removed spell Kharmic Wheel due to changes in immortality rules
+Electric Eels Morale 12 > 8, tail slap reduced to 5AN Shock damage
+
+Summon Animals 8 gems > 6 gems (4 gems for discounted nations)
+Pack of Animals 12 gems > 8 gems
+
+New Spells: Astral Fetters, Become Sea Monster (Transforms caster into Megalodon / Wise Whale / Ancient Kraken / Dandan / Karkinos / Indus Worm / Divine Turtle), Primal Rage (Thaum6, N5, 1 gem, all friendly animals become Berserk), Sloth of Dire Bears, Sounder of Dire Boars, Ambush of Dire Tigers, Summon Pride of Legend
+
+More items now grant temporary gems in battle:
+Barrel of Air (3 Air gems), Sea Kings Goblet (3 Water Gems), Crystal Heart (2 Earth gems, 2 Astral pearls), Eye Pendant (2 Earth gems, 1 Death gem), Wraith Crown (3 Death gems), Igor Konhelms Tome (2 Air gems, 2 Death gems), Crown of the Fire King (3 Fire gems), Crown of the Frost King (3 Water gems), Necklace of Power (2 Earth gems, 2 Astral pearls)
+
+Poison Bows now deal 15 poison damage - affects Androphag Archers, Serpent Archers, Man Hunters, Spider Archers, Gondwana Archers, Spider Riders and Nurumbee Archers
+
+Siege Golem now permanently transforms into immobile fort destruction mode but destroys itself in 3-4 turns.
+
+Pearl Citadel now allows recruitment of sacred Pearl Sideraspists on land.
+
+MA / LA R'lyeh gained Pretender - Id Monster
+
+Spectral Censor gained natprot 8 in line with Centurion and Senator
+
+Iram Emirs gained magic leader 10
+
+EA Ulm
+Steel Warriors gained Stealth, Fire/Poison/Shock res 3
+Spirit Warriors gained Stealth
+Warrior Smiths gained Stealth
+Warrior Scout gained 10 leadership
+Warrior Chiefs can now summon 2 warriors per month
+Rune Stone Uruz now summons 1/3 Spirit Warriors and 2/3 Spirit Kinsmen (Sacred ghosts)
+Rune Stone Fehu now allows casting Luck
+EA Ulm gained spells: Power of the Ancestors, Summon Ancestors
+
+Pazyryk Warriors Horse Tattoo 2 > Horse tattoo 4, resource cost 19 > 10, gained Stealth
+Jigari gained Stealth, leadership 10 > 80, cost 195 gold > 220 gold
+Tartary gained Stampede
+
+Outer Furnace reworked - now transforms caster into a Flame Spirit
+
+Ryuogjo Ryujin gained Spirit Sight
+
+EA/MA/LA Pan & Ashodel gained Pack of Dire Animals, Dire Horde
+
+Zion gained spell: Bind Evil Trinity of the Inferno
+
+
+
+
+
+
+Version 1.84
+
+All spiders and spider mounted units gained Unsurroundable 2
+Kydnides now have magical golden swords
+Kithaironic Lions now have magical claws and bite
+Seasonal Animals now all have magical natural attacks
+Displacer Beasts are now magicbeings, bite is now magical
+Eudaimon Awe 1 > Awe 3
+
+Horde of Scorpions Conj8, F4E2, Cave only > Conj7, F4E1, Cave or Waste
+Become Dragon Dragon form now gets -1 to non F paths
+Awaken Fire Dragon 45 gems > 35 gems
+Bonfire of the Phoenix 15 gems > 5 gems x size
+Summon Zephyr A3, 4 gems > A2, 3 gems
+Mysteries of the Astral Plane S4F3, 35 gems > S4F1, 25 gems
+Holy Word no longer removed for Pretenders with 4 in a path
+Fortress of Ice can no longer target UW provinces
+
+Zion chariots lost shield
+Bind Infernal Viper of the Abyss Conj3 > Conj2
+Bind Devil of the Fiery Inferno Conj4, 3 gems > Conj3, 2 gems
+Bind Infernal Host Conj 6, 15 pearls > Conj5, 12 pearls
+Shophet and Kohen Gadol gained magic and demon leadership
+
+Summon the Marshland is now Summon Marsh Beasts, cost reduced from 2 gems > 1 gem and only summons Bog Beasts
+
+Gift of Battle Fury now affects a targeted commander
+
+Eriu lost spells: Summon Picts, Host of the Seelie, Host of the Unseelie, Queen of the Seelie, Queen of the Unseelie
+MA Man gained spells: Summon Highlanders, Host of the Seelie, Host of the Unseelie, Queen of the Seelie, Queen of the Unseelie, Send Nuckelavee
+
+Dolmens no longer create Seelie and Unseelie doors during Spring/Winter
+Summon Picts & Summon Highlanders Conj2 > Conj3
+Contact Cu Sidhe / Summon Cu Sidhe now 6 gems for 8+½
+Call the Fianna Conj4 > Conj5
+Raise Nemedian Dead 15 gems for 10+½ > 8 gems for 5+½
+
+Albion Cambions lost N1, 270 gold, chaosrec 15 > 260 gold, Chaosrec 10
+War chariots Chaosrec 5 > Chaosrec 10
+Clan Scout, Clan Chieftain, Spearman & Skirmisher now foreign recruits
+Spearman, Skirmisher, Axeman & Oathsworn chaosrec 2 > 3
+Albion units gained increased tattoo values
+
+Sawaiiki starting gems A2N1D1 > A2N2W1
+
+Gondwana Razorhorn 35g, 36rp > 25g, 15rp
+
+LA Pythium Serpent Acolyte gained 50% W1, cost 70g > 85g
+
+Horseman defenders lost neednoteat
+Vegetable Lambs 4 gems > 2 gems
+
+Caelum Daeva of Aging gained A1
+
+
+Version 1.83
+
+Wailing Winds Evo 6, 2 gems > Evo 7, 4 gems
+Stone Guardian AP8 > 12, E1 > E2, gained slash res, pierce res, 2 x stone fists, crown
+
+Diadem of the Void now prevents teleportation
+Weapons of the shadelands was not restricted to undead
+Samhain now generates unrest when Fey appear
+Fomorian Plague Thaum8, 20 gems > Thaum9, 25 gems
+Basalt King gained Bite attack in line with other Atlantians
+Armored Serpents lost nat prot and gained Mail Barding
+
+New Pretenders: Storm Raven, Copper Maker, Lord of the Undersea, Lord of Violent Death, Totem
+New spells: Flock of Ostriches, Bind Mantis Horrors, Vision of Horror
+
+Asura lost helmet, hp 28 > 33, swapped weapons, new sprite
+Asurendra lost golden armor and helmet, hp 36 > 44, new sprite
+Brew Gandapana Wine 48 gems > 42 gems
+Trimurti of Destruction new sprite
+Danavaraja new sprite, gained 2 heads and Unsurroundable 2, lost shield
+Bandar Log gained Danavaraja
+Danava new sprite
+
+MA & LA Arco gained Dissolve into Atoms and Illusion of Motion
+
+Albion gained Stampede, Read the Stars
+
+Call Amesha Spenta 60 gems > 50 gems
+Call Greater Daeva 60 gems > 50 gems
+
+Sawaiiki Priest of the Four 150g > 130g
+Priestess of Ruin lost inept researcher, 130g > 140g
+Iliahi Lord A1W1, 210g > A1W1N1, 170g
+Gifts of the Moon now grants +4Str in addition to Berserk
+
+Sitecah warrior/chief mapmove 18 > 20
+Starnake Lord random 10% > 20%
+Blood Cult initiate unrest +3 > +2
+
+All Katsina are now plants and can cast plant-only spells
+Mongkatsina N2E1, 290g  > N1E1 100%AWEN, 260g
+Vision Trance 8 gems > 5 gems
+Povosqa gained 100% random, 115g > 150g
+Yaayapontsa dance F3A2 > F2A2
+Summon Corn Maiden Conj6, 18 gems > Conj3, 15 gems
+
+Imbue with N'um N3H1, aoe 0 > H1N3, aoe 1+
+
+Bend Winds A2, aoe 2+ > A1, aoe 2++, now available to MA and LA Iram
+Juhera & Iram gained Scorching Wind & Smokeless Flame
+MA Iram gained Host of Guardians, Elephant Clock, Construct Brass Golem, Legion of Guardians
+MA Iram gained Hammer of the Master Smith, usable by Artificers
+MA Iram now has Mubarak Swordsmen and Archers recruitable in capital if a Jinn is present
+MA Iram gained hero: Al-Jazari
+LA Iram gained spells: Pari Mastery, Jinn Mastery
+Enslave Jinn 200 fat > 80 fat
+Dervish now autoblesses in combat, gained linen cuirass
+Silent Widow 15 gold > 13 gold, now recruitable in all forts
+
+Great Arrada now generates 1d3 sacred vultures when blood sacrificing
+Offering spells summoning ancestor spirits have number of summons doubled
+Prince can now summon 2 Shield Carriers each month.
+Great Arrada gained Chill of the Grave.
+Princesses lost H1, cost 240 > 200
+Hunter, Bow Hunter, Shield carrier, Village Chief & Egungun now foreignrecruits
+
+Dom-Daniel gained Sahuagin recruits in UW forts, new spells Summon Ghawwas, Contact Ghawwas Sultan, Summon Host of Ghawwas
+Summon Dandan 2 gems > 1 gem
+
+LA Pythium now takes 3 months to change cults after first year rather than being random.
+
+
+
+
+Version 1.82
+
+Several Pretenders gained Recuperation
+Siege Golem no longer loses fort killing ability if participates in a battle, however cannot be teleported by magic
+Many monster pretenders gained some magical natural attacks
+Fixed some incorrect monster commands
+Fixed some incorrect spell commands 
+Khamul the Witch King lost S3, gained W3
+Fixed Corner Stone sometimes being unable to be used except in forests & seas
+Zodiac mercenaries now start with some gear
+
+New item: Apotropaic Eye
+
+Son of Niefel, Fomorian God King, Son of the Sea no longer get reduced prot
+Unseelie gained +0.5 unrest per month, Seelie gained -1 unrest per month
+Samhain sites and events now correctly generate unrest
+White Elephants morale 9 > 11
+Some Aboleths did not count as Mind Lords or could not use items
+Black Hunters & lords lost slots, Hunter Lord Rcost 3 > 25, Black Hunters Fangs now gain Str to damage
+Glass Angel & Gilded Angel gained Spirit Sight
+Wooden Colossus and Colossal Fetish lost amphibian, gained swimming
+Tengu Village and Tengu Clanhold now trigger whenever appropriate mage is in province
+Incite Passion/Madness of the Wild/Bacchanalia now research level 3/5/7
+
+African and American nations gained new sprites for Rainbow Pretenders - by Mormacil
+
+Chaco gained spell: Army of Ants
+
+
+
+Version 1.81
+
+Prison of Fire aoe 3+, prec 2 > aoe 5+, prec 5
+Army of Kobolds summons 23+ Kobolds > 26+++ Kobolds
+Transformation 8 gems > 6 gems
+Become Giant N4 > N4S1
+Enchanted Lullaby doesn't affect friendlies
+Roar of the Lion aoe 10+ > 25
+Contact Gamayun 25 gems > 20 gems
+Call Leokampoi Conj 2, 7 gems for 5++ > Conj 1, 2 gems for 5+
+Orgy 1 slave > 5 slaves
+Rage of the Cornered Rat no longer cast off-script
+Summon Hellhounds F3 > F2
+Wand of Insects now removes stealth from bearer
+Helm of Acid Breath W1F1, 10 gems > W2F1, 15 gems
+
+Robin Redcap gained Stealth
+Black Hunter rescost 3 > 25
+Kobold morale 6 > 11, Elites morale 10 > 13
+kobold Rider size 2 > 3
+Kobold Shaman 40ldr > 60ldr
+Malingee prot 20 > 15
+Fire Dragon no longer gets old age penalties in human form
+Varangian Draugr no longer transform into Lord of the River on death
+Added Pretender discounts to Fennoscandia and Nahullo
+Sea Sami & Mountain Sami Chieftains gained Stealth
+
+New spells: Become Great Beast
+
+
+Chaco/Ongtuptqa:
+Vision Quest 8 gems > 5 gems, Vision Trance 12 gems > 8 gems
+Ogre Dance Conj5, 5 gems > Conj3, 4 gems
+Summon Serpent Warriors 10 gems > 8 gems
+Summon Primordial Deer Conj6 > Conj5, Domsummons Deer
+Ant warriors Str 14 > Str 17, swapped bite attack for poisonous sting
+Katsina Warrior 90 gold > 75 gold, Katsina Archer 100 gold > 75 gold
+Lost multihero Coyote Shaman, new multihero - Adventurous Ant
+
+Nahullo:
+Nahullo starting commanders now Sitecah Chieftain and Blood Cult Initiate
+Blood Cult initiate random E/D/N > F/E/S/D/N
+Ishtahullo now animates 1 corpse in province as a soulless each month
+Starnake High Priest lost 1 Earth path, gained 100% F/E/S/D/B random
+Nahullo gained spells: Teachings of Semyaza, Teachings of Ezekiel, Teachings of Shamshiel, Teachings of Kokabel, Teachings of Arakiel, Release Lord of Civilization
+Bind Black One Blood 6, 38 slaves > Blood 4, 24 slaves, now summons a B1D1H1 reanimator priest instead of a B1D1 assassin
+New spell: Host of Soul Eaters
+
+Zion:
+Temple Guard & Shophet gained Halt Heretic 3
+Bind Lesser Demons of the Host 2 gems > 1 gem
+Gained spells: Send Host of Birds, Bind Demonic Being, Exhort Demonic Beings, Bind Infernal Host
+
+Albion:
+Awaken Tattoo spells now Divine and tied to H paths instead of requiring research and N paths
+Thyrs Cambions can now be recruited in all forts
+Witch Queen 455g > 430g
+Woad warriors Horse Tattoo 3 > Boar Tattoo 5
+Most Thyrsa gained Forest Survival
+Sacred Spring heals 5% > heals 25%
+
+Tree Breaker lost body & feet slots, N2 > N1+100%E/N+50%E/N
+
+Eusebes Solaris Mapmove 8 > 14
+
+
+
+
+
+Version 1.80
+
+Sword of Swiftness 15 gems > 5 gems
+Fixed bug with message when casting Unleash Fury, Claw of Cybele
+Soul Contract, Protection from Geryon, Lifelong Protection cannot be used by creatures without blood (inanimates, undead, demons).
+Rainmaking, Power of Water cannot be cast in caves.
+Lunar Potency attacks rarer but units owned by Enchantment caster, no longer requires owning enchantment to turn commanders into werewolves
+Send Moirai now works like Manifestation - 50% chance to choose each commander in province, if none chosen attacks caster.
+Lavaborn commander gained F1, 20%E
+Diadem of the Void Const4 > Const2, not cursed
+Crown of Lead Const2 > Const0
+Statue of the Sun & Rain cost 160 > 180
+Hero Chief, Titan of the Forge can now use Hammer of the Master Smith
+
+Purebred Abysians & Lavaborn gained neednoteat
+Malediction now converts commander with Flesh Eater to vampires rather than those suffering a Curse.
+
+Reduced LA Rlyeh capital void spawns in low Dominion
+R'lyeh lesser summoning spells/effects now summon regular Thing from the Void / Lesser Otherness / Vile Thing
+Wisdom of the Void now R'lyeh only
+Necklace from Beyond Tainted 10% > Tainted 25%, Summoning requires Magic scales & has Candles * 10% chance to suceed.
+
+Black Hunter & Hunter Lord lost secondshape, now act more like War Elephants - gained Spider stats in main shape.
+
+Juhera/Iram gained Summon Pack of Shiqq, Call Old Man of the Sea, Summon Ghaddar, Summon Hinn
+MA & LA Iram gained Contact Jinn of Wishes
+LA Iram gained Bind Warrior of the Jinn, Bind Jinn & Bind Unseen Host
+LA Iram Dervish: Berserk 1 > Berserk 2, Att/Def 10 > Att/Def 12, gained poor formation fighter & unsurroundable 1
+
+Snow Lions 10 gems for 2 > 8 gems for 2, Lost Fear & Bite attack, gained magic claw & aoe Save-or-die + Fear roar attack
+Yeh-Teh 5 gems > 3 gems, White Fury of the Mountains 25 gems > 15 gems
+Propitiate Sunghma Lha now includes 10 Dra Lha instead of 6
+Thokcha 10 gems > 6 gems, Namchak Thokcha 20 gems > 10 gems, Anointed Dorje 30 gems > 20 gems
+
+Asphodel tax loss due to Dominion now affects capital
+Carrion Lord 25 gems > 35 gems
+
+Plague of Chorts summons 3+ > Summons 4+
+Bogarus gained item: Chort Contract
+
+Alchera Dreamhunter gained Spirit Sight.
+
+New Pretenders: Great Navigator, Obsidian Butterfly
+
+
+
+Version 1.79
+
+Fixed Incite Passion, Madness of the Wild  & Bacchanalia to correctly destroy armor only if original MR check failed
+Astral Barrier no longer states it affects undead
+Spirits of the wood 8 gems > 5 gems
+Earth Elementals gained +2 Prot, Stone Fist, Slash & Pierce resist
+Illearth Elementals gained Slash & Pierce Resist, Fear 5 & Life Drain attack
+Ice Elementals gained Coldpower
+Great Bears gained bite attack like Werebears
+Removed Unique from several heroes - prevented them from entering HoF
+
+Mind shield cost fixed - now 10 gems
+Marble Armor Const4 > Const6, now grants Slash & Pierce resist, immune to petrify
+Berserker Pelt grants Berserk +2 instead of Berserk 0 in line with description
+
+Boulders now have Strength/2 range, deal either secondary slashing damage due to shards on impact or an aoe blunt damage & stun effect for larger boulders
+Obsidian Club Swords gained +1 attack, 1h version damage 4 > 5
+Machaka Spear no longer has -1 attack
+Enchanted Scimitar +3 attack > +2 attack
+Poison Sling range 15, -4 Prec > range 25, -2 Prec
+Poison Spits have 50% chance to be used in melee (Mainly affects Naga, Jaguar Toad, Kuro-Oni, Foul Spawn)
+Obsidian Cuirass & Bronze Cuirass -2 resource cost
+Hide Shield & Great Hide Shield +1 prot, +1 parry
+
+Merman Village site enables recruitment of Merman Scout
+Cavemen & Lavaborn now get more units in PD
+
+Mictlan - Sun Warriors & High Priests of the Sun now have Sun Awe 1, Moon Warriors have DV100 and Darkpower 2, Rain warriors recruitable in coastal forts
+EA Ctis - Serpent Dancer gained unsurroundable, Berserk 3 & go berserk when blessed, bad formation fighter 2
+Vanheim - Fay Boar cost 100 gold > 60 gold, pays half normal upkeep
+Ur - Swamp Recruits now available in capital, Anzu now sacred
+Ubar/Na'ba - Vault of Incense & Marvels only grants 50 gold, All recruitable Jinn now max 3/month, Houri 1RP > 2RP, Hermit Sahir 100% random > 50% random, Camel riders lost stealth and 4 mapmove
+Juhera - Qutrub now max 3/month
+Oceania - Sirens now have spellsinger, 100% AWN random
+Sceleria - Shadow Vestals morale 11 > 15, gained Cold Res10, Enchanted Spear, Enchanted Shield and Magic Robes. New commander for Vestals - Vestalium Maxima.
+MA Man - Secrets of Avalon 100 gems > 80 gems
+MA Machaka - Sorceress random 10% > 110%
+MA Atlantis - Mother Guard RP cost 41 > 32
+Ryugo-jo - All Ryujin now cap only, Labs & Temples now normal cost, Tatsu now sacred
+LA C'tis - Desert Rangers now available in capital
+Great Arrada - gained spells: Unholy Power, Power of the Shadelands, Agasunon gained 110% DNB
+Jomon - Tatsu now sacred
+R'lyeh - Mind Vessel 15 gems > 5 gems, Power of the Void now horror marks caster, no longer provides Astral Shield
+
+Pretender changes
+New Middle America Pretenders: Statue of the Sun, Idol of Sustenance
+Mictlan, Xibalba lost gods - Idol of the Sun, Idol of the Harvest
+Oracle Fortune Teller 33% > 75%
+Fountain of Blood cost 140 > 150, now passively creates 1d6 Blood slaves/month
+Statue of Order cost 170 > 190, now reduces unrest by 1 point per candle in friendly Dominion (including when Imprisoned or dead)
+Divine Glyph cost 160 > 190, now starts with 5 Dominion and generates 5 extra temple checks/turn whilst awake
+Statue of the Underworld cost 150 > 180, now domsummons between 0 and half candles Released Ones each month and rarely summons a Released Warrior
+Polypal Mother cost 150 > 170, now domsummmons Enlarged Spawn with death wail 2, regular spawn appear in friendly provinces under your Dominion whilst she is in play.
+Statue of the Bloody Mother cost 150 > 170, N1B2 but gets +1N for the purpose of blessings
+Idol of Sorcery cost 170 > 200, S2D1 > S1D1N1B1, Pathcost 40 > 80
+God Block cost 140 > 170, domsummons between 0 and half candles Hinn each month
+Master Lich gained 50% reanimate those killed as soulless, pathcost 40 > 20
+Lich Queen now starts with 3-12 Dust Walkers and 2-4 Dust Warriors if taken awake 
+Risen Oracle gained Summon Allies - 1 Cavern Wight
+Sapa Inca gained battlesummon - 4 Sun Guard
+Ghost King cost 160 > 170, gains 4-10 Ghosts and 2-12 Shadow Soldiers if awake at game start
+Atlantian Ghost King now battlesummons 5-30 Atlantian Shadow Soldiers
+Terracotta Emperor cost 120 > 130, now gains 4-18 Terracotta Footmen, 1-6 Terracotta Horsemen and 2-4 Terracotta Chariots if awake at game start
+Piscean now generates 30% additional tax in province whilst underwater
+Gallu Demon no longer autocasts Personal Luck, now casts Holy Avenger instead
+Arch Mage cost 120 > 160, gained F1A1W1E1, Pathcost 10 > 80
+Master Enchanter cost 120 > 130, gained Master Ritualist 1
+Great Enchantress gained +1 Sorcery Pathboost
+
+Starting army changes:
+EA Marverni: 15 Bare Chests > 10 Noble Warriors
+EA Machaka: 15 Machaka Warriors > 15 Lion Clan Warriors
+EA Agartha: 15 Pale Ones, 10 Pale One Warriors > 12 Pale One Warriors, 10 Cavern Guards
+EA Kailasa: Bandar Commander, 20 Atavi > Guhyaka General, 10 Bandar Swordsmen
+EA Lanka: 20 Atavi > 10 Bandar Warriors
+EA Ur: Gained 5 Enkidu Archers
+EA R'lyeh: 15 Slave Atlantians, 10 Slave Mermen > 10 Slave Guardian Atlantians, 10 Slave Guardian Mermen
+EA Pelagia: 10 Pelagian Soldiers > 10 Coral Clan Soldiers
+EA Oceania: 15 Ichtysatyrs > 10 Ichtysatyr Warriors
+
+MA Man: 10 Spearmen, 10 Longbowmen > 10 Longspears, 15 Longbowmen
+MA Machaka: 15 Machaka Warriors > 10 Machaka Hoplites
+MA C'tis: 15 Light infantry > 10 Heavy Infantry
+MA Vanarus: 10 Archers, 10 Huskarls > 15 Archers, 15 Huskarls
+MA Bandar Log: 20 Atavi > 15 Vanara Swordsmen
+MA Xibalba: 10 Muuch Dart Throwers, 10 Muuch Warriors > 15 Muuch Dart Throwers, 15 Muuch Warriors
+MA Phaeacia: 10 Archers, 10 Light Infantry > 15 Archers, 15 Light Infantry
+MA Atlantis: 12 Shield Bearers, 8 Atlantian Light Infantry > 10 Atlantian Infantry, 10 Atlantian Light Infantry
+MA R'lyeh: 20 Lobo Guard, 10 Slave Mermen > 10 Slave Guardian Atlantians, 10 Slave Guardian Mermen
+MA Oceania: 15 Ichtysatyrs > 10 Ichtysatyr Warriors
+MA Ys: 10 Ysian Infantry, 10 Ysian Spearmen > 15 Ysian Infantry
+
+LA Man: 10 Spearmen, 10 Longbowmen > 15 Longspears, 15 Longbowmen
+LA Marignon: 15 City Guard > 15 Halberdiers
+LA Patala: 20 Atavi > 20 Vanara Swordsmen
+LA C'tis: 15 Light infantry > 10 Heavy Infantry
+LA R'lyeh: 20 Lobo Guard, 10 Slave Mermen > 10 Slave Guardian Atlantians, 10 Slave Guardian Mermen
+
+
+
+Version 1.78
+
+Floating Eye no longer has itemslots
+Cursed Luck Alt6 > Alt7
+Body of Flames F2 > F3
+Curse of Limos Ench7, N4D2, 2 gems, aoe battlefield > Ench6, N2D2, 40 fatigue, aoe 15
+Rise of the Insects N5F2, 65 gems > N5F3, 75 gems
+Well of Misery 40 gems > 50 gems
+Thief of Fortune now adds 10% province income per Luck scale present in a province, reduces province income by 10% per Mistfortune scale
+Most uniques now banned from casting Twiceborn
+Music of the Spheres now grants decreased spellcasting times by 25% instead of granting Innate Caster
+Erect Accursed Idol  S3D1, 25 pearls, S3D2N1 > D3S2, 35 gems, D3S2N1
+Channel Divine Starfire 3 effects > 2 effects
+Horned Serpents summons 6++ > 4++
+Vile Water cost 1 gem, summons 1 cube > costs 2 gems, summons 2 cubes
+Gelatinous Cubes now only combine when at a fort with a Vile Vial present - larger forms gained MR and Slimer, summon smaller cubes each month
+Cleanse Well of Pestilence now only kills caster if they fail an MR check
+
+Fey Fascination N4A2, 1 gem, aoe 666 > N2A2, 40 fat, aoe 15
+Queen of the Seelie / Unseelie no longer fail to summon if there is already one present in the world
+Beatific Vision nows stuns all units, friendly or enemy
+Temper Army now only affects friendly troops
+Bag of Spiders 10 gems > 8 gems, now grants 1 Magic Leadership
+Water Bubble Const2 > Const4
+Queen of Na'ba can use Consecrate Block
+Restore the Dharma Thaum3, MR Negates > Thaum5, MR Easily Negates
+
+One with the Void now summons lesser Void beings, only occasionally produces 1-3 pearls
+Lord of the Void 50 pearls > 60 pearls
+Enter the Void Ench8, S6, 4 gems, affects battlefield > Ench6, S3, 1 gem, affects aoe 15
+Dimensional Shambler Thaum6 > Thaum8
+
+Sharktooth sword gained +1 damage, +1 attack
+Lua now stuns target when hits, targets size 3-4 or Str 15+ can resist and targets size 5+ immune.
+All Ali'i, Koa and Children of Nanaue gained magic tattoos
+All Gifts spells now also activate magical tattoos
+Gained spell: Activate Tattoos
+Ali'i spearmen 10 attack > 11 attack
+Koa Warriors gained Stealth
+Iliahi Lord gained stats to make them more comparative to Koa Warrior
+Olohe Bandit  30 gold, 35RP > 25 gold (with Chaospower 5), 15RP, gained Stealth, chaospower 1
+Olohe Kaupe B3 to summon > B1 to summon, gained +100% B/N, Stealth, Undead leader 80, chaospower 1
+Priestess of Ruin 120 gold, 50% random > 130 gold, 100% random, gained 10 undead leadership
+Mo'O 50hp, MR13, Morale 11, N3W2, Forgebonus 1 > 65hp, MR15, Morale 13, N2W2 +100% N/W, Forgebonus 2, gained 1 temp water & nature gem in battle.
+Nightmarchers D4, 8hp > D3, 15hp
+Lost Ones 20 gems > 25 gems, gained 4 random paths from S/D/A
+Celebration of Peace / War 120 gems > 100 gems
+
+Mongkatsina 4RP > 2RP
+Spider Grandmother Disease Healer 5 > Healer 5
+Vision Trance now also grants Healer 1 if successful
+
+Blacksteel Plate 4 gems > 5 gems
+Enchanted Ring Mail 3 gems > 5 gems
+Enchanted Shield 2 gems > 4 gems
+Blacksteel Kite Shield 3 gems > 5 gems
+Blacksteel Tower Shield 3 gems > 5 gems
+Enchanted Pike 3 gems > 4 gems
+Enchanted Spear 2 gems > 3 gems
+Lightweight scale mail 3 gems > 4 gems
+Mind Shield S1, 10 gems > S3, 10 gems
+Clockwork Tool Const4 > Const2, can now summon Clockwork horrors & spiders
+Flower Charm now acts as a slave matrix & summons 1 Nymph Communicant
+Sword of Swiftness W1, +4 def > W2, +2 def
+Cutlass of piercing +4 def > +2 def
+Arach amulet now correctly causes assassinations by spiders on bearer, spider summons now occur from amulet rather than Arach.
+Staff of the Fire King F5, 40 gems > F6, 90 gems
+Staff of the Frost King 60 gems > 90 gems
+
+Peacock Angel lost body slot
+Angelic Lord lost hand slots
+Elohim cost 260 > 280
+Nataraja cost 210 > 240
+Destroyer of Worlds cost 220 > 240
+Lord of the Carrion Dead cost 200 > 230
+Kami of War cost 200 > 230
+Celestial General cost 200 > 220
+Keeper of the Bridge cost 200 > 220
+King in Yellow S2D1 > S1D1, lost Ethereal & Stealth
+Trimurti of Destruction lost inherent Fear
+Ancient Kraken Prot 18 > 15
+Iram Grand Artificer and Master Alchemist now have recup and disease resist
+Titan Trinities all have -10 inept researcher
+
+
+Version 1.77
+
+Great Toad lost Pierce resist, +20 points cost
+Become Giant 20 gems, Alt 6 > 25 gems, Alt 7
+Become Dragon Alt 7 > Alt 6, Transformed Dragon 88hp, 18 Prot > 125hp, 20 Prot, gained Dragonlord 2
+Infernal Disease can now target UW provinces
+Protection of Geryon no longer appears as Arena prize
+Vessel of Misery - Heal effect only triggers once per month, reduced Disease Demon commander from 1/month to 25% chance /month, no longer chance to summon Harvesters
+Zatanai Master and Zatani now become Spectral Zatanai when using Prepare Spirit
+White Tiger now only creates Blessing of Fortune for eastern nations even if wished for
+Lobster Hybrid no longer costs upkeep
+Klu is no longer cold blooded in serpent form
+Wonderful Lamp now allows casting Bind Warrior of the Jinn
+
+Starnake Warrior Golden Scale > Starnake Scale, Gained 1 Enc but res cost reduced by 9
+Sitecah warrior gained Reinforced Leather cap to match tribesmen
+Nahullo gained spell - Summon Shilombish
+Nalusa Falaya 7hp > 14hp
+
+Most cursed items are no longer picked up after battle (except artifacts)
+Carnivorous Plants N3, summons 10+ > N2, summons 5+, now castable anywhere, if cast in Forest plants gain +4Str
+Advanced Cross Breeding B2N2, summons 25++ > B2N1, Summons 40+++
+Focused Cross Breeding B3N3, 45 slaves > B3N1, 35 Slaves
+Improved Cross Breeding 20 slaves, summons 40++ Spawn & 4 Good Spawn > 25 slaves, summons 40++ Spawn & 10 Good Spawn
+
+EA Atlantis gained 20% discount to all Crystal items
+Niefelheim, Jotunheim & Utgard gained spell: Jotun Prayer
+
+Several weaker Monster Pretenders gained a magic path
+Most immortal Pretenders 10-20points cheaper
+Pure Ones & Norns 150pts > 130pts
+Titan Trinities new path cost 60 > 80
+Peacock Angel lost Poison & Shock resist, cost 230 > 240
+Lord of the Forest & Kami of Fertility +20 points cost
+
+MA TC Gained spell: Lesser Mercury
+Gained item: Auspicious Charm
+Prince General gained H1
+Terracotta Soldiers summons 5+ > summons 6++
+Terracotta General autosummons 2 terracotta warriors/month, can Summon Allies 2 additional
+Create Fire Lances F2E1 > F1E1, Barracks now generates 50 resources
+Divine Fire Dragons F2E1 > F1E1, 4 ammo > 8 ammo
+Divine Rocket Arrow Shields F3E2 > F2E2
+Text of the Celestial Master 20 gems > 10 gems
+
+Tien Chi Cart of Fire Arrows, Divine Fire Dragon, Divine Rocket-Arrow Shield and Pythian Fire Onager gained wounded shape war machine that must be destroyed separately to the crew.
+
+
+
+Version 1.76
+
+Masauwu is now Unique
+Fixed paths for Seelie Queen and Unseelie Queen
+Rain of Fire no longer castable
+Hail of Fire lost 1 fireball, now scales 1 per 2 additional paths of caster
+
+New spell: Glass Strike
+
+Night Hunter gained Darkpower 3, Stealth and has a bodyguard of 1-6 Beast Bats in combat
+Niefel Giants & Jarls gained Mountain Survival
+Nahullo - Enslaved Tribesman is now undisciplined
+Uramlu Lord now summons 1 Urmalu/turn
+Become Giant 15 gems > 20 gems
+
+Dom-Dan'yel gained spells: Resilience of the Shadelands, Weapons of the Shadelands, Enter the Third Gate, Enter the Sixth Gate, Enter the Ninth Gate, Call Jinn of the Deep, Call Dandan, Call Old Man of the Sea, Summon Pack of Shiqq
+Dom-Dan'yel underwater PD additional ghosts replaced with size 4 Water Elementals when over 20PD
+
+
+
+Version 1.75
+
+
+Staff of the Fire King F6 > F5 now casts a 50-fireball version of Fires From Afar instead of Flames from the Sky.
+Cromlech lost Unify
+Blacksteel Colossus is now Inanimate
+Fixed sprite issue with Angel of the Choir
+Ring of Power now blesses bearer even if not sacred
+
+New spell: Create Familiar (UW)
+
+Dreams of Rlyeh is now correctly restricted to LA Rlyeh
+strengthen Mind can now be cast Underwater
+Guardian Angels now only scales at 1 extra angel/2 paths, 1 gem cost > 2 gem cost
+Avenging Angel > Avenging Angels, now summons2 Angels, cost 80Fat > 1 Pearl
+Anointed Reveler lost research penalty
+Boiling Seas AOE 5+ > 9++
+Auluudh and First Spawn can now cast Mind Lord only spells
+Lychantropos Amulet is no longer picked up after battles
+
+Ryugo-jo labs and temples now cost 600 gold
+
+Carrion Dragon and Carrion Lord no longer Undead
+
+MA Eriu: 
+Fir Bolg have reduced rec point costs
+Dolmens now create Seelie and Unseelie doors when in forest provinces
+Lost spell: Host of the Tuatha
+New spells: Host of Seelie, Host of the Unseelie, Queen of the Seelie, Queen of the Unseelie
+
+
+
+
+Version 1.74
+
+Awaken Magical Being Thaum6 > Thaum7
+
+Pashupatasra only has 100 siegebonus instead of 350 due to engine limits, reduced to Const6 and 20 gems
+Diadem of the Void now grants +2MR but 5% Shattered Soul and is cursed
+
+Oceanian Polymorph no longer a projectile spell
+
+Druid of Old Fomoria Heretic 3 > Heretic 1
+
+Gondwana
+Razorhorn Riders 40 gold > 35 gold, Mapmove 22 > 28, AP24 > 26
+Quagaraffe Mapmove 22 > 28, AP24 > 26, Precision 5 > 15
+Summon Quaggarafe N3 > A2N1
+
+Tien Chi gained national longdead summoning spells, mostly with spears or glaives & tower shields
+
+LA Marignon starting army 15 City Guard > 15 Halberdiers
+
+LA C'tis Keeper of the Tombs now summons a Corpse candle at start of battle
+
+Shoggoths can now eat a corpse eat month to gain 1hp
+
+Music of the Spheres cannot be cast by mindless casters, now causes Insanity 20% unless caster has Void Sanity
+
+Vaettiheim gained Charm of the Crescent Moon
+
+Tartary - Khans -10 gold cost, still summon 1 Horseman/month but cannot summon allies another one
+
+Dom-Dan'yel
+Kapikulu now correctly act as communion slaves
+New recruitable units in land forts - Baltadji and Timariot
+
+
+
+
+Version 1.73
+
+Stinger 4 gems > 6 gems
+Divine Wrath > Disease & blind effect now both hit 25% of enemy sacreds
+Sky Diamond now grants Summon Allies - 5 Spring Hawks instead of casting Summon Spring Hawks
+Rod of Falling Stars Const8 > Const6, Still Unique
+Dreams of R'lyeh can now only be cast once at each target province per month
+Clockwork Smith now creates Clockwork Soldiers, Horrors or Spiders
+Mishra's workshop now creates Clockwork Soldiers, Horrors or Spiders
+Clockwork Soldiers -15 reinvig > -5 reinvig
+Clockwork Horrors -15 reinvig > -10 reinvig
+Clockwork Spiders -8 reinvig > -5 reinvig
+Longdead and Soulless Bakemono now size 1
+
+Most Unique summons are now banned from casting spells that transform the caster - Become Eagle, Become Octopus, Become Giant, Become Dragon, Become Golem, Become Lich, Become Worm that Walks, Transformation
+
+Become Dragon, Become Golem, Become Lich, Become Worm that Walks no longer have a chance to kill caster
+Become Dragon now grants +1F whilst in Dragon form
+
+Seitaad paths F2A2 100% FAED > F1A1 100%FAED
+
+Staff of the Fire King and Staff of the Frost King gained Tainted 10%
+Leyline Collector, Dimensional Anchor and Gem of Elemental Power can now only be used by immobile beings
+Amulet of Solid Air now grants 1 Magic Leadership
+
+Removed spells: Spirits of the Desert, Spirits of the Clouds, Spirits of the Deep, Spirits of the Earth, Sever Soul, Contact Reef Giant, Torrent of Vitriol, Grasping Kelp, Improved Clockwork Soldiers
+
+Kailasa starting army now consists of Guhyaka General, 10 Bandar Swordsmen, 20 Atavi Archers
+Lanka starting army now consists of Bandar Commander, 10 Bandar Warriors, 20 Atavi Archers
+Bandar Log starting army now consists of Bandar Commander, 15 Vanara Swordsmen, 20 Atavi Archers
+Patala starting army now consists of Bandar Commander, 20 Vanara Swordsmen, 20 Atavi Archers
+
+Yomi/Shinu/Jomon gained spell: Corpse Animation
+
+Fennoscandia: Most troops reduced in cost by 1-2 gold, Fenni reduced by 4 and gained Undisciplined and Skirmisher
+
+Nahullo: Starnake Warrior and Starnake Lord Scale Mail Hauberk > Golden Scale Mail
+Starnake High Priest gained Adept Sacrificer 2, Randoms changed from 110% EDB > 110% FESDB
+Enslaved warriors cost reduced by 2 gold, Conscripts gained Undisciplined
+
+Chaco/Ongtupqa: Most warriors cost reduced by 2 gold.
+
+Juhera: Ghul Sorc 75 gold, FEDN random > 95 gold, FDN random
+Pari 20 gold > 15 gold
+PD now has reduced unit numbers
+
+Summon Ghaddar Blood3, 28 slaves > Blood4, 42 slaves, -4 Poor Researcher, gained 2 hand slots
+
+Dom-Dan'yel: Janissaries 14 gold, Att 11 > 13 gold, Att 12
+
+Added Mercenaries: King of Pentacles, Queen of Cups, Knight of Swords and Knave of Rods
+
+Disciples of Asphodel now suffer income penalty from Dominion & gain mandragora/vine wreathed statues
+Disciples of LA Rlyeh now gain chance of Void summons in Dom8+ provinces
+Disciples of MA Ermor now suffer income penalty from Dominion 
+Disciples of LA Rlyeh now suffer income penalty from Dominion
+
+ 
+
+
+Version 1.72
+
+Yomi/Shinu/Jomon no longer have access to Celebration of War/Peace
+Indies no longer summon Jomon longdead
+Manikins spawned by Haunted Forest no longer endlessly reform into themselves on death
+Rlyeh Void Lords are now Magic Beings
+Necklace from Beyond gained Tainted 10%
+Maenad of the Mother is now sacred
+Demon Priest no longer appears as a unit
+Dom-Dan'yel can now build forts underwater
+
+Ind gained spells: Call Unclean Spirits, Bind Lilith, Ten Plagues
+Demon Gate/Horde of Demon Hags can now summon Robed Shikome and Yomotsu Shikome, including as a commander
+
+LA Pythium gained hero - Mithra, the Adorable One
+Master of the Games now appears correctly as multihero, removed for EA Ermor, gained new sprite
+
+Yomi gained spell: Ritual of Dedication
+
+
+
+
+Version 1.71b
+
+Fixed missing longdead and removed Yomi etc. soulless as could be summoned without corpses
+Fixed some units missing from summoning lists
+
+
+Version 1.71
+
+Terracotta General and Emperor were summoning Terracotta Emperors.
+Sea Killer 1 gem > 3 gems
+Katsina Magic shield was not magic
+Juhera had incorrect PD commander
+Wing Buff attack was lost when equipped with a weapon
+Red Forest site was summoning two Kithaironic Lions instead of two Fire Snakes
+Bound Jinn of Zion/Dom-Dan'yel and bound demons of Nahullo now affected by Solomons Demise
+Thing that Should Not Be gained correct life drain attacks
+
+Jangar gained Enchanted Bow
+
+Yomi/Shinu/Jomon/ gained national longdead/soulless via spells
+Fomoria/Eriu gained national longdead via spells
+
+Yomi/Shinu/Jomon gained spells: Summon Goryou, Summon Kosenjobi
+
+Juhera Ghuls lost regeneration in second form
+Juhera Ghuls 15 gold, 9 rp > 20 gold > 22rp
+Juhera Ghuls lost some mapmove and lost some morale in secondshape
+
+Dom-Dan'yel:
+Marid is now amphibious
+Summon Pari Host now summon 6++ Pari and 6 Pari Swordsmen
+Bind Jinn now summons a commander
+Contact Jinn of Wishes Thaum9 > Conj9
+Bandit gained Cloth Headpiece
+Gate to the Shadowlands, D3 > Gate to the Shadelands, D2
+Gained spells: Bind Warrior Host, Prepare Spirit
+Zatanai gained twiceborn shape > Spectral Zatanai
+
+Nahullo: Ishkitini and Hashok Okwa Hu'iga gained Stealth
+
+
+
+Version 1.70
+
+
+Fate of the Corruptor had no effect when cast
+Ghulah had no abilities in second form
+Terracotta General could spawn more Generals
+Tower of the Heavens now disappears if enchantment stolen without being dispelled
+Morvarc'h Wraiths no longer suffer penalty for using breath weapon
+Carrion Dragon Pretender & summon now have correct slots in Dragon form and paths in Pan form
+King of Ghosts correctly casts Undead Mastery in battles
+
+
+End the Deep Slumber Ench8, N6, 75 gems > Ench7, N5, 60 gems, now requires caster is a Plant being
+Enchanted Salt Const4 > Const2
+Release the Nosoi can now spawn Apparitions in provinces with corpses and friendly Dominion (2% x candles chance)
+Become Golem grants MR12 > MR16
+
+New spells: Nature Power, Blessing of Gaia, Mantle of Ivy, Throw Salt, Spray of Salt, Barrier of Salt, Empty Graves, Living Mud, Living Mist, Living Magma, Living Smoke
+
+New items: Giant Sword, Earthshaker, Caladbolg
+
+EA Sauro Spirit Guide, EA TC Master of the Dead, LA TC Spirit Master, MA Tartary Udgan and MA Iram Sahir gained Throw Salt attack
+
+New Pretender: Idol of the Ancient Warrior
+
+New nation: LA Dom-Dan'yel
+
+
+
+Version 1.68
+
+Enter the Void now allows Human Dreamers
+AI no longer recasts Body of Flames
+Axe of the Berserker no longer grants +4Str
+Basmu no longer gets -10 damage on bite
+Meandash no longer turns into a Vaetti in battle
+Malphas the Triumphant no longer starts old
+Raise Fossilized Colossi now correctly requires D3E1
+
+Foul Vapors Ench5 > Ench6
+Astral Corruption 233 Slaves > 199 Slaves
+Open Gate to the Beyond 25 pearls > 15 pearls
+Ether Lord can now summon 1 Ether Warrior/month
+Mind Whip 15 gems > 10 gems
+Crown of Majesty 25 gems > 20 gems
+
+Tartary Khans Summon Allies 1 Kheshig > 1 Horseman
+
+New spell: Fate of the Corruptor
+
+New Pretender: Founding Father
+MA Ermor gained Dracolich Pretender
+
+Juhera reworked
+Binn are now Pari, gained salt and iron vulnerability, +1 Def
+Ghuls now match Ubar Ghuls
+Qarin are now Qutrub, gained Jinn characteristics, lost secondshape 65 gold > 80 gold
+
+
+
+Version 1.67
+
+Pooka no longer causes crashes in battles
+Land nations can now actually build forts underwater
+Vessel of Misery now produces units even if population of province is reduced to 0
+Carrion Dragon can now be selected as a Pretender
+Blacksteel Forge Const6 > Const5, can now actually be cast
+
+Rabisu lost invisibility, HP 20 > 15, cost 10 gems > 13 gems
+Dendrooism now grants Innate Caster 1
+Phoenix Feather now grants Woundfend 5, 100% chance to reform and bearer explodes on death (20 aoe, 10AP fire damage)
+Wand of insects costs 10, makes 2 insects > costs 12, makes 5 insects
+Strength of Steel E4F1 > E4F2
+
+LA Rlyeh gained spell: Lord of the Void
+Ulm gained spell: Temper Army
+
+Tridevi - cost 300 > 250
+Neter Triad - Neter child gained +1N, Neter Father gained +1D, Neter Mother gained +1S
+Morrigna - First gained +1A, Second gained +1D, last gained +1S
+Titan of Crossroads - Lampadephoros gained +1D, Kleidouchos gained +1S, Kourotropos gained +1N
+
+
+
+Version 1.66
+
+Fixed Samsara, Underworld Path, Join the Smouldercone & Knowledge of the Underworld being unable to be cast
+Djinn Madness spell no longer castable
+Fixed some commanders not appearing for Release Throne Power
+Fixed some spell descriptions
+Curse of Limos no longer affects friendly units
+
+Ryugo-jo Ryujin gained Tail Sweep
+Send Moirai A3E1 > A3E3
+Teachings of Azazel 20% Forge discount > 10% Forge discount
+Stoke the Blood: Thaum7, N5 > Thaum5, N3
+
+Asphodel: Reduced rate of Statue and Mandragora freespawn
+Vine creatures now suffer fatigue as they are formed of living vines and not inanimate or undead
+Temples cost 400 > 600, Forest Temples cost 200 > 300, Forest labs cost 250 > 350
+Carrion Centaur & Carrion Lady gained Inept Researcher -4
+Carrion Dragon, First Mandragora Pretenders lost Undead & Lifeless tags
+Carrion Beast, Carrion Dragon & Wild Mandragora summons lost undead & lifeless tags
+
+R'lyeh: Reduced rate of Void Being freespawn outside the capital
+Freespawn Void Beings now require Turmoil aswell as Magic scales, Temples increase the rate
+Removed Thing from Beyond and Thing of Many Eyes from the Void Being spawn list
+Whispers of Rlyeh now slowly increases Turmoil & Magic scales in coastal provinces
+
+Bhod: War Mammoth 140 gold, 20 res > 130 gold, 25 res
+
+Ashdod: Release Azazel, 55 gems, summons unique Azazel commander > Release Grigori, 65 gems, summons Tartarian Grigori commander
+
+
+
+
+Version 1.65
+
+Fixed sprite issue with Sahuagin Hunter
+Fixed gemcosts to Samsara, underworld Path, Join the Smouldercone & Knowledge of the Underworld
+Fixed Stellar Focus applying Riches from Beneath effect
+Fixed Read the Stars creating multiple Standing Stones per province
+Removed Mounted from Urmalu
+Ghostform now works underwater
+Cernunnos no longer becomes a Vaetti when killed
+Fixed LA Nihuala getting melee troops as castle defenders
+Removed Markata Freak from the Transformation pool
+Removed upkeep from some summons
+
+Glory of the Sun: 10 gems > 2xSize gems
+Journey to the Styx: 15 gems > 3xSize gems
+Sword of Sharpness 3 gems > 4 gems
+Greatsword of Sharpness 3 gems > 5 gems
+
+Idol of Watery Wisdom Inspiring Researcher 1 > +10 Research
+New Pretender: Kirin
+
+Cynocephalian Saint B3 > H3
+Swordbearer gained H2
+
+MA Uruk: Basmu & Mushussu are now Drakes
+First Mushussu gained Dragonlord 2
+
+MA Ulm: Gained spell: Empower Forge
+
+Machaka: Contact Aziza N2F1 > F1N2, Form of the Hunter N1F1 > F1N1
+MA Machaka gained spell: Raise Fossilized Colossi
+
+Nahullo: Sitecah Chieftain and Starnake Lord gained Capture Slaves
+
+Sauromatia: Delgnat's Bargain 15 gems > 20 gems
+Open Partholonian Tomb D5W1, 40 gems > D5W2, 60 gems
+
+Marverni/Albion: Summon Pict Tribe 24 gems > 35 gems
+
+Ryugo-jo: Protection of the Dragon Divine spell, H1 > Ench4, W1H1
+Nu Kua 40 gold > 55 gold
+Metal Short Sword Att 0, Def 2 > Att 1, Def 1
+
+Ryugo-jo & Jomon gained spell: Summon Eelfolk
+
+Bhod: War Mammoth 120 gold > 140 gold
+
+Alchera: Maohi Spear warrior lost dagger, gained javelins
+Dreamhunter gained Magicpower & Magicstudy
+Gained item: Serpent Skin Tjurunga (Thanks Teju Jagua!)
+
+Fennoscandia: Sea Sami can now be recruited in coastal provinces without a fort
+Gained spell: Contact Vuorihiisi
+
+Rephaite Lich size 4 > 5
+Spectral Ba'al gained Invulnerable 10
+
+Pyraemon can now use Hammer of the Master Smith
+
+All nations can now build forts underwater
+
+MA Asphodel - Dominion no longer kills population, now causes taxloss per Dom point outside the capital (65% lost at 5 Dom)
+Bless points bonus - 1 Nature, 1 Death
+Temples now generate Nature gems
+Gained default scales - Growth 3, Sloth 3
+Dominion spreads Sloth scales like Niefelheim spreads Cold
+Black Centaurs lost Berserk, -1Att, -1Def, -1Str, gained Slothpower 1, Sleep Aura, -5 gold cost
+Carrion Centaur, Carrion Lady, Carrion Lord lost -1Att, -1Def, -1Str, gained Slothpower 1, Sleep Aura
+Manikins, Carrions & Mandragoras now Magic Beings instead of Undead, lost -2Att, -2Def, -2Str, gained Slothpower 1
+Black Dryads/Hags gained Carcass Collector - convert N gems to D gems
+Forts now spawn Vine-Wreathed Statues in high Dominion
+Mandragoras spawn in provinces with high Dom regardless of corpses 
+Carrion Centaur 5 gems > 7 gems, magic paths H1 > N1D1H1
+Carrion Lady cost returned to vanilla, magic paths N1H2 > N2D2H2
+Some spells now target non-lifeless Magic beings rather than undead: Quick Roots, Regrowth, Mending Vines, Puppet Mastery, Carrion Growth
+Gained spells: Dreamless Sleep, Deep Slumber, Enchant Army, Sleeping Curse
+
+LA Rlyeh - Dominion no longer kills population, now causes unrest (1 per point/month), Forts gain 1-5 extra unrest/month
+Gained default scales - Magic 3, Turmoil 3
+Dominion spreads Turmoil scales like Niefelheim spreads Cold
+Capital now spawns Void Beings - 50% per Dom point in the capital
+Dominion now spawns more Void beings when Dom is high and magic scales are present
+Cap Only Starspawn lost 1 random path, gained H3, Templesummon 1 random Void Being, 10% Insanity
+Void Cultist lost assassin, gained Chaos Recruit 5, Templesummon 1 random Void Being, Magicpower 1
+Dreamers lost -2Att, -2Def, -2Str, -1 Patrol strength, gained Magicpower 1
+Madmen lost -1 Patrol strength
+Create Lobster Hybrid S2W1 > W2S1
+Lobster Hybrid Spawning S3W2 > W3S2
+Whispers of Rlyeh Thaum6 > Thaum7
+One with the Void 5 gems +1/month > 35 gems, Permanent until province lost/caster killed
+Open Gate to the Beyond 10 gems +1/month > 25 gems, Permanent until province lost/caster killed
+Prepare Gate to the Beyond 10 gems +1/month > 25 gems, Permanent until province lost/caster killed
+Lost spells: Create Shoggoth Servitor, Create Shoggoth Horde, Create Shoggoth Monstrosity
+Gained Spells: Call From Beyond, Call Host From Beyond, Void Summoning, Void Incursion
+
+
+Version 1.64
+
+Fixed old Tjatse Sprite overwriting Niefel Jarl
+Solomoriah, Khamul and Arach are now correctly Unique
+Arena no longer steals unique items that have been forged
+Wrath of the Forest can no longer summon anything with the animal tag
+
+Jotunheim lost spells: Awaken Niefel Giant, Awaken Rimturse
+Utgard lost spells: Steal Vitality, Call of the Iron Woods
+Vaettiheim gained spells: Call Jotun Wolf, Pack of Dire Wolves, Call of the Iron Woods, Howl of the Fenrer, Animate Ice, Send Mara, Steal Vitality, Entomb in Ice, 
+
+Create Fire Lances no longer cap only
+Removed shattered soul from several wightshapes due to Twiceborn cost changes
+Removed Twiceborn shapes where no longer needed
+Transformed Octopus loses tentacle attacks when weapons equipped
+
+Worthy Heroes updated to allow new patch heroes to appear
+Vaettiheim gained heroes: Spornsjall, Hel
+Utgard lost hero: Hel
+Na'Ba gained hero: Swordbearer
+Ind gained hero: Cynocephalian Saint
+
+New Pretenders updated in line with Pretenders Enhanced (all gained Disease Resist & Recuperation):
+Great Archon 280pts > 230pts
+Demiurge 200pts, S1E1, Prot 14 > 150pts, S2, Prot 20, Gained Tail Slap attack
+Serpent of the Underworld 180pts, E1D1, Prot 17 > 150pts, D2, Prot20, Gained Woundfend 2 & creates 20 gold/month
+King in Yellow 180pts > 200pts, gained Awe 1, Ethereal, Domspread 2, Poisonres 15, Teleports, Spreads Insanity, Heavy Magic Robes
+Abyssal Carcass gained Poisonres 25 & Coldres 15
+
+Na'ba gained spell: Consecrate Block
+
+
+
+Version 1.63
+
+Dragons had incorrect 40 Protection - reduced to 20
+Fixed site recruits not appearing for some sites
+Magic Tattoo items can no longer be picked up after a battle
+Demon Mask correctly restricted to Demons
+Nahullo Slave soldier now has correct stats and sprite
+Fixed description on Solomon's Demise
+Elemental Barrage no longer triggers Phantasmal Archers
+
+New spell: Summon Sunbird
+
+Chthonic Cyclops gained Kick attack
+Ghostly Rephaites gained Wasteland Survival
+
+EA Ulm: Warrior Spirit 7 gems > 10 gems
+Aesir gained Coldres 5
+
+EA Machaka gained: Call Ndichie, Summon the Ndichie, Call Alusi
+MA Machaka gained: Call Alusi
+
+Ctis & Ur/Uruk gained: Summon Beasts of Chaos
+
+MA pythium: Celestial Splendour aoe 4 > 6++
+Guardian Angel summons 1 Angel > Guardian Angels, summons 4+ Angels
+Will of the Lord Alt7 > Alt6
+Avenging Angel S6H5, 100 Fat > S5H5, 80 Fat
+Burning Angel, summons 1 Seraphim Warrior & 2 Angels > Burning Angels, summons 3 Seraphim Warriors
+Consecrate Battlefield S8H7 > S6H7, Enemy demons must resist with MR (Hard) or be stunned
+
+
+Several Sprite additions by notsoTRUEVECTOR (Redcap, Murducchan, Eleionomae, Nuckelavee, Ndichie, Alusi)
+
+
+
+Version 1.62
+
+Ghaddar can now fly
+Zhong Kui now correctly casts Undead Mastery at battle start
+Uru'gallu gained swimming
+Pyraemon lost head slot
+First Spawn can correctly use Aboleth-only items and spells
+Fixed Solomons Demise triggering on Vanara Captains
+Vessel of Misery correctly lasts 12 month
+
+Most Monster Pretenders gained +2Prot
+New Pretenders: Terracotta Emperor, Cromlech
+Uluru 180 > 150
+Night Hunter 170 > 160
+Elohim Awe 5, 250pts > Awe 3, 260pts
+Wadjet now spreads Growth
+Neter of Crafts forge discount 2 gems > 4 gems, new pathcost 60 > 40
+Titan of the Forge new pathcost 60 > 40
+Blacksteel Colossus reworked to match Bronze Colossuss
+God Spider now summons Wolf Spiders in friendly Dominion
+Kami of Fertility temp gems 2E 1N > 2N 1E
+
+New monster: Wight Slaver
+Aboleths now have twiceborn shape: Wight Slaver
+
+Gift of Reason N4 > N3
+Animate Kelp Field Ench5 > Ench4
+Awoken Ancient Presence W2N1 > D2N1
+
+New spell: Summon Wolf Spiders
+
+Bog-soaked armor Const2 > Const4
+
+Artifacts from Const8 > Const4: Harvest Blade, Infernal Sword, Holger the Head, Percival the Pocket Knight, Midget’s Revenge
+
+Artifacts from Const8 > Const6: O’al Kan’s Sceptre, Winter Bringer, Dawn Fang, The Summit, Twin Spear, Rod of Death, Ember, Sword of Injustice, Picus’s Axe of Rulership, Procas’s Axe of Rulership, The Sharpest Tooth, Sword of Justice, Hammer of the Forge Lord, The Oath Rod of Kurgi, Immaculate Shield, Barrier, Shield of the Dawn, Aseftik’s Armor, Armor of the Dawn, Robe of Calius the Druid, Helmet of the Dawn, Crown of the Ivy King, The Crown of Despair, Crown of the Fire King, Crown of the Frost King, Sandals of the Crane, The Boots of Calius the Druid, Fever Fetish, Igor Könhelm’s Tome, Krupp’s Bracers, Draupnir, Alchemist’s Stone, Bell of Cleansing, Nethgul, Carcator the Pocket Lich, Disease Grinder, The Green Eye, Wondrous Box of Monsters, Fountain of Youth, The Manual of Cross Breeding, Ardmon’s Soul Trap
+
+New items: Amulet of Power, Ring of Power, Necklace of Power, Token of the Deep, Rod of Falling Stars, Skull Orb, Oil of Sharpness, Pashupatastra, The Corner Stone, Blessed Chisel, The Heartstone, Bowl of Prophecy, Obscuro's Ring, Simbeline, Mother Pearl, Sky Diamond, Shield of Flaming Death, Gem of Creation, Barbed Coat, Staff of the Frost King, Staff of the Fire King, The Hyborian Gem, Arach Amulet, Shard of Solomoriah
+
+
+New sites: Rune Stone, Cave of the Seithberandi, Shrimp Settlement, Sahuagin Village, Sahuagin Settlement, Eagle Tribe Settlement, Grand Mosque, Alamut
+
+Ryugo-jo Shark Berserkers 50 gold, 38rp > 65 gold, 41rp
+Crab Soldiers 25 gold > 30 gold
+
+Juhera gained hero: The First Qarin
+
+Increased Chaos recruit discount to some Albion giants
+Removed unneeded darkvision from Albion demons
+
+Ind gained spells: Headless Men, Call Indus Worm
+Erytheia gained spell: Summon Scarab
+C'tis Gained spells: Summon Scarab, Summon War Scarab
+MA/LA Pythium gained spell: Summon Basiliscus
+Nightmarchers gained Fear 5, Incunrest 0.5
+
+
+
+
+
+
+Version 1.61
+
+Vampiric Drain now unresearchable
+Shamir Cutting gaze now deals 20 damage
+
+Male Shishi gained 3 itemslots
+Female Shishi bite now correctly deals extra damage to demons/undead
+
+Na'Ba gained Summon Ghaddar
+
+Juhera gained Summon Ghaddar, Beckon Shaytan
+
+Tartary Khan gained Summon Allies - 1 Kheshig
+
+Great Toad HP 220 > 190, gained Kills Population - 100/month
+Spirit of the Henge cost 150 > 170
+Sceleria lost Skull Idol
+
+New Spell: Create Sanguine Horror
+
+Rlyeh: The Stars Are Right 70 gems > 55 gems, no longer creates Baleful Star events, no longer summons void beings in friendly provinces, K'lullu gained domsummon - Void Beings
+
+Removed upkeep cost from Albion heroes
+Albion giant race renamed to Thyrsa - changed in descriptions and nation summary
+Albion gained discount to Blood Henge, Duiu of War and Spirit of the Henge Pretenders
+Removed leadership from Albion scout
+Woad Giants gained Power of the Turning Year: 2
+Witch Queen gained Combat Caster, Att 10 > 13
+
+Zion Chariot Spear > Sword
+Zion gained Divine Glyph Pretender
+Capturing Zion's capital no longer gives the ability to summon Jinn Warriors
+
+Nihuala - Flying Heads D1 100% ADN > D2, 50% AN
+Purification Lodge 10 gems > 5 gems
+
+MA Nihuala War Chief size 2 > 3
+
+LA Nihuala Skinwalker Stalkers now cap-only, lost one dagger
+Some skinwalkers lost Stealth, Magic Resistance and physical stats in human form
+Skinwalker Shamans AENB random > ENB random, made cheaper
+Skinwalker Ancients gained Air 1 base, cost increased
+Crow and Owl Witches gained Forest Survival
+Raiders renamed "Tomahawk Raider"
+Man Hunters (elite ranged troops) with crossbows 12g > 13g. Also reduced to 10HP
+Mad Dogs cost increased, Morale and Magic Resistance lowered, gained Berserk 2
+Some sprite tweaks
+
+Alchera gained Pretender - Great Burrower
+Alchera gained some Pretender discounts
+
+
+
+Version 1.60
+
+Blood Feast was accidentally removed in 1.57 - readded
+Reveler was not showing as recruitable for LA Pythium - readded
+Become Giant 12 gems > 15 gems
+Purify Water lasts 2 rounds > 1 round
+Mask of the Vampire drains 15AN > drains 5AN
+Stellar Cascades 25AP damage > 35AP damage, MR for half
+Summon Efreet replaced with Summon Seitaad
+Removed Summon Efreet Sultan 
+Suleiman the Magnificent tweaked and is now a Na'Ba national spell
+Crown of Pyriphlogos no longer gives 10 Fire Res per team member in Disciples games
+Summon Pictish Tribe now correctly summons a living Pictish Chieftain instead of an undead one
+Eudaimon gained hidden paths if made commander - N1, 2 x 100%ASN
+
+Marverni & TNN gained Summon Merrow
+
+Rune Stone Uruz 25 gems > 30 gems
+
+MA Man Monks 25 gold > 40 gold
+
+Headless Men 16 gems, summons 15++ > 8 gems, summons 7+
+
+Aid from the Afterlife Conj3 > Conj5
+
+Marignon Holy Relic is now unique
+
+Avenging Angel 200 Fat > 100 Fat
+Burning Angel 300 Fat > 200 Fat
+
+TC: Swapped paths of Celestial summons to use Astral primary
+Alchemical Secrets 10 gold/gem > 15 gold/gem
+Terracotta Soldiers F1E1 > F1, now summons random Terracotta units
+Terracotta Legion Ench6 > Ench5
+Construct Fire Arrows F2E1, 12 gems > F2, 10 gems
+Terracotta General 5 gems > 10 gems, can Summon Allies 2x Terracotta Warriors
+MA TC gained items: Jar of Cinnabar, Elixir of the Five Elements
+MA TC Gained spells Alchemical Workings, Alchemical Preparation and Alchemical Mastery
+
+Jomon: Dragon Princess W1 > W2
+Monks of the five paths 1CP > 2CP
+Welcome sign range 5 > 15
+Grandmaster of Flowers replaced with Miko
+Miko Bonding ritual reworked, 50 gems > 35 gems, no longer uses events and can have any number of bonded Miko
+Adjusted rate Divine Miko spawns Kami in different terrains whilst preaching
+
+Zmey Gorynch 240 points > 220 points
+
+MA/LA Man gained Reanimate Longdead Giants
+
+LA Abysia now gains 20% discount to Soul Contracts
+
+Yomi & Lanka gained Demon Mask (+4MR Helmet, Demons only)
+
+LA Rlyeh Void Spectre is now sacred
+
+Sawaiiki: Olohe Bandit 40 gold > 30 gold
+Consort of Lava 10 gems > 5 gems, gained hidden paths F1E1
+
+Tartary - most horsemen cost 2-3 rec points less
+Khan cost 140 gold > 150 gold, now summons 1 Barbarian Horseman/month.
+
+Ryugo-jo: Shrimp Soldiers 10 gold > 11 gold
+Crab Warrior 12 morale > 11 morale
+
+Wuya cost 545 gold > 580 gold, Att 12 Def 13 > Att 10 Def 10
+
+Shesanaga and Azazel became unwishable
+
+
+Reworked Juhera and Iram to account for introduction of Na'ba and potentially Ubar
+
+Juhera gained Scorching Wind, Summon Hinn
+
+Na'Ba gained Release Father of Jinn
+
+New EA nation - Albion, Tattooed Giants
+
+New EA nation - Zion, Seals of the Prophet King
+
+
+
+
+Version 1.57
+
+Fixed weapon clashes with new weapons added in 5.38
+Many Fey gained Iron Vulnerability and +1Att
+Fixed Release Sheut not summoning a Shadow
+Call Jotun Wolf correctly restricted to Jotun nations
+Abyzou gained Demon tag
+Removed incorrect note that Weapons of Shiva / Weapons of Brahma granted Magic Weapons
+Mi Go base cost 20 > 16
+Juhera/Iram Djinn gained Spiritsight
+
+All new Pretenders gained Disease Resist and Recuperation in line with Pretenders Enhanced
+New Pretender costs adjusted in line with Pretenders Enhanced
+New Titans gained abilities in line with Pretenders Enhanced
+Removed Dom1 Pretenders from Ind
+Ind gained access to Elohim, Icon and Burning Bush
+
+Ind gained Teachings of Kokabel
+
+
+Version 1.56
+
+Ice darts now do Piercing damage
+EA Arco spells correctly limited to Mage Engineers
+Tattoo spells now have no flysprite
+Swan Beak attack +10 > +1
+White Minotaur is now correctly a Multihero
+
+Contact Leng Spider S4N2, 25 pearls > S3N1, 20 pearls
+Leng Spiders poison now deals fatigue damage, also gained Sleep Aura 8
+The Spinner in Darkness S5D2, 50 pearls > S3D3, 40 pearls
+Atla Nacha gained Sleep Aura 20 and Mindslime 20, MR 18 > 20
+Call Gorgon E5N2 > E3N2
+Curse of Limos 300 fat > 200 fat
+Natures Claim now allows MR check to avoid entanglement
+Lord of the Carrion Dead Corpseeater 10 > 5
+Added some additional spell details to descriptions
+Axe of the Berserker +4att > +2att
+
+Endurance of Giants D5B2 > D4B2
+Atahsaia Corpse Eater 10 > Corpse Eater 5
+Effigy of the Sun lost body slot
+Ali'i 'Aimoku gained Tax Collector
+Pearl Citadel no longer loses ability to create Pearl warriors over time
+Phantasmal Sidhe A2 > A1, Att10, Def10 > Att11, Def12
+Wind Warriors gained Horse Tattoo 3
+LA Heaveborn Verethragna now causes fear & cold to target instead of aoe fear on strike
+MA Ulm gained Daughters of the Rhine
+Contact Du Conj3 > Conj2
+Summon Sin Po Conj2 > Conj4, Sin Po Def 14 > 13
+Muster Sin Po War Party Conj5 > Conj6
+MA and LA C'tis gained Summon Spectral Sauromancer
+EA and LA C'tis gained Summon Spectral High Priest
+EA and MA C'tis gained Revive Tomb Prince
+EA and MA C'tis gained Saurolichcraft
+Necklace from beyond now automatically triggers summoning ritual if worn
+Whispers from Rlyeh now creates some Hybrid Cultist Commanders
+MA and LA Abysia gained Outer Furnace
+
+Starnake King > Starnake Lord, recruitable in any fort
+Starnake Lord E1B1 100%EBD > E1B2
+New unit: Enslaved Tribesman
+Starting army 10 Enslaved warriors, 10 Enslaved archers > 15 Enslaved warriors, 15 Enslaved archers
+Temple cost 600 > 500
+Ishtahullo gained E1, now starts with 2 Shilombish in battle
+Blood Cult Initiate gained Dowse bonus: 1
+Bind Demon OWl 7 slaves > 5 slaves
+Bind Demon Owls 18 slaves > 14 slaves
+Summon Crow Witch D3, 10 gems > D2, 12 gems
+Crow Witch gained 100% ADN
+Summon Owl Witch Conj5 > Conj4
+Owl Witch gained 100% SDN
+Hoklonote are now female
+
+New Pretender: Sea Star
+
+
+Version 1.55
+
+Fixed Tide of Mud not casting
+Awaken Sacred Grove no longer summons tree from Dendrooism
+Weeping Shield and Vial of Saints Blood now appear for Venedia
+Fixed some typos banning incorrect spells from nations
+Oni Kunshu spirit form now has full slots like other Oni spirits
+Zmey Gorynch no longer has full slots
+Keystone can no longer be picked up after battles
+Fixed Odontotyrannous having -10 damage to bite attack
+LA Ontupqa Katsina Priest gained 10 invulnerability
+
+Water Elementals no longer max size 4 underwater > Now have 5% UWregen, lost a Crush attack at size 5 and 4.
+Spirit of Justice & Spirit of Unanimity Invuln 15 > 10
+Dragon Pretenders Prot 18 > 20
+Asian Dragon Pretenders Prot 17 > 20
+Lord of the Forest and Kami of Fertility increased to 220 points due to vineshield
+Icy Blast prec 0 > 5
+Burning Hands Evo1 > Evo0
+Fire Blast Evo2 > Evo1
+Magma warrior, Mud warrior, Mist warrior and Smoke Warrior all became mindless
+Siege Golem 10 gems, Const 7 > 20 gems, Const 9, now summons as a Commander and can destroy forts
+Release Throne Power now creates site that increases Magic scales, spreads Dominion & aids in recalling Pretender
+Guardian of Hades 20 gems > 15 gems, Kerberos gained 3 crown slots
+Call Gorgon 40 gems > 30 gems
+Guardian Spirit 50 gems > 40 gems
+Reach Through Aeons N5S5 > N5S3
+
+
+Xibalba Mud Men gained hp and regeneration, MR 9 > 7
+Rotterland Mud Men MR 9 > 7
+Nehushtan is now cheaper for Gath
+Asterios gained magical horns
+Blessings of the Numina aoe 1 > 3
+Summon Gegeines 6 gems, summons 3 > 4 gems, summons 2
+Stygian Waters Alt 6 > Alt 4, ai never casts
+Du War Party Conj5 > Conj4
+Sin Po War Party Conj4 > Conj5
+Children of Nanue 35 gold > 25 gold
+Many Sawaiiki units gained Swimming
+Kahuna Healer H1 > N1
+Gifts of the Sky H1A2, aoe 4, 99 Fat > H1A1, aoe 5, 50 Fat
+Gifts of the White H1N2, aoe 2, 99 Fat > H1N1, aoe 5, 50 Fat
+Gifts of the Moon H1S2, aoe 3, 99 Fat > H1S1, aoe 5, 50 Fat
+Gifts of the Deep H1W2, 99 Fat > H1W1, 50 Fat
+Form of the Great Bear 15 gems > 8 gems
+Eriu gained Mother of Tuathas Pretender
+
+Added spell: Enlarge Urchins
+
+Added yellow text details to many spells
+
+
+
+Version 1.54
+
+Spellsinger spells now correctly centered on caster
+Gift of Natures Bounty Ench8 > Ench9
+Summon Tikbalang now summons a unit
+Zmey Gorynch now correctly Twiceborns into a Dracowight
+Skum no longer cost upkeep
+Ancestral Prince, Princess & QUeen lost Spectral Shield
+Fixed some sprite issues
+Unforging F1W1 > F1
+Unforge Iron Armaments F2W1 > F2
+
+Fire Dragon 88hp > 120hp
+Wight Mage gained maxage 5000
+
+LA Man lost access to Hidden in Peat, gained Summon Morgen Wraith & Hidden under Shores
+MA Man gained Hidden in Peat
+
+
+
+Version 1.53
+
+Fixed some EA Rlyeh spells unable to be cast
+Fixed Heal Mind not working underwater
+Reduced events from Blood Harvest
+Fixed Animate Kelp Field not summoning Kelp Men
+Fixed Azi having odd path reduction in Dragon form
+
+Thalassa's Blessing, W2 > Enchant Algae, N2
+Amulet of Missile Protection Const2 > Const0
+
+New Pretender: Zmey Gorynch
+
+New Spells: Unforging, Unforge Iron Armor
+
+Pretas Conj5, D2, 10 gems for 10+ > Conj3, D3, 5 gems for 5+
+Golden Warrior Pike > Golden Spear
+MA Xib lost Obsidian Butterfly
+Mushushu and Basmu are now Drakes and affected by Dragon Master
+Boksi gained Inept Researcher -3
+Animate Effigy of the Sun 55 gems > 65 gems
+Summon Crow Witch 14 gems > 10 gems
+Summon Owl Witch 16 gems > 12 gems
+Contact Aziza N2F2 > N2F1
+Auluudh hero now summons 1 Aboleth unit/turn
+Kelp Lord Sleep Vines > Tentacles
+Khans gained Tax Collector
+Noyan and Kheshig gained Prophetshape into Khan
+Temujin now allows recruitment of Kheshig
+Summon Apostle D3H3 > D3H2
+Summon the First Apostle D4H3 > D4H2
+Soldier Ants kill 50 month > 20 month
+Hail of Fire Evo7 > Evo5
+Blade Storm Evo8 > Evo7
+Warp Armor Alt6, 1 gem > Alt5, 80Fat
+Rust Armaments 60Fat, range 20 > 40Fat, range 25
+Azi 220 points > 240 points
+
+Evo spells gained Precision
+Fireball
+Cold Blast
+Acid Bolt
+Bane Fire Dart
+Bolt of Unlife
+Breath of the Dragon
+Nether Dart
+Blast of Unlife
+Ice Strike
+
+Evo spells gained damage
+Fireball 16++ > 20++
+Falling Fires 15+ > 20++
+Acid Bolt 16+ > 20++
+Bane Fire Dart 16+ > 20++
+Acid Rain 12 > 15++
+Falling Frost 17+ > 20++
+
+
+
+Version 1.52
+
+Bag of Dragon Teeth grants Magic Leadership 1
+Border Reiver size 2 > 3
+Ancestral Champion lost Spectral Shield
+Enchant Gilded Angel S2 > F3S2
+Fixed some sprite issues
+
+Crown of Majesty F2E2, 20 gems> F3E2, 25 gems
+Arges can use Hammer of the Master Smith
+Repeating Crossbow gained AP, 1/3 Str to damage
+Wand of Insects 15 gems > 10 gems
+Flame Bow 6 ammo > 12 ammo
+Bramblewild Spirit 20hp, Prot 10, Poison armor 5 > 15hp, Prot 7, Poison armor 2
+ThistleSpear Spirit 35hp, Def 12, Poison armor 5 > 30hp, Def 11, Poison armor 3
+Summon Thistle Spirit Conj3 > Conj4
+Some Standard units lost 3AP
+Weapons of Sharpness E4 > E5
+Seeking Ichor W3S1 > W3D1, Ichor lost item slots
+Vessel of Misery 50 gems > 40 gems, now lasts until end of year
+Protection of the Numina 5 gems > 10 gems, now lasts until end of year
+Create Fire Lances 12 gems, gem duration > 20 gems, permanent
+Alfablot 9 slaves, gem duration > 12 slaves, lasts until end of year
+Disablot 3 gems, gem duration > 6 gems, lasts until end of year
+Incantation of Eridu 2 gems, gem duration > 6 gems, lasts until end of year
+Powamuya 3 gems, gem duration > 6 gems, lasts until end of year
+Blessings of the Numina gained Precision 100
+Displacer Beast 2 gems > 3 gems, gained Blink (in-battle Teleportation)
+Hellhound gained Spit Flame attack
+Sahuagin gained Pillagebonus 1
+
+Phoenix Feather Const6, F3 > Const4, F2
+Flask of Vitriol W3 > F1W1
+
+New Pretender: Tree of Hate
+
+New Spells: Word of Drowning, Raise Centurion, Raise Legate, Dendrooism, Samsara, Knowledge of the Underworld, Call Eudaimon, Underworld Path, Bonfire of Rebirth, Call Sea-Devils, Herd of the Great Mother
+
+LA Pythium - Removed Fertility Rite, Servants of the Great Mother Con3, 5 gems > Con2, 4 gems
+
+Shambhala
+Crossbowman lost Formation Fighter
+Polearm Heavy Infantry lost Formation Fighter, 13rp > 15rp
+Sword & Shield Heavy Infantry 12 gold, 13 rp > 14 gold, 17rp
+Mak Hrak 18rp > 20rp
+Guardian of the Hidden Valley 23 gold, 20rp > 25 gold, 26rp
+
+Gondwana lost spell: Spirit Dance
+
+Ryugo-jo Nu Kua 35 gold > 45 gold, Armor of the Dragon King 20 res > 25 res
+
+
+
+Version 1.51
+
+Border Reiver gained Shield
+Wind Warriors gained Ethereal, Enc 0
+Vegetable Lamb is now undisciplined
+Fixed Novice Horseman sprite having a bow
+The Looming Hell no longer spawns Ethereal Dwarves
+Gloves of Far Striking now grant a magic fist attack
+Units with Fireshield 6 > 8 as per vanilla
+
+Darkhad Str 10 > 12
+Ancestral Rider lost Hoof attack, Att 13, Def 13, Str 12, Enc 3 > Att 12, Def 12, Str 10, Enc 0
+Sin Po gained undead leadership
+Reduced event spam from Acid Seas
+Hidden in Sand E3D1 > F3D1, Dust Priest gained F1D2 instead of E1D2
+Venedian Doctor D1N1 > D1
+Tartary nation description amended
+Tartary spearman att 8, def 8 > att 10, def 10
+Summon the Marshland N5W2 > W3N2
+Trimurti of Protection Att 13 Def 13 > Att 11 Def 11
+Tetrachire E1N1, Dom3 > E2, Dom2
+Auluudh gained 3 misc slots in MA and LA
+
+
+
+Version 1.50
+
+Giustiziere no longer autocasts Spirit Mastery in battles
+Dryad Charm fixed from 13 > 8 gems
+Divine Anvil gained Poison Resistance
+Fixed typos in some Worthy Heroes
+Re-added Red Tengu lightning strike
+Added damage types to some weapons where missing
+Create Floating Eye castable underwater
+K'lullu Void Sanity 25 > 20
+Vanir will not attack Niefelheim whilst Ragnarok is in effect if they are on the same team
+Ravens and Frogs can no longer lead armies
+Summon Forest Troll Tribe now summons Forest Trolls again
+Removed reference to Ivy Lord in End the Deeper Slumber
+Re-added Heroes from the last patch removed by Worthy Heroes changes
+Removed Morgan and Merlin from Worthy Heroes due to new Illwinter heroes
+Fixed Remote Domination not creating units
+Malediction no longer creates Unique Vampire Counts
+
+Demonic Rune of Iron no longer creates Poison Cloud
+Riptide Range 20, +3 Prec > Range 25, +5Prec, now gains +5 range and +5 damage per extra path level
+Summon Stone Guardian 2 gems > 3 gems
+Removed Summon Mo'O except from Sawaiiki
+Animate Kelp Field no longer summons 5+ Kelp Men, instead applies tangle vines to 1 square and summons a Kelp Man for each target creature affected.
+Summon Nuckelavee > Send Nuckelavee, gained 3 province range
+Some units gained a price reduction when certain enchantments in play - Newts, Burning Ones, Black Centaur, Sun Priest, Sun Warrior, Moon Warrior
+Looming Hell requires B6 > B8, now creates 1 random demonic commander and 3-10 demonic units in  your Pretender Gods province each turn whilst active, also can create attacks on enemy lands in your Dominion
+
+
+Avatar of the Endless Sky, Immortal Advisor, The Immortal Killer, Red Death, Akhilleus, Asklepios, Alcaeus, Ulixes, Eurymedon and the First Apostle all regained Immortality and lost Reform 50% in battle.
+
+Twiceborn gained new shapes:
+Wight Beast - Used for quadruped monsters - comes in size 2, 4 and 6
+Necrophidian - Used for Serpentine monsters - comes in size 3 and 6
+Wight Giant - Used for most size 5 Humanoid creatures, Hill Giants & Telkhines
+Wight Titan - Used for most size 6 Humanoid creatures
+Ziz - Used for size 5 & 6 birdlike monsters
+Dracowight - Used for size 5+ Western and Eastern Dragons and similar flying Dragonkin (Azi, Zmey etc.)
+Leviathan - Used for Aquatic monsters & turtles, plus size 6 Aboleths
+
+Spell Scaling ovehaul - many spells changed scaling as detailed at end of changelog
+
+
+Bracers of Protection 5 > 3 gems
+Harpy Manikin Mapmove 16 > 22
+Sea Nymph pathcost 80 > 40
+
+Ancestor Smith, Ephor and Geronte are affected by Unaging bless
+
+New Pretenders: Skull Idol, Markata Master, Traveler, Elohim, Demiurge, Nehushtan, Burning Bush
+
+New Spells: Detonate, Summon Tikbalang, Melody of the Winds, Ballad of Ancient Heroes, Fearful Dirge, Wail of Despair, Enchanted Lullaby, Healing Refrain
+
+New Heroes:
+EA/MA/LA Pan:	Silenus, Wise Satyr
+MA Asphodel	Ampelos, Satyr Mandragora
+
+
+EA/MA/LA Caelum gained spells: Herd of Mammoths, Summon Yazata Champion, Summon Daeva Champion, Aid from the Afterlife
+
+LA Caelum gained spells: Wake the Buried Dead
+
+LA Ragha gained spells: Summon Yazata Champion, Summon Daeva Champion, Aid from the Afterlife
+
+MA C'tis gained spell: Fetid Stench
+
+LA Bogarus gained spell: Summon Ubir
+
+Yomi lost Locate Tengu Village, Locate Tengu Clanhold
+
+MA Xibalba gained spells: Army of Mud, Summon the Marshland, Swamp Rot
+
+Laestrygonian Tyrant wight shape gcost 600 > 0, Shattered Soul 25 > 15
+
+Shambhala lost Bhodpa Warrior, Bhodpa Horseman, Mi Gö Hunter
+Shambhalan units and summons renamed according to Simplified Phonetic Transcription of Standard Tibetan
+Removed Mirror Llamellar item, added 20% national discount to Mirror Armor
+Shambhala Mountainrec Mi Go replaced with Mountainrec Bhodpa
+Bhodpa Horseman lost Hoof attack
+Restore the Dharma aoe 2 > aoe 1
+Gained spells: Join the Dharmapala, Summon Pretas, Self-Mummification
+
+Ongtupqa - Katsina Dancers 24/26 > 28 gold, Enchanted Shield parry 7 > 5
+
+Curse of Sinking Mire aoe 6++ > 4+, Slime > Slime + Def Negates Earth Meld
+
+Gates of Death now creates Knights of the Unholy Sepulchre for EA Ermor instead of Lictors
+
+Rotterland: Doctor gcost 190 > 170
+Doctor and Refugee Mermage gained 10% random, Levee Master random 10% > 20%
+Refugee Mermage gained Gift of Waterbreathing 30
+Pelagian Mermages 100 gold, W1, 100% WSEN > 150 gold, W1, 2 x 100% WSAN, 10% WSAN 
+Mosquito Swarm Strength Drain now MR Negates
+Moss Maiden 30 gems > 20 gems
+New spells: Tide of Mud, Fetid Stench, Summon the Marshland, Swamp Rot, Spreading Miasma
+New nation description and some new unit/hero descriptions
+
+Eriu gained recruitables: Fir Bolg Militia, Piper, Border Reiver, Gallowglaich and Druid of Old Fomoria
+Bean Sidhe is now recruit-anywhere
+Eriu Fir Bolg gained Chaos Recruit, Pillage Bonus & Unrest increase.
+Fir Bolg with axe gained Berserker 1, +2 gold cost
+Fir Bolg Champion renamed Fir Bolg Clan Chief
+Bard gained unrest reduction -5/turn
+Gained spells: Raise Nemedian Dead, Summon Picts, Summon Spectral Druid
+Gained Items: Uillean Pipes, Pipes of Doom
+
+TNN gained recruitable: Fir Bolg Piper
+
+Sawaiiki: Kahuna Sorcerer Mutihero D1W1 > D2W2
+Gained Bless Points: 1A, 1N
+
+Nazca: Huaca Stone gained Supply Bonus 50, Bringer of Fortune 20, rarely summons a Supaya
+
+Venedia gained spells: Enchant Glass Angel, Enchant Gilded Angel, Create Ornithopter Scout, Create Ornithopters, Create Flying Boat, Create Flying Ship
+Gained items: Vial of Saints Blood, Weeping Shield
+Venedia Lost: Titan of the Underworld
+
+Ryugo-jo: Nu Kua cost +5 gold
+Starting Army 15 Shrimp Warriors, 5 Crab Soldiers > 10 Shrimp Warriors, 5 Crab Soldiers
+
+Alchera: Dreamwalker spear Length 4 > Length 3
+
+Therodos: Divine Dance is now only castable by Hekateride
+Removed Telkhine Skull
+Therodos lost Blessing, Divine Blessing
+Reworked War Dances to replace blessing spells but with range 0
+
+EA Arco: Creations of the Lykeion, Construct Talos, Mechanical Icarids, Men of Bronze & Defences of Daidalos castable by Mage Engineer/Daidalos only
+
+Nahullo: Nalusa Falaya - Gain Assassin
+
+LA Ulm: Malediction creates less Ghoul Commanders
+Malediction now provides some effects to teammates - ghoul & vampire creation & commanders become vampires
+Mage summoned with Reveal Infiltrator now has additional magic path
+
+EA Rlyeh
+Some spells now only castable by Aboleths
+Remote Domination S5 > S4, Caster sees attacks, now reduces unrest by ~25 if cast at friendly province
+Create Skum Conj6 > Conj4, now summons smaller but more numerous skum 
+Doomed Aboleth Tainted 50% > 15%
+Auluudh gained 3 misc slots
+
+LA Rlyeh gained Create Lobster Hybrids, Lobster Hybrid Spawning
+Stars Are Right will create void beings for teammates in Disciples games
+
+MA Marignon
+Face of the Lord 75 gems > 90 gems
+Face of the Lord doesn't try to create units underwater, creates Angel of the Host units (reduced chance) and Angel of the Choir commanders rather than the other way round
+
+LA Marignon
+Angelique gained H1, poor magic leader, summmons Angel of the Host in battle
+Tomaso gained +2 Morale, +5 Fire res due to Fire Plate, Domsummons Flagellants
+
+
+
+New Nations:
+
+EA Bhod, Terton Kings
+
+MA Tartary, The Golden Horde
+
+LA Great Arrada, Bloody Kingdom
+
+
+
+SCALING CHANGES:
+
+
+Gained Half Scaling
+
+Summon Shikome
+Summon Bears
+Summon Abysian Ancestors
+Summon Spectral Infantry
+Summon Cu Sidhe
+Summon Yazatas
+Call Daevas
+Summon Huacas
+Summon Supayas
+Summon Glosos
+Brood of Garm
+Summon Jaguars
+Call Celestial Soldiers
+Summon Nagas
+Summon Gandharvas
+Summon Vetalas
+Unleash Horde of Tiamat
+Anoint Equites
+Summon the Black Riders
+Summon Picts
+Horde of Daevas
+Children of the Neters
+Raise Nemedian Dead
+Spirits of the Drowned
+Call the Dishird
+Call Garudas
+Summon Urmalu
+Elemental Storm
+Tyrant Lizards
+Call Orca Pod
+Ghostly Legionnaires
+Create Cheirosiphones
+Servants of the Great Mother
+Plague of Chorts
+Amaru of the Peaks
+Wedge of Swans
+Host of Spectral Vestals
+Host of Spectral Lictors
+White Fury of the Ancients
+Herd of Mammoths
+Dü War Party
+White Fury of the Mountain
+Call Tsen
+Muster Sin Po War Party
+Band of Cannibal Demons
+Banquet of Cannibal Demons
+Contact the Lords of Cemetery
+Propitiate Lha Warriors
+Summon the Kinnie Ger
+Create Ornithopters
+Summon Eagles
+Kátsina Warrior Dance
+Bind Demon Owls
+
+
+Half Scaling > Full Scaling
+
+Memories of Stone
+Summon Ko-Oni
+Summon Aka-Oni
+Summon Konoha Tengus
+Summon Oni
+Summon Kuro-Oni
+Enslave Sea Trolls
+Summon Cave Grubs
+Summon Crocodiles
+Summon Ogres
+Summon Shades
+Summon Killer Mantis
+Summon Yetis
+Summon Cave Cows
+Herd of Buffaloes
+Summon Gryphons
+Summon Summer Lions
+Summon Spring Hawks
+Contact Sea Trolls
+Summon Winter Wolves
+Summon Fall Bears
+Contact Trolls
+Contact Forest Trolls
+Summon Fire Snakes
+Summon Great Eagles
+Contact Lamias
+Enliven Gargoyles
+Bind Fiery Imps
+Bind Bone Fiends
+Reawaken Fossil
+Contact Cu Sidhe
+Summon Ao-Oni
+
+
+Single Scaling > Double Scaling
+
+Terracotta Army
+Pack of Wolves
+Sloth of Bears
+Pride of Lions
+Ambush of Tigers
+Summon Sea Lions
+Summon Leogryphs
+Summon Fire Ants
+
+
+Half Scaling > Double Scaling
+
+Summon Sea Dogs
+Summon Bog Beasts
+Clockwork Soldiers
+Claymen
+Summon Horned Serpents
+
+
+Double Scaling > Normal Scaling
+
+Summon Kobolds
+Army of Kobolds
+Open Partholonian Tomb
+Cad Goddeu
+Children of Blood
+Ghost Legion
+
+
+Full > Half Scaling (Some spells also gained discounted costs)
+
+Flock of Ziz
+Awaken Sacred Grove
+Mokele-mbembe
+Summon Cloud Serpents
+Children of Catharsis
+Pack of Fire Drakes
+Animate Ice
+Call Order of the Volans
+Animate Deadwood
+
+
+Version 1.48
+
+Battle Saints no longer promote into Bean Sidhe
+Increased movement speed on Terracotta Horsemen & Chariots
+Some magical weapons and armor gained resource costs
+Void King gained Mapmove 100 Teleport
+Abyssal Carcass gained Recuperation & Disease Immunity
+
+
+Fungal Mass			Conj6, N3D2 > Conj4, N2D1
+
+
+One with the Void		S4H2 > S3H2
+Open Void Gate			S4H2 > S2H2
+Prepare Gate to the Beyond	S4H2 > S3H2
+Doomed Aboleth Hero		Tainted 50% > 15%
+
+Call Winter Wolf > Call Jotun Wolf
+
+Katsina War club		7 res > 5 res, +1 Att
+Katsina War Spear		9 res > 5 res, +1 Def
+
+Curse of the Berserker		MR-neg Stream of Life > Temporary Growing Fury
+
+
+New Spells: Stoke the Blood, Fungal Swarm
+
+
+
+
+
+Version 1.47
+
+Volans Knight Commander no longer summoned as a unit
+Crown of Majesty F2E2 > F2S2
+Confusion attack can be used underwater
+Star Children no longer start old
+Gonagas are no longer incorrectly recruitable for 45 gold
+Perkunu no longer become old when casting Form of the Great Bear
+Removed some incorrect possible Transformation forms
+Jaundice Demon gained Poison Resist to protect from his poison cloud
+
+All Monster Pretenders 1 path at 1 > 1 path at 2
+
+Dagon 250 > 260
+Cthonic Cyclops 250 > 240
+Annunaki of the Sky 210 > 190
+Solar Disc 250 > 240
+Neter of the Underworld 200 > 180
+Annunaki of the Underworld 210 > 190
+Horned One 210 > 190
+Neter of the Moon 200 > 180
+Ahura of Wisdom 210 > 190
+Apu Inti 210 > 190
+Apu Illapa 210 > 190
+Titan of the Hunt 200 > 180
+Kami of the Earth 200 > 180
+Prince of the Deeps 220 > 200
+Titan of War and Wisdom 250 > 260
+Devi of Darkness 250 > 260
+Teteo Inan 250 > 260
+Earth Made Flesh 260 > 270
+
+Lord of Floods Prot 18 > 16
+Blacksteel Colossus lost body slot
+Son of the Fallen Gcost 180 > 170, Pathcost 60 > 40
+Void King W1S1 > S1D1
+
+Cloud damage aligned with Dom5 values
+Dead Water Paralyze Damage 3 > 1
+Dead Sea Paralyze Damage 3 > 1
+Acidic Water damage 12 > 6
+Purify Water damage 3+ > 3
+Gas Pocket Fatigue 25+ > 10, poison 4 > 1
+
+Karmic Wheel now works, also grants all friendly units Reincarnation 5
+
+Freezing Mist W2A1 > W3A1
+
+Efreets hp 20 > 18, secondshape lost trample & lightning swarm, gained Scorching Wind attack
+
+Magia Mortuus has reduced chance to feeblemind high path mages
+
+Ermorian Cultist 1RP > 4RP
+
+Release Throne Power now has effects if cast at a level 1 or 2 Throne
+
+
+Scelerian Cultist 1RP > 2RP
+
+LA Ctis gained Revive King
+
+Dryad Charm 5 gems > 8 gems
+
+Ten Plagues S4H1 > S4
+
+Summon Battle Saint 15 > 20 gems, gained Dominion Immortality, xpshapes into Sanctus Venerabilis
+
+Divine Dance now has less chance of increasing Dominion, reduced permanent gold & resource generation for Growth but sometimes creates gems, reduced message spam
+
+Toughened Hide no longer Ench0 > Ench3, no longer grants Slashing resist
+
+Shambhalans except cavalry gained Snow Move
+Guardians of the Hidden Valley gained +1MR, -5 Gold cost
+
+
+
+Version 1.46
+
+Fixed Summon Mushushu summoning a Sirrush
+Fixed Scassius' Book looking like a bowl of fruit
+Fixed Summon Vimana summoning a unit instead of a commander
+Fixed Tower of the Heavens site not appearing immediately when cast
+Fixed Conjure Mountain Spirit only being castable underwater
+Fixed MA Ctis income penalty applying to disciples - Thanks Heartless!
+Cain is no longer female
+
+Readded hidden paths to Ether Warrior, Cave Drake, Fire Drake, Ice Drake, Swamp Drake, Hama Dryad, Demon of Heavenly Fires, Demon of Heavenly Waters, Penumbral, Umbral, Sepulchral, Morrigan, Kydnides, Daeva, Celestial Hound, Crusher, Karasa Tengu, Konohoa Tengu, Tzitzimitl, Smoulderghosts, Siege Golem, Poison Golem & Rephaite Warrior due to increased magic path limits.
+
+Summon Daimones, Nature's Claim, Marshes of C'tis, Call the Drowned, Call Drowned Spirits, Memories of Therodos and Call Mimis all changed to one-time effect due to engine changes rendering ongoing summons abusable until fixed by Illwinter.
+
+Avatar of the Endless Sky, Immortal Advisor, The Immortal Killer, Red Death, Akhilleus, Asklepios, Alcaeus, Ulixes, Eurymedon and the First Apostle all lost Immortality due to this no longer working for Unique Summons. Each has temporarily gained Reform 50% in battle until the bug is fixed by Illwinter.
+
+Removed Boiling Torrent, Boiling Wave and Freezing Wave due to Illwinter removing line effect spells from the game.
+
+Disease Demon gained Stealth 40
+Dragon Sceptre Const6 > Const4
+Vile Water 2 gems > 1 gem
+Night Hunter has new sprite
+Wand of Wild Fire 12 gems > 10 gems
+Rod of the Phoenix 20 gems > 15 gems
+Mechanical Dragonflies > Iron Flies
+
+New Pretender: Drake Breeder
+
+Spell cost changes
+Reverted patch cost changes to Winter Wolves and Fall Bears due to scaling increase in DE for seasonal animals
+Reverted patch cost change to Zmey due to being a Drake in DE
+
+
+Alchera
+Summon the Kinnie Ger N3, 10 gems for 5+ > N2, 6 gems for 5+(1/2 scaling)
+
+Nihuala
+Gained Wadjet Pretender, some description and mapmove fixes
+Owl Witch 65 gold > 75 gold
+Crow Witch 65 gold > 75 gold
+
+LA Ongtupqa
+Yaayapontsa Priest gained 10% Random
+
+LA Gondwana
+Gained Colossal Fetish Pretender
+Gondwana Priest MR 10 > 11
+Ekaiwe MR 10 > 11
+Terror Bird MR 13 > 9
+Thunder Beast sprite tweaked to minimise selection issues
+Thunder Lord renamed Ogiso, 4CP > 6CP
+
+LA Mictlan 
+Returned (UW recruit shamblers) are now Sacred
+
+
+
+Version 1.45
+
+Bugfix
+Fixed commanders transforming into Kinnara after Return from the Divine is cast
+Fixed The Renegade Chief mercenary having invalid units
+Leng Spider MR5 > MR14
+Atlach-Nacha MR5 > MR18
+Fixed some weapon inaccuracies
+Black Dryads correctly discounted under Haunted Forest
+
+Tweaks
+Removed discount to Bracers of Protection 3 gems > 5 gems
+Rainbow Serpent is no longer a valid wish target
+
+Temporarily removed hidden paths from Ether Warrior, Cave Drake, Fire Drake, Ice Drake, Swamp Drake, Hama Dryad, Demon of Heavenly Fires, Demon of Heavenly Waters, Penumbral, Umbral, Sepulchral, Morrigan, Kydnides, Daeva, Celestial Hound, Crusher, Karasa Tengu, Konohoa Tengu, Tzitzimitl, Smoulderghosts, Siege Golem, Poison Golem & Rephaite Warrior due to magic path limits.
+
+Manual PDF
+Added Dom Enhanced nations to PDF
+
+Heroes
+Removed Ho Hsien Ku the Immortal from EA and LA TC
+Removed Li T'ieh-Kuai the Master with the Iron Crutch from MA and LA TC
+Removed Tenjiro, the Dragon Girl from EA and LA TC
+Added Da Yu the Master of Earth and Water to EA TC
+Added Hou Yi the Immortal Archer to EA TC
+Added Jing Wei the Bird Maiden to EA TC
+Added Sun Wu the Military Scholar to MA TC
+Added Li Er the Learned Scholar to MA TC
+Added Kubadei the Khagan to LA TC
+Added Phagpa to Imperial Preceptor to LA TC
+Added Panlong the Dragon of Rain to LA TC
+
+Nation tweaks:
+
+Marverni
+Under Read the Stars Druids now create a Druid Circle site that provides 1 Astral Pearl instead of Monoliths and Standing Stones
+
+Nahullo
+Starnake Giants 50 gold, 36RP > 40 gold, 27RP
+Sitecah Warriors 36RP > 18RP
+Blood Cult Initiate +unrest 5/turn > +unrest 3/turn
+
+EA Rlyeh
+Enslaved Mages now have 10% Insanity
+
+Asphodel
+Black Dryad Hag now gains 50 gold rebate under Haunted Forest
+
+Arco etc
+Brass Bull 30 gems > 20 gems
+
+Chaco
+Katsina Archer swapped War Spear for War Club, 95 gold > 100 gold
+Katsina Warrior lost War Club, 95 gold > 90 gold
+New spell: Summon Ant Warrior Swarm
+
+Yomi
+New spell: Hitobashira
+
+Pelagia (All Ages)
+Summon Pearl Warriors Conj4 > Conj5
+
+Pan (All Ages)
+Dryad loses Seduction, cost reduced in line with autocalc
+Gained item: Dryad Charm, 5 gems to grant Dryad Seduction
+
+MA/LA Rlyeh
+Star Child lost Assassin, cost 85 > 60
+New Spell: Strengthen Mind, 4 S Pearls, grants Star Child Assassin & Spy
+Void Cultists gained Assassin, 1RP > 2RP
+Contact Void Creature S3 > S3H2
+Send Void Creature S4 > S4H2
+One with the Void S4 > S4H2
+Open Void Gate S4 > S4H2
+Prepare Gate to the Beyond S4 > S4H2
+
+LA Pythium
+Some mage MR values tweaked
+Theurg Acolyte A1S1 > S1, 20%A1
+
+
+
+New Nation:
+
+LA Gondwana
+
+
+
+
+
+
+Version 1.41
+
+Re-added 2 LA Ulm Heroes removed by Worthy Heroes - Members of the Third Tier
+Fixed EA Nahullo heroes appearing incorrectly
+Miakoda - LA Nihuala Hero gained correct sprite
+Wuya gained War Spear instead of War Club
+Bitch Queen now correctly grants friendly wolves Invulnerable 15 in battle
+Removed Awe and Fire Resistance from Storm Eagle
+Fixed some typos in descriptions
+Keres now affected by Solomons Demise
+
+Xp granting sites grant 25xp > 20xp / turn
+Heavenly Condor gained Fear 5
+Hidden in Peat now also creates Preserved Chieftain
+Preserved Pictish Warriors Coldres 5, Prot 5, Poison Aura 2 > Coldres 15, Prot 8, Poison Aura 3
+Visit Dis D4 > D3E1
+
+Kailasa gained spell: Summon Vimana
+Kailasa/Bandar gained spell: Summon Yavana Charioteers
+Kailasa/Bandar/Patala gained items: Padma Lotus Blossom, Shanka
+
+Asphodel gained 1 Nature bless point and 2 Death bless points
+Asphodel Dryads can now reanimate Manikins
+Asphodel gained spells: Strangle Vines, Strangling Growth
+
+Huaca Headdress Const4 > Const6
+
+Sheshai Anakites rpcost 27 > 52
+Ahiman Anakites rpcost 27 > 42
+
+
+
+Version 1.40
+
+Call the Great Bulls now grants caster 5% income bonus per growth scale in provinces in friendly Dominion while active
+Samhain no longer creates Aos Si attacks or grants all nations Conj 20% discount, now creates Aos Si and unrest in casters provinces, caster gains Conj/Ench20% discount in one province during Autumn months only.
+Gates of Death freespawn now affected by Dom strength
+Read the Stars Ench 5, 35 gems > Ench 6, 50 gems
+Thief of Fortune can be used underwater
+
+Purge Undead N2F2 > N2F1, range 20+ > 30
+Sever Soul now has no effect on Mindless
+Hidden under Mounds now curses 2 commanders in the province when cast
+Ghostform Alt 2 > 5
+Remove Curse correctly requires N3D1
+Elemental Storm 8 gems > 10 gems
+Enchanted Pike 1 gem > 3 gems
+Enchanted Spear 1 gem > 2 gems
+Eyecatcher 4 gems > 8 gems
+Beasthide Warriors aoe 10 > 5
+Bonds of Apostasy can be used underwater
+Gallus axe now removes immortality from targets wounded by it
+
+Foul Vapors 1 gem > 2 gems
+
+Blacksteel Angel allows recruitment of Black Iron Infantry when present at a fort
+
+
+Fixes for all-nations games & Disciples by Heartless (Thanks Heartless!):
+Enchantment spells fixed in all-ages games - Celestial Garden, Locate Tengu Village/Clanhold, Gates of Death
+Klullu now joins whichever nation controls Stars are Right
+Void Cults will join Rlyeh allies whilst Whispers of Rlyeh is active
+Marverni gets Blood Slaves if allies cast Samhain
+Disciples games - Disciples now get income penalty from Ermor/Lemuria Dom, also gain 1% income bonus from MA C'tis Dom (instead of 5% penalty)
+
+
+New spells - Summon Water sprite, Summon Sahuagin, Contact Nawidnehr, Send Moirai
+
+New Pretenders - Great Gull of the Sea, First Valkyrie
+
+
+Eriu gained spells: Contact Clurichaun, Contact Pooka, Hidden in Peat, Song of Great Fortune
+Eriu gained recruitables: Milesian Chariot, Milesian Prince Coastal commander
+
+MA/LA Man gained spell: Summon Pixie
+LA Man gained spell: Hidden in Peat
+
+Yomi/Shinu/Jomon gained spell: Shoal of Fighting Fish
+
+Rotterland
+Fixed the bug where priests can be recruited without temples
+Doctor lost H1, still sacred
+
+Dragon Kings
+Heikegani no longer recruitable
+Fighting Fish no longer recruitable
+New spells: Shoal of Fighting Fish, Summon Heikegani, Summon Band of Heikegani
+
+New EA Nations
+Chaco, The Fourth World
+Nihuala, The First People
+Nahullo, White Giants
+
+New MA Nations
+Ontupqa, Parched Land
+Nihuala, Earth and Sky
+
+New LA Nations
+Ontupqa, Cleansing Fire
+Nihuala, Spirits of Darkness
+
+
+
+
+Version 1.37
+
+Fortress of Ice no longer creates a Castle of Crystal and Bronze
+Homunculous Jar no longer half the intended price
+Serpent Priests can now transform back from Sacred Serpents correctly
+Restore the Dharma correctly converts enemies
+
+Anti-Sacred Godpath spells Precision 100 > 5, No resistance > MR-Hard Neg
+Piscean Pretender Prot 18, 128hp, Def 11, Poisonres 0 > Prot 19, 148hp, Def 14, Poisonres 5
+Ice Golem 10 gems > 8 gems
+
+Therodos gains ~5,000 starting pop per Growth scale
+Bind Chort B2D1 > B1D1
+Plague of Chorts > B3D2 > B2D2
+Hannya Pact 6 gems > 4 gems
+Greater Hannya Pact 10 gems > 6 gems 
+Yama-Uba Pact 10 gems > 6 gems 
+Ubagabi Pact 12 gems > 6 gems
+End of Courage D1F1 > D1
+Hunger of the Oni D1F1 > D1N1
+Dark Bolt D2 > D1E1
+Numanari now recruitable in Swamps
+Sorcerers now recruitable in Mountains
+Yomi/Shinu/Jomon gained item: Oni Mask
+
+
+Version 1.36
+
+EA Juhera Si'lah now correctly cap recruit only
+Pizarro Cursed Falchion Curses instead of causes headloss
+Fixed some remote enchantments not working when cast on enemy provinces
+Mother of Monsters now battlespawns foul spawn with Poison resistance
+Fixed some unique summoning spells summoning incorrect creatures
+Uluru lost full slots
+Fixed units with incorrect Formation Fighter
+Fixed some units with incorrect mapmove (thanks alexsa2015sa!)
+Lord of the Forest correctly gained his Thorn Spear
+Brew Panacea can be used underwater
+Become DemiGod can be used underwater
+Tuatha Wraithlord lost upkeep, gained bronze armor and Enc 0
+Basalt Architect gained Prot 13 and Coldres 5 like a real Basalt King
+Huaca Stone now correctly creates a temple whilst present
+Bestow Throne Power now has some different effects if cast Underwater
+
+Stars are Right can only be cast at capital
+K'llulu now Immortal whilst Stars are Right is active instead of reappearing automatically
+Shesanaga Immortal > Dom Immortal
+Contact Void Creature 3 gems > 2 gems, now Horror Marks caster
+Void Lord gained Str added damage on Life Drain Tentacle
+Thunderhammer aoe 1 30Fat, aoe6 10Fat > aoe1 2AN Shock, aoe6 1AN Capped Shock
+Banner of the Phantasmal Host removes stealth from bearer
+Uruk Entu and Ereshdingir gained 50 gold rebate under Lunar Potency
+Uruk gains Darkvision 50 bless and +1 pearl/month if casts Lunar Potency
+Magma Warriors Att 10, Def 9 > Att 12, Def 10
+Summon Magma Warriors, Smoke Warriors, Mist Warriors, Mud Warriors Summons 4 > Summons 5
+Iblis is no longer a valid wish target
+Bitch Queen now grants regular wolves fighting with her Invuln 15
+Gift of the Moon Ench4 > Ench2
+Holy Scourge x3 vs Undead/Demons > Secondaryeffect 6AP dam x3 vs Undead/Demons
+Lemuria Spectral Lictors 3 gems > 2 gems, now summons the vanilla unarmored Spectral Lictor
+Some Abysian Hellspawns gained Undead leadership
+Dragon Kings Starting Army 15 Shrimps, 5 Shark Warriors > 15 Shrimps, 5 Crab Soldiers
+Fighting Fish reclimit 3/month
+
+Added Hero - Enkelados, the First Gigante to EA Mekone
+Added Hero - Polybotes, Cursed King to MA Phlegra
+Added Hero - Alcinous, King-Consort to MA Phaeacia
+Eurytion, Herdsman LA Erytheia Hero now appears when Geryon appears
+Added items: Staff of the Sea, Gem of Elemental Power, Dimensional Anchor, Leyline Collector, Flask of Vitriol
+Added spells: Manifest Nigredo, Manifest Albedo, Manifest Rubedo, Pyre of Rebirth, Suppress Dissent, Vessel of Misery, Divine Fortifications
+Lemuria gained spell: Revive Lemur Censor
+LA Ulm gained Item: Charm of the Crescent Moon
+MA TC, LA Agartha, LA Bogarus, LA Venedia and LA Iram gained item: Homunculous Jar
+LA Iram gained items: Vials of Acid, Vials of Chemicals
+LA Venedia gained item: Vials of Chemicals
+
+EA Alchera
+Several commanders base cost reduced by 10 gold
+Most Alcheran troops -2 gold cost
+Most Alcheran troops gained Woomera or Boomerang
+Kurdaitcha now recruitable in capital and wastes
+Dreamspeaker gained 1F path
+Removed Spell: Protection of the Dreamtime
+Gained spells: Spearwalking, Dreamwalk, Honey Ant Dreaming, Kangaroo Dreaming, Emu Dreaming, Great Dreaming, Bridge the Worlds, Dreamtime, Summon the Kinnie Ger, Call Malingee, Summon Irukandji Swarm
+Walkabout cannot be used by immobile beings
+Follow Songlines S4 > S3
+Maero gained Stealth
+Yowies gained Stealth, Magicpower 1
+Great Dreamwalker S1, H1 > S2, H2
+Gained Hero -  Bluetongue Lizard
+
+
+
+Version 1.35
+
+BUGFIX
+
+Fixed EA Sauro & MA Pythium Hydra spell descriptions stating Serpent Priest required.
+Fixed typos highlighted by Lambda
+Fixed Svartalf Mastersmith starting with eyeloss
+Fixed Demon Priest summoning wrong Oni
+Fixed Legion of Wights being banned from Helheim
+Fixed Draugherse starting with incorrect items
+Ghostform and Body of Flames are no longer cast by AI off script
+Monsters with swallow attacks gained digest
+
+SPELL CHANGES
+
+Fireball Evo3 > Evo2
+Flare removed
+Fire Blast, Fireball, Pillar of Fire: Heat Shock aoe 6 > 6++
+Falling Fires 15AP Dam, Aoe 3+ > 15+AP Dam, Aoe 5+
+Falling Frost 17+Dam, Aoe 5+ > 17++ Dam, Aoe 6++
+Zmey are now Drakes and affected by Dragon Master, 5 gems > 8 gems
+Vile Water Ench4 > Ench3, 5 gems summons 2 size 4 cubes > 2 gems summons 1 size 3 cube
+Multiple Gelatinous Cubes in a province now combine to become larger, faster, more hp, and gain more powerful acid attacks and a poison cloud
+Summon Forest Troll Tribe summons 6 x Forest Giants
+Call Knight of the Volans S3W1 > S2W2, Conj4 > Conj3
+
+New spells: Call Knight Commander, Call Order of the Volans, Jaguar Toad Spawning
+
+Etimmu cannot appear before turn 10
+Aos Si Rider and Hornblower now ride Cu Sidhe - gained Cu Sidhe onebattle secondshape
+
+ITEM CHANGES
+
+All items granting mass water breathing now allow x5 size points of units
+All mass waterbreathing items at Constlevel 6+ grant +4Att, +4AP to airbreathing units whilst underwater
+Banner of the Phantasmal Host Const4 > 6
+Clockwork Tool E3, 15gems > E3, 10 gems
+Potion of Regrowth N2W1 > N3W2, No inanimates or undead
+Helmet of Premonition gained Unsurroundable 2
+New Items: Crown of Eyes, Diadem of the Void, Keystone, Healing Herbs
+
+PRETENDER CHANGES
+
+All Titans gained minimum Prot 5
+Non-Undead Messengers gained in-battle Luck
+
+North Realm
+Son of Niefel > Gained Summon Allies 2 Jotun Wolves
+Asynja > Gained Summon Allies 3 Valkyries
+Tiwaz of War > Gained Start of Battle spell: Fanaticism
+Volla of the Bountiful Forest > Gained 30% Tax boost
+Keeper of the Bridge > Gained Gjallarhorn weapon (aoe stun), Start of Battle spell: Gjallarhorn (Summons Huskarls from edge of battlefield)
+Father of Winters > Great Sword > Frost Brand
+Deivies of the Sun > Gained Summon Allies 1 Firebird
+
+Celtic Realm
+Lord of the Forest > Gained Entangle attackers, Att/Def 13 > 14, Spear > Thorn Spear, Scale & Helmet > Lightweight scale & Magic Helmet
+Fomorian God-King > Gift of Waterbreathing 75 > 500
+Duiu of Thunder > Summon 1 random Seasonal spirit each month
+Duiu of Farming > Gained Summon Allies 2 Divine Cattle
+Matrona of the Healing Spring Cost 210 > 200, Healer 1 > 3, Gained Regeneration 10%
+Mother of Tuathas > Summon Allies 1 Tuatha Warrior > 3 Tuatha Warriors
+Green Man > Gained Domsummon/2 Vine Ogres
+
+Mediterranean Realm
+Mother of Monsters > battlesummons 1 Hound of Twilight
+Titan of War & Wisdom > Gained Unsurroundable 2
+Titan of Heaven > Gained Storm Immunity, Thunderbolt Attack (As Thunderstrike)
+Titan of the Sea > Gained Wave Breaker Trident (3 attacks), Poisonres 10, Gift of Waterbreathing 75 > 500
+Titan of Rivers > Gained Summon Allies 1 Size 4 Water Elemental
+Titan of Love > Gained Charming Glance attack (Enslave Mind), Battlesummon 3 x Charmed Heroes
+Titan of Serpents & Medicine > Gained Summon Allies 3 Sacred Serpents
+Titan of Wind & Waves > Gained Star of Battle spell: Wind Guide, Gift of Waterbreathing 50 > 500
+Titan of the Hunt > Gained Golden Bow (+10 Precision, Heart Finding)
+Titan of Growth > Gained 30% Taxboost
+Titan of the SUn > Gained Burning Ray weapon (as Pillar of Flame)
+Titan of the Night 260 points > 230 points
+
+Far East Realm
+Nyorai > Bringer of Fortune 15 > 35, Gained Start of Battle spell: Battlefield Twist Fate
+Jade Emperor > Gained Summon Allies 2 Celestial Soldiers
+Celestial General > Gained Summon Allies 2 Celestial Soldiers
+Celestial Carp > Gained Fear 5, Gift of Waterbreathing 50 > 500, Prot 8 > 12
+Kami of the Sun 230 points > 220 points
+Kami of the Moon > Gained Start of Battle spell: Solar Eclipse
+Kami of Storms > Gained Amphibian, No-Dachi > Kusanagi-no-Tsurugi (Aoe stun)
+Dharmapala of the Underworld > Gained Summon Allies 1 Amanojaku
+Kami of the Earth > Gained Summon Allies 2 x Size 4 Earth Elementals
+Kami of Fertility > Gained 30% Taxboost
+
+Middle East Realm
+Annunaki of the Sky > Gained Battlesummon 2 Sacred Gryphons, Summon Allies 2 Sacred Gryphons
+Annunaki of Sweet Water > Gift of Waterbreathing 500, Start of Battle Spell: Friendly Currents
+Annunaki of the Morning Star > Start of Battle spell: Light of the Northern Star
+
+Middle America Realm
+Teotl of Rain > Domsummons Jaguar Toads
+Teotl of War > Gained Fear 5, Start of Battle Spell: Personal Quickness, Crown > Jade Mask
+Teotl of the Sky > Gained Summon Allies 2 Spring Hawks
+
+Africa Realm
+Neteret of Joy > 30% taxboost in local province
+Neter of the Sun > Gained Staff from the Sun weapon (aoe 3)
+Neter of Chaos > Gained Summon Allies 2 Children of the Mastabas
+Lord of the Desert Sun > Gained Summon Allies 2 Sacred Kithaironic Lions
+Lord of the Summer Plague > Summon Allies 1 Disease Demon
+Neter of the Underworld > Summon Allies 2 Dust Warriors
+Neter of Kings > Gained Battlesummon 2 Child of the Valley, Summon Allies 2 Child of the Valley
+Neter of the moon > Gained Summon Allies 2 Child of the Sphinx
+
+India Realm
+Nataraja > Gained Summon Allies 2 Apsara & 1 Gandharva
+Devi of Good Fortunes > Bringer of Fortune 25 > 50, Spreads Luck scales, Gift of Waterbreathing 50 > 500
+Lord of Knowledge > Gained Summon Allies 1 x White Elephant
+
+Deeps Realm
+Nerid > Domsummons Ichtysatyrs
+Old Man of the Sea > Gained Summon Allies 1 Size 4 Water Elemental
+Lord of the Waves > Gained Battlesummon 4 x Knights of the Deep
+Father of Monsters > Prot 16 > 18
+Lord of the Deep > Gained Affliction Resistance 99, Gift of Water Breathing 50 > 500
+
+Nation Specific Pretenders
+Deified Emperor > Gained Battlesummon 2D6 Emerald Guard
+Antumbral > Gained Summon Allies 1 Umbral
+Mother of Mountains > Gained Domsummon Mi Gö
+Viracocha > Lost Heat Aura, Gained Summon Allies 2 Living Statues
+Apu Inti > Gained Heat Aura 10
+Apu Illapa > Lightning > Thunderbolt (As Thunderstrike)
+Stone Tyrant gained Fear 5
+
+New Pretenders: Vargr, Feathered Serpent, Monstrous Dog
+
+LA Mictlan
+All Rain Kings, Priests and Warriors gained Poisonres 15
+New Recruit: Mictlan Blow Pipe Warrior
+New cap only recruit: Sacred Temple Toad (Monster toad, 60 gold, 3/month limit)
+Gained spells: Poison Arrow, Hail of Poison, Jaguar Toad Spawning
+
+Juhera/Iram updated to 0.2 patch by Boing
+EA: added Thunder Fist to Jann Vizier and Jann Sheikh
+EA: Si'lah from rec-anywhere to cap-only. Gold cost increased to 250 (more like dryad and bouda)
+EA: fixed description for Ifrit (I hope), which was getting the description from MA Ifrit
+MA: Reduced number of jann summoned with Summon Jann Tribe from 15 to 10
+MA and LA: increased fortera to 3
+LA: Edited Mubarak description to justify sacred-ness in LA. 
+
+
+
+Version 1.33
+
+Several Pretenders now correctly get female titles
+Fixed Dragon Princesses having Russian names
+
+Whispers of Rlyeh no longer destroys capital temples
+Whispers of Rlyeh chance for temple destruction and void cult reduced outside Rlyehs Dominion
+Malediction reworked - Dom based summons, commanders that are undead, magicbeings, mindless or inanimate beings don't become Vampires
+Lunar Potency doesn't transform commanders that are undead, magicbeings, mindless or inanimate beings into werewolves
+LA Abysia Staff of Magma now needs temple to create Magma Child and only 1/province
+Animate Kelp Field summons 6+ > Summons 5+
+Kelp Lord removed exhaustion as no longer prevents summoning, now summons 1 less Kelp Man per turn
+
+New items: Crown of the Warrior King, Silver Crown, Ring of the Victor, Serpent Staff, Potion of Regrowth
+
+Mekone Ephor gained -1unrest/month, Kryptes gained -5unrest/month
+Mekone, MA and LA Phlegra gained & lost some Pretender options
+MA and LA Phlegra gained Golden Headband item
+MA and LA Phlegra gained Stone Tyrant Pretender
+LA Phlegra gained spells: Sow Dragons Teeth, Headless Men, The Guardian of Hades, Call Lycaons, Volcanic Tremor, Mental Oppression, Mental Coercion, Mental Domination, Release Laestrygonian
+Laestrygonians gained Twiceborn shape: Wight Tyrant - by Eel
+
+
+
+Version 1.32
+
+Remove Curse now correctly displays as requiring N3D1
+Reordered items to remove some erroneous discounts
+Fixed Veles Serpent form
+Fixed typos as reported by Lambda (Thanks Lambda!)
+Lunar Potency doesn't transform commanders that have morale 15+ into werewolves
+Become Dragon, Become Lich, Become Golem, Become Worm that walks gained MR-Neg kill caster
+
+New Pretenders: Neter Triad, Deives of the Seasons, Titan of the Night, Spirits of Justice
+Morning Star and Evening Star gained Poor Researcher -10
+Neter of the River Prot 15 > 18, 210 points > 240 points
+Cold 3 nations lost Earth Snake
+Reworked Triple Goddess to prevent shapechange shenanigans
+Lord of Mysteries keeps Golden Bands if killed
+White Stag Antlers gained def-negates
+Several units with 4 arms gained Ambidextrous
+Saltwater Serpent gained Poison Resist 10
+Tetrachire lost body slot
+Great Enchantress produces 2 Astral Pearls/month
+
+Erytheia gained Heroes - Library Founder, Travelling Scholar, Bibliographer
+EA Mekone gained Hero - Arges
+MA Phlegra gained Hero - Pyraemon
+
+
+Version 1.31
+
+
+Fixed crash when casting Swarm or Create Familiar due to missing sprite
+Morning Star and Evening Star gained Flight
+Caelum and Ragha gained Pretender - Peacock Angel 
+Some nations got national Pretender discounts
+Removed unneeded "Demons Immune" tag from some spells
+Clouds of Smoke Machaka Only > Generic spell
+Summon Lilot 25 gems > 15 gems
+Reduced rate of Lilith summoning Lilots
+
+
+Version 1.3
+
+Call the Peaks 40 Fat, 45 damage > 30 Fat, 35 damage
+Become Octopus Alt6 > Alt5
+Falling Stars 15 gems > 25 gems
+Clockwork Dragonflies > Mechanical Dragonflies
+Bloody Altar N3B2 > N3B3, generates 5 Blood Slaves/month
+Erect Altar of Sacrifice no longer forest only
+Removed path penalty to Leng Spider and Atlach-Nacha
+Added Raven and Frog to list of Familiars
+Fixed various typos identified by Lambda
+
+New spells: Summon Handmaiden, Create Seeking Ichor
+New Item: Magesmiths Apron
+
+Hooded Spirits no longer lose paths when separated
+Changed descriptions of non-Rainbow Trinity Pretenders due to no longer losing magic paths when separated
+Titan of the Crossroads Trinity 350 points > 300 points
+Morrigna Trinity 350 points > 300 points
+Great White Stag Antlers > aoe 1
+Angelic Lord Invuln 20 > 15, Shockres 15 > 5, Fireres 15 > 0, Poisonres 15 > 0, lost Sight Vengeance
+Drakon, Linnorm, Dragons +20 points cost
+Azi F1D1 > D2
+Arch Mage Cost 100 > 120, gained Master Ritualist 1
+Master Enchanter Cost 110 > 130, generates 1D3 Nature gems whilst at a Lab
+Freak Lord Cost 100 > 120, generates 2 Blood Slaves/turn + Domsummons Crossbreeds
+Arch Mage Cost 100 > 120, Gained Master Ritualist 1
+Arch Druid Cost 110 > Cost 120, Domsummons Vine Men
+Skratti Cost 110 > 130, Gained Master Ritualist 1
+Arch Seraph Cost 110 > 120, Gained Templetrainer 1 Yazad
+Great Seer of the Deeps Cost 100 > 110, Starts with Stone Sphere
+Great Sorceress Cost 130 > 150, Gained Master Ritualist 1
+Great Sorcerer Cost 110 > 120, Domsummons Great Spiders
+Leader of the Closed Council Cost 110 > 120, Taxboost 10% in local province
+Centauride Enchantress Cost 100 > 120, Generates 1D3 Nature Gems each turn at a Lab
+Centaur Great Sage Cost 100 > 120,  Gained Inspiring Researcher 1, Reseachbonus 15
+Master Sorcerer Cost 100 > 110, Gained Oni Summoner 75
+Onmyo Hakase Cost 100 > 120, gained Fortune Teller 50%, Master Ritualist 1
+Grand Heirophant Cost 100 > 110, gained Fortune Teller 50%
+Aphroi Sage Cost Cost 110 > 130, Gained Inspiring Res 1, Researchbonus 10
+Master Cost 110 > 130, Gained Master Ritualist 1, Researchbonus 10
+Bone Mother Cost 110 > 120, Gained Gemgen 1 Death gem/month
+Enkidu Great Sage Cost 110 > 120, Gained Researchbonus 20
+New Pretenders: Great Toad, Celestial Fox, Monkey King, Returned King, Demon Bull King, Peacock Angel, Pure Ones, Norns, Lord of Mysteries, Triple Goddess, Sun Father, Tridevi, Trimurti
+
+
+Vanilla Changes
+Mechanical Men Const7 > Const5
+
+Alchera
+Walkabout Thaum 0 > 3
+
+Shambhala
+Lost 5% resource bonus in forted provinces
+Wise One 2RP > 4RP, Randoms 50% & 20% > 100% & 10%
+Mi Go only recruitable in Mountains
+All Mi Go and Yak Riders gained Coldrec
+Guardian of the Hidden Valley 40 gold > 28 gold
+Drapa lost random path
+Demon Hunter random 20% > 10% 
+Gelug A1E1S1 +100%AES > S1 +100%AES, 220 gold > 180 gold
+Nyingmapa A1E1S2 + 110%AWES > A1E1S1 +10%AWES, 290 gold > 200 gold
+Karmapa A1S2D1 +50%AED +10%AED > S1D1, 240 gold, 4RP > 120 gold, 2RP
+
+MA Marignon
+Strength of Faith no longer grants +4Att & +4AP
+
+Ragha
+Gained spells: Enslave Jann & Enslave Ifrit
+
+Rotterland
+Gained Summon Mosquito Cloud
+
+
+Added nation - MA Sawaikii, The Eternal Sea by Amuys
+
+
+Version 1.29
+
+PDF now highlights nerfs to existing spells/items in red
+
+Revive King and Pale Riders no longer castable UW
+Removed Contact Bluecaps
+Skeletal Legion loses MR Neg Disease, gains MR Neg 10AN stun damage (Undead/Lifeless immune)
+Celestial Mantra S2 > S1N1
+
+New spells: Revive Boatswain, Vessel of the Damned, Contact Bluecap, Rainmaking
+
+Ryujo-go
+Shark Warriors 35 gold > 45 gold
+Shark Berserkers 44 gold > 50 gold
+Gained spell: Protection of the Dragon King
+
+
+Version 1.28
+
+BUGFIX
+Maohi warriors gained correct rpcost
+Jann Swordsman lost Hypnotize attack
+Siren Queen no longer turns into a pirate when leaving the water
+Naiad Queen no longer summons Nu Kua in battle
+Fixed Dimensional Instability Horror attacks
+Fixed Malediction not turning commanders into vampires
+Undead Guardians now works if cast whilst under siege
+Pearl Citadel no longer loses Pearl Armory when besieged
+
+BALANCE TWEAKS
+Wisdom King & Lord of Wisdom gained 4 arm slots, 1 misc slot
+Tetrachire lost Regeneration
+Great Mother cost 250 > 260, Prot 16 > 12
+Heal Mind, Remove Curse, Brew Panacea can all be cast UW
+Various Wolves, Dogs and Bears gained Darkvision
+Dark Vines life drain tentacle damage 5 > -5
+First Mandragora now restricted to Pan & Asphodel
+Magma Spirit lost Berserk, Ambidex, Bad formation Fighter
+Vampire Queen cost 200 > 230, seduction 14 > 10
+Raksharani seduction 14 > 10
+Call the Wastes Thaum3, 50 Fat, 45+ dmg > Thaum 4, 40 Fat, 35 dmg
+Divine Dance effects now trigger based on Dominion in province
+
+GLOBAL SPELL CHANGES
+Reduced rate of Death scales & taxloss from Acid Seas
+Malediction has reduced chance for vampires & Vampire counts to spawn
+Malediction now curses commanders before turning them into Vampires
+Blood Harvest scale change now triggers based on Dominion in province
+Stars are Right Void Beings now appear based on Dominion in province
+Gaia's Vengeance assasinations now trigger based on Dominion in province
+Lords of the Drowned Dead now summons Drowned Ones based on Dominion in province
+Oceanic Assault now triggers attacks based on Dominion in province
+Crown of Pyriphlogos assassinations trigged based on Dominion in province
+Whispering Winds effects now trigger based on Dominion in province
+Thaw the Ancient Ones now spawns Unfrozen based on Dominion in province
+Thief of Fortune now increases Luck scales based on Dominion in province
+
+VANILLA CHANGES
+Rigor Mortis 100 Fat > 300 Fat
+Quickening Alt8 > Alt7
+Rain removed - Rain effect accessible through Power of Water or Healing Rain
+Lichcraft 30 gems > 40 gems
+Call Wraith Lord 40 gems > 50 gems
+Call Worm that Walks 30 gems > 40 gems
+Curse of Blood 77 Blood Slaves > 99 Blood Slaves
+
+NEW ADDITIONS
+New Pretender: Sage of the Sea
+New Spells: Create Familiar, Summon Zephyr, Bind Abyzou
+New Item: Mortal Blade
+
+NATION SPECIFIC
+Therodos
+Clash of cymbals aoe 5 > 1
+War Cry aoe 10 > 5
+Great War Dance +4 Att, +4AP > +2 Morale
+
+Lemuria
+Dominion income penalty increased to 20% + 5% per Dominion candle
+
+MA Ermor
+Temples cost 400 > 500
+
+LA Rlyeh
+Domkill .1% per candle > .3% per candle
+Temples cost 400 > 500
+
+Kailasa/Bandar/Patala:
+Guru S2N1 > S1N1 100% WESN
+Kailasa gained spell: Celestial Melody
+Kailasa gained 1 Astral Bless points & 1 Nature bless point
+Bandar gained 1 Astral Bless point
+
+MA Marignon
+New spell: Summon Battle Saint
+
+Mictlan
+New multihero - Tetlachihuiani
+
+Tir/Eriu
+New spell: Queen of the Bean Sidhe
+TNN hero: Malgven, Warrior Queen
+
+Rus/Vanarus/Bogarus
+Gained spells: Summon Domovoy & Summon Kikimora
+Rus gained spell: Form of the Great Bear
+Rus Gained Heroes - Oleg the Great & Fair Prince, Olga the Vengeful Widow and Veles the Shaman of Many Forms
+Vanarus gained spells: Battle Fury & Hidden in Barrows
+Bogarus gained spells: Bind Chort, Plague of Chorts, Infernal Legion, Bind Bies, Awaken Svyatogor
+
+Shinuyama
+New spell: Hide Heart
+
+
+Version 1.27
+
+Fixed some Undead only spells that could target non-undead
+Fixed Void Crystal description
+Fixed Whispering Winds causing Sylph attacks
+Fixed Become Octopus only castable on land
+Fixed Jomon Ryujin not getting Dragon Pearl
+Fixed Torrent of Vitriol not creating Living Acid
+Fixed Forked Lightning not generating orbs
+Mother of Monsters correctly generates a Blood Slave
+Neter of the Sun, Annunaki of Love and War gained temporary gems
+
+Bestow Void Skill now grants +3 void skill
+Allfather lost recuperation, gained Woundfend 2
+Raksharani  gained Seduction 14
+Oni Kunshu swapped temporary Nature gem for Earth
+Wisdom King lost temporary E gem
+Drakon E1N1 > N2, Prot 18 > 20, 220 points > 200 points
+Linnorm D1W1 > D2, 200 points > 180 points
+Sylphs gained Stealthy
+Open Partholonian Tomb 35 gems > 40 gems
+Netherworld Gate 30 gems > 40 gems, 1D6 Shikome > 2D6 Shikome
+Added Amanojaku to potential Demon Priest Oni summons
+End of Days increases unrest for enemy nations only
+Horn of Vanhalla loses Ride of the Valkyries itemspell, gained Flying and 1D6 Vakyries in battle
+Sever Soul S2D1, 100 fat > D2S1, 40 Fat
+Become Lich Ench7 > 8
+Become the Worm that Walks Ench7 > 8
+Removed Weapons of the Shadelands
+New Item: Brunhilde's Horn
+New Pretender - Divine Anvil
+
+Juhera
+Jann troops lost Hypnotise attack
+Shayatin lost Hypnotise attack, gained Throw Flames, Cost 50 > 65
+
+
+Version 1.26
+
+Raise Ghoul Guardians Ench2 > Ench3, 10 gems for 10 > 6 gems for 6
+LA Pythium Hydras no longer recruitable if you capture their capital
+Fixed Summon Jann and Summon Ifrit summoning too many creatures
+Fixed Activate Tattoos giving too many effects
+Fixed Hidden Valley summoning Tyrant Lizard 
+Fixed Lemuria 25 gold temples
+
+
+Version 1.25
+
+Fixed Ryugo-jo items & pearls
+Fixed bugs with some Hero ID's
+Merlins forms no longer possible Transformation targets
+Fixed Rotterland capitalisation
+
+Added some Gods to Ryugo-jo pantheon
+Added ME Spells to most mod nations
+Floating Mind Cost 100 > 120
+Lesser Hunter spiders 2 gems > 4 gems, size 4 > size 3
+Grey One cost 90 > 150
+
+Rotterland
+Puritan Soldier gained Torch weapon
+Reduced res & rp cost on Cuirassier
+Lancer gained Shield
+
+Venedia
+Removed blood random from Doctor
+
+
+Version 1.2
+
+Updated Magic Enhanced to v2.43:
+Fixed Shocking Scourge summoning Serpent Lords
+Fixed bug with Summon Daimones
+Added Spirit Sight to many units
+Ur God Statue 50% random > 100% random
+EA Rlyeh Enslaved Mages less chance of high paths
+Improved Clockwork Soldiers summons 10+ > 10+++
+Demon Priests Summon Allies > Temple Trainer, better Oni summons, removed unrest increase
+Bane Venom Charm cannot be picked up after battles
+Summon Water Elemental > Summons size 4 Elemental underwater
+New spell: Summon Mo'O
+
+Updated Pretenders Enhanced to v2.4:
+Idol of Thunder gained Stormimmune
+Several Pretenders gained Darkvision or Spiritsight
+Sprite for Night Hunter made smaller to reduce selection issues
+
+EA Juhera changes:
+Si'lah 100% B/D > 10% B/D
+Ifrit 435 gold > 560 gold
+Shayatin Stealth 80 > 65
+
+
+Added EA Alchera, Out of the Dreamtime
+Added MA Ryugo-jo, The Dragon Courts
+Added LA Venetia, Merchant Princes
+
+Reordered mod file to prevent Pretenders Enhanced changes from affecting certain ME summons
+
+Domkill nations tweaked:
+
+EA Therodos (Vanilla: 0.5% per candle popkill)
+0.1% per candle popkill, +1% pop killed at Death scales 2+
+
+MA Ermor (Vanilla: 5% per candle popkill)
+1% per candle popkill, +25% fort costs, income penalty per province of 20% + 5% per Dominion candle
+
+MA Asphodel (Vanilla: 1% per candle popkill)
+0.3% per candle popkill, income penalty of 10%
+
+LA Lemuria (Vanilla: 3% per candle popkill)
+0.5% per candle popkill, +25% fort costs, +25% temple costs, mercs +100% cost like MA Ermor, income penalty per province of 20% + 3% per Dominion candle
+
+LA Rlyeh (Vanilla: 1% per candle popkill)
+0.1% per candle popkill, income penalty of -15%, +1-15 unrest per fort per turn
+
+
+
+
+Version 1.1
+
+Updated Magic Enhanced to v2.42
+Fixed Poisonarmor on units due to new modding commands
+Changed Boarskin description as poisonarmor spells currently bugged
+Removed Coralskin as poisonarmor spells currently bugged
+Altered Coral Warriors to grant Stoneskin and be castable underwater as poisonarmor spells currently bugged
+Removed Nightshade Warriors as poisonarmor spells currently bugged
+
+Mud Man now gains Slimer and Strangulation attack, Fatiguecost 20 > 30
+Cursed Tyrants gain Ambidextrous 4
+Some void beings gained Neednoteat
+Rlyeh Ftaghn works on Madmen
+Open Void Gate Thaum7 > Thaum6
+Added spell: Prepare Gate to the Beyond
+Transformation spells now have no effect if cast by lifeless beings
+Summon Air Spirit 15 gems > 12 gems
+Summon Chthonic Spirit 12 gems > 10 gems
+
+
+Updated Pretenders Enhanced to v2.3
+Added Spirit Bear
+Fixed onebattlespells
+Berytos lost european Sacred Grove
+
+
+Updated Sites Enhanced to v1.1
+
+Added new Mercenary group - The Dread Pirate Roberts
+Tweaked Shambhala Pretenders to be more in line with Pretenders Enhanced
+Added a number of Pretenders Enhanced pretenders to Fennoscandia
+
+
+
+Attributions:
+
+amuys: Too many to name, including: Immortals, Neterchildren, Tanuki, Nanook (human form), Redcap, Rhinemaiden, Giant Crab, Hesperides, Tuathan Longdead, Ao Side, Ao Side Rider, Aos Sidhe Lord, Nosoi, Black Knight, Red Knight, Fey Knight, Ababil, Faery, Adze Fly, Vanbaldr, Shesanaga, Amanojaku, Miko & Divine Miko, Howler Monkey, Shard of Heaven, Ancestral Rider & Black Rider, Monkey nation summons, all sprites and ideas for Reach through Dimensions, Red Death
+Addy Aorta: Wild Mandragora 
+Llamabeast: Emberlord, Grendel, Shishi, Mechanical Giant & Monster, Wendigo
+Wolfsbane: Polar Bear
+Psientist: Cthulhu, Large Crab, Karkinos, Leng Spider, Atlach-Nacha, Fungal Masses
+Phobosexual: Nanookbear
+Sombre: Rhino
+Foodstamp: Orca
+Executor: Talos
+Schneeble: Tyrannosaurus
+Burnsaber: Angels, Kelp Creatures, Selkie & seal
+EliteZeon: Raijin & Raiju
+Zonk: Black Tortoise of the North
+StainedClass: Tanagran Triton, Laistrygones, Basmu, Gud-Alim, Gallu, Longdead Partholonians, Black Amaru, Annunaki of the Heavens
+Mithradates: Spectral Ba'al, Rephaite Lich, Zamzummite Mummy
+Sum1Won: Pythium units: Galli, Primani Solaris, HelioPater, Various Terracotta Warriors
+Woodman: Picts & Wode Warrior
+Heartless: Swan Knights
+Marjanaama: Colour from the Spheres
+Mormacil: Divine Anvil, Peacock Angel
+Bloax: Gallowglaich
+
+
+
+PRETENDER CHANGES
+
+> All Pretenders gained Disease Resistance
+> All Pretenders gained Recuperation, except those starting with afflictions which gained Woundfend.
+
+
+-- DOMINION 4 --
+
+Oracle -- Cost 150 > 170
+
+Monument -- Cost 140 > 150
+
+Statue of Order -- Cost 150 > 170
+
+Void Lurker
+
+Baphomet -- Cost 160 > 190
+
+Fountain of Blood -- Cost 150 > 140
+
+Monolith -- Cost 160 > 170
+
+Colossal Head -- Cost 170 > 150
+
+Divine Glyph -- Cost 120 > 160
+
+Colossal Fetish -- Cost 270 > 260, Gained MR 20, pooramphibian, recuperation
+
+Polypal Queen -- Cost 170 > 150
+
+Irminsul
+
+Idol of Men
+
+Idol of Beasts
+
+Idol of Sorcery -- Cost 160 > 170
+
+Statue of Fertility
+
+Statue of the Bloody Mother -- Cost 160 > 150
+
+Golden Idol -- Cost 120 > 140
+
+Statue of War
+
+Golden Pillar -- Cost 150 > 140
+
+Stone Huaca -- Cost 120 > 150
+
+Protgenos of the Sea -- Cost 230 > 160
+
+Father of the Sea -- Cost 220 > 160
+
+Statue of the Underworld -- Cost 170 > 150
+
+
+
+--- DOM 3 ---
+
+> All Titans except Trinities gained Temporary gems equal to their starting paths
+
+> All Titans gain MR20
+
+
+Dagon -- Cost 290 > 250, gained MR20, def 12, hp 139
+
+Cyclops (becomes Chthonic Cyclops) -- Cost 250, gained att 13, def 13, forgebonus 2
+
+Mother of Monsters -- Cost 220 > 200, gained def 13, Claw attack, Battlesummon Foul Spawns, Makes 1 blood Slav/month
+
+DemiLich -- Cost 120 > 160
+
+Nerid -- Cost 180 > 200, gained awe 5
+
+Neter of Crafts -- Cost 230 > 220, gained resources 100
+
+Neteret of Joy -- Cost 220 > 200, gained awe 2
+
+Neter of the Sun -- Cost 260 > 210, gained att 14, def 14, Beak attack
+
+Neter of Many Names -- Cost 250 > 160
+
+Neter of Chaos -- Cost 230 > 200, gained prot 5, darkvision 100
+
+Nataraja -- Cost 260 > 210, gained prot 5, awe 3, Lightning Spear, Fire Sword & Axe of Sharpness,
+
+Allfather -- Cost 280 > 250, gained pathcost 20, researchbonus 10
+
+Titan of War & Wisdom -- Cost 260 > 250, gained prot 5, hp 105, researchbonus 10, inspiringres 1
+
+Titan of Heaven -- Cost 240 > 200
+
+Teotl of Rain -- Cost 250 > 200, gained MR 20, supplybonus 50, makes 1 blood slave/month
+
+Teotl of the Night -- Cost 290 > 240, gained MR20, makes 2 Blood Slaves/month
+
+Son of Niefel -- Cost 260 > 210, gained Dire Wolf Pelt armor 
+
+Great Mother -- Cost 280 > 250, gained prot 16, hp 165, enc 3
+
+Void Lord -- Cost 250, gained mr 22, hp 148, acidshield 8, inspirational 2, bluntres, pierceres, slashres
+
+Lord of the Wild -- Cost 250, gained hp 118, prot 14, douse 3, fear 5, seduce 16, woundfend 2, Makes 1 blood slave/month
+
+Jade Emperor -- Cost 220 > 200, gained hp 135, Battlesummon 2 Celestial Soldiers
+
+Lord of the Desert -- Cost 250 > 200, gained prot 5, heat 10
+
+Titan of the Sea -- Cost 240 > 210, gained prot 5, Crown
+
+Destroyer of Worlds -- Cost 240 > 220, gained awe 3, att 14, def 14, Lightning Spear & Fire Sword
+
+Lord of the Summer Plague -- Cost 240 > 200, gained prot 5, diseasecloud 10, heat 10, autodisgrinder 1
+
+Asynja -- Cost 250 > 210, Battlesummon 1d6 Valkyries
+
+Titan of the Forge -- Cost 240 > 200, resources 50, woundfend 2
+
+Drakaina -- Cost 260 > 240, gained def 13, prot 16, Claw & Tail Sweep, 
+
+Old Man of the Sea -- Cost 270 > 200, gained researchbonus 20, Tail Sweep
+
+Lord of the Waves -- Cost 240 > 200, Tail Sweep
+
+Nyorai -- 220 > 200
+
+Tiwaz of War -- Cost 240 > 210, gained prot 5, hp 90, inspirational 1, Enchanted Sword
+
+Devi of Darkness -- Cost 260 > 250, gained prot 10, darkvision 100, Makes 2 Blood Slaves / month
+
+Titan of Rivers -- Cost 250 > 210, gained Battlestartsummon 2 x Size 3 Water Elementals, Sacred Pitcher attack
+
+Titan of Love -- Cost 260 > 210
+
+Devi of Good Fortunes -- Cost 240 > 210
+
+Celestial General -- Cost 250 > 200, gained prot 5, hp 120, Battlestartsum 2 x Celestial Soldiers, Enchanted Sword
+
+Titan of Serpents & Medicine -- Cost 260 > 200, gained autohealer 3
+
+Volla of the Bountiful Forest -- Cost 210 > 200, gained hp 85
+
+Titan of Death & Rebirth -- Cost 230 > 250, gained Immortal
+
+Annunaki of the Sky -- Cost 280 > 210
+
+Annunaki of the Sweet Water -- Cost 250 > 200, gained Crown
+
+Annunaki of the Morning Star -- Cost 240 > 200
+
+Lord of the Forest -- Cost 210 > 200, gained hp 95, prot 5
+
+Keeper on the Bridge -- Cost 220 > 200, gained prot 5, castledef 100
+
+Solar Disc -- Cost 230 > 250, gained prot 12, increase Heat scale, Throw Flames & Fire Flare attacks, 
+
+Father of Winters -- Cost 240 > 210, gained hp 118, iceprot 1, dire wolf pelt
+
+Fomorian God King -- Cost 290 > 220, gained Magic Spear
+
+Son of the Fallen -- Cost 260 > 180, gained Summon Allies 1 x Rephaite Warrior, Makes 3 Blood Slaves/turn
+
+Oni Kunshu -- Cost 250 > 190, gained inspirational 2, Spread Turmoil, Onisummon 100
+
+Asynja -- Cost 240 > 260, gained immortal, autohealer 1
+
+Titan of the Underworld -- 240 > 230
+
+Teteo Inan -- Cost 270 > 250, gained MR20, prot 5, poisonres 15, Life Drain attack, makes 1 Blood Slave/turn
+
+Annunaki of Love and War -- Cost 260 > 210, gained def 14, hp 95, awe 5, Wing Buff
+
+Annunaki of the Moon -- Cost 270 > 220, gained darkvision 100, pathcost 20
+
+Annunaki of Growth and Rebirth -- Cost 260 > 250
+
+Annunaki of the Underworld -- Cost 270 > 210, gained domsummon2 Shade Beasts
+
+Teotl of War -- Cost 250 > 190, gained Grab and Swallow attack, popkill 5
+
+Teotl of the Sky -- Cost 240 > 200, gained overcharged 1, stormimmune
+
+Teotl of the Underworld -- Cost 250 > 200, gained domsummon Longdead
+
+Neter of the Underworld -- Cost 260 > 200
+
+Neter of Kings -- Cost 240 > 210, gained amphibian, awe 1
+
+Horned One -- Cost 250 > 210, gained domsummon Wolves & bears
+
+Neter of the Moon -- Cost 270 > 200, gained researchbonus 20
+
+Earth Made Flesh -- Cost 280 > 260, gained prot 8, regeneration 10, bluntres, trample, inspirational 1
+
+Ahura of Wisdom -- Cost 290 > 210
+
+Celestial Carp -- Cost 240 > 200, gained prec 13
+
+Angra Mainyu -- Cost 280 > 210, banefireshield 8, Battlesummon 2 x Daeva, Makes 1 Blood Slave/turn
+
+Viracocha -- Cost 290 > 210, gained heat 10
+
+Apu Inti -- Cost 290 > 210, gained hp 108, Bite
+
+Apu Illapa, Cost 280 > 210, gained stormpower 3, overcharged 1, Beak attack
+
+Hun Came -- Cost 290 > 210
+
+Father of Monsters -- 250 > 240, gained prot 16, def 14, hp 128, Tail Sweep attack
+
+Titan of Winds & Waves -- Cost 260 > 210, gained Battlesummon 1 x Size 3 Air Elemental & 2 x Size 2 W Elemental, Crown, ambidextrous 5
+
+Son of the Sea -- Cost 280 > 220, gained raiseonkill 50, Weightless Scale armor
+
+Uttervast -- Cost 340
+
+Kami of the Sun -- Cost 280 > 230
+
+Kami of the Moon -- Cost 260 > 210
+
+Kami of Storms -- Cost 260 > 210
+
+Morrigna -- Cost 380 > 350, Do not lose paths when separated
+
+Duiu of Thunder -- Cost 250 > 200, gained power of turning year 3
+
+Duiu of Farming -- Cost 240 > 210, gained battlesummon 2 x Divine Cattle
+
+Duiu of War -- Cost 250 > 200, gained incscale Turmoil, chaospower 1, domsummon Barbarians, makes 1 Blood slave/month
+
+Matrona of the Healing Spring -- Cost 240 > 210
+
+Deives of the Sun -- cost 220
+
+Dharmapala of the Underworld -- Cost 260 > 200
+
+Titan of the Hunt -- Cost 260 > 200
+
+Titan of Crossroads -- Cost 340 > 350, Do not lose paths when separated
+
+Titan of the Spring -- Cost 220 > 250 
+
+Titan of Growth -- Cost 200
+
+
+
+
+--- DOM 2 ---
+
+> Messengers gained Dominion Spreader 2, but reduced to 2 starting paths
+
+> Immortals reduced to 2 starting paths
+
+> Most Monsters excepts Dragons & Dragon-kin reduced to 1 starting path
+
+
+Moloch -- Cost 280 > 220, gained fireshield 8
+
+Gorgon -- Cost 240 > 200, gained prot 12
+
+Master Lich -- Cost 240 > 180
+
+Virtue -- Cost 240 > 200
+
+Dragons -- Cost 220 > 200, gained pathcost 40
+
+Wyrm -- Cost 200 > 170, gained prot 19
+
+Saurolich -- Cost 240 > 200
+
+Prince of Death -- Cost 270 > 200, gained prot 5, invulnerable 20, inspirational 1
+
+Lich Queen -- Cost 180, Death 3 > Fire 1, Death 1, domsummon20 Dust Warriors
+
+Bitch Queen -- Cost 160 > 130, startdom 1 > 2, paths N1 > S1N1, gained invulnerable 15, domsummon2 Werewolves
+
+Phoenix -- Cost 110 > 130, paths 1 Air, 1 Fire, gained prot 12, awe 1, onebattlespell Phoenix Pyre
+
+Bog Mummy -- Cost 240 > 180
+
+Dracolich -- Cost 180 > 220, gained prot 16, immortal
+
+Scorpion King -- Gcost 160 > 170, Paths F1E1 > E1
+
+Shedu -- Cost 200 > 170, Paths E1S1 > S1, gained prot 18
+
+Rams Head Serpent -- Cost 180 > 150, gained Crush & Barbed Tail attacks, woundfend 2
+
+Ghost King -- Cost 220 > 150, gained invulnerable 10, Death 1 > Death 2
+
+Divine Emperor -- Cost 110 > 120, gained inspiringres 1, auto-communion master
+
+Ancient Kraken -- Cost 200 > 150, Paths E1S1 > S1, gained prot 18, woundfend 2
+
+Great Black Bull -- Cost 190 > 150, Paths N1/B1 > N1, gained prot 14
+
+Great White Bull -- Cost 190 > 170, Paths N1/E1 > E1
+
+Carrion Dragon -- Cost 150 > 200, gained prot 16, woundfend 2
+
+Son of Fenrer -- Cost 150, Paths N1W1 > W1, gained prot 15, Claw attack
+
+Devourer of Souls -- Cost 140 > 150, Paths E1D1 > D1, gained prot 19
+
+Risen Oracle -- Cost 240 > 180
+
+Ageless Olm -- Cost 130 > 160, Paths E1W1, prot 16, regeneration 10, bluntres, Summon Allies 1 x Great Olm, gained Mental Mastery attack
+
+Urmahlullu -- Cost 180 > 160, Paths A1S1 > S1, gained ethereal
+
+Sphinx -- Cost 190 > 160, Paths D1S1 > D1, gained invulnerable 20, Gaze of Death
+
+Great Siddha -- Cost 160 > 180, gained hp 29, att 14, def 14, invulnerable 20, pathcost 40, 2 x Perfect Fist attacks
+
+Melqart -- Cost 230 > 150, gained awe 1, reinvigoration 2
+
+Dragon King -- Cost 200, gained awe 2, hp 120, woundfend 2
+
+Celestial Dragon -- Cost 200, gained awe 1, hp 110, woundfend 2, startdom 3, pathcost 40
+
+Sea Dragon -- Cost 140 > 150
+
+Bodhisattva of Mercy -- Cost 250 > 190, gained invulnerable 20
+
+Kamadhenu -- Cost 240 > 160, Paths N1S1 > S1, gained invulnerable 18
+
+Ahura of the Oath -- Cost 260 > 180, gained invulnerable 20, Sword of Oaths gained Paralyze attack
+
+Ahura of the Waters -- Cost 260 > 180, gained invulnerable 20, Staff of Water
+
+Spenta Mainyu -- Cost 260 > 180, gained invulnerable 15
+
+Yazad King -- Cost 210 > 180, gained invulnerable 10, Rod of the Yazad, Battlesummon 2 Yazads
+
+Azi  -- Cost 220
+
+Gannag Menog -- Cost 250 > 180, gained invulnerable 20
+
+Daeva of Wrath -- Cost 240 > 180, gained invulnerable 20, awe 1, pathcost 40
+
+Heavenly Condor -- Cost 180 > 160, Paths A2 > A1, gained prot 1, Wing Buff
+
+Sapa Inca -- Cost 200 > 180, gained hp 27, invulnerable 15, att 13, def 13
+
+Ayar -- Cost 240 > 160, gained awe 3, gained Weightless Scale
+
+Immortal Coya -- Cost 160 > 200
+
+Bolon-ti-ku -- Cost 230 > 180, gained invulnerable 25, hp 33, Poisoned claws, 
+
+Hun Balam -- Cost 170 > 150, Paths F1B1 > B1, gained prot 18
+
+Demon Macaw -- Cost 170 > 160, Paths F1S1 > S1, gained prot 16, hp 88, Killing light attack, 
+
+Drakon -- Cost 220
+
+Thrice Horned Boar -- Cost 150, Paths E1N1 > N1, gained prot 18, hp 132, woundfend 2
+
+Solar Eagle -- 230 > 160, Paths F1A1 > F1, gained prot 16, heat 8, Fire Flare, woundfend 2
+
+Celestial Gryphon -- Cost 180 > 160, Paths A2 > A1, gained prot 18, stormimmune, Battlesummoned 1d6 Sacred Gryphons
+
+Celestial Lion -- Cost 160, Paths F1S1 > F1, gained prot 16, awe 2
+
+Man Eater -- Cost 200 > 160, Paths E1B1 > B1, gained prot 18
+
+Raven of the Underworld -- Cost 140 > 160, Paths D2 > D1, gained hp 88, prot 18, raiseonkill 50, Wing buff
+
+Myrmecoleon -- Cost 150 > 160, Paths E1F1 > E1, gained hp 130
+
+Earth Serpent -- Cost 240 > 180, Paths E2 > E1, woundfend 2
+
+Solar Serpent -- Cost 180 > 150, Paths F2 > F1, gained prot 16, heat 8, Firey Breath
+
+Serpent of Chaos -- Cost 180 > 160, Paths D2 > D1, gained prot 18, Battlesummon 1d6 Shadows
+
+Dog of the Underworld  -- Cost 120 > 150, Paths D1W1 > D1, gained prot 18, Battlesummon 2 Ghosts
+
+Hound of Hades -- Cost 170 > 150, Paths E1D1 > D1, gained prot 18, hp 132
+
+Heiracosphinx -- Cost 190 > 160, Paths F1A1 > A1, gained invulnerable 20, fireshield 8, stormimmune, Lightning
+
+Criosphinx -- Cost 120 > 160, Paths A1N1 > N1, gained invulnerable 20, trample
+
+Wadjet -- Cost 170 > 160, Paths W1N1 > W1, gained prot 18, Crush attack, 
+
+Ormr -- Cost 180 > 160, Paths W1N1 > W1, gained prot 18, Crush attack, 
+
+Linnormr -- Cost 210 > 200, gained regeneration 5
+
+Ghost King -- Cost 240 > 160, gained invulnerable 10, D1 > D2
+
+Floating Mind -- Cost 80 > 120, gained researchbonus 10, inspiringres 1
+
+Telkhine God-King -- Cost 290 > 230, gained hp 67, att 14, def 14
+
+Hooded Spirit -- Cost 290 > 250
+
+Golden Lion -- Cost 160 > 150
+
+Chiranjivi -- Cost 190 > 150, startdom 1 > 2
+
+Apkallu -- Cost 280 > 200
+
+Eldest Cyclops -- Cost 240 > 190
+
+
+
+
+--- DOM 1 ---
+
+Arch Mage -- Cost 100
+
+Master Enchanter -- Cost 110
+
+Freak Lord -- Cost 100
+
+Arch Mage -- Cost 100
+
+Crone -- Cost 80
+
+Frost Father -- Cost 120
+
+Great Sage -- Cost 120
+
+Arch Druid -- Cost 110
+
+Great Enchantress -- Cost 110
+
+Great Warlock -- Cost 100
+
+Skratti -- Cost 110
+
+King of Frozen Bones -- cost 120
+
+Arch Seraph -- Cost 150
+
+Master Alchemist -- Cost 110, gained resources 50
+
+Bakemono Kunshu -- Cost 180
+
+Serpent King -- Cost 120, gained domsummon2 Horned Serpents
+
+The Smoking Mirror -- Cost 130
+
+Vampire Queen -- Cost 200, gained hp 25, seduce 14, darkpower 3 Battlesummon 2 Vampires, 
+
+Great Seer of the Deeps -- Cost 100
+
+Lawgiver -- Cost 140
+
+Fomorian Sorcerer -- Cost 130
+
+Great Sorceress -- Cost 130
+
+Great Sauromancer -- Cost 120
+
+Eldest Dwarf -- Cost 120
+
+Great Sorcerer -- Cost 110
+
+Hunter Spider -- Cost 110
+
+Bouda Father -- Cost 150
+
+Werehyena -- Cost 150
+
+Maharishi -- Cost 100
+
+Raksharani -- Cost 150
+
+Manushya Raksharani -- Cost 150
+
+Svartalf Mastersmith -- Cost 200
+
+Svartalfr Linnorm -- Cost 200, gained regeneration 5
+
+Morghen High Queen -- Cost 130
+
+Leader of the Closed Council -- Cost 110
+
+Centauride Enchantress -- Cost 110, gained woundfend 2
+
+Centaur Great Sage -- Cost 100,  gained woundfend 2
+
+Master Sorcerer -- Cost 100
+
+Onmyo Hakase -- Cost 100
+
+Grand Heirophant -- Cost 100
+
+Firstborn of the Star -- Cost 120
+
+Grand Hydromancer -- Cost 100
+
+Aphroi Sage -- Cost 110, gained woundfend 2
+
+God-King of the Deep -- Cost 120
+
+Magister Supreme -- Cost 120
+
+Master -- Cost 110
+
+First Spawn -- Cost 150
+
+Bone Mother -- Cost 110
+
+Enkidu Great Sage -- Cost 110
+
+Great Camazotz -- Cost 130
+
+Grey One -- Cost 90
+
+
+
+----------------------------------- CREATURE PATH ADDITIONS ----------------------------------- 
+
+632 -- Storm Demon
+100% AB
+
+449 -- Frost Fiend
+100% WB
+
+489 -- Demon Knight
+100% EB
+
+304 -- Devil
+100% FB
+
+2073 -- Shedim
+100% AB
+
+2074 -- Se'ir
+1B
+
+736 -- Ether Warrior
+100% AD
+50% AD
+
+522 -- Cave Drake
+1E
+50% E
+
+523 -- Fire Drake
+1F
+50% F
+
+579 -- Ice Drake
+1W
+50% W
+
+2196 -- Swamp Drake
+1N
+50% W
+
+513 -- Spring Hawk
+1A
+50% A
+
+515 -- Summer Lion
+1F
+50% F
+
+512 -- Fall Bear
+1E
+50% E
+
+511 -- Winter Wolf
+1W
+50% W
+
+932 -- Hama Dryad
+1N
+#seduce 9
+
+566 -- Ghost
+#assassin
+
+360 -- Undine
+1W
+50% W
+
+562 -- Sylph
+1A
+50% A
+
+561 -- Earth Gnome
+1E
+50% E
+
+640 -- Magma Child
+1F
+50% E
+
+926 -- Demon of Heavenly Fires
+1F
+50%F
+
+904 -- Demon of Heavenly Rivers
+1W
+50%W
+
+1498 -- Granite Guardian
+1E
+
+2497 -- Penumbral
+1D
+
+1490 -- Umbral
+1D
+50% E
+50% D
+
+1500 -- Sepulchral
+1D
+50% D
+1H
+
+1940 -- Zmey
+1F
+50%F
+
+1743 -- Sandhyabala
+1D
+100%DB
+
+1821 -- Morrigan
+1A
+100%AD
+
+1227 -- Kydnides
+1W
+100%WN
+
+2697 -- Huaca
+1S
+1H
+#inspirational 1
+
+1607 -- Yazad
+1S
+1H
+#inspirational 1
+
+Daeva
+1D
+50%F
+
+Shade
+#spy
+
+Foul Beast
+100%DB
+
+466 -- Cockatrice
+100%DB
+
+636 -- Basilisk
+100%DB
+
+530 -- Foul Spawn
+100%DB
+
+487 -- Chimaera
+100%DNB
+
+637 -- Draco Lion
+100%DNB
+
+659 -- Grotesque
+200%DNB
+100%DNB
+
+1335 -- Gandharva
+1S
+100AEN
+
+1332 -- Apsara
+1S
+100AWN
+
+1338 -- Celestial Hound
+1S
+50A
+
+475 -- Crusher
+1E
+50%E
+
+476 -- Lumber Construct
+1N
+50%N
+
+1347 -- Sirrush
+1N
+50%W
+
+1356 -- Ozelotl
+1B
+50%F
+
+Karasu Tengu
+1A
+50%N
+
+1479 -- Konoha Tengu
+1A
+50%E
+
+1483 -- Tzitzimitl
+1S
+50%S
+
+543 -- Angel of the Host
+1S
+50%F
+
+1649 -- Scorpion Man
+1F
+1E
+
+1656 -- Smoulderghost
+1F
+50%D
+
+1971 -- Smoulderghost
+1F
+50%D
+
+1983 -- Green Lion
+2 x 100%W/F
+
+760 -- Siege Golem
+1E
+50%E
+
+1099 -- Poison Golem
+1D
+50%E
+
+814 -- Fire Snake
+1F
+
+405 -- Vampire
+1B
+50%D
+
+5691 -- Stone Guardian
+1E
+
+5332 -- Eudaimon
+N1
+2 x 100% ASN
+
+5458 -- Seitaad
+F2A2
+100% FAED
+
+5736 -- Black Drake
+2 x 100% ED
+
+5737 -- White Eagle
+2 x 100% SW
+
+5738 -- Red Rooster
+2 x 100% FE
+
+781 -- Juggernaut
+#onebattlespell 159 -- Divine Channeling
+
+925 -- Tarrasque
+1W
+2N
+100% WEN
+#onebattlespell Foul Vapors
+25% regeneration
+
+521 -- Abomination
+1W
+2S
+100% WSD
+#onebattlespell Astral Tempest
+Teleport 10
+
+2251 -- Ancient Presence
+2W
+1N
+100% WDN
+#onebattlespell Quagmire
+Summon 1 x Swamp Ghost per battle round
+
+531 -- Iron Dragon
+2F
+1E
+100% FAE
+#onebattlespell Heat from Hell
+Fire Shield 10
+Heat Aura 12
+
+
+---- SITE CHANGES -----
+
+
+Abyss
+summon 1 x Troglodyte
+
+Abyss to the Beyond
+voidgate 20
++astralrange 2
+
+Ancient Forest
+commander recruit Bandar Warrior
+unit recruit Bandar
+
+Ancient Ruin
+summon 1 x Giant Spider, 1 x Great Spider
+
+Academy of War
+xp gain > 25
+
+Ancient Temple of C'tis
+summon 2 x Longdead of C'tis
+
+Ancient Tomb
+summon with lvl 2 mage 2 x Released One
+
+Animal Cemetary
++1 Death Gem
+summon 1 x Carrion Beast
+
+Arcane Diagram
++2 Astral Gems
+
+Ash Valley
+summon with lvl 2 mage 2 x Dust Walkers
+
+Ashen Forest
++Death
++2 Death Gems
++1 Nature Gem
+
+Basalt Halls
++res 100
+
+Basalt Mirror
++1 Earth Gem, +1 Astral Gem
+
+Basalt Pillars
++Magic
++astralrange 1
++earthrange 1
+
+Basalt Statue
+conjuration discount 20%
+
+Basalt Wall
++Magic
++astralrange 1
++earthrange 1
+
+Basilisk Cave
+summon 1 x Basilisk
+
+Bear Mountain
+Unit recruit: Chud Skinshifters
+
+Birdsong Tower
++1 Air Gem, +1 Nature Gem
+
+Blackhawk Nest
+summon 4 x Black Hawks
+
+Blashpemous Presence
+Adventure 20%
+
+Blasted Heath
++Magic
+
+Bleeding Tree
+commander recuit Blood Mage
+
+Blizzard Valley
+summon 2 x Yeti
+
+Bloodleaf Forest
++2 Nature Gems
+summon 1 x Dark Vine
+
+Bloodmarble Mausoleum
+summon with lvl3 mage 1 x Vampire
+
+Bloodsplatter Pattern
++1 Astral Gem, +1 Death gem
++Misfortune
+
+Blood Mountain
+summon with lvl2 mage 1 x Size 4 Illearth
+
+Bloodsucker Fens
+summon 2 x Lamia
+
+Bloodwind Waste
++1 Air Gem, +1 Death gem
+
+Bog of Strange Lights
+summon 2 x Will O' Wisp
+
+Boiling Current
+summon 1 x Flame Jelly
+
+Bone Filled Cave
+summon 3 x Longdead
+
+Bonedoor Tower
+summon 1 x Bane
+Adventure 20%
+
+Breeding Ground of Eels
+summon 2 x Electric Eels
+
+Broken Tower
+commander recruit Conjurer
+
+Brook of Glimmering Pearls
++gold 50
++Magic
+
+Buried Temple
++2 Astral Gems
+summon 1 x Released Warrior
+
+Canyon of Playful Winds
+summon with lvl2 mage 1 x Sylph
+
+Canyon of Sand
++2 Earth Gems
+
+Catacombs
+summon 3 x Longdead Legionnaires
+
+Cave of Dark Rites
++deathrange 2
+
+Cave of Ghouls
+summon 3 x Ghouls
+
+Cave of the Pale Ones
+commander recruit Earth Reader
+
+Cave of the Sleepers
++Magic
+summon with lvl2 mage 2 x Sleepers
+
+Caveman Cavern
++1 Earth Gem, +1 Nature Gem
+
+Cavern of Flames
+summon 1 x size 3 Fire Elemental
+
+Cavern of Magma
+summon 1 x Magma Child
+
+Caves of Passing Time
++Magic
+
+Chamber of Changes
+summon 1 x Living Statue
+
+Chillsick Swamp
+summon with lvl2 mage 1 x Swamp Ghost
+
+Cliffside Abattoir
+commander recruit Blood Mage
+
+Cloud Pillars
+summon with lvl 4 mage 1 x Size 6 Air Elemental
+
+Copper Cliff
++gold 50
+
+Copper Mists
+summon 1 x Efreet
+
+Coral Garden
++1 water gem
+unit recruit Triton Rider
++res 50
+
+Coral Statue
+commander recruit Mermage
+commander recruit Merman Priest
+
+Cottage in the Woods
+summon 1 x Great Bear, 1 x Moose
+
+Cracked Tower
++lab
+
+Crypt in the Sand
+summon with lvl2 mage 2 x Dust Walker
+
+Crystal Flames
++Cold
+commander recruit Crystal Sorceress
+commander recruit Crystal Priestess
+unit recruit Crystal Amazon
+
+Ctonian Gate
+summon with lvl2 mage 1 x Cave Drake
+
+Dark Depths
+summon 1 x Giant Lobster
+
+Dark Waters
+summon with lvl4 mage 1 x Child of Tiamat
+
+Date Oasis
++1 Water gem, +2 Nature Gems
+
+Devil's Furnace
++1 Fire Gem, +1 Blood Slave 
++Heat
+summon 2 x Fiery Imp
+
+Diamond Corals
+summon 2 x Leocampus
+
+Dolmen
++1 Earth gem, +1 Astral Gem
+summon 2 x Aos Si
+
+Double Bottom Lake
+commander recruit Mermage
+
+Dragon Forest
+summon with lvl3 mage 1 x Fire Drake
+
+Dragon Rune
+summon with lvl3 mage 1 x Ice Drake
+
+Dreaming Stone
++1 Astral Gem
+
+Dripping Caverns
+unit recruit Olm
+
+Earthroot Grove
++1 Earth Gem, +1 Nature gem
+commander recruit Witch
++Growth
+
+Earthroot Tower
++2 Earth gems, +1 Nature gem
++naturerange 2
++Growth
+
+Egg of the Phoenix
+heal 25%
+
+Elusive Lights
++Magic
++Luck
+
+Enchanted Current
+commander recruit Hydromancer
+
+Enchanted Glacier
++1 Air Gem, +1 Water gem
+summon 2 x Yeti
+
+Endless Caverns
+summon 2 x Cave Grub
+
+Evergreen Mountain
+summon 2 x Dire Wolf
+
+Eye Pebble Plain
+Enter to scry 
+
+Falling Depths
+summon 1 x Undine
+
+Farm of Plenty
++1 Nature Gem
+
+Field of Golden Rye
++gold 50
+
+Field of Undead Clams
++1 Water Gem, +1 Death Gem
+
+Fields of Blood
+summon 1 x Spine Devil
+
+Fire Rift
+commander recruit Amber Clan Mage
+
+Flame Forest
+summon 2 x Fire Snake
+
+Flaming Tomb
+summon 2 x Smoulderghost
+
+Flesh Eaters Isle
+summon 3 x Ghoul
+
+Floating Forest
+summon 2 x Sprite
+
+Flooded Mines
++1 Water Gem, +1 Earth Gem, +1 Death Gem
+
+Flowering Bog
+commander recruit S2N3 Shaman
+unit recruit Lizard Warrior
+
+Foaming Waves
++1 Air Gem, +1 Water gem
+
+Forest of Joy
+commander recruit Bean Sidhe
+
+Forest of Pain
+summon 2 x Reveler
+
+Forest of the Ape King
+summon 2 x Great Ape
+
+Forgotten Crevasse
+summon 1 x Giant Lobster
+
+Forgotten Oasis
++1 Water Gem, +1 Nature gem
++supply 100
+
+Fossilized Conch
++2 Earth gems 
+
+Frozen Glen
+commander recruit Ice Crafter
++Cold
+
+Fungus Forest
+summon 2 x Great Spider
+
+Gallows
+summon with lvl2 mage 1 x Ghost
+
+Garden of Longevity
+heal 20%
+
+Garden of Weeping Roses
+commander recruit Horticulturalist
+
+Gateward Valley
++1 Nature Gem
+
+Ghoul Fish Cave
+summon with lvl2 Mage 1 x Drowned Ghost
+
+Glowing Depths
+summon 1 x Flame Jelly
+
+Glowing Fissure
+summon 1 x Devil
+
+Gold Leafed Tree
++gold 50
+
+Gore Swamps
+commander recruit Blackrose Sorceress
+
+Grove of Hooded Spirits
+heal 15%
+
+Hall of the Ivy King
+commander recruit Animist
+summon 2 x Vine Ogre
+
+Halls of the Drowned
+summon 3 x Drowned Ones
+
+Haunted Torture Chamber
+summon 3 x Dispossessed Spirits
+
+Healing Spring
+heal 25%
+
+Heart of the Desert
+commander Sorcerer of the Sands
+summon 1 x Flame Child
+
+Heart of the Forest
+commander recruit Troll Seithberender
+summon 1 x Forest Troll
+
+Heart of the Mountain
+commander recruit Troll King
+summon 1 x War Troll
+
+Hidden Monastery
+commander recruit Monk
+unit  recruit Holy Knight
+
+Hidden Valley
+summon with lvl4 mage 1 x Tyrant Lizard
+
+House of Embers
+summon 2 x Magma Child
+
+Howling Gorge
+summon 2 x Dire Wolf
+
+Ice Mists
+summon 2 x Winter Wolf
+
+Icebrick Tower
+commander recruit Mage of Winter
+
+Impossible Angle
++Magic
+
+Inkpot End
+commander recruit Plague Cult Leader
+
+Iron Tomb
+summon 1 x Iron Ancestor
+
+Isle of Death
+summon with lvl2 mage 1 x Ghost Champion
+
+Isle of Ice
+summon with lvl2 mage 1 x Size 4 Ice Elemental
+
+Isle of Rebirth
+heal 25%
+
+Ivy Grove
+summon 2 x Vine Ogre, 2 x Vine Man
+
+Kraken Pit
++1 W Gem
+
+Lair of the Spiders
+summon 2 x Great Spider, 2 x Giant Spider
+
+Lair of the Eel King
++2 Nature Gems, 
+summon 2 x Electric Eels
+
+Lake of Mists
+summon 1 x Mist Warrior
+
+Lantern Forest
+summon 1 x Will o Wisp
+
+Leper Fens
+summon with lvl2 mage 2 x Apparition
+
+Lifeless Lake
++1 W gem, +1 D Gem
+
+Long Lost Circle
+Enter to scry 
+
+Maelstrom
++gold 50
+
+Maggot Woods
+summon 3 x Soulless
+
+
+Magma Pit
+summon 1 x Magma Child
+
+Man O War Breeding Ground
+summon with lvl2 mage 1 x Flame Jelly 
+
+Mandrake Gallows
+summon 1 x Mandragora
+
+Maze of Frozen Flames
++1 W gem, +1 F gem
+
+Maze of Thorn Hedges
+commander recruit Hedge Wizard
+commander recruit Enchanter
+
+Melting Cliffs
++2 W Gems
+
+Meteorite Cliffs
++res 75
+
+Mineral Fingers
++res 75
+
+Mist Caverns
+commander recruit Cloud Mage
+#end
+
+Mist Forest
+commander recruit Cloud Mage
+
+Mist Swamps
+commander recruit Cloud Mage
+
+Moon Mirror
+Enter to scry 
+
+Mooncatch Lake
++2 W gems
+
+Moonlit Halls
+commander recruit Moon Mage
+summon 2 x Werewolf
+
+Moonlit Lake
+commander recruit Wizard of Crescent Moon
+
+Moonvine Forest
+summon 3 x Vine Man
+
+Moonwind Marsh
++1 Air gem, +1 Astral gem, +1 Death gem
+
+Mount Frost
+summon 2 x Winter Wolf
+
+Mountain Underneath
++res 100
+
+Mountain of Revelation
++1 E gem
+
+Mud Caverns
+summon 2 x Mud Warrior
+
+Murder Bog
+summon 2 x Corpse Candle
+
+Murdering Mire
+summon 1 x Swamp Ghost
+
+Mushroom Forest
++2 N gems
+
+Nest of Obsidian Snakes
+summon 1 x Jade Serpent
+
+Nidus of Power
++1 S gem, +1 D gem
+
+Nightlight Fen
+summon 1 x Swamp Drake
+
+Oak of Memories
++Magic
+
+Oakwood Tower
+commander Enchantress
+
+Oasis of Verdant Greenery
+commander recruit Jade Sorceress
+unit recruit Jade Amazon
+
+Opulent Tomb
++gold 50
+
+Oracles Lair
++1 S gem
+
+Order of the Undying
+commander recruit Ermorian Cultist
+summon 3 x Longdead Horseman
+
+Overgrown Graveyard
++Growth
+summon 2 x Manikin
+
+Overgrown Lake
+summon 2 x Crocodile
+
+Painted Cavern
++1 E Gem, +1 S gem
+
+Painted Crypt
+summon 2 x Dead One
+
+Pearl Stairway
+commander recruit Pearl Mage
+
+Pentagram
++1 D gem, +1 S gem
+
+Pharos
++1 F Gem
+
+Pillar of Life
++1F F Gem
+
+Pinnacle of Power
+commander recruit Wind Master
+
+Pit of Despair
++3 D gems 
+summon with lvl2 mage 4 x Shadow Soldiers
+
+Place of Prophecy
+commander recruit Pilgrim
+unit recruit Pilgrim
+dominion conflict bonus 1
+
+Plague Barrow
+summon with lvl2 mage 1 x Disease Demon
+
+Plaguewater Oasis
+summon 1 x Apparition
+
+Plaguewind Waste
+summon with lvl3 mage 1 x Shed
+
+Pond of Lava
++1 F gem, +1 E gem
+
+Pool of Perpetual Night
++1 W gem, +1 D gem
++waterrange 2
++deathrange 2
+
+Pool of Sanctity
+heal 20%
+
+Pyramid of Life
+heal 15%
+
+Rage Wind Heath
+unit recruit Bone Tribe
+unit recruit Bone Tribe
+commander recruit Bone Tribe
+
+RageFlame Tower
+decunrest -5
+commander recruit Fire Lord
+
+Rain Ridge
+commander recruit Toad Tribe Shaman
+unit recruit Toad Tribe
+
+Raven Oak
+summon 1 x Great Hawk
+
+Red Forest
+summon with lvl 3 mage 2 x Fire Snake
+
+Reef of Sunken Ships
++gold 50
+summon 1 x Damned Buccaneer
+
+Riddle Dark
+adventure 25%
+
+Rock Forest
+commander recruit Witch
+
+Ruins of the Old Empire
+Adventure 15%
+
+Runaway Pit
+unit recruit Human Slave
+
+Rune of Air
++1 Air Gem
+
+Rune of Earth
++1 Earth Gem
+
+Rune of Fire
++1 F Gem
+
+Rune of Water
++1 W gem
+
+Saltspray Cliffs
+summon 1 x Giant Crab
+
+Scorched Tower
+commander recruit Adept of Pyriphlegeton
+summon 1 x Hell Spawn
+
+Scorchwind Waste
+summon with lvl2 mage 1 x Efreet
+
+Scoriatic Cliffs
++1 F Gem, +1 A gem
+
+Shademist Swamp
+summon 2 x Shade Beast
+
+Shrine of the Outcast
++1 D gem
+
+Shrine of the Shark Lords
++1 W gem
+
+Sigil of the Ancients
++1 D gem
+summon with lvl 2 mage 1 x Released Warrior, 1 x Released One
+
+Sign of Nodens
+heal 20%
+
+Singing Stream
+commander recruit Baobhan Sidhe
+
+Skinshifters Barrow
++1 D gem, +1 N gem
+summon with lvl2 mage 1 x Draug
+
+Skywatch Tower
++astralrange 2
+
+Smoke Forest
+summon 1 x Smoke Warrior
+
+Smoke Gorge
+summon with lvl2 mage 1 x Fire Drake
+
+Splattermaid Gorge
+commander recruit Blood Mage
+
+Stairway Mountain
+summon with lvl2 mage 1 x Sylph
+
+Stalagmite Cavern
+summon 1 x Cave Crab
+
+Starfire Crystals
++gold 50
+
+Starsong Grove
+commander recruit Enchanter
+
+Statue of Death
++Death
+summon with lvlv 3 mage 1 x Handmaiden of Death
+
+Steam Fountain
++supply 50
++res 50
+
+Steam Swamp
+summon 1 x Will O Wisp
+
+Steel Swamps
++res 75
+
+Stele of Law
++Order
+
+Stone Tree Grove
++1 E gem, +1 N gem
+
+Stony Swamps
+summon 1 x Living Statue
+
+Subterranean City
++1 E gem
++gold 100
++res 100
+
+Subterranean Lake
++2 W Gems
+summon 1 x Cave Crab
+
+Sunken Ship of Dread
+summon 1 x Damned Boatswain, 2 x Damned Buccaneers
+
+Sunken Tower
+commander recruit Azure Initiate
+
+Swamp of Shadows
+summon 3 x Shadow
+
+Tears of the Ancients
+unit recruit Wet One
+
+Temple of Darkness
+commander recruit Ermorian Cultist
+
+Temple of Flying Monkeys
+commander recruit Yogi
++naturerange 2
+
+Temple of Life and Death
+heal 20%
+summon 1 x Mummy
+
+Temple of the All Seeing Eye
++allrange 2
+
+Temple of the Spider God
++1 N gem 
+
+The Ancient Master
++xp 25
+
+The Bowl of the Lost
++3 D gems 
+
+The Brass Door Hill
+commander recruit Dwarf Smith
+
+The Broken Maze
+commander recruit Sorceress
+
+The Cave of Souls
+summon with lvl2 mage 2 x Ghost
+
+Cedar Forest
++3 N gems 
++res 100
+unit recruitment Enkidu Hunter
+commander recruit Enkidu Hunter Chief
+
+The Charnel House
+summon 3 x Ghoul
+commander recruit Circle Master
+
+Chasm of Black Roses
+commander recruit Blackrose Sorceress
+
+City of Wonders
+Adventure 20%
+
+City of the Damned
++1 D gem
+Adventure 15%
+
+Cliff of Seven Directions
+summon 1 x False Horror
+
+The Cloven Mountain
+commander recruit Shugenja
+
+The Crone
++1 D gem, +1 N gem
+
+The Crown Woods
++2 N gems 
+commander recruit Dryad
+unit recruit Satyr
+
+The Darkness
++1 D gem
+
+Deepest Mine
++res 100
+
+The Empty Grave
+commander recruit Pilgrim
+
+The Factory
++res 50
+commander recruit Mage Engineer
+
+The Ferry
+Recall godbonus 1
+
+The Forest of the Lake
+commander recruit Dryad Mother
+unit recruit Satyr
+
+Forgotten City
+Adventure 20%
+
+The Gate of Deeper Slumber
+summon 1 x Night-Gaunt
+
+Gnomon
++Order
+
+Golden City
++gold 75
++res 75
+
+Halfway Inn
+commander recruit Adventurer
+commander recruit Adventurer
+commander recruit Adventurer
+
+The Highest Peak
++1 E gem
+summon with lvl2 mage 1 x Size 4 Air Elemental
+
+The Land of Pleasures unattained
+commander recruit Nagini
+
+The Mammoth Forest
+summon 1 x Elephant
+
+Mountain of the Past
+summon 1 x Yazad
+
+The Obsidian Sphere
++2 D gems
+commander recruit Obsidian Warrior
+
+The Olm Cavern
+unit recrtuit Great Olm
+
+The Previous Forest
+commander recruit Dryad Hag
+
+Prison of Hearts
++2 blood slaves 
+
+Prophet's Sigil
+commander recruit False Prophet
+
+The Sacred Glen
+commander recruit Melissa
+
+The Silent Sea
+commander recruit Ah Itz
+
+The Snake Collector
+summon 2 x Horned Serpent
+
+The Storm Underneath
+summon with lvl3 mage 1 x Size 6 Air Elemental
+
+Sunless Sea
++1 D gem
+summon 1 x Great Olm
+
+The Swamp of Dread
+summon 1 x Serpent Fiend
+
+Vale of Unicorns
+heal 20%
+
+Valley of Shame
++1 blood Slave
+
+The Ward
+commander recruit High Inquisitor
+
+The Wasted Sea
+summon 2 x Soulless of Atlantis
+
+Whirlwind of Cyclon
++Turmoil
+commander recruit Wind Master
+
+Thorn Maze
+commander recruit Hedge Wizard
+
+Thundertop Mountain
+summon 1 x Wyvern
+
+inderwood Forest
+summon 1 x Size 3 Fire Elemental 
+
+Tomb of the Ancients
+summon with lvl2 mage 1 x Unfrozen Warrior
+
+Tomb of the Grand Thaumaturg
+summon 2 x Longdead Principe
+
+Tower of the Moon
+commander recruit Moon Mage
+
+Tree of Knowledge
+xp +25
+
+Tree of Life
+heal 15%
+
+Umbral Cave
+summon with lvl3 mage 1 x Umbral
+
+Underground Lake
++1 E gem
+
+Undermirks
+commander recruit Troll Seithberender
+unit recruit Forest Troll
+
+Undersea Cave
++1 E gem
+unit recruitment Deep One
+
+Underworld Entrance
++res 75
+summon with lvl2 mage 1 x Cave Drake
+
+Unsettling Pattern
++1 A gem, +1 S gem
+
+Vale of Healing Herbs
+heal 10%
+commander recruit Adventurer
+
+Wailing Woods
+summon 1 x Bean Sidhe
+
+Waterfall
+summon 1 x Water Weird
+
+Well of All Waters
+summon with lvl3 mage 1 x Size 6 Water Elemental
+#end
+
+Well of Darkness
+summon 1 x Fiend of Darkness, 1 x Shadpw Imp
+
+Well of Yesterdays Waters
++Magic
+
+Wellspring of the Virgins
+heal 15%
+
+Whispering Waters
+summon 1 x Undine
+
+Whisperwind Tower
+Enter to scry 
+
+Windswept Catacombs
+summon with lvl3 mage 1 x Storm Demon
+
+

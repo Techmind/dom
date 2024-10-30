@@ -1,0 +1,18 @@
+How to install a Dominions mod:
+
+Step 1) Download the mod you want to install
+Step 2) Open the folder you downloaded the mod to
+Step 3) Copy the mod (Windows Ctrl+c)-usually two things: a DM-file and a folder with .tga files
+Step 4) Open the dominions 5 application (the game)
+Step 5) Press the game tools button in the menu
+Step 6) Press Open user data directory in the game tools menu (its under the Other banner)
+Step 7) In the opened directory go to the mods folder and open it
+Step 8) In the mods folder paste the mod (Windows Ctrl+v)
+OPTIONAL Step 9) If the mod was in a zipped file unzip it.
+Step 10) Reopen the dominions 5 application (the game), press exit on the game tools menu to return to the main menu
+Step 11) In the main menu click on the mods option to open mod preferences screen.
+Step 12) Click on the mods you want to enable.
+Step 13) Press exit on the Mod preferences screen to return to main menu.
+Step 14) Enjoy your freshly installed mod!
+
+Notes: Mods usually consist out of two things: a folder with .tga files and a DM-file. The .tga files should remain in their own subfolder within the mods folder, Whilst the DM-file is directly in the mods folder.
