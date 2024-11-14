@@ -4958,7 +4958,7 @@ Legendary - 6.67%
 Ulrich Patrifagus - 3.33%"
 #school 0
 #researchlevel 6
-#path 0 7
+#path 0 8
 #pathlevel 0 3
 #effect 10021
 #damage -3506
