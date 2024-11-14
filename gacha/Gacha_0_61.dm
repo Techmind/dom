@@ -5665,7 +5665,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #descr "The blood binding rituals are tainted by Gacha! Random demons will be bound."
 #school 6
 #researchlevel 0
-#path 0 7
+#path 0 8
 #pathlevel 0 1
 #effect 10021
 #damage -2600
