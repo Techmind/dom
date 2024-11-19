@@ -1,6 +1,6 @@
-#modname "Gacha 0.63"
+#modname "Gacha 0.64"
 #description "Fixed commander abuse by using as s1 mage, now bigger upkeep shit research"
-#version 1.2
+#version 1.3
 #icon "./banner.tga"
 
 ------------------------------------------------------------------------------------------
@@ -364,7 +364,7 @@
 #onlymnr 5500
 #name "Mage Summon"
 #descr "A regular summoning with standard currency, the chances for good mages are not great but it is certainly cheap.
-395 1-3 path mages with less than 200 gold in base game and a couple of really good ones
+395 1-3 path mages with less than 200 gold in base game and a couple of really good ones"
 #school 0
 #researchlevel 0
 #path 0 4
@@ -504,7 +504,7 @@
 #onlymnr 5500
 #name "Mage Summon (Premium)"
 #descr "A premium summoning with gems, very high chance for good mages.
-204 4+ > 200 gold mages 
+204 4+ > 200 gold mages"
 #school 0
 #researchlevel 0
 #path 0 4
@@ -679,7 +679,7 @@
 #onlymnr 5503
 #name "Commander Summon"
 #descr "A regular summoning with standard currency, the chances for good commanders/priests are not great but it is certainly cheap.
-130 leadership > 100 commanders, might include mages & priests too, includes some assasins%"
+130 leadership > 100 commanders, might include mages & priests too, includes some assasins"
 #school 0
 #researchlevel 0
 #path 0 4
