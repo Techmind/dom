@@ -1663,7 +1663,7 @@
 #req_targmnr 5053
 #notext
 #nolog
-#6d6units 507 -- Illithid Soldier
+#6d6units 407 -- Illithid Soldier
 #killcom 5053
 #end
 #selectmonster 66
