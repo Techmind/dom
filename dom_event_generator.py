@@ -1,6 +1,87 @@
 import os
 import csv
 
+def get_nation_units_with_cap_sites(fort_troop_file, attributes_file, magic_sites_file):
+    """
+    Adds units from the capital magic site to a nation's unit pool.
+
+    Args:
+        fort_troop_file: Path of fort_troop_types_by_nation.csv file
+        attributes_file: Path of attributes_by_nation.csv file
+        magic_sites_file: Path of MagicSites.csv file
+
+    Returns:
+      dict: A dictionary of nation ID with it's respective troops and commanders.
+    """
+
+    nation_troops = {}
+    with open(fort_troop_file, 'r') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter='\t')
+        for row in reader:
+             nation_id_from_file = int(row['nation_number'])
+             monster_id = int(row['monster_number'])
+             if nation_id_from_file not in nation_troops:
+               nation_troops[nation_id_from_file] = {"monsters":[], "commanders":[]}
+             nation_troops[nation_id_from_file]["monsters"].append(monster_id)
+    
+    # Read attributes to get the capital sites of all nations.
+    nation_attributes = {}
+    with open(attributes_file, 'r') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter='\t')
+        for row in reader:
+            nation_id_from_file = int(row['nation_number'])
+            attribute_id = int(row['attribute'])
+            if attribute_id == 52: # Capital site attribute.
+              if nation_id_from_file not in nation_attributes:
+                 nation_attributes[nation_id_from_file] = []
+              nation_attributes[nation_id_from_file].append(int(row["raw_value"])) # Append the capital site id.
+    
+     # Read magic sites.
+    magic_sites_dict = {}
+    with open(magic_sites_file, 'r') as csvfile:
+      reader = csv.DictReader(csvfile, delimiter='\t')
+      for row in reader:
+        site_id = int(row['id'])
+        magic_sites_dict[site_id] = row
+
+    # Iterate through all nations to add units from their capital sites.
+    for nation_id, capital_site_ids in nation_attributes.items():
+      if nation_id not in nation_troops:
+          nation_troops[nation_id] = {"monsters":[], "commanders":[]}
+      for capital_site_id in capital_site_ids:
+         magic_site = magic_sites_dict.get(capital_site_id)
+         if magic_site:
+
+              unit_ids_from_site = [
+                  magic_site.get('hmon1'),
+                  magic_site.get('hmon2'),
+                  magic_site.get('hmon3'),
+                  magic_site.get('hmon4'),
+                  magic_site.get('hmon5'),
+                  magic_site.get('natmon'),
+              ]
+              for unit_id in unit_ids_from_site:
+                if unit_id is not None and unit_id.strip():
+                  unit_id = int(unit_id)
+                  if unit_id not in nation_troops[nation_id]["monsters"]:
+                     nation_troops[nation_id]["monsters"].append(unit_id)
+
+              commander_ids_from_site = [
+                  magic_site.get('hcom1'),
+                  magic_site.get('hcom2'),
+                  magic_site.get('hcom3'),
+                  magic_site.get('hcom4'),
+                   magic_site.get('hcom5'),
+              ]
+
+              for commander_id in commander_ids_from_site:
+                if commander_id is not None and commander_id.strip():
+                    commander_id = int(commander_id)
+                    if commander_id not in nation_troops[nation_id]["commanders"]:
+                       nation_troops[nation_id]["commanders"].append(commander_id)
+    
+    return nation_troops
+
 def read_unit_gold_costs(file_path):
     """Reads the gcost.csv and returns a dictionary of unit gold costs."""
     unit_costs = {}
@@ -21,20 +102,6 @@ def read_unit_gold_costs(file_path):
 def get_unit_cost(unit_id, unit_costs):
     """Get gold cost of the unit."""
     return unit_costs.get(unit_id, 0)
-
-
-def read_fort_troop_types(file_path):
-    """Reads the fort troop types CSV and returns a dictionary."""
-    nation_troops = {}
-    with open(file_path, 'r') as csvfile:
-        reader = csv.DictReader(csvfile, delimiter='\t')
-        for row in reader:
-            nation_id = int(row['nation_number'])
-            monster_id = int(row['monster_number'])
-            if nation_id not in nation_troops:
-                nation_troops[nation_id] = []
-            nation_troops[nation_id].append(monster_id)
-    return nation_troops
 
 
 def generate_event_code(nation_id, commander_ids, unit_data, add_strikeunits=True, province_id=1, month=1):
@@ -64,7 +131,7 @@ def generate_event_code(nation_id, commander_ids, unit_data, add_strikeunits=Tru
     else:
         event_code += f"#req_code -{province_id}\n#req_monster \"Spy\"\n"
         # clean marker and code
-        event_code += f"#codedelay 0\n#killcom \"Spy\""
+        event_code += f"#codedelay 0\n#killcom \"Spy\"\n"
 
     for commander_id in commander_ids:
         event_code += f"#com {commander_id}\n"
@@ -88,8 +155,10 @@ def generate_event_code(nation_id, commander_ids, unit_data, add_strikeunits=Tru
 def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, commanders1, commanders2, unit_costs, total_gold_cost = 2000):
     """Generates fight events for all combinations of unit pairings."""
 
-    nation1_units = nation_troops.get(nation1_id, [])
-    nation2_units = nation_troops.get(nation2_id, [])
+    nation1_units = nation_troops[nation1_id].get("monsters", [])
+    nation2_units = nation_troops[nation2_id].get("monsters", [])
+    
+    #print(nation1_units)
 
     mod_code = f"""#modname "Test Event Mod"
 #description "Mod to create 1 to 1 arena event that spawns all combinations of units from both nations and make them fight with gold cost scaling"
@@ -122,7 +191,7 @@ def create_mod_file(nation1, commanders1, nation2, commanders2, file_path, natio
 if __name__ == "__main__":
     # Example Data
     nation1_id = 5  # Arcoscephale
-    nation1_commanders = [559]
+    nation1_commanders = [559] #Sleepers as coms <
 
     nation2_id = 6  # Mekone
     nation2_commanders = [559]
@@ -133,8 +202,14 @@ if __name__ == "__main__":
 
     unit_costs = read_unit_gold_costs(gcost_file_path)
 
-    nation_troops = read_fort_troop_types(troop_file_path)
-
+    fort_troop_file = "dom6inspector/gamedata/fort_troop_types_by_nation.csv"
+    attributes_file = "dom6inspector/gamedata/attributes_by_nation.csv"
+    magic_sites_file = "dom6inspector/gamedata/MagicSites.csv"
+    fort_troop_file = "dom6inspector/gamedata/fort_troop_types_by_nation.csv"
+    attributes_file = "dom6inspector/gamedata/attributes_by_nation.csv"
+    nation_troops = get_nation_units_with_cap_sites(fort_troop_file, attributes_file, magic_sites_file)
+    
+    #print(nation_troops)
 
     create_mod_file(
         nation1_id, nation1_commanders,
