@@ -1,6 +1,17 @@
 import os
 import csv
 
+def read_unit_names(file_path):
+    """Reads the BaseU.csv and returns a dictionary of unit names by id."""
+    unit_names = {}
+    with open(file_path, 'r', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter='\t')
+        for row in reader:
+            unit_id = int(row['id'])
+            unit_name = row['name']
+            unit_names[unit_id] = {'name': unit_name, 'holy' : row['holy']}
+    return unit_names
+
 def get_nation_units_with_cap_sites(fort_troop_file, attributes_file, magic_sites_file):
     """
     Adds units from the capital magic site to a nation's unit pool.
@@ -104,7 +115,7 @@ def get_unit_cost(unit_id, unit_costs):
     return unit_costs.get(unit_id, 0)
 
 
-def generate_event_code(nation_id, commander_ids, unit_data, add_strikeunits=True, province_id=1, month=1):
+def generate_event_code(nation_id, commander_ids, unit_data, unit_names, add_strikeunits=True, province_id=1, month=1):
     """Generates the event code string for a specific nation."""
     
     #commander_id = commander_ids[0]
@@ -136,9 +147,9 @@ def generate_event_code(nation_id, commander_ids, unit_data, add_strikeunits=Tru
     for commander_id in commander_ids:
         event_code += f"#com {commander_id}\n"
 
-	
+    
     for unit_id, count in unit_data:
-        d6 = (count // 8)
+        d6 = round(count / 3.5)
         
         while d6 >= 15:
             d6 -= 15
@@ -147,54 +158,154 @@ def generate_event_code(nation_id, commander_ids, unit_data, add_strikeunits=Tru
 
         if d6 > 0:  # Check if there's a remainder greater than 0
             event_code += f"#{d6}d6units {unit_id}\n"  # Add 1d6 for each 10 units
-
-    event_code += f'#msg "Army from nation {nation_id} has arrived at province {province_id}."\n'
+            
+    comms = len(commander_ids)
+    
+    unit_name = unit_names[unit_id]['name']
+    event_code += f'#header 2\n'
+    event_code += f'#msg "Frm: {nation_id}:{unit_id}:{unit_name} {comms} coms at ##landname## {province_id} ."\n'
+    event_code += f'#extramsg {nation_id}."\n'
+    
     event_code += "#end\n"
     return event_code
+    
+    
+def modify_spells(spells_file, target_school, max_research_level):
+    """
+    Modifies spells of a specific school, reducing their fatigue cost and research level.
 
-def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, commanders1, commanders2, unit_costs, total_gold_cost = 2000):
+    Args:
+       spells_file (str): Path to the spells.csv file.
+        target_school (int): The school ID to modify.
+        max_research_level (int):  Max research level for a spell to be modified.
+
+    Returns:
+        str:  A string of spell modifications in Dominions mod format.
+    """
+    modified_spells_str = ""
+    with open(spells_file, 'r') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter='\t')
+        for row in reader:
+            spell_id = int(row['id'])
+            spell_school = int(row['school'])
+            research_level = int(row['researchlevel'])
+            fatigue_cost = int(row['fatiguecost'])
+
+            if spell_school == target_school and research_level <= max_research_level:
+              modified_spells_str += f"""#selectspell {spell_id}
+#researchlevel 0
+#fatiguecost {min(fatigue_cost, 99)}
+#end
+"""
+
+    return modified_spells_str    
+
+def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, commanders1, commanders2, unit_costs, unit_names, only_sacreds_1, only_sacreds_2, total_gold_cost = 2500):
     """Generates fight events for all combinations of unit pairings."""
 
-    nation1_units = nation_troops[nation1_id].get("monsters", [])
-    nation2_units = nation_troops[nation2_id].get("monsters", [])
+    nation1_units_all = nation_troops[nation1_id].get("monsters", [])
+    nation2_units_all = nation_troops[nation2_id].get("monsters", [])
     
     #print(nation1_units)
 
     mod_code = f"""#modname "Test Event Mod"
 #description "Mod to create 1 to 1 arena event that spawns all combinations of units from both nations and make them fight with gold cost scaling"
 """
-    province_counter = 1
-    for unit1_id in nation1_units:
-        for unit2_id in nation2_units:        	
-            unit1_cost = get_unit_cost(unit1_id, unit_costs)
-            unit2_cost = get_unit_cost(unit2_id, unit_costs)
-            unit1_count = max(1,total_gold_cost // max(1, unit1_cost))
-            unit2_count = max(1,total_gold_cost // max(1, unit2_cost))
 
-            # Spawn nation1 army
-            mod_code += generate_event_code(nation1_id, commanders1, [(unit1_id, unit1_count)], add_strikeunits=True, province_id=province_counter, month=1)
-             # Spawn nation 2 army
-            mod_code += generate_event_code(nation2_id, commanders2, [(unit2_id, unit2_count)], add_strikeunits=False, province_id=province_counter, month=2)
-            province_counter += 1
+    # Function to filter out non-sacred units
+    def filter_sacreds(unit_list, unit_names):
+      sacred_units = []
+      for unit_id in unit_list:
+          unit_data = unit_names.get(unit_id)
+          if unit_data and unit_data.get("holy") == '1':
+              sacred_units.append(unit_id)
+      return sacred_units
+
+
+    nation1_units = nation1_units_all if not only_sacreds_1 else filter_sacreds(nation1_units_all, unit_names)
+    nation2_units = nation2_units_all if not only_sacreds_2 else filter_sacreds(nation2_units_all, unit_names)
+
+    
+
+    province_counter = 1
+    
+    spending_strategies = [
+        ("all_units", 1.0, 0.0),  # All gold on units
+        ("half_units", 0.5, 0.5),  # Half gold on units
+#        ("20p_units", 0.2, 0.8),  # 20% of gold on units, 80% on commanders
+    ]
+
+    for unit1_id in nation1_units:
+        for unit2_id in nation2_units:
+            for strat1_name, unit1_ratio, com1_ratio in spending_strategies:
+                #for strat2_name, unit2_ratio, com2_ratio in spending_strategies:
+                    unit1_cost = get_unit_cost(unit1_id, unit_costs)
+                    unit2_cost = get_unit_cost(unit2_id, unit_costs)
+
+                    unit1_count = max(1, int((total_gold_cost * unit1_ratio) // max(1, unit1_cost)))
+                    unit2_count = max(1, int((total_gold_cost * 1) // max(1, unit2_cost)))
+
+                    commander1_ids = []
+                    commander2_ids = []
+
+                    available_commanders = commanders1                     
+                    remaining_gold = total_gold_cost * com1_ratio
+                    while remaining_gold > 0:
+                        clean = []
+                        #print(f"remaining_gold: {remaining_gold}\n ")
+                        for commander_id in available_commanders:
+                            commander_cost = get_unit_cost(commander_id, unit_costs)
+                            if commander_cost <= remaining_gold:
+                                commander1_ids.append(commander_id)
+                                if (commander_cost > 0):
+                                    clean.append(commander_id)
+                                remaining_gold -= commander_cost
+                            else:
+                                unit1_count += (remaining_gold // unit1_cost) 
+                                remaining_gold = 0 
+                                break
+                                
+                        # do not duplicate sleepers/h3's
+                        available_commanders = clean
+                                
+                    if not commander1_ids:
+                        commander1_ids = commanders1
+                        
+                    commander2_ids = commanders2    
+
+                    # Spawn nation1 army
+                    mod_code += generate_event_code(nation1_id, commander1_ids, [(unit1_id, unit1_count)], unit_names,
+                                                    add_strikeunits=True, province_id=province_counter)
+                    # Spawn nation 2 army
+                    mod_code += generate_event_code(nation2_id, commanders2, [(unit2_id, unit2_count)], unit_names,
+                                                    add_strikeunits=False, province_id=province_counter)
+                    province_counter += 1
    
- 	# Ensure the directory exists
+    spells_file = "dom6inspector/gamedata/spells.csv"
+    target_school = 2  # evo
+    max_research_level = 3
+    modified_spells_str = modify_spells(spells_file, target_school, max_research_level)
+
+    mod_code += modified_spells_str
+   
+     # Ensure the directory exists
     os.makedirs(os.path.dirname(file_path), exist_ok=True)
     with open(file_path, "w") as f:
         f.write(mod_code)
     print(f"Mod file created at: {file_path}")
 
 
-def create_mod_file(nation1, commanders1, nation2, commanders2, file_path, nation_troops, unit_costs):
-    generate_arena_events(nation1, nation2, nation_troops, file_path, commanders1, commanders2, unit_costs)
+def create_mod_file(nation1, commanders1, nation2, commanders2, file_path, nation_troops, unit_costs, unit_names, only_sacreds_1, only_sacreds_2):
+    generate_arena_events(nation1, nation2, nation_troops, file_path, commanders1, commanders2, unit_costs, unit_names, only_sacreds_1, only_sacreds_2)
 
 
 if __name__ == "__main__":
     # Example Data
-    nation1_id = 5  # Arcoscephale
-    nation1_commanders = [559] #Sleepers as coms <
+    nation1_id = 70
+    nation1_commanders = [559, 1943, 1427] #Sleepers as coms <
 
-    nation2_id = 6  # Mekone
-    nation2_commanders = [559]
+    nation2_id = 76 
+    nation2_commanders = [559, 1943]
 
     output_file_path = "/home/ilya/.dominions6/mods/testventmod/testeventmod.dm"
     troop_file_path = "dom6inspector/gamedata/fort_troop_types_by_nation.csv"
@@ -209,10 +320,14 @@ if __name__ == "__main__":
     attributes_file = "dom6inspector/gamedata/attributes_by_nation.csv"
     nation_troops = get_nation_units_with_cap_sites(fort_troop_file, attributes_file, magic_sites_file)
     
+    baseu_file_path = "dom6inspector/gamedata/BaseU.csv"
+
+    unit_names = read_unit_names(baseu_file_path)
+    
     #print(nation_troops)
 
     create_mod_file(
         nation1_id, nation1_commanders,
         nation2_id, nation2_commanders,
-        output_file_path, nation_troops, unit_costs
+        output_file_path, nation_troops, unit_costs, unit_names, False, True
     )
