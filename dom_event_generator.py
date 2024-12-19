@@ -231,7 +231,7 @@ def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, comm
     
     spending_strategies = [
         ("all_units", 1.0, 0.0),  # All gold on units
-        ("half_units", 0.5, 0.5),  # Half gold on units
+#        ("half_units", 0.5, 0.5),  # Half gold on units
 #        ("20p_units", 0.2, 0.8),  # 20% of gold on units, 80% on commanders
     ]
 
@@ -267,6 +267,9 @@ def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, comm
                                 
                         # do not duplicate sleepers/h3's
                         available_commanders = clean
+
+                        if len(clean) == 0:
+                            break;
                                 
                     if not commander1_ids:
                         commander1_ids = commanders1
@@ -301,10 +304,10 @@ def create_mod_file(nation1, commanders1, nation2, commanders2, file_path, natio
 
 if __name__ == "__main__":
     # Example Data
-    nation1_id = 70
-    nation1_commanders = [559, 1943, 1427] #Sleepers as coms <
+    nation1_id = 75
+    nation1_commanders = [559] #Sleepers as coms <
 
-    nation2_id = 76 
+    nation2_id = 80 
     nation2_commanders = [559, 1943]
 
     output_file_path = "/home/ilya/.dominions6/mods/testventmod/testeventmod.dm"
@@ -329,5 +332,5 @@ if __name__ == "__main__":
     create_mod_file(
         nation1_id, nation1_commanders,
         nation2_id, nation2_commanders,
-        output_file_path, nation_troops, unit_costs, unit_names, False, True
+        output_file_path, nation_troops, unit_costs, unit_names, False, False
     )
