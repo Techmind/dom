@@ -1,6 +1,6 @@
-#modname "Gacha 0.64"
-#description "Fixed commander abuse by using as s1 mage, now bigger upkeep shit research"
-#version 1.3
+#modname "Gacha 1.65"
+#description "Fixed2commander abuse by using as s1 mage, now bigger upkeep shit research"
+#version 1.65
 #icon "./banner.tga"
 
 ------------------------------------------------------------------------------------------
@@ -376,6 +376,74 @@
 #nextspell 91 -- Kill Caster
 #end
 
+#newmonster 5550
+#spr1 "./regsum.tga"
+#name "Mage Summon Portal (auto)"
+#researchbonus -10
+#descr " "
+#neednoteat
+#spiritsight
+#amphibian
+#fireres 25
+#shockres 25
+#coldres 25
+#poisonres 25
+#immobile
+#unteleportable
+#ap 12
+#mapmove 0
+#hp 10
+#prot 20
+#size 4
+#str 0
+#enc 0
+#att 0
+#def 0
+#prec 0
+#mr 18
+#mor 50
+#maxage 100
+#startage 0
+#nametype 133
+#magicskill 4 1
+#gcost 100
+#rcost 1
+#rpcost 1
+#weapon "Paralyze"
+#noleader
+#end
+
+
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5550
+#com -1500
+#killcom 5550
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5550
+#com -1500
+#killcom 5550
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5550
+#com -1500
+#killcom 5550
+#nolog
+#notext
+#end
 
 
 
@@ -675,6 +743,70 @@
 #noleader
 #end
 
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5503
+#com -1502
+#killcom 5503
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5503
+#com -1502
+#killcom 5503
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5503
+#com -1502
+#killcom 5503
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5503
+#com -1502
+#killcom 5503
+#nolog
+#notext
+#end
+
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5503
+#com -1502
+#killcom 5503
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5503
+#com -1502
+#nolog
+#notext
+#killcom 5503
+#end
+
+
+
+
 #newspell
 #onlymnr 5503
 #name "Commander Summon"
@@ -710,7 +842,7 @@
 #notext
 #nolog
 #16d6units 30 -- Militia
-#killcom 4000
+#killcom 5000
 #end
 #selectmonster 1118
 #addupkeep -1000
@@ -805,7 +937,7 @@
 #selectmonster 277
 #addupkeep -1000
 #end
-#newmonster 6006
+#newmonster 5006
 #copyspr 2 --standard
 #addupkeep -1000
 #name "Jotun Militia Standard"
@@ -814,7 +946,7 @@
 #newevent
 #rarity 5
 #nation -2
-#req_targmnr 6006
+#req_targmnr 5006
 #notext
 #nolog
 #6d6units 277 -- Jotun Militia
@@ -1775,6 +1907,25 @@
 #killcom 5059
 #end
 
+#newmonster 5060
+#copyspr 1405
+#addupkeep -1000
+#name "GOATOCAPLYPSES"
+#descr "Tremble, mortal, and despair! Doom has come to this world!"
+#mapmove 0
+#hp 1
+#montag 2500
+#end
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5060
+#notext
+#nolog
+#15d6units 2227 -- GOATS
+#end
+
+
 #newmonster 5501
 #spr1 "./troopsum.tga"
 #name "Troop Summon Portal"
@@ -1813,6 +1964,42 @@
 #weapon "Paralyze"
 #noleader
 #end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5501
+#com -2500
+#killcom 5501
+#nolog
+#notext
+
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5501
+#com -2500
+#killcom 5501
+#nolog
+#notext
+
+#end
+
+
+#newevent
+#rarity 5
+#nation -2
+#req_targmnr 5501
+#com -2500
+#killcom 5501
+#nolog
+#notext
+#end
+
+
+
 
 #newspell
 #onlymnr 5501
@@ -5437,7 +5624,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5444
 #notext
 #nolog
-#1d6units 88 -- Fiend of Darkness
+#2d6units 88 -- Fiend of Darkness
 #killcom 5444
 #end
 #selectmonster 1083 -- Succubus
@@ -5459,7 +5646,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5445
 #notext
 #nolog
-#1d6units 526 -- Serpent Fiend
+#2d6units 526 -- Serpent Fiend
 #killcom 5445
 #end
 #selectmonster 330
@@ -5477,7 +5664,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5446
 #notext
 #nolog
-#1d6units 330 -- Dark Vines
+#2d6units 330 -- Dark Vines
 #killcom 5446
 #end
 #selectmonster 449
@@ -5495,7 +5682,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5447
 #notext
 #nolog
-#1d6units 449 -- Frost Fiend
+#2d6units 449 -- Frost Fiend
 #killcom 5447
 #end
 #selectmonster 2280
@@ -5513,7 +5700,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5448
 #notext
 #nolog
-#1d6units 2280 -- Illearth
+#2d6units 2280 -- Illearth
 #killcom 5448
 #end
 #selectmonster 405
@@ -5531,7 +5718,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5449
 #notext
 #nolog
-#1d6units 405 -- Vampire
+#2d6units 405 -- Vampire
 #killcom 5449
 #end
 #selectmonster 638
@@ -5549,7 +5736,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5450
 #notext
 #nolog
-#1d6units 638 -- Spine Devil
+#2d6units 638 -- Spine Devil
 #killcom 5450
 #end
 #selectmonster 1314 -- Demon General
@@ -5575,7 +5762,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5451
 #notext
 #nolog
-#1d6units 304 -- Devil
+#2d6units 304 -- Devil
 #killcom 5451
 #end
 #selectmonster 489
@@ -5611,7 +5798,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #req_targmnr 5453
 #notext
 #nolog
-#1d6units 632 -- Storm Demon
+#2d6units 632 -- Storm Demon
 #killcom 5453
 #end
 #selectmonster 305 -- Buriol
@@ -5669,7 +5856,7 @@ The Cunning Cunny Tamamo-no-Mae has been summoned! The Cunning Cunny banner no l
 #effect 10021
 #damage -2600
 #nreff 1
-#fatiguecost 10000
+#fatiguecost 6000
 #end
 ------------------------------------------------------------------------------------------------------
 --NATIONS
@@ -5699,6 +5886,7 @@ Luck: Weird Goodluck rituals that never works"
 #addreccom 5503
 #addreccom 5500
 #addreccom 5501
+#addreccom 5550
 
 #startcom 5503
 #startscout 5600
@@ -5735,6 +5923,8 @@ Luck: Don't need, just swipe r-right? h-haha..."
 
 #addreccom 5503
 #addreccom 5500
+#addreccom 5550
+
 #addreccom 5501
 
 #startcom 5503
@@ -5773,6 +5963,8 @@ Luck: Don't need, just swipe"
 #addreccom 5503
 #addreccom 5500
 #addreccom 5501
+#addreccom 5550
+
 
 #startcom 5503
 #startscout 5600
@@ -5810,6 +6002,8 @@ Luck: Godlike"
 #addreccom 5503
 #addreccom 5500
 #addreccom 5501
+#addreccom 5550
+
 
 #startcom 5503
 #startscout 5600
@@ -5846,6 +6040,8 @@ Luck: Below Average"
 
 #addreccom 5503
 #addreccom 5500
+#addreccom 5550
+
 #addreccom 5501
 
 #startcom 5503
@@ -5883,6 +6079,8 @@ Luck: Average"
 
 #addreccom 5503
 #addreccom 5500
+#addreccom 5550
+
 #addreccom 5501
 
 #startcom 5503
@@ -5920,6 +6118,8 @@ Luck: Tard Luck, Above Average"
 
 #addreccom 5503
 #addreccom 5500
+#addreccom 5550
+
 #addreccom 5501
 
 #startcom 5503
@@ -5957,6 +6157,8 @@ Luck: Above Average"
 
 #addreccom 5503
 #addreccom 5500
+#addreccom 5550
+
 #addreccom 5501
 
 #startcom 5503
@@ -5994,6 +6196,8 @@ Luck: Rolls Cute"
 
 #addreccom 5503
 #addreccom 5500
+#addreccom 5550
+
 #addreccom 5501
 
 #startcom 5503
@@ -6031,6 +6235,8 @@ Luck: Saving luck for next gacha"
 
 #addreccom 5503
 #addreccom 5500
+#addreccom 5550
+
 #addreccom 5501
 
 #startcom 5503
