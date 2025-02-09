@@ -52,107 +52,56 @@ $battle_meta = [
 	'my_defenders' => ['start' => -1, 'prov' => "custom", 
 		'armies' => [
 			1 => [
-				['name' => "Son of Heaven", 'coms' => 1, 'units' => 0, 'autocast' => "Mist,Wind Guide"],
-				['name' => "Daughter of the Sun", 'coms' => 1, 'units' => 0, 'autocast' => "Heat from Hell"],
-				['name' => "Rusian Hunter", 'coms' => 0, 'units' => 75],
-				['name' => "Chud Berserker", 'coms' => 0, 'units' => 6],
-				['name' => "Rusian Hunter", 'coms' => 0, 'units' => 27],
-				//['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 50],
-				['name' => "Chud Skinshifter", 'coms' => 0, 'units' => 10],
-				['name' => 'Great Bear', 'coms' => 0, 'units' => 90, 'id' => 3003],
-				['name' => 'Alkonost', 'coms' => 1, 'units' => 0, 'autocast' => "Flaming Arrows"],
-				['name' => 'Slinger', 'coms' => 0, 'units' => 80],
+				//['name' => "Vaetti Archer", 'coms' => 0, 'units' => 36, 'autocast' => "Template"],
+				['name' => "Vaetti Archer", 'coms' => 0, 'units' => 36],
+				['name' => "Jotun Jarl", 'coms' => 3, 'units' => 0, 'autocast' => "Blessing"],
+				['name' => "Jotun Javelinist", 'coms' => 0, 'units' => "25"],
+				['name' => "Militia", 'coms' => 0, 'units' => "5"],
+				['name' => "Gryphon", 'coms' => 0, 'units' => "3"],
+				['name' => "Thrymshirding", 'coms' => 0, 'units' => "9"],
+				['name' => "Crystal Sorceress", 'coms' => 1, 'units' => "0"],
 				
 				
-				//['name' => "Militia", 'coms' => 0, 'units' => 30],
-				//['name' => "Light Cavalry", 'coms' => 0, 'units' => 30],
-				
-				//['name' => "Firebird", 'coms' => 0, 'units' => 40],
-				//['name' => "Rusian Warrior", 'coms' => 0, 'units' => 20],
-				//['name' => "Footman", 'coms' => 0, 'units' => 120, 'id' => 928 ],
-				
-				
-				
-				//['name' => 'Sirin', 'coms' => 1, 'units' => 0],
-				//['name' => 'Daughter of the Sun', 'coms' => 4, 'units' => 0],
-				
-				//['name' => "Ettin", 'coms' => 0, 'units' => 1],
-				//['name' => "Foul Spawn", 'coms' => 0, 'units' => 30, 'id'],
-				//['name' => "Heavy Infantry", 'coms' => 0, 'units' => 10],
-				//['name' => "Woodsman Blowpipe", 'coms' => 0, 'units' => 30],
-				//['name' => "Vine Man", 'coms' => 0, 'units' => 30],
-				//['name' => "Militia", 'coms' => 0, 'units' => 20],
-				//['name' => "White Centaur", 'coms' => 0, 'units' => 80],
-				//['name' => "Satyr", 'coms' => 0, 'units' => 300],
-				//['name' => "Archer", 'coms' => 0, 'units' => 300],
-				//['name' => "Crossbowman", 'coms' => 0, 'units' => 15]
-				//['name' => "Wolf Tribe Archer", 'coms' => 0, 'units' => 80],
-				//['name' => "Wolf Tribe Warrior", 'coms' => 0, 'units' => 80]
 				                                 
 			],
 			3 => [
-				/*2+0 0+0 Woodhenge Druid (0 0)
-  0:  0+0 4+0 Atavi Archer (0 0)
-  0:  0+0 443+0 Helote Peltast (0 0)
-  0:  0+0 101+0 Neodamode Peltast (0 0)
-  0:  0+0 82+0 Gigante Hoplite (0 0)
-  0:  1+0 0+0 Lochos (0 0)
-  0:  6+0 0+0 Polemarch (0 0)
-  0:  5+0 0+0 Ephor (0 0)
-*/
 				
-				['name' => "Polemarch", 'coms' => 6, 'units' => 0, 'items' => "Helmet of Heroes"],
-				['name' => "Ephor", 'coms' => 5, 'units' => 0, 'items' => 'Fire in a Jar'],
-				['name' => "Woodhenge Druid", 'coms' => 5, 'units' => 0, 'items' => 'Fire in a Jar'],
-								
-
-				//['name' => "Sleeper", 'coms' => 4, 'units' => 0],
-				//['name' => "Sleeper", 'coms' => 2, 'units' => 0],
-				//['name' => "Assassin", 'coms' => 1, 'units' => 0],
-				//['name' => "Forest Troll", 'coms' => 1, 'units' => 10],
-				//['name' => "Dai Oni", 'coms' => 1, 'units' => 0],
-				//['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 10],
-				//['name' => "Polemarch", 'coms' => 10, 'units' => 0],
-				//['name' => "Lochos", 'coms' => 1, 'units' => 0],
-				//['name' => "Kryptes", 'coms' => 5, 'units' => 0],
-				//['name' => "Geronte", 'coms' => 1, 'units' => 0],
-				//['name' => "Horse Tribe Cavalry", 'coms' => 1, 'units' => 50],
-				['name' => "Gigante Hoplite", 'coms' => 0, 'units' => 82],
-				//['name' => "Clockwork Soldier", 'coms' => 0, 'units' => 20],
-				//['name' => "Gigante Ekdromos", 'coms' => 0, 'units' => 10],
-				//['name' => "Machaka Archer", 'coms' => 0, 'units' => 80],
-				['name' => "Helote Peltast", 'coms' => 0, 'units' => 443],
-				['name' => "Neodamode Peltast", 'coms' => 0, 'units' => 101],
-				
-				//['name' => "Cu Sidhe", 'coms' => 0, 'units' => 80],
-				
-				//['name' => "Fir Bolg Warrior", 'coms' => 1, 'units' => 30],
-				//['name' => "Fir Bolg Slinger", 'coms' => 1, 'units' => 30],
-				//['name' => "Fir Bolg Militia", 'coms' => 1, 'units' => 30],
-				
-				//['name' => "Knight of the Chalice", 'coms' => 0, 'units' => 80],
-				//['name' => "Flagellant", 'coms' => 0, 'units' => 200],
-				//['name' => "Man at Arms", 'coms' => 0, 'units' => 200],
-				//['name' => 'Rusian Chieftain', 'coms' => 1, 'units' => 0],
-				//['name' => 'Chud Skinshifter', 'coms' => 0, 'units' => 10],
-				//['name' => 'Rusian Hunter', 'coms' => 0, 'units' => 9],
-
-				//['name' => "Rusian Warrior", 'coms' => 0, 'units' => 11],
-				//['name' => 'Black Priest', 'coms' => 1, 'units' => 0],
-				//['name' => 'Hochmeister', 'coms' => 4, 'units' => 0],
-				//['name' => 'Black Templar', 'coms' => 0, 'units' => 20],
-				//['name' => 'Ranger of Ulm', 'coms' => 3, 'units' => 7],
-				//['name' => 'Fortune Teller', 'coms' => 2, 'units' => 0],
-				//['name' => 'Wolf', 'coms' => 0, 'units' => 40],
 				
 			]
-			                                                           
-//			3 => [
-//				['name' => 'Soldier Priest', 'coms' => 1, 'units' => 18],
-//				['name' => 'Archer Priest', 'coms' => 1, 'units' => 7],
-//			]         
 		]
-	],                 
+	],
+	'charm test' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+                                //['name' => "Vaetti Archer", 'coms' => 0, 'units' => 36, 'autocast' => "Template"],
+                                ['name' => "Gygja", 'coms' => 15, 'units' => 0, 'autocast' => 'Sabbath Master'],
+                                ['name' => "Jotun Skratti", 'coms' => 4, 'units' => 0, 'autocast' => "Sabbath Slave"],
+                                ['name' => "Jotun Spearman", 'coms' => 0, 'units' => "50"],
+
+                        ],
+                        3 => [
+				['name' => "Blindlord", 'coms' => 10, 'units' => "0"],
+				['name' => "Blindfighter", 'coms' => 1, 'units' => "200"],
+
+                        ]
+                ]
+	],
+	'longdeads' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+                                //['name' => "Vaetti Archer", 'coms' => 0, 'units' => 36, 'autocast' => "Template"],
+                                ['name' => "Vampire", 'coms' => 15, 'units' => 0],
+                                ['name' => "Longdead", 'coms' => 0, 'units' => 900, 'id' => 194],
+
+                        ],
+                        3 => [
+                                ['name' => "Blindlord", 'coms' => 10, 'units' => "0"],
+                                ['name' => "Blindfighter", 'coms' => 1, 'units' => "200"],
+
+                        ]
+                ]
+        ],
+	
 	'fbirds' => ['start' => -1, 'prov' => "custom",
                 'armies' => [
                         1 => [
@@ -230,7 +179,15 @@ $battle_meta = [
                                 ['name' => 'Imperial Archer', 'units' => 15, 'coms' => 0],                                                               
                         ]
                 ]
-        ],
+    ],
+    'test_sun' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+                                        ['name' => 'Heavy Infantry', 'coms' => 0, 'units' => 20],
+                                        ['name' => 'Heavy Cavalry', 'coms' => 3, 'units' => 20],
+
+                        ],
+		]]
 	# todo add mpaths and gear 
 ];
 
@@ -382,14 +339,44 @@ foreach ($sacred_test as $unit_id => $gcost)
 
 
 $spells_lookup = [];
+$spell_data = [];
+$spell_schools = [
+    0 => 'Conjuration',
+    1 => 'Alteration',
+    2 => 'Evocation',
+    3 => 'Construction',
+    4 => 'Enchantment',
+    5 => 'Thaumaturgy',
+    6 => 'Blood',
+    7 => 'Divine'
+];
+
+// Initialize the school level map
+$school_level_map = [];
 
 $row = 0;
 if (($handle = fopen($spells_file, "r")) !== FALSE) {
+	$header = fgetcsv($handle, 1000, "\t");
+
     while (($data = fgetcsv($handle, 1000, "\t")) !== FALSE) {
         $num = count($data);
-		$id = $data[0];
+		$id = intval($data[0]);
 		$name = $data[1];
-		$spells_lookup[$name] = $id;		
+		$spell = array_combine($header, $data	);
+
+		$spells_lookup[$name] = $id;
+		$spell_data[$id] = $spell;
+		
+		$school = (int) $spell['school']; // Cast to integer for indexing
+        $researchlevel = (int) $spell['researchlevel'];// Cast to integer for indexing
+        
+        if (array_key_exists($school, $spell_schools)) {
+           if (!isset($school_level_map[$spell_schools[$school]][$researchlevel])) {
+                $school_level_map[$spell_schools[$school]][$researchlevel] = [];
+           }
+           $school_level_map[$spell_schools[$school]][$researchlevel][] = $id;
+        }
+		
 		$row++;
     }
     fclose($handle);
@@ -459,7 +446,7 @@ if (file_exists($log_path)) {
 		if ($in_battle_step == 2)
 		{		
 			//   0:  0 15 Sea Troll (0 0)
-			if (preg_match("~\s*([0-9]):\s*([0-9\+]*)\s*([0-9\+]*)\s*([A-Za-z\s]*)~", $lines[$i], $matches)) {
+			if (preg_match("~\s*([0-9]):\s*([0-9\+]*)\s*([0-9\+]*)\s*([A-Za-zè\s0\-]*)~", $lines[$i], $matches)) {
 				//var_dump($matches);
 				$army = $matches[1];
 				$coms = 1*explode('+', $matches[2])[0];
@@ -558,7 +545,7 @@ foreach ($battle_meta as $prov_id => $info)
 				}
 			
 			$unit_id = !empty($unit['id']) ? $unit['id'] : $units_lookup[$name]['id'];
-
+			//var_dump($name, $unit_id);
 			
 			if ($autocast)
 			{
@@ -726,10 +713,43 @@ foreach ($free_spells as $k => $v)
 	}
 }
 
+// TODO imply research from CASTERS spell or pass from console
+
+$min_levels = [
+	// evocation => 8
+	'Evocation' => 8,
+	// thau 8
+	'Thaumaturgy' => 8,
+	// ecnh 7
+	'Enchantment' => 7,
+	// conj 8
+    'Conjuration' => 8,
+    'Alteration' => 7,
+    'Evocation' => 5,
+    'Construction' => 0,
+    'Blood' => 8,
+];
+
+foreach ($min_levels as $school => $max_level) {
+    if (isset($school_level_map[$school])) {
+        foreach ($school_level_map[$school] as $level => $spell_ids) {
+            if ($level <= $max_level) {
+                foreach ($spell_ids as $spell_id) {
+                  // Add $spell_id to $free_spells if it's not already there
+                  if (!in_array($spell_id, $free_spells)) {
+                      $free_spells[] = $spell_id;
+                  }
+                }
+            }
+        }
+    }
+}
+
 // Sloop mod some random spell
 $free_spells[1531] = 1531;
 $free_spells[1167] = 1167;
 //echo $spells_text;
+
 
 foreach ($free_spells as $id)
 {
@@ -740,8 +760,6 @@ foreach ($free_spells as $id)
 ";
 }
 
-
-// TODO imply research from CASTERS spell or pass from console
 
 // generate debug mod
 $content = file($debug_mod_template);

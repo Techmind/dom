@@ -15,11 +15,60 @@
  Strength of Giants
  Temper Armors
  Twist Fate
- Raise Skeletons
+ #Raise Skeletons
  Communition Master
  Communition Slave
  Curse
  Mirror Image
- Astral Shield
- Shroud of Bewilderment
- Horrible Visage
+ #Astral Shield
+ #Shroud of Bewilderment
+ #Horrible Visage
+Flaming Arrows
+Phoenix Power
+Gift of Flight
+Soldiers of Steel
+Phoenix Power
+Horde of Skeletons
+Summon Water Elemental
+Reinvigorating Rain
+Body Ethreal
+Luck
+Rigor Morthis
+Charm
+Sandman's Blessing
+Twilight
+ Acid Rain
+ Divine Blessing
+ Earth Shatter Hammers
+ Envenom Arrows
+ Falling Frost
+ Frozen Heart
+ Gift of Formlessness
+ Gift of Giant Strength
+ Ice Strike
+ Ignite Arrows
+ Invigorating Rain
+ Lightning Bolt
+ Mistform
+ Mossbody
+ Orb Lightning
+ Personal Ironskin
+ Phoenix Power
+ Protective Winds
+ Quicken Self
+ Quickness
+ Sermon of Courage
+ Soldiers of Steel
+ Storm of Thorns
+ Strength of Giants
+ Summon Earthpower
+ Summon Storm Power
+ Temper Armors
+ Temper Flesh
+Wrathful Skies
+Blood Rain
+Rigor Mortis
+Foul Vapors
+Mass Regenration
+Sabbath Slave
+

@@ -9,8 +9,40 @@ def read_unit_names(file_path):
         for row in reader:
             unit_id = int(row['id'])
             unit_name = row['name']
-            unit_names[unit_id] = {'name': unit_name, 'holy' : row['holy']}
+            unit_names[unit_id] = {'name': unit_name, 'holy' : row['holy'], 'wpn1' : row['wpn1'], 'wpn2': row['wpn2']}
     return unit_names
+
+def read_ranged_weapons(file_path, only_ranged=False):
+    """Reads the weapons.csv and returns a dictionary of ranged weapons by id.
+    
+    Args:
+        file_path (str): The path to the weapons.csv file.
+        only_tanged (bool): If True, filters only tanged weapons (ammo > 0).
+    
+    Returns:
+        dict: A dictionary of ranged weapons by id.
+    """
+    weapons = {}
+    with open(file_path, 'r', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile, delimiter='\t')
+        for row in reader:
+            ammo = int(row['ammo'])
+            if ammo > 0 and (not only_ranged or (only_ranged and ammo > 0)):
+                weapon_id = int(row['id'])
+                weapon_name = row['name']
+                weapons[weapon_id] = {
+                    'name': weapon_name,
+                    'ammo': ammo,
+                    'att': int(row['att']),
+                    'def': int(row['def']),
+                    'len': int(row['len']),
+                    'nratt': int(row['nratt']),
+                    'secondaryeffect': int(row['secondaryeffect']),
+                    'secondaryeffectalways': int(row['secondaryeffectalways']),
+                    'rcost': int(row['rcost']),
+                    'weapon': int(row['weapon'])
+                }
+    return weapons
 
 def get_nation_units_with_cap_sites(fort_troop_file, attributes_file, magic_sites_file):
     """
@@ -200,7 +232,8 @@ def modify_spells(spells_file, target_school, max_research_level):
 
     return modified_spells_str    
 
-def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, commanders1, commanders2, unit_costs, unit_names, only_sacreds_1, only_sacreds_2, total_gold_cost = 2500):
+def create_mod_file(nation1_id, nation2_id, nation_troops, file_path, commanders1, commanders2, unit_costs, unit_names, ranged_weapons, 
+                    only_sacreds_1, only_sacreds_2, only_melee_1 = False, only_melee_2 = False, total_gold_cost = 2500):
     """Generates fight events for all combinations of unit pairings."""
 
     nation1_units_all = nation_troops[nation1_id].get("monsters", [])
@@ -220,12 +253,24 @@ def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, comm
           if unit_data and unit_data.get("holy") == '1':
               sacred_units.append(unit_id)
       return sacred_units
-
+    
+    def filter_outranged(unit_list, unit_names, ranged_weapons):
+        ranged_units = []
+        for unit_id in unit_list:
+            unit_data = unit_names.get(unit_id)
+            if unit_data and not (unit_data.get("wpn2") in ranged_weapons):
+                ranged_units.append(unit_id)
+        return ranged_units
 
     nation1_units = nation1_units_all if not only_sacreds_1 else filter_sacreds(nation1_units_all, unit_names)
     nation2_units = nation2_units_all if not only_sacreds_2 else filter_sacreds(nation2_units_all, unit_names)
 
-    
+    nation1_units = nation1_units if not only_melee_1 else filter_outranged(nation1_units, unit_names, ranged_weapons)
+    nation2_units = nation2_units if not only_melee_2 else filter_outranged(nation2_units, unit_names, ranged_weapons)
+
+    # for each nation unit sort them by their gcost
+    nation1_units.sort(key=lambda unit_id: -unit_costs.get(unit_id, unit_costs))
+    nation2_units.sort(key=lambda unit_id: -unit_costs.get(unit_id, unit_costs))
 
     province_counter = 1
     
@@ -298,17 +343,14 @@ def generate_arena_events(nation1_id, nation2_id, nation_troops, file_path, comm
     print(f"Mod file created at: {file_path}")
 
 
-def create_mod_file(nation1, commanders1, nation2, commanders2, file_path, nation_troops, unit_costs, unit_names, only_sacreds_1, only_sacreds_2):
-    generate_arena_events(nation1, nation2, nation_troops, file_path, commanders1, commanders2, unit_costs, unit_names, only_sacreds_1, only_sacreds_2)
-
 
 if __name__ == "__main__":
     # Example Data
-    nation1_id = 75
-    nation1_commanders = [559] #Sleepers as coms <
+    nation1_id = 13
+    nation1_commanders = [559, 177] #Sleepers as coms <
 
-    nation2_id = 80 
-    nation2_commanders = [559, 1943]
+    nation2_id = 34 
+    nation2_commanders = [559, 177]
 
     output_file_path = "/home/ilya/.dominions6/mods/testventmod/testeventmod.dm"
     troop_file_path = "dom6inspector/gamedata/fort_troop_types_by_nation.csv"
@@ -321,16 +363,19 @@ if __name__ == "__main__":
     magic_sites_file = "dom6inspector/gamedata/MagicSites.csv"
     fort_troop_file = "dom6inspector/gamedata/fort_troop_types_by_nation.csv"
     attributes_file = "dom6inspector/gamedata/attributes_by_nation.csv"
+    weapons_file = "dom6inspector/gamedata/weapons.csv"
+
     nation_troops = get_nation_units_with_cap_sites(fort_troop_file, attributes_file, magic_sites_file)
     
     baseu_file_path = "dom6inspector/gamedata/BaseU.csv"
 
     unit_names = read_unit_names(baseu_file_path)
+
+    ranged_weapons = read_ranged_weapons(weapons_file, True)
     
     #print(nation_troops)
 
-    create_mod_file(
-        nation1_id, nation1_commanders,
-        nation2_id, nation2_commanders,
-        output_file_path, nation_troops, unit_costs, unit_names, False, False
-    )
+    create_mod_file(nation1_id, nation2_id, nation_troops, output_file_path, 
+                    nation1_commanders, nation2_commanders, unit_costs, unit_names, ranged_weapons, 
+                    False, True)
+

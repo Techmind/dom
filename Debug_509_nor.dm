@@ -43,6 +43,41 @@ Compatibility: Uses monster IDs 9001, 9002. This mod is only for debugging and t
 #researchbonus 9999
 #end
 
+#newmonster 9002
+#copystats 3335
+#copyspr 3335
+#hp 900
+#name "PD BLOCKER"
+#ap -3
+#str 1
+#att 1
+#holy
+#size 8
+#armor 14
+#armor 21
+#armor 3
+#weapon 591
+#helmet 118
+#fireres 5
+#shockres 5
+#posionres 5
+#coldres 5
+#end
+
+
+#newspell
+#name "Summon pd blocks"
+#path 0 4
+#school 0
+#researchlevel 0
+#pathlevel 0 1
+#effect 10001
+#nreff 60
+#damage 9002
+#spec 8388608
+#end
+
+
 ------
 --New Spells
 #newspell
