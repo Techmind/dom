@@ -2,6 +2,8 @@
 $app_data_dir = !empty($_ENV["APPDATA"]) ? $_ENV["APPDATA"] : $_SERVER["APPDATA"];
 $app_data_dir = "/home/ilya/.dominions6/";
 
+// file to import battle_meta_from
+$import_file = !empty($argv[1]) ? $argv[1] : null; 
 // launch Domninions with -d flag to create debug log and watch reports you want recreated
 $log_path = 'log.txt';
 // use mod inspector to find unit id's
@@ -49,6 +51,18 @@ OR launch dominions with debug flag and watch reports/battles and script will ge
 
 
 $battle_meta = [
+	'dorchas_throne' => ['start' => -1, 'prov' => "custom",
+		'armies' => [
+			1 => [
+				['name' => "Barbarian Chief", 'coms' => 2, 'units' => 0],
+				['name' => "Black Sorceress", 'coms' => 1, 'units' => 0, 'gems' => '#tmpfiregems 3,#tmpearthgems 3,#tmpastralgems 6', 'mpaths' => 'f1e1s2'],
+				['name' => "Sorceress", 'coms' => 1, 'units' => 0, 'gems' => '#tmpairgems 3,#tmpastralgems 4,#tmpdeathgems 7,#tmpglamourgems 4', 'mpaths' => 'a1s2d3g2'],
+				['name' => "Barbarian", 'coms' => 0, 'units' => 109],
+				['name' => "Heavy Infantry", 'coms' => 0, 'units' => 6],
+				['name' => "Warrior Illusion", 'coms' => 1, 'units' => 33],
+			],
+		]
+	],
 	'my_defenders' => ['start' => -1, 'prov' => "custom", 
 		'armies' => [
 			1 => [
@@ -149,6 +163,16 @@ $battle_meta = [
                         ]
                 ]
         ],
+    'testgarnets' => ['start' => -1, 'prov' => "custom",
+                'armies' => [
+                        1 => [
+								['name' => 'Garnet Sorceress', 'coms' => 15, 'units' => 0],
+
+                        ],
+                        3 => [
+                        ]
+                ]
+        ],
     
     'blitz' => ['start' => -1, 'prov' => "custom",
                 'armies' => [
@@ -187,9 +211,147 @@ $battle_meta = [
                                         ['name' => 'Heavy Cavalry', 'coms' => 3, 'units' => 20],
 
                         ],
-		]]
+		]],
+	'ryujin_stats' => 
+	  array (
+		'start' => 77731,
+		'prov' => '14',
+		'armies' => 
+		array (
+		  0 => 
+		  array (
+			0 => 
+			array (
+			  'name' => 'Archer',
+			  'coms' => 0,
+			  'units' => 13,
+			),
+			1 => 
+			array (
+			  'name' => 'Crossbowman',
+			  'coms' => 0,
+			  'units' => 15,
+			),
+			2 => 
+			array (
+			  'name' => 'Faery Queen',
+			  'coms' => 1,
+			  'units' => 0,
+			  'items' => 'Boots of the Messenger,Amulet of Antimagic,Weightless Scale Mail,Spell Focus'
+			),
+			3 => 
+			array (
+			  'name' => 'Samurai Archer',
+			  'coms' => 0,
+			  'units' => 3,
+			),
+			4 => 
+			array (
+			  'name' => 'O-ban',
+			  'coms' => 0,
+			  'units' => 21,
+			),
+			5 => 
+			array (
+			  'name' => 'Go-Hatamoto',
+			  'coms' => 0,
+			  'units' => 169,
+			),
+			6 => 
+			array (
+			  'name' => 'Sohei',
+			  'coms' => 0,
+			  'units' => 6,
+			),
+			7 => 
+			array (
+			  'name' => 'Daimyo',
+			  'coms' => 3,
+			  'units' => 0,
+			),
+			8 => 
+			array (
+			  'name' => 'Onmyo-ji',
+			  'coms' => 3,
+			  'units' => 0,
+			  'items' => "Starshine Skullcap,Coin of Meteoritic Iron,Armor of Meteoritic Iron"
+			),
+			9 => 
+			array (
+			  'name' => 'Troglodyte Lord',
+			  'coms' => 4,
+			  'units' => 0,
+			),
+			10 => 
+			array (
+			  'name' => 'Kappa',
+			  'coms' => 0,
+			  'units' => 125,
+			),
+			11 => 
+			array (
+			  'name' => 'Shark Warrior',
+			  'coms' => 0,
+			  'units' => 43,
+			),
+			12 => 
+			array (
+				'id' => 2104,
+			  'name' => 'Ryujin',
+			  'coms' => 38,
+			  'units' => 0,
+			  'items' => "Dragon Helmet,Fire Plate,Boots of the Messenger,Amulet of Antimagic",
+			  'gems' => '#tmpwatergems 8,#tmpearthgems 5,#tmpfiregems 1'
+			),
+			13 => 
+			array (
+			  'name' => 'Okami',
+			  'coms' => 0,
+			  'units' => 3,
+			),
+			14 => 
+			array (
+			  'name' => 'Orionde Crossbowman',
+			  'coms' => 0,
+			  'units' => 1,
+			),
+			15 => 
+			array (
+			  'name' => 'Lion of Strange Color',
+			  'coms' => 0,
+			  'units' => 1,
+			),
+			16 => 
+			array (
+			  'name' => 'Azure Dragon of the East',
+			  'coms' => 1,
+			  'units' => 0,
+			  'gems' => 'tmpnaturegems 4',
+			  'autocast' => 'Relief'
+
+			),
+			17 => 
+			array (
+			  'name' => 'Carrion Titan',
+			  'coms' => 4,
+			  'units' => 0,
+			  'items' => "Sword of Swiftness,Sword of Swiftness,Horned Helmet,Armor of Meteoritic Iron,Chi Shoes",
+			  'autocast' => 'Personal Ironskin'
+			),
+		  )
+		 ,
+		),
+		'end' => 77775,
+	  ),
+
 	# todo add mpaths and gear 
 ];
+
+if (!empty($import_file))
+{
+	$battle_meta = $battle_meta + json_decode(file_get_contents($import_file), true);
+	echo var_export($battle_meta, true);die;
+}
 
 $units_lookup = [];
 
@@ -400,6 +562,7 @@ if (($handle = fopen($items_file, "r")) !== FALSE) {
 //var_dump(array_keys($units_lookup));die;
 
 if (file_exists($log_path)) {
+	$generated_metas = [];
 	echo "USING LOG!\n";
 	$lines = file($log_path);
 
@@ -411,7 +574,7 @@ if (file_exists($log_path)) {
 	$in_battle_step = 0;
 
 	$matches = [];
-
+	
 	for ($i = 0; $i < $cnt; $i++)
 	{
 		$line = $lines[$i];
@@ -470,9 +633,25 @@ if (file_exists($log_path)) {
 				$prov = $tmp['prov'];
 				$battle_meta[$prov] = $tmp;
 				$in_battle_step = 0;
+				$generated_metas[] = $prov;
 			}		
 		}
 	}
+	
+	$export = [];
+	$generated_metas = array_unique($generated_metas);
+	foreach ($generated_metas as $_ => $k)
+	{
+		if (!empty($battle_meta[$k])) {
+			$export[$k] = $battle_meta[$k];
+		}
+	}
+	
+	$date = date('Ymd');
+	$file_name = "export$date.json";
+	
+	echo "BATTLE META EXPORTED TO $file_name\n";
+	file_put_contents($file_name, json_encode($export));
 } else {
 	echo "NO LOG FILE: $log_path\n";
 }
@@ -538,7 +717,13 @@ foreach ($battle_meta as $prov_id => $info)
 			$num = $unit['units'];
 			$autocast = !empty($unit['autocast']) ? $unit['autocast'] : null;
 			$items = !empty($unit['items']) ? $unit['items'] : null;
+			$gems = !empty($unit['gems']) ? $unit['gems'] : [];
 			
+
+			if (!empty($gems))
+			{
+				$gems = explode(',', $gems);
+			}
 			if (empty($name))
 				{
 				continue;
@@ -563,17 +748,20 @@ foreach ($battle_meta as $prov_id => $info)
 				$item_ids = [];
 			}
 			
-			if ($item_ids || $spell_autocast_ids)
+			if ($item_ids || $spell_autocast_ids || $gems)
 			{
 				$spells['monster']["monster_$monster_id"] = "
 
 #selectmonster $monster_id
 #copystats $unit_id
+#copyspr $unit_id
 \n".
 implode('', array_map(function($i) { return "#startitem $i\n";}, $item_ids))
 #copystats $unit_id
 ."\n".
 implode('', array_map(function($i) { return "#onebattlespell $i\n";}, $spell_autocast_ids))
+."\n".
+implode('', array_map(function($i) { return "$i\n";}, $gems))
 // support for 0 cs
 .(!empty($unit['hold'])?"\n#ap 1\n":'')
 ."\n#end
@@ -717,17 +905,32 @@ foreach ($free_spells as $k => $v)
 
 $min_levels = [
 	// evocation => 8
-	'Evocation' => 8,
+	'Evocation' => 5,
 	// thau 8
-	'Thaumaturgy' => 8,
+	'Thaumaturgy' => 1,
 	// ecnh 7
-	'Enchantment' => 7,
+	'Enchantment' => 6,
 	// conj 8
-    'Conjuration' => 8,
-    'Alteration' => 7,
-    'Evocation' => 5,
-    'Construction' => 0,
+    'Conjuration' => 5,
+    'Alteration' => 4,
+    'Construction' => 5,
     'Blood' => 8,
+];
+
+
+$min_levels2 = [
+        // evocation => 8
+        'Evocation' => 5,
+        // thau 8
+        'Thaumaturgy' => 5,
+        // ecnh 7
+        'Enchantment' => 5,
+        // conj 8
+    'Conjuration' => 5,
+    'Alteration' => 5,
+    'Evocation' => 5,
+    'Construction' => 5,
+    'Blood' => 5,
 ];
 
 foreach ($min_levels as $school => $max_level) {
