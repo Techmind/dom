@@ -122,7 +122,7 @@ Compatibility: Uses monster IDs 9001, 9002. This mod is only for debugging and t
 #pathlevel 0 1
 #fatiguecost 100
 #effect 10021
-#damage 3401
+#damage 9001
 #spec 8388608
 #end
 
