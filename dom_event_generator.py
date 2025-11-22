@@ -352,7 +352,7 @@ if __name__ == "__main__":
     nation2_id = 68 #bandar
     nation2_commanders = [559, 177]
 
-    output_file_path = "/home/ilya/.dominions6/mods/testventmod/testeventmod.dm"
+    output_file_path = os.getenv("HOME") + "/.dominions6/mods/testventmod/testeventmod.dm"
     troop_file_path = "dom6inspector/gamedata/fort_troop_types_by_nation.csv"
     gcost_file_path = "gcost.csv"
 
