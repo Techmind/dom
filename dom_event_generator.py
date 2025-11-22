@@ -346,9 +346,11 @@ def create_mod_file(nation1_id, nation2_id, nation_troops, file_path, commanders
 
 if __name__ == "__main__":
     # Example Data
+    # you select nation 1
     nation1_id = 60 # 60 - ulm, 51 - phelgra
     nation1_commanders = [559, 177] #Sleepers as coms <
 
+	# you select nation 2
     nation2_id = 68 #bandar
     nation2_commanders = [559, 177]
 
@@ -376,6 +378,14 @@ if __name__ == "__main__":
     #print(nation_troops)
 
     create_mod_file(nation1_id, nation2_id, nation_troops, output_file_path, 
-                    nation1_commanders, nation2_commanders, unit_costs, unit_names, ranged_weapons, 
+                    nation1_commanders, nation2_commanders, unit_costs, unit_names, ranged_weapons,
+                    # configure if only using sacreds, or melee
+                    # only_sacreds_1, only_sacreds_2, only_melee_1 = False, only_melee_2 = False,
+                    # i am testing how sacreds with specific bless can handle ulm troops given SAME gold costs                    
+                    # set number of provs to 9, events trigger ONLY in procvs with DOM!
+                    # jsut pass turn!
+                    # dont forget to enable mod ;)
+                    # bandars suck vs ulm, try next bless
+                    # battles continue until all units are tested, can be quite a few turns
                     False, True, True, True)
 
