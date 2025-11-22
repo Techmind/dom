@@ -346,10 +346,10 @@ def create_mod_file(nation1_id, nation2_id, nation_troops, file_path, commanders
 
 if __name__ == "__main__":
     # Example Data
-    nation1_id = 13
+    nation1_id = 60 # 60 - ulm, 51 - phelgra
     nation1_commanders = [559, 177] #Sleepers as coms <
 
-    nation2_id = 34 
+    nation2_id = 68 #bandar
     nation2_commanders = [559, 177]
 
     output_file_path = "/home/ilya/.dominions6/mods/testventmod/testeventmod.dm"
@@ -377,5 +377,5 @@ if __name__ == "__main__":
 
     create_mod_file(nation1_id, nation2_id, nation_troops, output_file_path, 
                     nation1_commanders, nation2_commanders, unit_costs, unit_names, ranged_weapons, 
-                    False, True)
+                    False, True, True, True)
 
