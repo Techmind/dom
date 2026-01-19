@@ -1,0 +1,410 @@
+summoning_spell,number_of_units,unit_id,cost_in_gems,gempath
+Summon Hound of Twilight,1,3168,3,3
+Sow Dragon Teeth,10,3119,1,3
+Bind Keres,3,3127,12,5
+Contact Hesperide,1,3160,35,0
+Dogs of Gold and Silver,1,3169,7,3
+Craft Keledone,1,3164,5,3
+Forge Brass Bull,1,3171,25,0
+Orgy,1,1881,1,8
+Awaken Hamadryad,1,3066,25,6
+Contact Lar,1,3087,16,6
+xxx,1,1881,1,8
+Sounder of Boars,20,1807,15,6
+Contact Boar of Carnutes,1,1809,7,6
+Herd of Unicorns,10,3899,10,7
+Contact Huli Jing,1,1908,30,6
+Summon Okami,1009,3264,4,6
+Contact Bakeneko,1,3268,8,6
+Summon Shikome,10,2100,5,5
+Contact Jigami,1,2089,10,6
+Summon Omukade,1,3269,5,3
+Contact Mori-no-kami,1,2093,21,6
+Summon Ujigami,1,2095,8,3
+Contact Kaijin,1,2106,25,2
+Contact Mujina,1,3273,21,6
+Contact Tanuki,1,3266,26,6
+Contact Tatsu,1,2099,19,3
+Summon Kenzoku,1,2096,9,4
+Summon Gozu Mezu,1,2091,6,5
+Contact Jorogumo,1,3263,32,6
+Summon Araburu-kami,1,3270,5,5
+Contact Yama-no-kami,1,2097,28,3
+Summon Abysian Ancestors,7,1971,5,5
+Reawaken Fossil,505,1977,10,3
+Summon Spectral Infantry,7,1656,5,5
+Contact Scorpion Man,1,1649,12,3
+Summon Bears,15,3003,8,6
+Summon Simargl,1,1947,1,1
+Summon Firebird,1,1946,2,0
+Contact Sirin,1,1945,8,4
+Summon Rusalka,1,1954,16,2
+Summon Likho,1,1952,10,5
+Contact Alkonost,1,1943,15,4
+Summon Zmey,1,1940,5,0
+Contact Gamayun,1,1944,25,4
+Contact Beregina,1,1955,35,2
+Contact Mountain Vila,1,1942,40,6
+Contact Cloud Vila,1,1941,40,1
+Contact Leshiy,1,1949,60,6
+Sacred Crocodile,1,2186,1,6
+Herd of Elephants,505,2398,20,6
+God Brood,6,888,12,6
+xxx,10,3980,12,7
+Call Melqart,1,2267,99,8
+Memories of Stone,505,1998,10,5
+Dirge for the Dead,1,2045,25,5
+Banquet for the Dead,1,2039,55,5
+Scapegoats,2,2074,8,8
+Summon Se'irim,5,2074,23,8
+Summon Shedim,3,2073,28,8
+Call Malakh,1,2056,9,4
+Call Hashmal,1,2057,21,4
+Call Arel,1,2058,39,4
+Call Ophan,1,2051,49,4
+Call Merkavah,1,2052,222,4
+Summon Mazzikim,10,2072,3,6
+Summon Lilot,1,2071,15,6
+Summon Kusarikkus,2,3068,4,3
+Summon Ugallu,1,3095,24,1
+Call Anzus,2,3064,4,2
+Call Apkallu,1,2966,60,4
+Call Ephor,1,2845,7,5
+Call Spectral Philosopher,1,2846,11,5
+Summon Telkhine,1,2874,69,2
+Summon Hekateride,1,2834,30,6
+Summon Daktyl,1,2836,30,3
+Procession of the Underworld,15,3210,13,5
+Summon Monster Fish,1,1664,6,2
+Revive Lictor,1,259,3,5
+Revive Censor,1,260,4,5
+Revive Acolyte,1,256,10,5
+Revive Bishop,1,257,16,5
+Revive Arch Bishop,1,258,23,5
+Revive Spectator,1,254,12,5
+Revive Dusk Elder,1,253,20,5
+Revive Wailing Lady,1,255,8,5
+Lictorian Guard,5,259,10,5
+Lamentation,5,255,25,5
+Great Lamentation,14,255,33,5
+Lictorian Legion,25,259,35,5
+Ermorian Legion,50,187,15,5
+Revive Shadow Tribune,1,681,8,5
+Revive Lemur Centurion,1,678,5,5
+Revive Lemur Senator,1,680,15,5
+Revive Lemur Consul,1,679,25,5
+Revive Lemur Acolyte,1,2333,11,5
+Revive Lemur Thaumaturg,1,2334,20,5
+Revive Grand Lemur,1,2335,50,5
+Revive Grave Consort,1,690,10,5
+Revive Tomb Priest,1,691,16,5
+Revive Tomb King,1,692,23,5
+Carrion Centaur,1,714,8,6
+Carrion Lady,1,711,16,6
+Carrion Lord,1,710,35,6
+Summon Black Dogs,20,1769,5,5
+Summon Cu Sidhe,10,1770,5,7
+Summon Barghests,14,1768,7,5
+Summon Bean Sidhe,1,1776,25,5
+Summon Morrigan,1,1821,5,5
+xxx,10,3899,10,2
+xxx,10,3899,10,3
+Herd of Morvarc'h,10,3980,12,7
+Summon Incubus,1,4053,66,8
+Summon Succubus,1,811,66,8
+Contact Iron Angel,1,1975,25,3
+Summon Monster Toads,3,1358,5,6
+Contact Couatl,1,525,40,6
+Call Ahurani,1,2637,12,4
+Call Fravashi,1,2563,30,4
+Summon Yazatas,6,1607,12,4
+Call Daevas,6,2630,12,5
+Call Jahi,1,2631,15,5
+Summon Condors,1008,2694,8,1
+Summon Huacas,5,2697,12,4
+Summon Supayas,5,2700,8,5
+Contact Angel of the Host,1,3870,7,4
+Contact Harbinger,1,464,25,4
+Angelic Choir,3,1367,15,4
+Heavenly Wrath,1,1369,35,4
+Heavenly Choir,1,1368,144,4
+Bind Harlequin,1,1000,1,8
+Reascendance,1,626,88,8
+Amalgamation of Fire and Flesh,505,3864,10,0
+Amalgamation of Air and Flesh,505,3865,10,1
+Amalgamation of Water and Flesh,505,3866,10,2
+Amalgamation of Earth and Flesh,505,3867,10,3
+Summon Valkyries,7,261,1,1
+Awaken Draugar,4,2190,12,5
+Summon Glosos,9,2363,13,5
+Brood of Garm,5,1309,10,6
+Awaken Jotun Draugar,3,3193,15,5
+Summon Rimvaettir,1003,3420,5,2
+Winter's Call,1,844,86,8
+Summon Glosos,9,2363,10,5
+Command Draugar,4,2190,12,5
+Summon Jaguar Toads,3,1359,2,6
+Summon Jaguars,25,859,20,6
+Summon Jade Serpents,2,1889,3,2
+Summon Monster Toad,1,1358,1,6
+Contact Couatl,1,525,40,6
+Bind Beast Bats,3,1357,8,8
+Bind Jaguar Fiends,3,1356,16,8
+Contact Civateteo,1,1422,36,8
+Bind Tzitzimitl,1,1483,10,8
+Contact Tlahuelpuchi,1,1558,42,8
+Contact Onaqui,1,1360,101,8
+Rain of Jaguars,1008,1356,40,8
+Summon Sacred Scorpion,1,2690,2,3
+Celestial Servant,1,903,1,3
+Heavenly Rivers,3,904,9,2
+Celestial Hounds,2,1338,2,1
+Heavenly Fires,3,926,4,0
+Call Celestial Soldiers,6,902,15,1
+Wrath of the Ancestors,2018,1363,1,5
+Call Cyclops Tribe,505,3381,9,3
+Deceive the Decree of the Lost,1,3879,45,7
+Contact Jinn,1,3353,18,0
+Summon Jinn Warriors,3,3354,13,0
+Contact Houri,1,3375,26,1
+Summon Hinn,505,3367,4,1
+Summon Ifrit,1,3372,58,8
+Summon Shaytan,1,3373,73,8
+Summon Marid,1,3374,66,0
+Contact Marid,1,3376,60,2
+Awaken Jinn Block,1,3389,5,3
+Feast for Ghuls,505,3479,16,8
+Summon Ghulah,1,3481,31,8
+Summon Binn,505,3476,4,2
+Summon Si'lat,1,3483,21,1
+Summon Angiri,505,3666,5,0
+Summon Nagas,9,1319,15,2
+Summon Apsaras,505,1332,3,4
+Summon Vidyadhara,1,3668,15,4
+Contact Yaksha,1,1329,25,6
+Contact Yakshini,1,1330,25,6
+Contact Nagini,1,1322,25,2
+Summon Gandharvas,6,1335,15,4
+Summon Kimpurushas,6,3665,15,6
+Contact Nagaraja,1,1320,30,2
+Summon Garudas,6,3664,21,4
+Summon Maruts,3,3667,18,4
+Summon Kinnara,1,1331,25,4
+Contact Nagarishi,1,1321,40,2
+Summon Siddha,1,1337,35,4
+Summon Devata,1,1336,45,4
+Summon Devala,1,1713,55,4
+Summon Rudra,1,1906,55,4
+Summon Rakshasas,3,1736,8,8
+Feast of Flesh,18,1742,50,8
+Summon Asrapas,3,1741,8,8
+Summon Rakshasa Warriors,5,1737,21,8
+Summon Sandhyabalas,3,1743,25,8
+Summon Dakini,1,1714,81,8
+Summon Samanishada,1,1744,35,8
+Summon Danavas,3,1767,70,8
+Summon Daitya,3,3663,45,8
+Host of Ganas,2018,1764,9,5
+Summon Vetalas,15,1765,10,5
+Summon Ko-Oni,505,1260,4,5
+Summon Kappa,5,1482,3,2
+Summon Ao-Oni,505,1264,7,2
+Summon Karasu Tengus,3,1478,2,6
+Summon Aka-Oni,505,1266,7,0
+Summon Konoha Tengus,505,1479,3,1
+Ghost General,1,1256,10,5
+Summon Oni,505,1272,8,3
+Contact Dai Tengu,1,1480,55,1
+Contact Nushi,1,1431,25,2
+Summon Kuro-Oni,505,1274,9,5
+Summon Oni General,1,1276,20,5
+Contact Kitsune,1,1434,30,6
+Summon Dai Oni,1,1316,45,5
+Bind Penumbral,1,2497,1,5
+Summon Penumbrals,6,2497,6,5
+Summon Umbrals,6,1490,8,5
+Olm Conclave,1,2527,20,2
+Hall of Statues,4000,1496,30,3
+Revive Cavern Wights,5,1501,8,5
+Bind Umbral,1,1490,2,5
+Rhuax Pact,3,640,2,0
+Barathrus Pact,2,3741,3,3
+Attentive Statues,2,1497,3,3
+Enliven Sentinel,1,1496,2,3
+Enliven Granite Guard,1,1498,10,3
+Enliven Marble Oracle,1,1499,35,3
+Living Mercury,1,3762,6,2
+Nightmare Construction,1,2520,2,0
+Iron Corpse Reanimation,505,1439,2,3
+Reanimate Ancestor,1,1440,3,3
+Flame Corpse Construction,1,1441,1,0
+Ktonian Legion,5020,1439,15,3
+Awaken Shard Wights,505,2509,10,5
+Awaken Sepulchral,1,1500,3,5
+Awaken Tomb Oracle,1,1476,30,5
+Hall of the Dead,4000,2509,25,5
+Contact Void Spectre,1,1562,25,4
+Enslave Sea Trolls,505,1529,10,4
+Illusory Army,5005,297,1,7
+Manifest Vitriol,1,1983,3,2
+Iron Pigs,510,924,9,3
+Summon Cave Grubs,510,2526,5,3
+Summon Sea Dogs,510,1064,2,6
+Summon Crocodiles,510,2185,4,6
+Shadow Servant,1,434,5,5
+Summon Fire Ants,1008,2225,9,0
+Summon Ogres,505,2135,7,3
+Summon Shades,505,676,5,5
+Awaken Vine Men,4,361,1,6
+Awaken Algae Men,4,2976,1,6
+Summon Killer Mantis,510,2226,5,6
+Pack of Wolves,1014,284,2,6
+Summon Horned Serpents,510,403,4,6
+Summon Lesser Fire Elemental,1,3719,1,0
+Bind Scorpion Beast,1,524,2,0
+Summon Lesser Air Elemental,1,3727,1,1
+Summon Amphiptere,1,1412,3,1
+Summon Lesser Water Elemental,1,3735,1,2
+Call Krakens,505,438,4,2
+Summon Yetis,505,2231,8,2
+Summon Cave Cows,510,2512,3,2
+Summon Lesser Earth Elemental,1,3743,1,3
+Summon Cave Crab,1,2514,4,3
+Revive Wights,5,533,20,5
+Revive Bane,1,185,7,5
+Sloth of Bears,1013,694,6,6
+Pride of Lions,1013,628,9,6
+Ambush of Tigers,1013,1140,9,6
+Herd of Buffaloes,505,3009,8,6
+Summon Sea Lions,1014,1063,10,6
+Summon Bog Beasts,505,578,5,6
+Conjure Phantasmal Wolves,2,3625,1,7
+Nest of Salamanders,1008,3658,1,0
+Summon Fire Drake,1,523,6,0
+Summon Flame Jellies,1008,2854,6,0
+Summon Wyverns,2,520,3,1
+Summon Storm Drake,1,3991,5,1
+Summon Gryphons,510,2131,9,1
+Summon Ice Drake,1,579,7,2
+Summon Sea Serpent,1,565,4,2
+Summon Cave Drake,1,522,4,3
+Summon Shade Beasts,3021,442,15,5
+Summon Spine Frog,1,3712,1,6
+Summon Leogryphs,2016,2132,12,6
+Awaken Vine Ogres,3,362,3,6
+Summon Swamp Drake,1,2196,5,6
+Summon Kithaironic Lion,1,514,5,6
+Nest of Asps,1008,3657,1,6
+Conjure Phantasmal Warriors,2,3624,1,7
+Summon Water Kobold,1,3911,12,7
+Summon Cave Kobolds,505,3890,5,7
+Summon Fay Footfolk,505,3903,12,7
+Summon Fire Elemental,1,3716,1,0
+Summon Summer Lions,505,515,13,0
+Summon Air Elemental,1,3724,1,1
+Summon Spring Hawks,505,513,13,1
+Contact Draconians,1,620,20,1
+Summon Water Elemental,1,3732,1,2
+Contact Sea Trolls,510,564,10,2
+Summon Winter Wolves,505,511,6,2
+Contact Naiad,1,1226,35,2
+Naiad Warriors,25,1227,18,2
+Summon Earth Elemental,1,3740,1,3
+Summon Fall Bears,505,512,13,3
+Contact Trolls,505,518,10,3
+Spirit Mastery,1024,674,4,5
+Revive Bane Lord,1,998,12,5
+Summon Ether Warriors,3,736,15,4
+Spirits of the Wood,1012,932,8,6
+Contact Forest Trolls,510,2219,10,6
+Summon Manticores,3,2130,10,6
+Conjure Phantasmal Beast,1,3626,1,7
+Summon Bluecap,1,3891,20,7
+Summon Fay Knights,3,3901,15,7
+Awaken Sleeper,1,559,10,7
+Summon Fire Snakes,510,814,8,0
+Summon Flame Spirit,1,2626,30,0
+Summon Great Eagles,510,1381,8,1
+Summon Bishop Fish,1,1040,15,2
+Sea King's Court,1,580,55,2
+Streams from Hades,1,1477,40,2
+Contact Hill Giant,1,2230,3,3
+Troll King's Court,1,519,65,3
+Summon Spectre,1,329,22,5
+Summon Ghosts,505,566,10,5
+Forest Troll Tribe,1,2220,37,6
+Contact Forest Giants,2,2229,2,6
+Summon Sprites,6,592,1,7
+Contact Lamias,510,394,5,6
+Contact Lamia Queen,1,609,25,6
+Summon Fay Prince,1,3904,30,7
+Summon Gnome,1,345,35,7
+Living Fire,1000,3717,2,0
+Living Clouds,1000,3725,2,1
+Summon Asp Turtle,1,1234,10,2
+Living Water,1000,3733,2,2
+Summon Catoblepas,1,1290,12,2
+Living Earth,1000,3741,2,3
+Summon Mound Fiend,1,439,28,5
+Harvester of Sorrows,1,491,20,5
+Call Wraith Lord,1,181,40,5
+Awaken Ivy King,1,931,30,6
+Summon Calydonian Boar,1,3684,9,6
+Conjure Phantasmal Knight,1,3627,1,7
+Faerie Court,1,627,60,7
+Call Ancient Presence,1,2251,15,2
+Call Abomination,1,521,15,4
+Legion of Wights,3002,533,20,5
+Awaken Tarrasque,1,925,15,6
+Corpse Man Construction,1,534,1,1
+Clockwork Soldiers,510,2321,4,3
+Construct Manikin,2014,313,7,6
+Clockwork Horrors,1013,982,9,3
+Crusher Construction,1,475,10,3
+Wooden Construction,4,476,6,6
+Construct Mandragora,2006,314,10,6
+Iron Gryphon,1,3831,6,0
+Mechanical Men,1013,532,15,3
+Golem Construction,1,471,35,4
+Siege Golem,1,760,15,3
+Iron Dragon,1,531,25,3
+Juggernaut Construction,1,781,25,4
+Poison Golem,1,1099,35,5
+Revive King,1,188,3,5
+Claymen,510,817,7,2
+Create Revenant,1,396,9,5
+Terracotta Army,1014,2134,9,0
+Vile Water,1,2159,2,2
+Behemoth,1,452,7,5
+Watcher,1,768,5,1
+Enliven Gargoyles,510,2368,12,3
+Pale Riders,2019,189,10,5
+Enliven Statues,1007,474,20,3
+Reanimate Archers,10,535,5,5
+Ziz,1,1388,2,5
+Leviathan,1,1235,10,5
+Telestic Animation,1,473,5,4
+Call the Worm That Walks,1,2217,30,6
+Bind Shadow Imp,1,2287,4,8
+Summon Imps,5,303,1,8
+Bind Fiery Imps,505,2286,5,8
+Bind Spine Devil,1,638,2,8
+Bind Fiend,1,88,3,8
+Bind Bone Fiends,505,433,5,8
+Bind Devil,1,304,5,8
+Bind Frost Fiend,1,449,7,8
+Bind Serpent Fiends,3,526,4,8
+Bind Storm Demon,1,632,10,8
+Bind Succubus,1,811,66,8
+Bind Demon Knight,1,489,15,8
+Awaken Dark Vines,2,330,12,8
+Summon Illearth,1,3756,2,8
+Ritual of Five Gates,1,88,33,8
+Blood Rite,1,405,11,8
+Curse of Blood,1,404,96,8
+Forces of Darkness,1016,88,50,8
+Infernal Forces,1013,304,50,8
+Infernal Tempest,1007,632,50,8
+Forces of Ice,1010,449,50,8
+Infernal Crusade,1005,489,50,8
+Bind Incubus,1,4053,66,8

@@ -40,7 +40,9 @@ def parse_mod_file(mod_file_path, base_units):
                     current_unit['name'] = match.group(1)
                     current_unit['id'] = -1   # Placeholder, as it's name based.
                   elif match.group(2): #number                      # Start a new unit
-                    id = match.group(2)
+                    id = int(match.group(2))
+                    if (not id in units):
+                        units[id] = {'id' : id}
                     current_unit = units[id]
                     current_unit['id'] = match.group(2)
                     continue
@@ -50,14 +52,18 @@ def parse_mod_file(mod_file_path, base_units):
                 match = re.match(r"#newmonster(?:\s+(\d+))?", line)
                 if match:
                     if current_unit:
-                        units.append(current_unit)
+                        units[id] = current_unit
+
                     current_unit = {'id': -1, 'name': 'UNKNOWN', 'line' : line_no} # Placeholder
-                    if match.group(1):  # If a number is provided
-                       current_unit['id'] = int(match.group(1))
+                    if match.group(1):  # If a number is provided                            
+                       id = int(match.group(1))
+                       #print(id)
+                       current_unit['id'] = id
+
                     continue
 
 
-                match = re.match(r"#(\w+)\s*([^-]*)(\-\-\s?.*)?", line) # all other commands, ex: #name "testname"
+                match = re.match(r"#(\w+)\s*(-?[^-]*)(\-\-\s?.*)?", line) # all other commands, ex: #name "testname"
                 if match:
                   command = match.group(1)
                   argument = match.group(2).strip()
@@ -75,8 +81,11 @@ def parse_mod_file(mod_file_path, base_units):
                   elif command == 'copystats':
                     # copy existing stats from unit by id
                     current_unit['copystats'] = argument
-                    id = current_unit['id']
-                    current_unit = copy.deepcopy(base_units[argument])
+                    id_copy = int(argument)
+                    if (id_copy in units):
+                      current_unit = copy.deepcopy(units[id_copy])
+                    else:
+                      print(f"Failed to copystats {id_copy} to {id}")
                     current_unit['id'] = id
                     current_unit['line_no'] = line_no
                   elif command == "fixedname":
@@ -90,8 +99,10 @@ def parse_mod_file(mod_file_path, base_units):
                           print(f"Warning: Invalid integer value for {command}: {argument}")
                   elif command == 'montag':
                     if 'montag' not in current_unit:
-                      current_unit['montag'] = []
-                    current_unit['montag'].append(int(argument.split()[0]))
+                      current_unit['montag'] = ""
+                    #print('MONTAG', line_no, argument)
+                    current_unit['montag'] = int(argument)
+
                   elif command == 'weapon':
                       # Handle weapon command (can have name or number)
                       weapon_arg = argument.replace('"', '').strip()
@@ -111,6 +122,8 @@ def parse_mod_file(mod_file_path, base_units):
                       startitem_arg = argument.replace('"', '').strip()
                       if 'startitem' not in current_unit or current_unit['startitem'] == '':
                           current_unit['startitem'] = []
+                      if isinstance(current_unit['startitem'], str):
+                        current_unit['startitem'] = [current_unit['startitem']]
                       current_unit['startitem'].append(startitem_arg)
                   elif command == 'itemslots':
                       current_unit['itemslots'] = argument
@@ -148,7 +161,7 @@ def parse_mod_file(mod_file_path, base_units):
                   if command == 'end':
                         #print(f"endmonster {line_no}")
                         if current_unit:
-                            units.append(current_unit)
+                            units[id] = current_unit
                             current_unit = {}
                         continue  # Skip adding #end as a command
                   elif command == 'cleararmor':
@@ -167,7 +180,7 @@ def parse_mod_file(mod_file_path, base_units):
         print(f"Error: Mod file not found at {mod_file_path}")
         return []
     except Exception as e:
-        print(f"Error parsing mod file: {e}" + e.with_traceback())
+        print(f"Error parsing mod file line_no {line_no}: {e}" + e.with_traceback())
         return []
 
     return units
@@ -367,8 +380,10 @@ def load_baseu_maps(weapon_file, armor_file):
     return baseu_weapon_map, baseu_armor_map
 
 def main():
-    mod_file = "SCBM-clockwork_v1.065.dm.txt"  # Replace with your actual mod file path
-    csv_file = "scbmBaseU.csv"             # Replace with your desired output CSV file
+    #mod_file = "SCBM-clockwork_v1.065.dm.txt"  # Replace with your actual mod file path
+    #csv_file = "scbmBaseU.csv"             # Replace with your desired output CSV file
+    csv_file = "moddedBaseU.csv"
+    mod_file = "/home/ilya/.dominions6/mods/DomEnhanced2_12_fixed_art-clockwork_v2.12/DomEnhanced2_12_fixed_art-clockwork_v2.12.dm"
     weapon_file = "dom6inspector/gamedata/weapons.csv"        # Repalce with your dom 6 weapons.txt file
     armor_file = "dom6inspector/gamedata/armors.csv"            # Repalce with your dom 6 armors.txt file
     baseu_weapon_map, baseu_armor_map = load_baseu_maps(weapon_file, armor_file)
@@ -379,7 +394,7 @@ def main():
             headers = f.readline().strip().split('\t')
             for line in f:
                 values = line.strip().split('\t')
-                unit_name = values[0].replace('"', '').strip()
+                unit_id = int(values[0].replace('"', '').strip())
                 unit_stats = dict(zip(headers[1:], values[1:]))
                 weapons = [unit_stats.get(f'wpn{i}', '') for i in range(1, 8)]
                 unit_stats['weapons'] = weapons
@@ -390,7 +405,7 @@ def main():
                     unit_stats.pop(f'wpn{i}', None)
                     unit_stats.pop(f'armor{i}', None)
                 
-                base_units[unit_name] = unit_stats
+                base_units[unit_id] = unit_stats
 
     except FileNotFoundError:
         print("Warning: Base unit file not found at BaseU_10.csv")
