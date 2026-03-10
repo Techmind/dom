@@ -1,0 +1,220 @@
+id	name	rarity	description	requirements	effects	end
+4000	Magic Overflowing	-2	Magic is overflowing the boundaries of this realm. The air crystallizes into raw power.	pop0ok 1|magic 4|land 1	4d6vis A	
+4001	Arcane Surge	-2	Absolute magic has overwhelmed the realm, leaving behind clusters of pure aether.	pop0ok 1|magic 5|land 1	5d6vis S	
+4002	Mythical Beast Slain	-2	A mythical beast of pure mana has been slain. It leaves behind a wealth of magical gems!	magic 4|land 1	2d6vis All	
+4003	Astral Behemoth	-2	An astral behemoth has been slain. Its crystalline heart shattered into a staggering amount of gems!	magic 5|land 1	3d6vis All	
+4004	Potent Artifact	-1	A potent artifact humming with power was found by local prospectors.	maxunrest 50|magic 4|luck 1	magicitem 3|1d6vis S	
+4005	Legendary Discovery	-1	An artifact of legends has been unearthed from a reality rift.	maxunrest 50|magic 5|luck 1	magicitem 4|1d6vis S	
+4006	Arcane Vault Found	-1	A magical anomaly unearthed a hidden vault containing artifacts of forgotten power.	magic 4|luck 2|land 1	magicitem 4	
+4007	Reality Rift Artifacts	-1	Reality warped, leaving behind artifacts of immense, forgotten power.	magic 5|luck 2|land 1	magicitem 4|magicitem 3	
+4008	Pantokrator Armory	-2	Intense magic and incredible fortune revealed the lost armory of a Pantokrator.	magic 4|luck 3|turn 15	magicitem 4|magicitem 3|2d6vis All	
+4009	Lost Vault of Archmage	-2	Extreme magic and luck bestowed upon you the lost vault of an Archmage.	magic 5|luck 3|turn 15	gold 4000|magicitem 4|magicitem 4|3d6vis All	
+4010	Anti-Magic Hysteria	1	The populace has formed a fanatical mob and burned the lab to purge all magic.	unmagic 4|minpop 50|lab 1	lab 0|unrest 80|kill 5	
+4011	Void Collapse	2	The absence of magic caused reality to collapse in the lab, destroying your magical reserves.	unmagic 5|pop0ok 1|lab 1	lab 0|gemloss All|kill 10	
+4012	Meteor Strike	2	A massive meteor struck, destroying the province's infrastructure and treasury.	unluck 5|pop0ok 1|land 1	kill 50|gold -5000|fort 0|temple 0|unrest 200	
+4013	Rift in Fate	2	A total drain of mystical wards and bad luck allowed a terror to enter this world.	unluck 4|unmagic 3|land 1	unrest 150|com 308|kill 20	
+4014	Absolute Desolation	2	An anti-magic singularity and extreme bad luck has left nothing but ruin and madness.	unluck 5|unmagic 3|land 1	kill 75|gold -10000|lab 0|temple 0|fort 0|unrest 300	
+4020	Rogue Witch Hunt	2	Driven by superstition, a mob burned your laboratory to purge the local mages.	unmagic 3|unluck 3|land 1|lab 1	lab 0|unrest 40|kill 2	
+4021	Anti-Magic Riot	2	A massive anti-magic riot burned your laboratory to the ground and looted all gems.	unmagic 4|unluck 3|land 1|lab 1	lab 0|gemloss All|unrest 60|kill 3	
+4022	The Silent Void	2	Magic has drained so completely that magical reserves are evaporating into thin air.	unmagic 5|unluck 3|land 1	lab 0|gemloss All|kill 5	
+4023	Failing Wards	2	Ancient wards failed, allowing horrors from the void to feed on the unlucky populace.	unmagic 3|unluck 3|land 1	unrest 80|com 308|kill 10	
+4024	Mundane Collapse	2	Magical creatures wither and the populace descends into sheer, unlucky madness.	unmagic 4|unluck 3|land 1	lab 0|gemloss All|unrest 100|kill 15	
+4025	Successful Inquisition	-2	Lucky witch hunters burned a coven of rogue witches and gave you their hoard.	unmagic 3|luck 3|land 1	gold 500|magicitem 2|magicitem 2	
+4026	Mundane Prosperity	-2	Free from mages, the mundane populace thrived and rooted out a rogue sorcerer for you.	unmagic 4|luck 3|land 1	gold 1000|magicitem 2|1d6vis N	
+4027	Grand Witch Hunt	-2	Lucky hunters cornered a powerful cabal. The heretics' vast hoard of artifacts was secured.	unmagic 4|luck 3|land 1	gold 1500|magicitem 3|magicitem 3	
+4028	Heretic's Pyre	-2	A lich withered away from lack of magic. Lucky heroes plundered his crypt for you.	unmagic 5|luck 3|land 1	gold 1500|magicitem 3|1d6vis D	
+4029	Purge of the Arcane	-2	A magical vault collapsed due to mundane reality. The locals gathered the artifacts for you.	unmagic 5|luck 3|land 1	gold 3000|magicitem 4|magicitem 3|magicitem 3	
+4030	Neglected Defenses	2	Guards are sleeping and walls are degrading. Bandits easily sacked the local armory.	lazy 3|unluck 3|land 1	defence -15|unrest 20|gold -200	
+4031	Economic Apathy	2	Bureaucratic lethargy has ground trade to a halt. Tax collectors aren't working.	lazy 4|unluck 3|land 1	taxboost -100|landgold -10|landprod -10	
+4032	Sloppy Warding	2	Lazy mages allowed a void horror to slip through the province's weakened barriers.	lazy 4|unluck 3|lab 1|land 1	lab 0|com 308|kill 2|unrest 30	
+4033	Crumbling Foundations	2	Neglect has caused the local fortress foundations to completely collapse.	lazy 5|unluck 3|fort 1|land 1	fort 0|kill 2|unrest 30	
+4034	The Great Lethargy	2	People refuse to work or eat and are dying in their sleep from extreme apathy.	lazy 5|unluck 3|land 1	kill 20|landprod -20|landgold -20|unrest 50	
+4035	Accidental Artifact	-2	A lazy farmer unearthed an ancient artifact while napping under an oak tree.	lazy 3|luck 3|land 1	gold 300|magicitem 2|1d6vis E	
+4036	Fortuitous Collapse	-2	A wall collapsed because no one maintained it, revealing a long-forgotten treasury!	lazy 4|luck 3|land 1	gold 800|magicitem 3	
+4037	Effortless Bounty	-2	Lazy hunters found a beast that died in the square, leaving a hoard of gems for you.	lazy 4|luck 3|land 1	gold 1000|magicitem 3|3d6vis N	
+4038	Lucky Mishap	-2	Lazy researchers created an explosion that magically crystallized into astral pearls.	lazy 5|luck 3|lab 1|land 1	3d6vis S|magicitem 3	
+4039	Pity of the Gods	-2	A celestial left artifacts out of sheer pity for your province's absolute laziness.	lazy 5|luck 3|land 1	gold 2000|magicitem 4|magicitem 3	
+4040	Apathetic Anarchy	2	A mob was too lazy to rebel properly. They just stole some gold and went to bed.	lazy 3|chaos 3|land 1	unrest 20|gold -150|landprod -5	
+4041	Open Gates	2	Thugs entered the fort while the guards were asleep and ransacked the armory.	lazy 3|chaos 3|fort 1|land 1	defence -15|gold -300|unrest 15	
+4042	Negligent Fire	2	A torch was dropped during a riot. No one bothered to put it out, and the lab burned.	lazy 3|chaos 3|lab 1|land 1	lab 0|kill 2|unrest 30	
+4043	The Apathetic Rebel	-2	A rebellion fell apart because the rebels were too lazy. You got their gold.	lazy 3|chaos 3|land 1	gold 200|magicitem 1|unrest -10	
+4044	Absolute Ruin	2	Total societal collapse. The people sit in decaying ruins waiting to starve.	lazy 4|chaos 3|land 1	kill 15|landgold -15|landprod -15|unrest 80	
+4045	Glacial Bureaucracy	2	Strict laws and lazy clerks have ground trade to an absolute halt this month.	lazy 3|order 3|land 1	taxboost -100|unrest -10|landgold -5	
+4046	Ingenious Laziness	-2	Lazy but organized craftsmen invented automation. Production has permanently increased.	lazy 3|order 3|land 1	landprod 15|landgold 10	
+4047	The Slacker Mage	-2	A lazy mage invented a magical shortcut, creating an artifact in record time.	lazy 3|order 3|lab 1|land 1	magicitem 2|1d6vis S	
+4048	Mandatory Stagnation	2	All unauthorized labor is forbidden to ensure order. Nothing is getting done.	lazy 4|order 3|land 1	unrest -50|landprod -20|landgold -10	
+4049	Perfect Standstill	2	People stand in perfectly straight lines, doing nothing. The economy is crippled.	lazy 5|order 3|land 1	unrest -100|taxboost -200|landprod -30|kill 5	
+4060	Violent Mutiny	2	The defense mutinied, killed their officers, and sacked the local armory.	chaos 4|unluck 3|land 1|mindef 10	defence -20|unrest 60|kill 5	
+4061	Storm of Glass	2	An unnatural tempest of glass ripped through the province, shredding the crops.	chaos 3|unluck 4|land 1	kill 10|landprod -10|unrest 40	
+4062	Total Anarchy	2	Absolute anarchy. Mobs burned the local temples and looted the treasury.	chaos 4|unluck 3|land 1|temple 1	temple 0|gold -1000|unrest 100	
+4063	Wasteland Warlord	2	A warlord united the rabble into a horde and claimed the local fortress.	chaos 5|unluck 3|land 1|fort 1	fort 0|com 147|6d6units 140|unrest 150	
+4064	The Abyss Yawns	2	A rift to the Inferno opened, spewing fire and demons!	chaos 5|unluck 3|land 1	kill 40|lab 0|temple 0|fort 0|com 826|4d6units 304	
+4069	Glorious Anarchy	-2	Chaos result in a major threat dying and leaving artifacts.	chaos 5|luck 3|land 1	gold 2500|magicitem 4|magicitem 3|2d6vis All	
+4070	Volatile Reagents	2	Lack of safety caused a lab explosion, releasing hostile fire elementals.	chaos 3|magic 3|lab 1|land 1	lab 0|kill 5|unrest 40|assassin 3716	
+4071	Thaumaturgic Riot	-2	Rioting hedge wizards unleashed spells that accidentally created pure magical gems.	chaos 3|magic 3|land 1	unrest 30|gold -200|3d6vis All	
+4072	Rogue Conjuration	-2	A crazed conjurer lost control of a ritual. The beasts now bow to you!	chaos 3|magic 3|land 1	unrest 40|nation -2|2com 1910|10d6units 361	
+4073	Unbound Summons	2	Summoning circles broke in the anarchy, allowing demons to feed on the populace.	chaos 3|magic 3|land 1	unrest 60|kill 10|com 305|2d6units 88	
+4074	Anarchic Alchemy	-2	Reality is glitching. Base metals are turning into gold and gems spontaneously.	chaos 4|magic 3|land 1	gold 1000|2d6vis All|kill 5|unrest 50	
+4075	Aetheric Tornado	2	A storm of wild magic warped and mutated many of the surviving inhabitants.	chaos 4|magic 3|land 1	kill 15|unrest 70|landprod -10	
+4076	The Mad Archmage	-2	An erratic wizard thrives in the anarchy. He pledged loyalty and brought artifacts.	chaos 4|magic 3|land 1	nation -2|com 312|magicitem 3|magicitem 2	
+4077	Dimensional Fracture	2	A hole in reality opened. Astral horrors are pouring through to feed on the province.	chaos 4|magic 3|land 1	kill 20|unrest 90|com 308|4d6units 88	
+4078	Pandemonium's Gift	-2	Artifacts of legendary power and gems materialized out of thin air in the chaos.	chaos 5|magic 3|land 1	magicitem 4|magicitem 4|4d6vis All|unrest 100	
+4079	Maelstrom of Madness	2	Magical laws collapsed. Mages are insane and a Doom Horror has manifested.	chaos 5|magic 3|lab 1|land 1	lab 0|kill 30|unrest 200|com 2213	
+4080	Grave Treasure	-1	A landslide opened a mound; lucky peasants recovered treasure before the dead rose.	death 1|luck 3|land 1	gold 400|magicitem 2	
+4081	Reanimated Servant	-2	A necromancer, favored by luck, managed to bind a powerful wight as a loyal servant.	death 2|luck 3|pathdeath 1	nation -2|com 197	
+4082	Necrotic Windfall	-1	A surge of dark energy crystallized into rare death gems in a local graveyard.	death 2|luck 3|land 1	2d6vis D	
+4083	The Lich's Hoard	-2	A lich withered away from extreme misfortune, leaving his artifacts for you.	death 3|luck 3|land 1	gold 1500|magicitem 4	
+4084	Miracle of Undeath	-2	Through a freak occurrence, a fallen hero rose as a loyal undead champion for you.	death 3|luck 3|land 1	nation -2|com 188	
+4085	Arcane Decay	1	Death magic leaked into the lab, accidentally finishing a research project overnight.	death 1|magic 3|lab 1	researchaff 0|unrest 10	
+4086	Soul Synthesis	-2	Mages siphoned essence from local graveyards to create a powerful spirit servant.	death 3|magic 3|lab 1	nation -2|com 533	
+4087	Gem of the Dead	-1	A mage concentrated the essence of a thousand ghosts into a perfect death gem.	death 3|magic 3|land 1	2d6vis D	
+4088	Forbidden Library	-2	An ancient tomb was opened, increasing your mages' death magic proficiency.	death 4|magic 3|unique 1	deathboost 5	
+4089	Sovereign of Bone	-2	Your mastery of Death and Magic attracted a literal Lord of the Dead to you.	death 5|magic 3|unique 1	nation -2|com 181	
+4090	Lawful Prosperity	-2	The combination of law and luck has brought the province to a golden age.	order 3|luck 3|land 1	gold 500|taxboost 100	
+4091	Corrupt Bureaucracy	1	Strict laws enforced by bribery. The constant skimming hampers your treasury.	order 3|unluck 3|land 1	taxboost -50|unrest 10	
+4092	Arcanum Inspection	2	Law-enforcing priests arrived to ensure your labs follow new statutes.	order 2|magic 3|lab 1	unrest 15|gainaff 4096	
+4093	The Unmagic Decree	1	A decree mandates that magic experiments be filed in triplicate, stalling research.	order 3|unmagic 3|lab 1	researchaff 0|gold -50	
+4094	The Lucky Bailiff	-1	A lawful and lucky bailiff arrested a bandit ring and recovered their gold.	order 2|luck 3|land 1	gold 400|unrest -10	
+4095	Misfortune's Audit	2	Administrative errors and misfortune caused your tax records to catch fire.	order 2|unluck 3|land 1	taxboost -50|gold -200	
+4096	Arcane Tax Loophole	-2	A brilliant clerk discovered a loophole, entitling you to the mages' gems.	order 2|magic 3|lab 1	1d6vis All|gold 100	
+4097	Mundane Tax Evasion	2	Citizens are using loopholes to avoid taxes. The law prevents you from pursuing.	order 3|unmagic 3|land 1	taxboost -100	
+4098	Judicial Miracle	-1	A court case was resolved justly, bringing prosperity and a donation to your cause.	order 3|luck 2|land 1	gold 300|incdom 1	
+4099	Corrupt Verdict	1	A court case was resolved for the highest bidder, causing minor civil unrest.	order 2|unluck 3|land 1	unrest 20|gold 100	
+4100	Production Boom	-1	Efficient labor and clear schedules have boosted regional production!	prod 2|land 1	landprod 10|landgold 5	
+4101	Bureaucratic Logjam	2	Excessive record-keeping and quotas have paralyzed the local economy.	prod 2|order 3|land 1	landprod -10|unrest 10	
+4102	Resource Drain	1	Mystical decay is causing raw materials to wither before they can be processed.	prod 2|drain 3|land 1	landprod -15|landgold -5	
+4103	Industrial Blight	2	Unnatural death-energies have contaminated the mines, causing widespread sickness.	prod 2|death 3|land 1	landprod -20|disease 5	
+4104	Salvage Operations	-1	Hard work salvaged valuable resources from previously abandoned ruins.	prod 3|land 1	landprod 20|gold 100	
+4110	Grave Fever	1	A ghastly sickness has arisen from local barrows.	death 4|unrest 10	disease 10|kill 20	
+4111	Rotting Harvest	2	Crops in the field are turning to black mulch overnight.	death 4|landprod 1	landprod -30|kill 5	
+4112	Restless Spirits	2	The dead crawl from the soil to haunt the living.	death 5|unrest 30	unrest 100|kill 10	
+4113	The Withered Field	2	The very earth has died.	death 5|growth 0	landprod -50	
+4114	Necrotic Anarchy	2	Chaos and Death created sentient, hateful swarms of undead that pillage the land.	death 4|chaos 3	unrest 100|4com 197	
+4115	Grave Robber's Riot	1	The mob unearthed a crypt, and the spirits within turned them into ghouls.	death 4|chaos 3	kill 5|2d6units 198	
+4118	The Slow Decay	1	A wave of sloth allowed necrotic fungi to infest the local granaries.	death 4|lazy 3	landprod -20|kill 5	
+4119	Stagnant Corpse	1	The dead pile up; no one is bothered to bury them due to profound lethargy.	death 4|lazy 3	disease 10|unrest 20	
+4122	Draining Grave	1	The land is literally draining the life from the living to feed the tombs.	death 4|drain 3	kill 15|incscale2 Death	
+4123	Necrotic Well	1	The local wells have become fonts of necrotic energy.	death 4|drain 3	disease 20|kill 10	
+4130	Grave Bounty	-1	A lucky find in an ancient tomb!	death 3|luck 3|land 1	gold 400|magicitem 2	
+4131	Reanimated Luck	-2	Good fortune binds a powerful wight as a servant.	death 4|luck 3|land 1	com 197|unrest 10	
+4132	Dark Gem Surge	-1	Concentrated death-magic crystallizes into gems!	death 4|luck 3|land 1	2d6vis D	
+4133	Lich's Hoard	-2	A lich's failed plans yield a great gold and artifact bounty!	death 5|luck 3|land 1	gold 1500|magicitem 4	
+4135	Soul Siphon Empowerment	-1	Siphoning necrotic essence empowers your mage.	death 3|magic 3|lab 1	deathboost 2	
+4136	Forbidden Archive	-2	A rediscovered tomb reveals ancient necromantic arts and gems.	death 4|magic 3|unique 1	deathboost 4|2d6vis D	
+4138	Omen of the Dead	2	The restless dead are stirring, unnerved by your necrotic proximity.	death 4|unluck 3|land 1	unrest 60|kill 10	
+4200	Scorch-Blessed Land	-2	The relentless sun caused the land to bloom with fire-infused crops.	heat 3|growth 3|land 1	landprod 10|1d6vis F	
+4201	Drought of Apathy	2	Brutal heat caused a wave of lethargy. No one wants to work.	heat 3|lazy 3|land 1	landprod -15|landgold -10	
+4202	Arcane Heatwave	-1	A magical heatwave caused the ambient air to crystallize into fire rubies.	heat 3|magic 3|land 1	1d6vis F|1d6vis F	
+4203	Necrotic Heatstroke	2	Extreme heat is causing rapid decay in your undead armies.	heat 3|death 3|land 1	kill 5|unrest 20	
+4204	Orderly Irrigation	-1	Ordered society maintained perfect irrigation even during a drought.	heat 3|order 3|land 1	landprod 15|unrest -10	
+4210	The Frost’s Embrace	-2	Magical frost preserved the local harvest, creating a massive surplus.	cold 3|growth 3|land 1	landprod 20	
+4211	Stagnant Frost	2	Extreme cold frozen the flow of goods; trade has completely halted.	cold 3|lazy 3|land 1	landgold -20|taxboost -50	
+4212	Cryomancer’s Boon	-1	Intense, magical cold concentrated into pure ice-essence gems.	cold 3|magic 3|land 1	1d6vis W|1d6vis W	
+4213	Death’s Chill	2	Freezing temperatures are shattering your laboratory equipment.	cold 3|death 3|lab 1	lab 0|kill 1|unrest 20	
+4214	Ordered Winter	-1	Disciplined peasants prepared for winter efficiently, leaving a food surplus.	cold 3|order 3|land 1	taxboost 50|unrest -10	
+4250	Molten Forge	-1	Extreme heat and order allowed for masterful fire-tempered steel.	heat 3|order 3|land 1	gold 400|magicitem 2	
+4251	Cryo-Architecture	-1	Cold has been channeled into structured ice-fortifications.	cold 3|order 3|land 1	fort 3	
+4252	Volcanic Spawning	2	Intense heat and magic forced fire spirits to emerge in the province.	heat 3|magic 3|land 1	com 3716|1d6units 3716	
+4253	Ice-Crafters	2	Magical cold manifested sentient ice-sculptors that demand tribute.	cold 3|magic 3|land 1	unrest 20|4d6units 1202	
+4254	Infernal Heat	2	Heat and Death create a stifling, necrotic miasma across the province.	heat 3|death 3|land 1	kill 5|disease 5	
+4255	Glacial Grave	2	Cold preserves the dead, causing them to animate and haunt the living.	cold 3|death 3|land 1	unrest 40|kill 2	
+4256	Searing Industry	-1	A production boom fueled by a geothermal heat source.	heat 3|prod 3|land 1	landprod 20|landgold 10	
+4257	Frozen Quota	2	Production slowed as machinery freezes solid in the unyielding cold.	cold 3|prod 3|land 1	landprod -30|gold -200	
+4258	Infernal Turmoil	2	Heat and Turmoil summoned a minor demon lord to demand sacrifices.	heat 3|chaos 3|land 1	kill 10|unrest 30	
+4259	Arctic Anarchy	2	Cold has driven the populace to violent rioting and looting.	cold 3|chaos 3|land 1	unrest 50|gold -300	
+4270	Solar Flare	2	A surge of solar magic ignited the air in the province.	heat 4|land 1	kill 10|unrest 20	
+4271	Infernal Conflagration	2	Extreme heat turned the province into a fire elemental breeding ground.	heat 5|land 1|kill 20|com 3716|unrest 60	
+4272	Living Glass	-1	Heat melted sand into valuable artistic sculptures.	heat 4|prod 3|land 1	gold 500|landprod 10	
+4273	Sun's Wrath	2	Heat levels are so high that all crops have turned to ash.	heat 5|growth 3|land 1	landprod -50|unrest 40	
+4274	Eternal Blizzard	2	A magical blizzard froze the ground solid, making farming impossible.	cold 4|land 1	landprod -40|kill 5	
+4275	Glacial Awakening	2	Intense cold woke horrors from beneath the permafrost.	cold 5|death 3|land 1	kill 15|com 1201|unrest 50	
+4276	Frost-Gem Deposits	-1	Extreme cold caused gems to crystallize in the soil.	cold 4|magic 3|land 1	2d6vis W|1d6vis A	
+4277	The Absolute Zero	2	Reality itself is freezing; the province is now an icy wasteland.	cold 5|land 1	kill 60|landprod -100	
+4278	Sun-Fire Cult	1	Extreme Heat gave rise to a fanatical cult that worships the sun.	heat 4|dominion 3	incdom 3|unrest 20	
+4279	Ice-Forged Steel	-1	Master smiths used the cold to temper blades of unprecedented sharpness.	cold 4|prod 3|land 1	magicitem 2|gold 300	
+4300	Thermal Runaway	2	Heat is spiraling out of control. Everything is catching fire!	heat 4|land 1	incscale2 Heat|kill 10	
+4301	Heat Demon Surge	2	The extreme heat has summoned fire demons to the province.	heat 5|land 1	com 3716|2d6units 528	
+4302	Glacial Feedback	2	Cold is warping the local climate into a permanent deep-freeze.	cold 4|land 1	incscale2 Cold|landprod -20	
+4303	Niefelheim Manifest	2	Frost giants are pouring out of the ice to purge the living.	cold 5|land 1	com 2231|2d6units 3746	
+4310	Firelord's Patronage	-2	Heat impressed a Firelord. He pledges his forces to you!	heat 5|luck 3	nation -2|com 818|addequip 9	
+4311	Ice Prince’s Favor	-2	Cold attracted an Ice Prince who seeks a frozen realm to rule.	cold 5|luck 3	nation -2|com 844|addequip 9	
+4350	Summer Harvest	-1	A pleasant summer yielded a surplus of hardy grains.	heat 3|luck 3|land 1	landprod 5|gold 100	
+4351	Winter Bounty	-1	A cold snap preserved fish stocks, resulting in lucrative trade.	cold 3|luck 3|land 1	landgold 10	
+4356	Sun-Blessed Guards	-1	Heat and luck attracted disciplined desert warriors to your cause.	heat 4|luck 3|land 1	nation -2|1d6units 1565	
+4357	Frost-Bound Sentinels	-1	Cold and luck attracted mountain scouts to your service.	cold 4|luck 3|land 1	nation -2|1d6units 141	
+4358	Heat-Warped Trade	2	Moderate heat caused goods to spoil during transport.	heat 4|unluck 3|land 1	landgold -5	
+4359	Frozen Assets	2	Moderate cold slowed river navigation, reducing tax revenue.	cold 4|unluck 3|land 1	landgold -5	
+4380	Bountiful Order	-1	A well-ordered society maximized the fertility of the land.	growth 3|order 3|land 1	gold 300|landprod 10	
+4381	Disciplined Harvest	-1	Strict agricultural quotas led to a record-breaking crop yield.	growth 3|order 3|land 1	landprod 15	
+4382	Agricultural Excess	-2	Efficient administration created a massive food surplus.	growth 4|order 3|land 1	landgold 15|taxboost 50	
+4383	The Golden Fields	-2	Growth and Order transformed the province into an empire breadbasket.	growth 5|order 3|land 1	landprod 30|landgold 20	
+4384	Tainted Harvest	1	A sudden growth spurt drew the attention of dark spirits.	growth 3|drain 3|land 1	gold 100|gemloss All	
+4385	Corrupted Abundance	1	Crops are draining the very magic from the soil to grow.	growth 4|drain 3|land 1	gold 200|gemloss All	
+4386	Festering Orchard	2	The trees fruit with rot and necrotic energy.	growth 4|drain 3|land 1	gold 50|disease 10|gemloss All	
+4387	The Price of Life	2	Ferocious fertility consumes all magic to sustain itself.	growth 5|drain 3|land 1	gold 500|gemloss All	
+4388	Lush Overgrowth	-1	The land is so fertile that nature itself seems to gift you gold.	growth 4|land 1	landgold 10	
+4389	Verdant Fury	1	The forest has become aggressive and is encroaching upon the city.	growth 5|land 1	unrest 20|landprod -10	
+4400	Reality's Fraying	2	Magic and misfortune torn the veil. Horrors prowl the province.	magic 4|unluck 3|land 1	com 308|unrest 60|kill 10	
+4401	The Cursed Tome	2	A mage's discovery caused a catastrophic mana backlash.	magic 5|unluck 3|lab 1	lab 0|gainaff 4194304|unrest 30	
+4402	Paradoxical Gem	-2	A gem materialized that exists in two places at once.	magic 4|unluck 3|land 1	gold 500|1d6vis S	
+4404	Drain-Induced Paranoia	2	The province is so drained that the government suspects everyone.	drain 4|unluck 3|land 1	unrest 50|incdom -2	
+4405	Null-Zone Catastrophe	2	The absolute absence of magic is causing the world to unravel.	drain 5|unluck 3|land 1	kill 40|unrest 100|landgold -50	
+4406	The Finder's Fee	-1	A survivor of the Drain found a pocket of crystallized aether.	drain 4|luck 3|land 1	gold 300|1d6vis S	
+4407	Void-Crystal Luck	-2	Your mages found a safe void-well to harvest for gems.	drain 5|luck 3|land 1	3d6vis All	
+4410	The Void-Faith Eater	1	An entity emerged from a mana rift to feed on local belief.	magic 4|unluck 3|land 1	incdom -4|com 308|unrest 20	
+4411	Rogue Reality Weaver	2	A sorcerer declared himself ruler; the populace follows him.	magic 5|unluck 3|land 1	revolt 1|com 312|4d6units 1983	
+4412	Mutating Mana Mists	1	Unlucky magical residues condensed into a physical, warping mist.	magic 3|unluck 3|land 1	gainaff 4096|disease 10|kill 5	
+4413	Siphoning Horror	2	A massive horror is draining your gems to sustain its form.	magic 4|unluck 3|land 1	gemloss All|gold -500|com 2213|kill 10	
+4414	Avatar of Arcane Anarchy	2	Magical misfortune turned your priests into madmen.	magic 5|unluck 3|land 1	temple 0|incdom -8|unrest 100	
+4420	Eternal Flame Secret	-2	A ritual revealed the ultimate secret of Fire.	magic 4|luck 3|unique 1	fireboost 1|2d6vis F	
+4421	High Winds Wisdom	-2	A sentient gale granted mastery of Air.	magic 4|luck 3|unique 1	airboost 1|2d6vis A	
+4422	Deep Earth Communion	-2	Planetary resonance fortified your mage's Earth magic.	magic 4|luck 3|unique 1	earthboost 1|2d6vis E	
+4425	Ambient Mana Infusion	-2	Ambient magic naturally enhances the skills of local mages.	magic 5|luck 3|lab 1	pathboost 1	
+4426	Life-Force Overload	-2	In this magical land, nature magic comes easily to your mages.	magic 5|luck 3|growth 3	natureboost 1|1d6vis N	
+4427	Necrotic Resonance	-2	Concentrated death magic granted your mages a chilling clarity.	magic 5|luck 3|death 3	deathboost 1|1d6vis D	
+4429	Mastery of the Sphere	-2	Total magical saturation granted your mage ultimate power.	magic 5|luck 3|lab 1	pathboost 9|2d6vis All	
+4430	Lucky Insurrection	-1	A riot spilled over, leaving behind a cache of gold for you.	chaos 4|luck 3|land 1	gold 600|unrest 10	
+4431	The Anarch's Hoard	-2	Lack of order allowed thieves to plunder a vault for you.	chaos 5|luck 3|land 1	magicitem 4|gold 1000	
+4432	The Bandit Kingdom	1	Chaos allowed a criminal syndicate to take permanent root.	chaos 4|unluck 3|land 1	landgold -15|unrest 40	
+4434	The Golden Standard	-1	Ordered administration stabilized the currency, boosting trade.	order 4|luck 3|land 1	landgold 20|taxboost 50	
+4435	The Lawgiver's Hammer	-2	An artifact of absolute law has been discovered by inquisitors.	order 5|luck 3|land 1	magicitem 4|incdom 2	
+4436	Iron Fist Famine	1	Bureaucracy is so rigid that food distribution has failed.	order 4|unluck 3|land 1	kill 10|landprod -10	
+4437	Totalitarian Collapse	2	Extreme laws and misfortune caused massive tax riots.	order 5|unluck 3|land 1	unrest 150|gold -500	
+4440	Industrial Revolution	-2	Hard work and luck led to a steam and gear breakthrough!	prod 4|luck 3|land 1	landprod 30|gold 1000|magicitem 3	
+4441	Industrial Catastrophe	2	High quotas and luck led to a massive factory explosion.	prod 4|unluck 3|land 1	kill 5|landprod -20|gold -500|unrest 40	
+4442	Arcane Assembly Line	-2	Mages integrated rituals into the province's workshops.	prod 3|magic 3|lab 1|land 1	magicitem 2|magicitem 2|1d6vis E	
+4443	Soul-Crushing Labor	2	Total magic drain has made work physically exhausting.	prod 3|drain 3|land 1	kill 2|unrest 30|landprod -10|disease 5	
+4444	The Eternal Bureaucracy	-1	In this land of death, even the spirits must pay their taxes.	death 3|order 3|land 1	gold 400|incdom 2|unrest -10	
+4445	Orderly Mausoleums	-1	Burials are organized into magically resonant grids.	death 4|order 3|land 1	2d6vis D|incdom 3	
+4446	Wild Overpopulation	1	Explosive growth in a lawless province led to filthy slums.	growth 4|chaos 3|land 1	unrest 50|disease 10|kill 5	
+4449	Clockwork Mana-Forge	-2	Industry and magic built a forge that draws from the aether.	prod 5|magic 3|lab 1|land 1	magicitem 4|4d6vis All|landprod 50	
+4450	Bandit Hegemony	1	A powerful bandit lord has established a shadow government.	unluck 4|chaos 3|land 1	newsite -1|unrest 50|landgold -10	
+4451	Crimson Blight	1	A virulent, unlucky plague has struck the province.	unluck 4|death 3|land 1	kill 20|disease 15|unrest 30	
+4452	Embezzlement Scandal	1	Administrators were caught in a massive embezzlement scheme.	unluck 4|order 3|land 1	gold -800|unrest 20|taxboost -100	
+4453	Collapsing Trade Route	1	Unlucky landslides permanently damaged local infrastructure.	unluck 4|land 1|minpop 200	landgold -20|taxboost -50|landprod -10	
+4455	Folk Hero Rebellion	1	A charismatic rebel emerged, claiming you are cursed.	unluck 4|chaos 3|land 1	com 55|16d6units 1312|unrest 80	
+4460	The Sea Swallows All	2	A catastrophic earthquake caused the coast to sink.	unluck 5|coast 1|capital 0	kill 90|fort 0|temple 0|lab 0	
+4461	Legion of the Damned	2	Extreme misfortune opened a portal releasing a Demon Lord.	unluck 5|chaos 3|land 1	com 821|4d6units 304|kill 20|unrest 150	
+4462	Economic Armageddon	2	Total societal collapse; the treasury has been looted.	unluck 5|order 3|land 1	gold -5000|landgold -50|landprod -50|unrest 200	
+4470	Great Deluge	1	Unprecedented rains caused a catastrophic flood.	unluck 4|land 1	kill 15|unrest 40|landprod -10	
+4474	Earth Shudders	2	A massive earthquake leveled the local infrastructure.	unluck 5|land 1|kill 30|fort 0|temple 0|lab 0|unrest 80	
+4476	Void's Hunger	2	A permanent rift opened; a Doom Horror arrived for every soul.	unluck 5|land 1|com 2213|kill 50|unrest 200|gemloss All	
+4478	Divine Erasure	2	Extreme misfortune purged your dominion from the land.	unluck 5|temple 1	temple 0|incdom -15|unrest 300	
+4483	Divine Windfall	-2	Gold found in every well and gems in every garden.	luck 5|land 1	gold 3000|2d6vis All	
+4489	Singularity of Power	-2	Extreme magic saturation allowed a celestial to join you.	magic 5|land 1|unique 1	nation -2|com 651|addequip 4	
+4490	Oracle's Gamble	-1	An oracle offers prosperity in exchange for wealth.	luck 2|land 1|minpop 50	decscale Misfortune|gold -200|unrest 10	
+4495	Broken Idol	-2	A rival idol was shattered, increasing your province's luck.	luck 3|land 1|temple 1	decscale2 Misfortune|incdom -4|unrest 20	
+4497	Alchemist's Tithe	-1	A lucky alchemist needs gems to boost provincial fortune.	luck 3|lab 1|magic 3	decscale2 Misfortune|gemloss All	
+4499	Hermit's Prophecy	-2	A hermit blessed your reign in exchange for artifacts.	luck 3|land 1|magic 3	decscale2 Misfortune|magicitem -1|magicitem -1	
+4506	Lich's Dark Bargain	2	An ancient lich offered services for a feast of souls.	unluck 3|death 3|unique 1	incscale2 Misfortune|nation -2|com 310|kill 10	
+4509	Catastrophic Ritual	2	A dangerous ritual permanently shattered the province's fate.	unluck 3|magic 3|lab 1	incscale3 Misfortune|gold 1500|magicitem 3	
+4513	Lich's Cursed Pact	1	A Lich offered services for the province's total life force.	unluck 5|magic 3|unique 1	nation -2|com 310|kill 99|incdom -5	
+4515	Likho's Dark Favor	-2	Misfortune is so heavy that the Likho has come to share it.	unluck 3|magic 3|unique 1|land 1	nation -2|com 1952|incscale Misfortune	
+4521	Gore Tide Prime	2	Arcane saturation summoned the Gore Tide to consume all.	magic 5|unluck 3|land 1	com 2213|kill 40|unrest 200|lab 0	
+4525	Scavenger Supreme	2	The Corpse Eater manifested to consume the population.	death 3|unluck 5|land 1	com 997|kill 75|unrest 120|temple 0	
+4530	Solar Desiccation	2	Intense Heat caused the fortress to collapse.	heat 5|unluck 3|fort 1	fort 0|kill 5|unrest 20	
+4532	Rotting Pillar	2	Necrotic energy dissolved the temple into black sludge.	death 5|unluck 3|temple 1	temple 0|incdom -5|kill 5	
+4534	Religious Schism	1	Extreme order and bad luck led to a violent schism.	order 4|unluck 3|temple 1	temple 0|unrest 100|incdom -4	
+4544	Great Mana Burn	2	Unlucky feedback drove researchers mad and destroyed the lab.	magic 4|unluck 3|lab 1|researcher 1	researchaff 4194304|lab 0|gemloss All	
+4547	Chaos Vortex	1	A tornado of chaotic energy destroyed the fortress.	chaos 3|unluck 3|fort 1	fort 0|unrest 100|kill 5	
+4549	Doctrine of the Void	1	In unmagic, unlucky land, the temple was desecrated.	drain 4|unluck 3|temple 1	temple 0|incdom -6|unrest 50	

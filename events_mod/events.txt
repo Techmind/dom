@@ -1,0 +1,56 @@
+id	name	rarity	description	requirements	effects	end
+4000	Magic Overflowing	-2	Magic is overflowing the boundaries of this realm. The air crystallizes into magic.	pop0ok 1|magic 4|land 1	4d6vis A	
+4001	Arcane Surge	-2	A surge of absolute magic has overwhelmed the realm, leaving behind clusters of pure aether.	pop0ok 1|magic 5|land 1	5d6vis S	
+4002	Mythical Beast Slain	-2	A mythical beast of pure mana has been slain. It leaves behind a wealth of magical gems!	magic 4|land 1	2d6vis All	
+4003	Astral Behemoth	-2	An astral behemoth has been slain. Its crystalline heart shattered into a staggering amount of gems!	magic 5|land 1	3d6vis All	
+4004	Potent Artifact	-1	A potent artifact humming with power was found by prospectors.	maxunrest 50|magic 4|luck 1	magicitem 3|1d6vis S	
+4005	Legendary Discovery	-1	An artifact of legends has been unearthed from a reality rift.	maxunrest 50|magic 5|luck 1	magicitem 4|1d6vis S	
+4006	Arcane Vault Found	-1	A magical anomaly unearthed a hidden vault containing artifacts of forgotten power.	magic 4|luck 2|land 1	magicitem 4	
+4007	Reality Rift Artifacts	-1	Reality warped, leaving behind artifacts of immense, forgotten power.	magic 5|luck 2|land 1	magicitem 4|magicitem 3	
+4008	Pantokrator Armory	-2	Fortune revealed the lost armory of a Pantokrator.	magic 4|luck 3|turn 15	magicitem 4|magicitem 3|2d6vis All	
+4009	Lost Vault of Archmage	-2	Extreme fortune bestowed upon you the lost vault of an Archmage.	magic 5|luck 3|turn 15	gold 4000|magicitem 4|magicitem 4|3d6vis All	
+4010	Anti-Magic Hysteria	1	The populace has formed a fanatical mob and burned the lab to purge magic.	unmagic 4|minpop 50|lab 1	lab 0|unrest 80|kill 5	
+4011	Void Collapse	2	The absence of magic caused reality to collapse in the lab, destroying all magic items.	unmagic 5|pop0ok 1|lab 1	lab 0|gemloss All|magicitem -1|magicitem -1	
+4012	Meteor Strike	2	A massive meteor struck, destroying the province's infrastructure.	unluck 5|pop0ok 1|land 1	kill 50|gold -5000|fort 0|temple 0|unrest 200	
+4013	Rift in Fate	2	A total drain of mystical wards allowed a terror to feed on the province.	unluck 4|unmagic 4|land 1	unrest 150|com 308|kill 20	
+4014	Absolute Desolation	2	An anti-magic singularity has left nothing but ruin and madness.	unluck 5|unmagic 5|land 1	kill 75|gold -10000|lab 0|temple 0|fort 0|unrest 300	
+4020	Neglected Defenses	2	The militia is apathetic. Guards sleep and walls degrade. Bandits sacked the armory.	lazy 3|unluck 3|land 1	defence -15|unrest 20|gold -200	
+4021	Economic Apathy	2	Lethargy has overtaken the bureaucracy. Tax collectors aren't working.	lazy 4|unluck 3|land 1	taxboost -100|landgold -10|landprod -10	
+4022	Sloppy Warding	2	Mages skipped ritual steps; a void horror slipped through the weakened barriers.	lazy 4|unluck 4|lab 1|land 1	lab 0|kill 2|unrest 30|com 308	
+4023	Crumbling Foundations	2	Extreme neglect has caused the fortress foundations to collapse.	lazy 5|unluck 4|fort 1|land 1	fort 0|kill 2|unrest 30	
+4024	Great Lethargy	2	People refuse to work or eat and are dying in their sleep from extreme apathy.	lazy 5|unluck 5|land 1	kill 20|landprod -20|landgold -20|unrest 50	
+4025	Accidental Artifact	-2	A farmer fell asleep and tripped over a root, unearthing an ancient artifact.	lazy 3|luck 3|land 1	gold 300|magicitem 2|1d6vis E	
+4026	Treasury Reveal	-2	A crumbling wall collapsed on its own, revealing a long-forgotten treasury.	lazy 4|luck 3|land 1	gold 800|magicitem 3	
+4027	Magical Beast Walk-in	-2	A magical beast wandered into town and died, leaving behind a hoard.	lazy 4|luck 4|land 1	gold 1000|magicitem 3|3d6vis N	
+4028	Slacker Alchemy	-2	Researchers mixed reagents haphazardly, causing an explosion that crystallized into pearls.	lazy 5|luck 4|lab 1|land 1	3d6vis S|magicitem 3	
+4029	Divine Pity	-2	A celestial being, baffled by the province's laziness, left legendary artifacts as a pity-gift.	lazy 5|luck 5|land 1	gold 2000|magicitem 4|magicitem 3	
+4030	Molten Forge	-1	Heat and Order have allowed for the creation of masterful fire-tempered steel.	heat 3|order 3|land 1	gold 400|magicitem 2	
+4031	Cryo-Architecture	-1	Cold has been channeled into structured ice-fortifications.	cold 3|order 3|land 1	fort 3	
+4032	Volcanic Spawning	2	Extreme heat has forced fire spirits to emerge in the province.	heat 3|magic 3|land 1	com 3716|1d6units 3716	
+4033	Ice-Crafters	2	Magical cold has manifested sentient ice-sculptors that demand tribute.	cold 3|magic 3|land 1	unrest 20|4d6units 1202	
+4034	Infernal Heat	2	Heat and Death create a stifling, necrotic miasma.	heat 3|death 3|land 1	kill 5|disease 5	
+4035	Glacial Grave	2	Cold preserves the dead, causing them to animate and haunt the living.	cold 3|death 3|land 1	unrest 40|kill 2	
+4036	Searing Industry	-1	Geothermal heat boom.	heat 3|prod 3|land 1	landprod 20|landgold 10	
+4037	Frozen Assets	2	Cold has halted river navigation and trade.	cold 3|prod 3|land 1	landprod -30|gold -200	
+4038	Infernal Turmoil	2	Heat and Turmoil summon a demon lord to demand sacrifices.	heat 3|chaos 3|land 1	kill 10|unrest 30	
+4039	Arctic Anarchy	2	Cold has driven the populace to violent rioting and looting.	cold 3|chaos 3|land 1	unrest 50|gold -300	
+4040	Solar Flare	2	Solar magic ignited the air.	heat 4|land 1	kill 10|unrest 20	
+4041	Infernal Conflagration	2	Extreme heat has turned the province into a fire elemental breeding ground.	heat 5|land 1	kill 20|com 3716|unrest 60	
+4042	Living Glass	-1	Extreme heat melted sand into valuable art.	heat 4|prod 2|land 1	gold 500|landprod 10	
+4043	Sun's Wrath	2	Heat turned crops to ash.	heat 5|growth -2|land 1	landprod -50|unrest 40	
+4044	Eternal Blizzard	2	Magical blizzard froze farming.	cold 4|land 1	landprod -40|kill 5	
+4045	Glacial Awakening	2	Cold woke horrors from permafrost.	cold 5|death 2|land 1	kill 15|com 1201|unrest 50	
+4046	Frost-Gem Deposits	-1	Cold concentrated minerals into gems.	cold 4|magic 2|land 1	2d6vis W|1d6vis A	
+4047	Absolute Zero	2	Reality froze solid.	cold 5|land 1	kill 60|landprod -100	
+4048	Sun-Fire Cult	1	Heat gave rise to a fanatical sun cult.	heat 4|dominion 3	incdom 3|unrest 20	
+4049	Ice-Forged Steel	-1	Cold tempered superior steel.	cold 4|prod 2|land 1	magicitem 2|gold 300	
+4050	Bountiful Order	-1	Order maximized fertility.	growth 3|order 3|land 1	gold 300|landprod 10	
+4051	Disciplined Harvest	-1	Strict quotas led to record yields.	growth 3|order 2|land 1	landprod 15	
+4052	Excessive Surplus	-2	Efficient administration created a massive surplus.	growth 4|order 4|land 1	landgold 15|taxboost 50	
+4053	Golden Fields	-2	Growth and Order transformed the province into an empire breadbasket.	growth 5|order 5|land 1	landprod 30|landgold 20	
+4054	Tainted Harvest	1	Growth drew dark spirits.	growth 3|drain 3|land 1	gold 100|gemloss All	
+4055	Corrupted Abundance	1	Crops drain magic from soil.	growth 4|drain 4|land 1	gold 200|gemloss All	
+4056	Festering Orchard	2	Necrotic orchard.	growth 4|drain 5|land 1	gold 50|disease 10|gemloss All	
+4057	The Price of Life	2	Fertility consumes all magic.	growth 5|drain 5|land 1	gold 500|gemloss All	
+4058	Lush Overgrowth	-1	Soil yields gold.	growth 4|land 1	landgold 10	
+4059	Verdant Fury	1	Nature fights back.	growth 5|land 1	unrest 20|landprod -10
