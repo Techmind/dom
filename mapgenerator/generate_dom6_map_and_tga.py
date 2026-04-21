@@ -1,445 +1,514 @@
 #!/usr/bin/env python3
 """
-Generate a Dominions 6 west-east wrap map as both:
-- a .map file with terrain + neighbour data
-- a flat color-coded .tga image suitable as a first-pass map graphic
+Generate a Dominions 6 .map + .tga debug map.
 
-Current image strategy
-----------------------
-- Each province is drawn as a colored rectangular cell.
-- A single 1x1 pure-white pixel is placed at the province center so Dominions
-  can detect province locations when creating/editing the map.
-- No other pixel is allowed to be pure white, because every white pixel would
-  be treated as a separate province marker.
-- Black borders separate province cells for easy later import into the editor.
+Defaults:
+- generated_ring_grid.map
+- generated_ring_grid.tga
 
-This is intentionally ugly-but-usable. The logical topology is the important
-part; visuals can be replaced later without changing province ids or links.
+Layout rules:
+- configurable player count
+- each player gets a 4x4 block
+- inside each 4x4 block, coordinates are row-major in image space:
+    row 0: p1_0_0 p1_1_0 p1_2_0 p1_3_0
+    row 1: p1_0_1 p1_1_1 p1_2_1 p1_3_1
+    row 2: p1_0_2 p1_1_2 p1_2_2 p1_3_2
+    row 3: p1_0_3 p1_1_3 p1_2_3 p1_3_3
+- start province is inside the 2x2 center
+- west-east player ring wrap:
+  right edge of player N connects to left edge of player N+1
+- internal neighbours are 4-directional by default
+- output image is a debug TGA with flat colors
+- per-block role layout is slightly randomized
+- start and thrones are never neighbours (including diagonals)
+- 1 sea province is included in each 4x4 block
+- colors are by province TYPE/role, not by player
+
+Important:
+- #imagefile is written WITHOUT quotes
+- province names are written with #landname for debugging
+- province IDs are assigned in image-scan order matching the observed
+  Dominions behavior: bottom-to-top, right-to-left
 """
 
-from __future__ import annotations
-
 import argparse
-from dataclasses import dataclass, field
-from pathlib import Path
-from typing import Dict, Iterable, List, Set, Tuple
+import math
+import random
+import struct
+from dataclasses import dataclass
 
-
-# Dominions 6 terrain mask bits from the manual.
+# -----------------------------
+# Dominions terrain bitmasks
+# -----------------------------
 SMALL = 1
 LARGE = 2
+SEA = 4
+FRESHWATER = 8
 SWAMP = 32
 WASTE = 64
 FARM = 256
 CAVE = 4096
-MOUNTAINS = 8388608
+HOLY_SITE = 4194304
+MOUNTAIN = 8388608
 GOOD_THRONE = 33554432
 GOOD_START = 67108864
-HOLY_SITE = 4194304
+
+# -----------------------------
+# Layout constants
+# -----------------------------
+BLOCK = 4
+
+CELL_W = 56
+CELL_H = 56
+INTRA_GAP = 6
+
+BLOCK_GAP_X = 72
+BLOCK_GAP_Y = 72
+MARGIN = 30
+
+MAP_TITLE = "Generated Ring Grid"
+
+ROLE_COLORS = {
+    "plain": (120, 170, 90),
+    "farm": (190, 190, 70),
+    "mountain": (120, 120, 120),
+    "cave": (90, 70, 60),
+    "swamp": (60, 110, 80),
+    "waste": (170, 130, 80),
+    "sea": (70, 120, 200),
+    "start": (60, 180, 220),
+    "throne": (180, 80, 180),
+    "holy": (220, 220, 220),
+}
 
 
 @dataclass
 class Province:
     pid: int
-    player_idx: int
-    local_x: int
-    local_y: int
-    global_x: int
+    player: int
     x: int
     y: int
     left: int
     top: int
     right: int
     bottom: int
-    tags: Set[str] = field(default_factory=set)
-    neighbours: Set[int] = field(default_factory=set)
+    role: str
+    terrain: int
 
-    def terrain_mask(self) -> int:
-        mask = SMALL
-        if "large" in self.tags:
-            mask |= LARGE
-            mask &= ~SMALL
-        if "swamp" in self.tags:
-            mask |= SWAMP
-        if "waste" in self.tags:
-            mask |= WASTE
-        if "farm" in self.tags:
-            mask |= FARM
-        if "cave" in self.tags:
-            mask |= CAVE
-        if "mountain" in self.tags:
-            mask |= MOUNTAINS
-        if "throne" in self.tags:
-            mask |= GOOD_THRONE
-        if "start" in self.tags:
-            mask |= GOOD_START
-        if "holy" in self.tags:
-            mask |= HOLY_SITE
-        return mask
-
-    def color_key(self) -> str:
-        # Priority order for temporary debug coloring.
-        for key in ("start", "throne", "holy", "cave", "swamp", "waste", "farm", "mountain"):
-            if key in self.tags:
-                return key
-        return "plain"
+    @property
+    def name(self) -> str:
+        return f"p{self.player}_{self.x}_{self.y}"
 
 
-def local_id(x: int, y: int) -> int:
-    return y * 4 + x
+def sanitize_imagefile_name(imagefile: str) -> str:
+    imagefile = imagefile.strip().strip('"').strip("'")
+    if " " in imagefile:
+        raise ValueError("Dominions map filenames should not contain spaces.")
+    return imagefile
 
 
-def make_player_template() -> Dict[int, Set[str]]:
-    template: Dict[int, Set[str]] = {i: set() for i in range(16)}
+def tga_write(path: str, width: int, height: int, pixels: list[list[tuple[int, int, int]]]) -> None:
+    """Write uncompressed 24-bit TGA."""
+    with open(path, "wb") as f:
+        header = struct.pack(
+            "<BBBHHBHHHHBB",
+            0,   # id length
+            0,   # color map type
+            2,   # image type = uncompressed true-color
+            0, 0, 0,  # color map spec
+            0, 0,     # x/y origin
+            width,
+            height,
+            24,  # pixel depth
+            0,   # image descriptor
+        )
+        f.write(header)
 
-    template[local_id(1, 1)].add("start")
-
-    # Thrones must not connect to the start province.
-    template[local_id(3, 0)].update({"throne", "mountain"})
-    template[local_id(3, 3)].update({"throne", "large"})
-
-    template[local_id(0, 3)].add("holy")
-
-    template[local_id(0, 0)].add("farm")
-    template[local_id(1, 0)].add("farm")
-    template[local_id(2, 0)].add("mountain")
-    template[local_id(0, 1)].add("cave")
-    template[local_id(2, 1)].add("waste")
-    template[local_id(3, 1)].add("large")
-    template[local_id(0, 2)].add("swamp")
-
-    return template
+        # TGA pixel rows are written bottom-up
+        for y in range(height - 1, -1, -1):
+            row = pixels[y]
+            for x in range(width):
+                r, g, b = row[x]
+                f.write(bytes((b, g, r)))
 
 
-def build_provinces(players: int, cell_w: int, cell_h: int, margin: int, row_gap: int) -> List[Province]:
-    provinces: List[Province] = []
-    template = make_player_template()
-    pid = 1
+def choose_macro_cols(players: int, macro_cols: int | None) -> int:
+    if macro_cols is not None and macro_cols > 0:
+        return macro_cols
+    return max(1, math.ceil(math.sqrt(players)))
 
-    for p in range(players):
-        for y in range(4):
-            for x in range(4):
-                gx = p * 4 + x
-                left = margin + gx * cell_w
-                top = margin + y * (cell_h + row_gap)
-                right = left + cell_w - 1
-                bottom = top + cell_h - 1
-                cx = (left + right) // 2
-                cy = (top + bottom) // 2
+
+def is_neighbour(a: tuple[int, int], b: tuple[int, int]) -> bool:
+    """Chebyshev adjacency: includes diagonals."""
+    return max(abs(a[0] - b[0]), abs(a[1] - b[1])) <= 1
+
+
+def choose_non_neighbour_cells(
+    candidates: list[tuple[int, int]],
+    forbidden: tuple[int, int],
+    count: int,
+    rng: random.Random,
+) -> list[tuple[int, int]]:
+    pool = [c for c in candidates if not is_neighbour(c, forbidden)]
+    rng.shuffle(pool)
+    if len(pool) < count:
+        raise ValueError("Not enough non-neighbour cells available.")
+    return pool[:count]
+
+
+def random_role_layout(rng: random.Random) -> dict[tuple[int, int], tuple[str, int]]:
+    """
+    Slightly random per 4x4 block.
+
+    Guarantees:
+    - 1 start in center 2x2
+    - 2 throne provinces
+    - start is NOT adjacent to either throne
+    - 1 holy province
+    - 2 farms
+    - 2 mountain provinces (one large)
+    - 1 cave
+    - 1 swamp
+    - 1 waste
+    - 1 sea
+    - 1 additional large plain
+    - at least 1 explicit small plain
+    - everything else defaults to small plain
+    """
+    all_cells = [(x, y) for y in range(BLOCK) for x in range(BLOCK)]
+    center_2x2 = [(1, 1), (2, 1), (1, 2), (2, 2)]
+
+    start_cell = rng.choice(center_2x2)
+
+    throne_cells = choose_non_neighbour_cells(
+        [c for c in all_cells if c != start_cell],
+        forbidden=start_cell,
+        count=2,
+        rng=rng,
+    )
+
+    used = {start_cell, *throne_cells}
+
+    def pick_one(cands: list[tuple[int, int]]) -> tuple[int, int]:
+        pool = [c for c in cands if c not in used]
+        if not pool:
+            raise ValueError("No free cells left for role placement.")
+        cell = rng.choice(pool)
+        used.add(cell)
+        return cell
+
+    def pick_many(cands: list[tuple[int, int]], n: int) -> list[tuple[int, int]]:
+        pool = [c for c in cands if c not in used]
+        if len(pool) < n:
+            raise ValueError("Not enough free cells left for role placement.")
+        picks = rng.sample(pool, n)
+        used.update(picks)
+        return picks
+
+    layout: dict[tuple[int, int], tuple[str, int]] = {}
+
+    layout[start_cell] = ("start", SMALL | GOOD_START)
+    for cell in throne_cells:
+        layout[cell] = ("throne", SMALL | GOOD_THRONE)
+
+    # Holy: prefer center-ish, but any free cell is fine
+    holy_pref = [(1, 1), (2, 1), (1, 2), (2, 2), (1, 0), (2, 0), (1, 3), (2, 3)]
+    holy_cell = pick_one(holy_pref + all_cells)
+    layout[holy_cell] = ("holy", SMALL | HOLY_SITE)
+
+    # 2 farms: prefer outer rows
+    farm_pref = [(0, 0), (1, 0), (2, 0), (3, 0), (0, 3), (1, 3), (2, 3), (3, 3)]
+    for cell in pick_many(farm_pref + all_cells, 2):
+        layout[cell] = ("farm", SMALL | FARM)
+
+    # 2 mountains: prefer edges; one is large
+    mountain_pref = [(3, 0), (3, 1), (3, 2), (3, 3), (0, 0), (0, 1), (0, 2), (0, 3)]
+    mountain_cells = pick_many(mountain_pref + all_cells, 2)
+    layout[mountain_cells[0]] = ("mountain", SMALL | MOUNTAIN)
+    layout[mountain_cells[1]] = ("mountain", LARGE | MOUNTAIN)
+
+    # Cave / swamp / waste / sea: prefer edges
+    edge_pref = [(0, 1), (0, 2), (3, 1), (3, 2), (1, 0), (2, 0), (1, 3), (2, 3)]
+    cave_cell = pick_one(edge_pref + all_cells)
+    layout[cave_cell] = ("cave", SMALL | CAVE)
+
+    swamp_cell = pick_one(edge_pref + all_cells)
+    layout[swamp_cell] = ("swamp", SMALL | SWAMP)
+
+    waste_cell = pick_one(edge_pref + all_cells)
+    layout[waste_cell] = ("waste", SMALL | WASTE)
+
+    sea_cell = pick_one(edge_pref + all_cells)
+    layout[sea_cell] = ("sea", SMALL | SEA)
+
+    # 1 additional large plain
+    large_plain_cell = pick_one(all_cells)
+    layout[large_plain_cell] = ("plain", LARGE)
+
+    # 1 guaranteed explicit small plain
+    plain_cell = pick_one(all_cells)
+    layout[plain_cell] = ("plain", SMALL)
+
+    return layout
+
+
+def build_provinces(players: int, macro_cols: int, seed: int) -> list[Province]:
+    provinces: list[Province] = []
+    master_rng = random.Random(seed)
+
+    for player_index in range(players):
+        player = player_index + 1
+        block_col = player_index % macro_cols
+        block_row = player_index // macro_cols
+
+        block_left = MARGIN + block_col * (BLOCK * (CELL_W + INTRA_GAP) + BLOCK_GAP_X)
+        block_top = MARGIN + block_row * (BLOCK * (CELL_H + INTRA_GAP) + BLOCK_GAP_Y)
+
+        block_rng = random.Random(master_rng.randint(0, 10**9))
+        roles = random_role_layout(block_rng)
+
+        for y in range(BLOCK):
+            for x in range(BLOCK):
+                # IMPORTANT: row-major image layout, no Y flip
+                left = block_left + x * (CELL_W + INTRA_GAP)
+                top = block_top + y * (CELL_H + INTRA_GAP)
+                right = left + CELL_W
+                bottom = top + CELL_H
+
+                role, terrain = roles.get((x, y), ("plain", SMALL))
+
                 provinces.append(
                     Province(
-                        pid=pid,
-                        player_idx=p,
-                        local_x=x,
-                        local_y=y,
-                        global_x=gx,
-                        x=cx,
-                        y=cy,
+                        pid=0,  # assigned later in observed image scan order
+                        player=player,
+                        x=x,
+                        y=y,
                         left=left,
                         top=top,
                         right=right,
                         bottom=bottom,
-                        tags=set(template[local_id(x, y)]),
+                        role=role,
+                        terrain=terrain,
                     )
                 )
-                pid += 1
 
     return provinces
 
 
-def grid_lookup(provinces: Iterable[Province]) -> Dict[Tuple[int, int], Province]:
-    return {(p.global_x, p.local_y): p for p in provinces}
+def assign_ids_by_image_scan(provinces: list[Province]) -> list[Province]:
+    """
+    Match the observed Dominions behavior:
+    provinces numbered from bottom row upward,
+    and within a row from right to left.
+    """
+    sorted_provs = sorted(provinces, key=lambda p: (-p.top, p.left))
+    for i, p in enumerate(sorted_provs, start=1):
+        p.pid = i
+    return sorted_provs
 
 
-def add_neighbour_edges(provinces: List[Province], players: int) -> None:
-    total_cols = players * 4
-    lut = grid_lookup(provinces)
+def build_neighbours(
+    provinces: list[Province],
+    players: int,
+    diagonal_neighbours: bool = False
+) -> list[tuple[int, int]]:
+    by_player: dict[int, dict[tuple[int, int], int]] = {}
+    for p in provinces:
+        by_player.setdefault(p.player, {})
+        by_player[p.player][(p.x, p.y)] = p.pid
+
+    if diagonal_neighbours:
+        dirs = [
+            (-1, 0), (1, 0), (0, -1), (0, 1),
+            (-1, -1), (-1, 1), (1, -1), (1, 1),
+        ]
+    else:
+        dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+
+    neighbour_pairs: set[tuple[int, int]] = set()
+
+    # Internal neighbours inside each 4x4 block
+    for player in range(1, players + 1):
+        for y in range(BLOCK):
+            for x in range(BLOCK):
+                a = by_player[player][(x, y)]
+                for dx, dy in dirs:
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < BLOCK and 0 <= ny < BLOCK:
+                        b = by_player[player][(nx, ny)]
+                        neighbour_pairs.add(tuple(sorted((a, b))))
+
+    # Player ring wrap: right edge of player N to left edge of player N+1
+    for player in range(1, players + 1):
+        other = player + 1
+        if other > players:
+            other = 1
+        for y in range(BLOCK):
+            a = by_player[player][(3, y)]
+            b = by_player[other][(0, y)]
+            neighbour_pairs.add(tuple(sorted((a, b))))
+
+    return sorted(neighbour_pairs)
+
+
+def write_map(
+    path: str,
+    imagefile: str,
+    provinces: list[Province],
+    neighbours: list[tuple[int, int]],
+    width: int,
+    height: int
+) -> None:
+    imagefile = sanitize_imagefile_name(imagefile)
+
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(f'#dom2title "{MAP_TITLE}"\n')
+        f.write(f"#imagefile {imagefile}\n")
+        f.write(f"#mapsize {width} {height}\n")
+        f.write("#domversion 600\n")
+        f.write('\n')
+        f.write('#description "Generated 4x4-per-player ring grid debug map."\n')
+        f.write("\n")
+
+        for p in provinces:
+            f.write(f"#terrain {p.pid} {p.terrain}\n")
+
+        f.write("\n")
+
+        for p in provinces:
+            f.write(f'#landname {p.pid} "{p.name}"\n')
+
+        f.write("\n")
+
+        for p in provinces:
+            if p.role == "start":
+                f.write(f"#start {p.pid}\n")
+
+        f.write("\n")
+
+        for a, b in neighbours:
+            f.write(f"#neighbour {a} {b}\n")
+
+
+def draw_debug_tga(path: str, provinces: list[Province]) -> tuple[int, int]:
+    width = max(p.right for p in provinces) + MARGIN
+    height = max(p.bottom for p in provinces) + MARGIN
+
+    pixels: list[list[tuple[int, int, int]]] = [
+        [(0, 0, 0) for _ in range(width)]
+        for _ in range(height)
+    ]
 
     for p in provinces:
-        for dy in (-1, 0, 1):
-            for dx in (-1, 0, 1):
-                if dx == 0 and dy == 0:
-                    continue
-                nx = (p.global_x + dx) % total_cols
-                ny = p.local_y + dy
-                if not (0 <= ny < 4):
-                    continue
-                q = lut[(nx, ny)]
-                if q.pid != p.pid:
-                    p.neighbours.add(q.pid)
-                    q.neighbours.add(p.pid)
+        fill = ROLE_COLORS.get(p.role, ROLE_COLORS["plain"])
 
+        for yy in range(p.top, p.bottom):
+            row = pixels[yy]
+            for xx in range(p.left, p.right):
+                row[xx] = fill
 
-def validate(provinces: List[Province], players: int) -> None:
-    required_counts = {
-        "mountain": 2,
-        "cave": 1,
-        "swamp": 1,
-        "waste": 1,
-        "farm": 2,
-        "large": 2,
-        "start": 1,
-        "throne": 2,
-        "holy": 1,
-    }
+        # black border
+        for xx in range(p.left, p.right):
+            pixels[p.top][xx] = (0, 0, 0)
+            pixels[p.bottom - 1][xx] = (0, 0, 0)
 
-    by_player: Dict[int, List[Province]] = {p: [] for p in range(players)}
-    for prov in provinces:
-        by_player[prov.player_idx].append(prov)
+        for yy in range(p.top, p.bottom):
+            pixels[yy][p.left] = (0, 0, 0)
+            pixels[yy][p.right - 1] = (0, 0, 0)
 
-    for player_idx, plist in by_player.items():
-        counts = {k: 0 for k in required_counts}
-        plain_count = 0
-        start_prov = None
-        throne_provs: List[Province] = []
+        # large province inset border
+        if p.terrain & LARGE:
+            inset = 5
+            if p.left + inset < p.right - inset and p.top + inset < p.bottom - inset:
+                for xx in range(p.left + inset, p.right - inset):
+                    pixels[p.top + inset][xx] = (20, 20, 20)
+                    pixels[p.bottom - inset - 1][xx] = (20, 20, 20)
+                for yy in range(p.top + inset, p.bottom - inset):
+                    pixels[yy][p.left + inset] = (20, 20, 20)
+                    pixels[yy][p.right - inset - 1] = (20, 20, 20)
 
-        for p in plist:
-            tagged = False
-            for tag in required_counts:
-                if tag in p.tags:
-                    counts[tag] += 1
-                    tagged = True
-            if "start" in p.tags:
-                start_prov = p
-            if "throne" in p.tags:
-                throne_provs.append(p)
-            if not tagged:
-                plain_count += 1
+        # one pure-white province center pixel only
+        cx = (p.left + p.right) // 2
+        cy = (p.top + p.bottom) // 2
+        pixels[cy][cx] = (255, 255, 255)
 
-        for tag, expected in required_counts.items():
-            if counts[tag] != expected:
-                raise ValueError(f"Player {player_idx + 1}: expected {expected} {tag}, got {counts[tag]}")
+        # optional tiny non-white marker accents
+        if p.role == "start":
+            for dx in (-1, 1):
+                if 0 <= cx + dx < width:
+                    pixels[cy][cx + dx] = (0, 255, 255)
+            for dy in (-1, 1):
+                if 0 <= cy + dy < height:
+                    pixels[cy + dy][cx] = (0, 255, 255)
 
-        if plain_count < 1:
-            raise ValueError(f"Player {player_idx + 1}: expected at least 1 plain province")
+        elif p.role == "throne":
+            for dx, dy in [(-1, -1), (-1, 1), (1, -1), (1, 1)]:
+                if 0 <= cx + dx < width and 0 <= cy + dy < height:
+                    pixels[cy + dy][cx + dx] = (255, 0, 255)
 
-        assert start_prov is not None
-        for throne in throne_provs:
-            if throne.pid in start_prov.neighbours:
-                raise ValueError(
-                    f"Player {player_idx + 1}: throne province {throne.pid} is connected to start {start_prov.pid}"
-                )
+        elif p.role == "holy":
+            if cy - 1 >= 0:
+                pixels[cy - 1][cx] = (255, 255, 180)
+            if cy + 1 < height:
+                pixels[cy + 1][cx] = (255, 255, 180)
 
+        elif p.role == "sea":
+            # tiny darker blue cross so sea is easy to spot in debug image
+            dark = (30, 70, 150)
+            if cx - 1 >= 0:
+                pixels[cy][cx - 1] = dark
+            if cx + 1 < width:
+                pixels[cy][cx + 1] = dark
+            if cy - 1 >= 0:
+                pixels[cy - 1][cx] = dark
+            if cy + 1 < height:
+                pixels[cy + 1][cx] = dark
 
-def compute_canvas(players: int, cell_w: int, cell_h: int, margin: int, row_gap: int) -> Tuple[int, int]:
-    width = margin * 2 + players * 4 * cell_w
-    height = margin * 2 + 4 * cell_h + 3 * row_gap
+    tga_write(path, width, height, pixels)
     return width, height
 
 
-def map_header(title: str, imagefile: str, width: int, height: int) -> List[str]:
-    return [
-        f'#dom2title "{title}"',
-        '#domversion 600',
-        f'#imagefile "{imagefile}"',
-        f'#mapsize {width} {height}',
-        '#description "Generated west-east wrap map with 4x4 blocks per player."',
-        '#nodeepcaves',
-        '#nodeepchoice',
-        '#maptextcol 1.0 1.0 1.0 1.0',
-        '#mapdomcol 255 255 255 80',
-        '',
-        '-- Province centers for later image generation:',
-    ]
-
-
-def emit_map(provinces: List[Province], title: str, imagefile: str, width: int, height: int) -> str:
-    lines = map_header(title, imagefile, width, height)
-
-    for p in provinces:
-        tag_text = ", ".join(sorted(p.tags)) if p.tags else "plain"
-        lines.append(
-            f'-- Province {p.pid}: center=({p.x},{p.y}) rect=({p.left},{p.top})-({p.right},{p.bottom}) '
-            f'player={p.player_idx + 1} local=({p.local_x},{p.local_y}) tags=[{tag_text}]'
-        )
-
-    lines.append('')
-    lines.append('-- Terrain definitions')
-    for p in provinces:
-        lines.append(f'#terrain {p.pid} {p.terrain_mask()}')
-
-    lines.append('')
-    lines.append('-- Start locations')
-    for p in provinces:
-        if "start" in p.tags:
-            lines.append(f'#start {p.pid}')
-
-    lines.append('')
-    lines.append('-- Province names')
-    for p in provinces:
-        lines.append(f'#landname {p.pid} "P{p.player_idx + 1}_{p.local_x}_{p.local_y}"')
-
-    lines.append('')
-    lines.append('-- Neighbor links')
-    emitted: Set[Tuple[int, int]] = set()
-    for p in provinces:
-        for n in sorted(p.neighbours):
-            edge = (min(p.pid, n), max(p.pid, n))
-            if edge not in emitted:
-                lines.append(f'#neighbour {edge[0]} {edge[1]}')
-                emitted.add(edge)
-
-    lines.append('')
-    lines.append('-- End of generated map')
-    return "\n".join(lines) + "\n"
-
-
-class Image:
-    def __init__(self, width: int, height: int, bg: Tuple[int, int, int]) -> None:
-        self.width = width
-        self.height = height
-        self.pixels: List[List[Tuple[int, int, int]]] = [
-            [bg for _ in range(width)] for _ in range(height)
-        ]
-
-    def put(self, x: int, y: int, color: Tuple[int, int, int]) -> None:
-        if 0 <= x < self.width and 0 <= y < self.height:
-            self.pixels[y][x] = color
-
-    def fill_rect(self, left: int, top: int, right: int, bottom: int, color: Tuple[int, int, int]) -> None:
-        left = max(0, left)
-        top = max(0, top)
-        right = min(self.width - 1, right)
-        bottom = min(self.height - 1, bottom)
-        for y in range(top, bottom + 1):
-            row = self.pixels[y]
-            for x in range(left, right + 1):
-                row[x] = color
-
-    def rect_outline(self, left: int, top: int, right: int, bottom: int, color: Tuple[int, int, int], thickness: int = 1) -> None:
-        for t in range(thickness):
-            l, r = left + t, right - t
-            u, d = top + t, bottom - t
-            if l > r or u > d:
-                return
-            for x in range(l, r + 1):
-                self.put(x, u, color)
-                self.put(x, d, color)
-            for y in range(u, d + 1):
-                self.put(l, y, color)
-                self.put(r, y, color)
-
-    def save_tga(self, path: Path) -> None:
-        header = bytearray(18)
-        header[2] = 2  # uncompressed true-color image
-        header[12] = self.width & 0xFF
-        header[13] = (self.width >> 8) & 0xFF
-        header[14] = self.height & 0xFF
-        header[15] = (self.height >> 8) & 0xFF
-        header[16] = 24  # bits per pixel
-        header[17] = 0x20  # top-left origin
-
-        with path.open("wb") as f:
-            f.write(header)
-            for y in range(self.height):
-                for x in range(self.width):
-                    r, g, b = self.pixels[y][x]
-                    f.write(bytes((b, g, r)))
-
-
-def province_fill_color(province: Province) -> Tuple[int, int, int]:
-    base = {
-        "plain": (170, 150, 110),
-        "farm": (210, 180, 80),
-        "mountain": (120, 120, 120),
-        "cave": (70, 70, 95),
-        "swamp": (80, 120, 70),
-        "waste": (185, 125, 70),
-        "holy": (200, 170, 210),
-        "throne": (170, 90, 170),
-        "start": (90, 170, 220),
-    }[province.color_key()]
-
-    # Give each player a subtle tint so the block structure is visible.
-    player_tints = [
-        (18, 0, 0),
-        (0, 18, 0),
-        (0, 0, 18),
-        (18, 18, 0),
-        (18, 0, 18),
-        (0, 18, 18),
-        (12, 8, 0),
-        (0, 12, 8),
-    ]
-    tint = player_tints[province.player_idx % len(player_tints)]
-    return tuple(min(250, c + t) for c, t in zip(base, tint))
-
-
-def draw_map_image(width: int, height: int, provinces: List[Province], players: int) -> Image:
-    img = Image(width, height, bg=(35, 35, 40))
-    black = (0, 0, 0)
-    white = (255, 255, 255)
-    player_sep = (40, 40, 55)
-
-    # Slight player block backplates.
-    for p in range(players):
-        left = min(pr.left for pr in provinces if pr.player_idx == p) - 6
-        top = min(pr.top for pr in provinces if pr.player_idx == p) - 6
-        right = max(pr.right for pr in provinces if pr.player_idx == p) + 6
-        bottom = max(pr.bottom for pr in provinces if pr.player_idx == p) + 6
-        img.fill_rect(left, top, right, bottom, player_sep)
-
-    for prov in provinces:
-        fill = province_fill_color(prov)
-        img.fill_rect(prov.left, prov.top, prov.right, prov.bottom, fill)
-        img.rect_outline(prov.left, prov.top, prov.right, prov.bottom, black, thickness=2)
-
-        # Large provinces get an extra inset outline.
-        if "large" in prov.tags:
-            img.rect_outline(prov.left + 10, prov.top + 10, prov.right - 10, prov.bottom - 10, (245, 245, 245), thickness=2)
-
-        # Visual role markers.
-        if "start" in prov.tags:
-            img.fill_rect(prov.x - 7, prov.y - 7, prov.x + 7, prov.y + 7, (30, 210, 255))
-        if "throne" in prov.tags:
-            img.fill_rect(prov.x - 10, prov.y - 3, prov.x + 10, prov.y + 3, (220, 70, 220))
-            img.fill_rect(prov.x - 3, prov.y - 10, prov.x + 3, prov.y + 10, (220, 70, 220))
-        if "holy" in prov.tags:
-            img.fill_rect(prov.x - 9, prov.y - 1, prov.x + 9, prov.y + 1, (235, 210, 255))
-            img.fill_rect(prov.x - 1, prov.y - 9, prov.x + 1, prov.y + 9, (235, 210, 255))
-
-        # The province marker Dominions should detect.
-        img.put(prov.x, prov.y, white)
-
-    return img
-
-
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate a Dominions 6 west-east wrap .map and debug .tga.")
+    parser = argparse.ArgumentParser()
     parser.add_argument("--players", type=int, default=6, help="Number of players / 4x4 blocks.")
-    parser.add_argument("--title", default="Generated Ring Grid", help="Map title.")
-    parser.add_argument("--imagefile", default="generated_ring_grid.tga", help="Referenced TGA image filename.")
-    parser.add_argument("--output-map", default="generated_ring_grid.map", help="Output .map path.")
-    parser.add_argument("--output-tga", default="generated_ring_grid.tga", help="Output .tga path.")
-    parser.add_argument("--cell-width", type=int, default=96, help="Province cell width in pixels.")
-    parser.add_argument("--cell-height", type=int, default=96, help="Province cell height in pixels.")
-    parser.add_argument("--row-gap", type=int, default=12, help="Extra vertical spacing between rows.")
-    parser.add_argument("--margin", type=int, default=48, help="Canvas margin in pixels.")
+    parser.add_argument("--macro-cols", type=int, default=None, help="How many player blocks per row. Default: auto.")
+    parser.add_argument("--seed", type=int, default=12345, help="Random seed for per-block role layout.")
+    parser.add_argument("--diagonal-neighbours", action="store_true", help="Use 8-direction internal neighbours instead of 4-direction.")
+    parser.add_argument("--output-map", default="generated_ring_grid.map")
+    parser.add_argument("--output-tga", default="generated_ring_grid.tga")
+    parser.add_argument("--imagefile", default="generated_ring_grid.tga", help="Filename written into #imagefile, no quotes.")
     return parser.parse_args()
+    
+def write_debug_mapping(path: str, provinces: list[Province]) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        for p in sorted(provinces, key=lambda q: q.pid):
+            cx = (p.left + p.right) // 2
+            cy = (p.top + p.bottom) // 2
+            f.write(
+                f"{p.pid}\t{p.name}\trole={p.role}\tterrain={p.terrain}\tcx={cx}\tcy={cy}\n"
+            )    
 
 
 def main() -> None:
     args = parse_args()
-    if args.players < 2:
-        raise SystemExit("players must be >= 2")
 
-    width, height = compute_canvas(args.players, args.cell_width, args.cell_height, args.margin, args.row_gap)
-    provinces = build_provinces(args.players, args.cell_width, args.cell_height, args.margin, args.row_gap)
-    add_neighbour_edges(provinces, args.players)
-    validate(provinces, args.players)
+    if args.players < 1:
+        raise ValueError("--players must be at least 1")
 
-    map_text = emit_map(provinces, args.title, Path(args.imagefile).name, width, height)
-    Path(args.output_map).write_text(map_text, encoding="utf-8")
+    macro_cols = choose_macro_cols(args.players, args.macro_cols)
+    provinces = build_provinces(args.players, macro_cols, args.seed)
+    provinces = assign_ids_by_image_scan(provinces)
+    neighbours = build_neighbours(
+        provinces,
+        args.players,
+        diagonal_neighbours=args.diagonal_neighbours,
+    )
+    width, height = draw_debug_tga(args.output_tga, provinces)
+    write_map(args.output_map, args.imagefile, provinces, neighbours, width, height)
+    write_debug_mapping("generated_ring_grid_debug.txt", provinces)
 
-    image = draw_map_image(width, height, provinces, args.players)
-    image.save_tga(Path(args.output_tga))
-
-    print(f"Wrote map: {args.output_map}")
-    print(f"Wrote tga: {args.output_tga}")
-    print(f"Players: {args.players}")
-    print(f"Provinces: {len(provinces)}")
-    print(f"Canvas: {width}x{height}")
-    print("Start provinces:", ", ".join(str(p.pid) for p in provinces if "start" in p.tags))
+    print(f"Generated: {args.output_map}")
+    print(f"Generated: {args.output_tga}")
 
 
 if __name__ == "__main__":
