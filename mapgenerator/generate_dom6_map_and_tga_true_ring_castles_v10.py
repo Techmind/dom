@@ -71,6 +71,7 @@ import csv
 import math
 import os
 import random
+import re
 from dataclasses import dataclass
 from PIL import Image, ImageDraw, ImageOps
 
@@ -1147,14 +1148,40 @@ def draw_center_corner_image_in_ring_hole(
 
 
 
-def resolve_corner_image_paths(path: str | None, label: str) -> dict[str, str] | None:
+def natural_sort_key(value: str) -> list[tuple[int, int | str]]:
+    """Sort helper that treats digit runs as numbers, not plain strings.
+
+    Example order: 1.png, 2.png, 3.png, ..., 10.png, 11.png.
+    Uses tagged tuples so Python never compares str directly to int.
+    """
+    parts = re.split(r"(\d+)", value)
+    key: list[tuple[int, int | str]] = []
+    for part in parts:
+        if not part:
+            continue
+        if part.isdigit():
+            key.append((0, int(part)))
+        else:
+            key.append((1, part.lower()))
+    return key
+
+
+def resolve_corner_image_paths(
+    path: str | None,
+    label: str,
+    rng: random.Random | None = None,
+) -> dict[str, str] | None:
     """Resolve corner art from either one PNG path or a directory of PNGs.
 
     - If a single file path is passed, that file is used as the top-left corner
       source and mirrored/flipped for the other corners (old behavior).
-    - If a directory is passed, PNGs are sorted by filename and then assigned
-      deterministically to tl/tr/bl/br. This keeps the same corner art across
-      runs instead of changing each time.
+    - If a directory is passed, PNGs are sorted by filename before use.
+    - If the directory contains more than 4 PNGs and the count is divisible by 4,
+      it is treated as multiple 4-image sets. Images are grouped by position in
+      the sorted list, so tl uses index 0/4/8..., tr uses 1/5/9..., bl uses
+      2/6/10..., and br uses 3/7/11.... One image is chosen from each group.
+    - Otherwise, the first 4 PNGs are used (reusing from the start if fewer than
+      4 images exist).
     """
     if not path:
         return None
@@ -1162,11 +1189,24 @@ def resolve_corner_image_paths(path: str | None, label: str) -> dict[str, str] |
     if os.path.isdir(path):
         candidates = [
             os.path.join(path, name)
-            for name in sorted(os.listdir(path))
+            for name in sorted(os.listdir(path), key=natural_sort_key)
             if name.lower().endswith('.png')
         ]
         if not candidates:
             raise FileNotFoundError(f"No PNG files found in {label} directory: {path}")
+
+        if len(candidates) > 4 and len(candidates) % 4 == 0:
+            picker = rng if rng is not None else random.Random()
+            groups = {
+                "tl": candidates[0::4],
+                "tr": candidates[1::4],
+                "bl": candidates[2::4],
+                "br": candidates[3::4],
+            }
+            return {
+                key: picker.choice(group)
+                for key, group in groups.items()
+            }
 
         picked = [candidates[i % len(candidates)] for i in range(4)]
         return {
@@ -1189,6 +1229,7 @@ def draw_outer_corner_image_outside_ring(
     outer_corner_image_path: str | None,
     center: tuple[int, int] | None,
     outer_radius: int | None,
+    seed: int | None = None,
 ) -> None:
     """
     Fill the empty square corners outside the outer circular ring.
@@ -1206,7 +1247,8 @@ def draw_outer_corner_image_outside_ring(
     if not outer_corner_image_path or center is None or outer_radius is None:
         return
 
-    resolved_corner_paths = resolve_corner_image_paths(outer_corner_image_path, "outer corner image")
+    rng = random.Random(seed) if seed is not None else random.Random()
+    resolved_corner_paths = resolve_corner_image_paths(outer_corner_image_path, "outer corner image", rng=rng)
     if not resolved_corner_paths:
         return
     for corner_key, corner_path in resolved_corner_paths.items():
@@ -1426,6 +1468,7 @@ def draw_map_with_sprites(
     castle_fill_color: str | None = None,
     castle_scale_percent: float = 100.0,
     start_sprite_seed: int | None = None,
+    outer_corner_seed: int | None = None,
     blocks: list[PlayerBlock] | None = None,
     ring_center: tuple[int, int] | None = None,
     ring_inner_radius: int | None = None,
@@ -1453,6 +1496,7 @@ def draw_map_with_sprites(
         outer_corner_image,
         ring_center,
         ring_outer_radius,
+        seed=outer_corner_seed,
     )
 
     # For true-ring maps, --center-corner-image can be used as a mirrored
@@ -1746,8 +1790,12 @@ def parse_args() -> argparse.Namespace:
         help=(
             "Optional image or directory of PNG images used to fill the empty square corners outside "
             "the outer circular ring. If a single image is passed, it is mirrored/flipped per quadrant. "
-            "If a directory is passed, PNGs are sorted by filename and assigned deterministically to "
-            "tl/tr/bl/br corners (reusing from the start if fewer than 4 images exist)."
+            "If a directory is passed, PNGs are sorted by filename using natural numeric order (for example "
+            "1, 2, 3, ..., 10, 11). Normally the first four are used for "
+            "tl/tr/bl/br (reusing from the start if fewer than 4 images exist). If there are more than 4 "
+            "PNGs and the total count is divisible by 4, the directory is treated as multiple 4-image sets: "
+            "tl picks from 1st/5th/9th..., tr from 2nd/6th/10th..., bl from 3rd/7th/11th..., and br from "
+            "4th/8th/12th...."
         ),
     )
     parser.add_argument(
@@ -1852,6 +1900,7 @@ def main() -> None:
         castle_fill_color=args.castle_fill_color,
         castle_scale_percent=args.castle_scale_percent,
         start_sprite_seed=args.castle_seed,
+        outer_corner_seed=(args.castle_seed if args.castle_seed is not None else args.seed),
         blocks=blocks if args.layout == "square-ring" else None,
         ring_center=ring_center,
         ring_inner_radius=ring_inner_radius,
