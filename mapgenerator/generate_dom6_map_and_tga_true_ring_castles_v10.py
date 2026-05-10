@@ -1664,7 +1664,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--outer-corner-image",
-        default=None,
+        default="corners",
         help=(
             "Optional image or directory of PNG images used to fill the empty square corners outside "
             "the outer circular ring. If a single image is passed, it is mirrored/flipped per quadrant. "
