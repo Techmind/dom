@@ -67,6 +67,7 @@ Dependencies:
 """
 
 import argparse
+import csv
 import math
 import os
 import random
@@ -128,10 +129,15 @@ class Province:
     # For true-ring layout this stores the 4 polygon corners.
     # For old grid/square-ring layouts it stays None and left/top/right/bottom are used.
     points: tuple[tuple[int, int], tuple[int, int], tuple[int, int], tuple[int, int]] | None = None
+    display_name: str | None = None
 
     @property
     def name(self) -> str:
         return f"p{self.player}_{self.x}_{self.y}"
+
+    @property
+    def landname(self) -> str:
+        return self.display_name or self.name
 
     @property
     def cx(self) -> int:
@@ -1533,6 +1539,69 @@ def draw_map_with_sprites(
     return width, height
 
 
+
+def escape_map_string(value: str) -> str:
+    """Escape a value for Dominions .map quoted strings."""
+    return value.replace("\\", "\\\\").replace('"', r'\"')
+
+
+def load_province_names_from_csv(path: str) -> list[str]:
+    """
+    Load province names from a CSV file.
+
+    Uses the first non-empty cell in each row. If the first loaded value looks
+    like a header ("name", "province_name", etc.), it is skipped.
+    """
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"Missing province names CSV: {path}")
+
+    names: list[str] = []
+    with open(path, newline="", encoding="utf-8-sig") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            name = next((cell.strip() for cell in row if cell.strip()), "")
+            if name:
+                names.append(name)
+
+    if names and names[0].strip().lower() in {
+        "name",
+        "names",
+        "province",
+        "province_name",
+        "province name",
+        "landname",
+        "land name",
+    }:
+        names = names[1:]
+
+    if not names:
+        raise ValueError(f"No usable province names found in CSV: {path}")
+
+    return names
+
+
+def assign_province_names_from_csv(
+    provinces: list[Province],
+    csv_path: str | None,
+    seed: int,
+) -> None:
+    """Assign random unique CSV names to provinces, if csv_path is provided."""
+    if not csv_path:
+        return
+
+    names = load_province_names_from_csv(csv_path)
+    if len(names) < len(provinces):
+        raise ValueError(
+            f"Province names CSV has {len(names)} usable names, "
+            f"but the map has {len(provinces)} provinces."
+        )
+
+    rng = random.Random(seed)
+    selected_names = rng.sample(names, len(provinces))
+    for province, display_name in zip(provinces, selected_names):
+        province.display_name = display_name
+
+
 def write_map(
     path: str,
     imagefile: str,
@@ -1557,7 +1626,7 @@ def write_map(
         f.write("\n")
 
         for p in provinces:
-            f.write(f'#landname {p.pid} "{p.name}"\n')
+            f.write(f'#landname {p.pid} "{escape_map_string(p.landname)}"\n')
 
         f.write("\n")
 
@@ -1576,13 +1645,13 @@ def write_debug_mapping(path: str, provinces: list[Province], blocks: list[Playe
     with open(path, "w", encoding="utf-8") as f:
         f.write("# pid is assigned from the white marker pixel scan order used for the .map file.\n")
         f.write("# For true-ring TGA output from Pillow, visual coordinate scan is bottom-to-top, left-to-right.\n")
-        f.write("# pid\tname\tplayer_block_col\tplayer_block_row\trole\tterrain\tcx\tcy\n")
+        f.write("# pid\tgenerated_name\tlandname\tplayer_block_col\tplayer_block_row\trole\tterrain\tcx\tcy\n")
         for p in sorted(provinces, key=lambda q: q.pid):
             cx = p.cx
             cy = p.cy
             block = block_by_player[p.player]
             f.write(
-                f"{p.pid}\t{p.name}\t"
+                f"{p.pid}\t{p.name}\t{p.landname}\t"
                 f"block_col={block.col}\tblock_row={block.row}\t"
                 f"role={p.role}\tterrain={p.terrain}\tcx={cx}\tcy={cy}\n"
             )
@@ -1593,6 +1662,15 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--players", type=int, default=6)
     parser.add_argument("--macro-cols", type=int, default=6)
     parser.add_argument("--seed", type=int, default=12345)
+    parser.add_argument(
+        "--province-names-csv",
+        default=None,
+        help=(
+            "Optional CSV with province names. The first non-empty cell from each row is used; "
+            "names are randomly assigned uniquely to provinces, and the CSV must contain at least "
+            "as many usable names as the generated map has provinces."
+        ),
+    )
     parser.add_argument("--diagonal-neighbours", action="store_true")
     parser.add_argument("--sprite-dir", default=".")
     parser.add_argument(
@@ -1664,7 +1742,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--outer-corner-image",
-        default="corners",
+        default=None,
         help=(
             "Optional image or directory of PNG images used to fill the empty square corners outside "
             "the outer circular ring. If a single image is passed, it is mirrored/flipped per quadrant. "
@@ -1755,6 +1833,12 @@ def main() -> None:
                 args.players,
                 diagonal_neighbours=args.diagonal_neighbours,
             )
+
+    assign_province_names_from_csv(
+        provinces,
+        args.province_names_csv,
+        seed=args.seed + 24681357,
+    )
 
     width, height = draw_map_with_sprites(
         args.output_tga,
