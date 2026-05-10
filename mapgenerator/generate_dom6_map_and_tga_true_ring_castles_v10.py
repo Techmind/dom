@@ -1224,6 +1224,60 @@ def resolve_corner_image_paths(
     }
 
 
+def replace_white_pixels_with_neighbor_average(image: Image.Image) -> Image.Image:
+    """Replace visible pure-white pixels with the average of neighboring pixels.
+
+    This is intended for outer-corner images where some white filler pixels can
+    look ugly on the final map. Only visible pixels with RGB exactly (255, 255, 255)
+    are processed; fully transparent pixels are left untouched.
+
+    The replacement uses the average of neighboring visible, non-white pixels.
+    Multiple passes are used so small white regions can be filled progressively.
+    """
+    img = image.convert("RGBA")
+    width, height = img.size
+    pixels = img.load()
+
+    max_passes = 8
+    for _ in range(max_passes):
+        replacements: list[tuple[int, int, tuple[int, int, int, int]]] = []
+        for y in range(height):
+            for x in range(width):
+                r, g, b, a = pixels[x, y]
+                if a == 0 or (r, g, b) != (255, 255, 255):
+                    continue
+
+                neighbors: list[tuple[int, int, int, int]] = []
+                for ny in range(max(0, y - 1), min(height, y + 2)):
+                    for nx in range(max(0, x - 1), min(width, x + 2)):
+                        if nx == x and ny == y:
+                            continue
+                        nr, ng, nb, na = pixels[nx, ny]
+                        if na == 0:
+                            continue
+                        if (nr, ng, nb) == (255, 255, 255):
+                            continue
+                        neighbors.append((nr, ng, nb, na))
+
+                if not neighbors:
+                    continue
+
+                count = len(neighbors)
+                avg_r = round(sum(n[0] for n in neighbors) / count)
+                avg_g = round(sum(n[1] for n in neighbors) / count)
+                avg_b = round(sum(n[2] for n in neighbors) / count)
+                avg_a = round(sum(n[3] for n in neighbors) / count)
+                replacements.append((x, y, (avg_r, avg_g, avg_b, avg_a)))
+
+        if not replacements:
+            break
+
+        for x, y, color in replacements:
+            pixels[x, y] = color
+
+    return img
+
+
 def draw_outer_corner_image_outside_ring(
     canvas: Image.Image,
     outer_corner_image_path: str | None,
@@ -1288,6 +1342,7 @@ def draw_outer_corner_image_outside_ring(
         w = max(1, right - left)
         h = max(1, bottom - top)
         art = variants[key].resize((w, h), Image.Resampling.LANCZOS)
+        art = replace_white_pixels_with_neighbor_average(art)
         layer.alpha_composite(art, (left, top))
 
     # Keep only pixels outside the outer ring circle.
