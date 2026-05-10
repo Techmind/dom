@@ -1,0 +1,2 @@
+python3 generate_dom6_map_and_tga_square_ring.py   --players 8   --layout square-ring   --ring-side 3   --sprite-dir .   --output-map square_ring.map   --output-tga square_ring.tga   --imagefile square_ring.tga --center-image gymboss2.png
+python3 generate_dom6_map_and_tga_true_ring_castles_v7.py   --players 6   --layout ring   --sprite-dir .   --output-map generated_true_ring.map   --output-tga generated_true_ring.tga --center-image voidgachi.png --outer-corner-image monster2.png --castle-dir=castles --castle-scale-percent 80 --castle-seed=1112
